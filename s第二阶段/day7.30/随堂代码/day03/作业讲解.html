@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="UTF-8"/>
+	<title>闰年</title>
+	<head>
+		<script>
+			//打印出1000-2000年中所有的闰年，并以每行四个数的形式输出
+			
+			/*var year=1000;   //声明变量 用来保存初始值
+			var count=0;  //用来保存闰年的个数
+			while(year<=2016){   //循环的条件
+				if((year%4==0&&year%100!=0)||year%400==0){  //闰年成立的条件
+					document.write(year+" ");  //找到一个符合条件的就在页面中输出
+					count++;   //每次找到一个符合条件的就在原来的基础上加一
+					if(count%4==0){  //每四个数字在一行显示
+						document.write("<br>");  //换行
+					}
+				}
+				year++;  //变量自增  
+			}
+			
+			
+			var num1=Number(prompt("请输入第一个数"));
+			var num2=Number(prompt("请输入第二个数"));
+			var num3=Number(prompt("请输入第三个数"));
+			var max=num1;
+			if(num2>max){
+				max=num2;
+			}
+			if(num3>max){
+				max=num3;
+			}
+			alert("最大的值是"+max);*/
+			
+			
+			var year=1000; //初始值
+			var count=0;
+			while(year<=2000){
+				if((year%4==0&&year%100!=0)||year%400==0){
+					document.write(year+" ");
+					count++;
+					if(count%4==0){
+						document.write("<br>");
+					}
+				}
+				
+				year++; //++条件不能少  如果缺了，就是死循环  条件永真  不会跳出循环
+			}
+			
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

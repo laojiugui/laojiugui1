@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>信息统计</title>
+<style>
+	table{ border-collapse:collapse;}
+	td{width:80px;height:20px;border:1px solid #666;}
+	input{width:78px;height:18px;}
+</style>
+</head>
+
+<body>
+<div>
+	姓名：<input type="text" name="txt"><br>
+    性别：<input type="text" name="txt"><br>
+    年龄：<input type="text" name="txt"><br>
+    电话：<input type="text" name="txt"><br>
+    住址：<input type="text" name="txt"><br>
+    生成表格<input type="button" id="btn" value="点击生成">
+    
+</div>
+<table id="tab"></table>
+
+<script>
+	var btn=document.getElementById("btn");
+	btn.onclick=function(){
+		var txt=document.getElementsByName("txt");
+		var tab=document.getElementById("tab");
+		var tr=document.createElement("tr")
+		
+		var arr=["姓名：","性别：","年龄：","电话：","住址："]
+		for(i=0;i<txt.length+1;i++){
+			if(i==txt.length){
+				var td=document.createElement("td")
+				var btn=document.createElement("input");
+				btn.value="删除";
+				btn.type="button"
+				td.appendChild(btn)
+				tr.appendChild(td);	
+				btn.onclick=function(){
+					this.parentNode.parentNode.parentNode.removeChild(tr)	
+				}
+				
+			}else{
+				var td=document.createElement("td")
+				td.innerHTML=arr[i];
+				tr.appendChild(td);
+				var td2=document.createElement("td")
+				var inp=document.createElement("input");
+				inp.value=txt[i].value;
+				td2.appendChild(inp);
+				tr.appendChild(td2);
+	
+				txt[i].value=""
+				
+				
+				
+			
+			
+			}
+			
+			
+		}
+		tab.appendChild(tr)
+				
+		
+	}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM</title>
+	<style>
+		#box{width: 300px;height: 300px;background: green;}
+	</style>
+</head>
+<body>
+	<div id="box" style="border:1px solid red;"> </div>
+	<script>
+	//DOM  document  object model
+	//方法 
+	//getElementById()    getElementsByClassName()  getElementsByTagName() getElementsByName()  
+	var box=document.getElementById("box");
+	//alert(box.tagName.toLowerCase());  //tagName 用来获取标签名
+
+	//获取 设置  删除属性
+	//getAttribute()
+	//setAttribute()
+	//removeAttribute()
+
+	//获取非行间样式
+	//alert(box.style.border) 
+	//IE  对象.currentStyle
+	// window.getComputedStyle(对象,false)
+	//alert(box.currentStyle['width']);
+
+	//alert(window.getComputedStyle(box,false)['height'])
+
+	//节点
+
+	//元素节点  属性节点  文本节点  注释节点  文档节点
+	//nodeType    nodeValue  nodeName
+
+	//节点间的关系 
+	//parentNode()
+	//chlidNodes()
+	//firstChild()
+	//lastChild()
+	//previousSibling()
+	//nextSibling()
+
+	//ownerDocument()
+
+	//attributes()   //获取回来的对象  {}
+
+
+	//查找   创建 （添加）  删除  复制   替换  插入
+
+
+	//box.innerHTML="<span>hfhfhfhfhfh</span>";
+	box.childNodes[0].nodeValue="<span>hfhfhfhfhfh</span>"  //原格式输出，不会解析html标签
+	//box.nodeValue="hfhfhfhfhfh";
+	</script>
+</body>
+</html>

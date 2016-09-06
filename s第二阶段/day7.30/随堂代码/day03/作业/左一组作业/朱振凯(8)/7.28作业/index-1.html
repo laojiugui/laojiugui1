@@ -1,0 +1,311 @@
+<!doctype html>
+<html>
+<head>
+<style>
+	span{display:inline-block;padding:5px;margin:10px;background:red;}
+	#box{width:1000px;heigth:100px;background:green;}
+</style>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+<div id="box"></div>
+<script>
+var obox=document.getElementById("box")
+alert(obox.innerHTML)
+obox.innerHTML="复水我们来相会"
+
+var i=1;
+while(i<=20){
+	document.write(i+".中华人民万岁<br>");
+	i++;
+}
+
+var a=1;
+while(a<=100){
+	document.write(a+"<br>");
+	a++;
+}
+
+var b=1;
+var c=0;
+while(b<=100){
+	c+=b;
+	b++;
+}
+document.write(c);
+
+var b=0;
+var c=0;
+while(b<=100){
+	c+=b;
+	b++;
+	b++;	
+}
+document.write(c);
+
+var b=1;
+var c=0;
+while(b<=100){
+	c+=b;
+	b++;
+	b++;	
+}
+document.write(c);
+ 
+var num=1;
+var years=1000;
+while(years<=2000){
+	a1=years%4;
+	a2=years%100;
+	a3=years%400;
+	if((a1==0&&a2!=0)||a3==0){
+		document.write(years+" ");
+			if(num%4==0){
+				document.write("<br>");					
+			}
+		num++;			
+	}
+	years++;		
+}
+
+var num1=Number(prompt("输入第一个数"));
+var num2=Number(prompt("输入第二个数"));
+var num3=Number(prompt("输入第三个数"));
+var max=num1;
+if(num2>max){max=num2;}
+if(num3>max){max=num3;}
+alert(max);
+
+var a=1;
+var aa="*";
+var count=0;
+while(a<=40){
+	document.write(aa);
+	a++;
+	count++;
+	if(count%10==0){
+		document.write("<br>");		
+	}	
+}
+
+var i=1;
+while(i<=5){
+	j=1;
+	while(j<=i){
+		document.write("*");
+		j++;	
+	}
+	document.write("<br>");
+	i++;	
+}
+
+var i=1;
+while(i<=5){
+	m=1;
+	while(m<=5-i){
+		document.write("&nbsp");
+		m++;
+	}
+	j=1;
+	while(j<=i){
+		document.write("*")
+		j++;	
+	}
+	
+	document.write("<br>");
+	i++;	
+}
+
+var i=1;
+while(i<=4){
+	j=1;
+	while(j<=10){
+		document.write("*");
+		j++;
+	}		
+	document.write("<br>");
+	i++;	
+}
+
+for(i=1;i<=4;i++){
+	for(j=1;j<=10;j++){
+		document.write("*");	
+	}	
+	document.write("<br>");
+}
+
+for(x=1;x<35;x++){
+	for(y=1;y<35;y++){
+		if((x+y==35)&&(4*x+2*y==94)){
+		document.write("鸡有"+y+"只"+"==========="+"兔有"+x+"只")
+		}
+	}	
+}
+
+for(i=1;i<=9;i++){
+	for(j=1;j<=i;j++){
+		obox.innerHTML+="<span>"+i+"&times;"+j+"="+i*j+"</span>"	
+	}
+	obox.innerHTML+="<br>";	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var obox=document.getElementById("box")
+alert(obox.innerHTML)
+obox.innerHTML="复水我们来相会"
+
+var i=1;
+while(i<=20){
+	document.write(i+".中华人民万岁<br>");
+	i++;
+}
+
+var a=1;
+while(a<=100){
+	document.write(a+"<br>");
+	a++;
+}
+
+var b=1;
+var c=0;
+while(b<=100){
+	c+=b;
+	b++;
+}
+document.write(c);
+
+var b=0;
+var c=0;
+while(b<=100){
+	c+=b;
+	b++;
+	b++;	
+}
+document.write(c);
+
+var b=1;
+var c=0;
+while(b<=100){
+	c+=b;
+	b++;
+	b++;	
+}
+document.write(c);
+ 
+var num=1;
+var years=1000;
+while(years<=2000){
+	a1=years%4;
+	a2=years%100;
+	a3=years%400;
+	if((a1==0&&a2!=0)||a3==0){
+		document.write(years+" ");
+			if(num%4==0){
+				document.write("<br>");					
+			}
+		num++;			
+	}
+	years++;		
+}
+
+var num1=Number(prompt("输入第一个数"));
+var num2=Number(prompt("输入第二个数"));
+var num3=Number(prompt("输入第三个数"));
+var max=num1;
+if(num2>max){max=num2;}
+if(num3>max){max=num3;}
+alert(max);
+
+var a=1;
+var aa="*";
+var count=0;
+while(a<=40){
+	document.write(aa);
+	a++;
+	count++;
+	if(count%10==0){
+		document.write("<br>");		
+	}	
+}
+
+var i=1;
+while(i<=5){
+	j=1;
+	while(j<=i){
+		document.write("*");
+		j++;	
+	}
+	document.write("<br>");
+	i++;	
+}
+
+var i=1;
+while(i<=5){
+	m=1;
+	while(m<=5-i){
+		document.write("&nbsp");
+		m++;
+	}
+	j=1;
+	while(j<=i){
+		document.write("*")
+		j++;	
+	}
+	
+	document.write("<br>");
+	i++;	
+}
+
+var i=1;
+while(i<=4){
+	j=1;
+	while(j<=10){
+		document.write("*");
+		j++;
+	}		
+	document.write("<br>");
+	i++;	
+}
+
+for(i=1;i<=4;i++){
+	for(j=1;j<=10;j++){
+		document.write("*");	
+	}	
+	document.write("<br>");
+}
+
+for(x=1;x<35;x++){
+	for(y=1;y<35;y++){
+		if((x+y==35)&&(4*x+2*y==94)){
+		document.write("鸡有"+y+"只"+"==========="+"兔有"+x+"只")
+		}
+	}	
+}
+
+for(i=1;i<=9;i++){
+	for(j=1;j<=i;j++){
+		obox.innerHTML+="<span>"+i+"&times;"+j+"="+i*j+"</span>"	
+	}
+	obox.innerHTML+="<br>";	
+}
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+
+<style>
+#table{width:500px;text-align:center;margin:20px auto;border-collapse:collapse;}
+#center{width:500px;margin:20px auto;background:#666;}
+#center td{border:1px solid #666;width:30%;height:38px;text-align:center}
+#td1{width:70%;background:#fff}
+#box{width:500px;height:500px;border:10px solid red;text-align:center;line-height:200px;}
+</style>
+</head>
+<body>
+<div id="box"></div>
+<input id="shu" type="text" value="" />
+<input id="btn" type="button" value="随机抽取" />
+
+<div id="table"><img src="img.png" /></div>
+<table id="center" cellspacing="1" cellpadding="0">
+	<tr>
+		<td>体重 :</td>
+		<td id="td1" style="text-align:left">&nbsp;&nbsp;<input type="text" id="tz"></td>
+	<tr>
+	<tr>
+		<td>体重 :</td>
+		<td id="td1" style="text-align:left">&nbsp;&nbsp;<input type="text" id="tz"></td>
+	<tr>
+
+
+</table>
+
+
+<script>
+function zhishu(x){
+	var cunt=0
+	for(var i=1;i<=x;i++){
+		if(x%i==0){
+			cunt++;	
+		}	
+	}
+	if(cunt==2){
+		//alert(x+"这是质数")
+		return true
+	}
+	else{
+		//alert(x+"不是质数")
+		return false
+	}
+	
+}document.write(zhishu(20));
+
+function qiuping(){
+	var sum=0
+	var cunt=0  //保存
+
+
+}
+
+
+//var arr=[1,2,3,5,8,4,5,6,3,5,54,8,56,6,58,4,5,4,5,5,5,5,6,6,6,6,5,5,5,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,545,5,5,5,5,5,85,8,5,55,5,5]
+//alert(arr.length)  //测量数组里面的数量
+//arr.length=0       //数组清空!!!
+//alert(arr[57])                         ///////最大下标等于length-1
+
+//alert(typeof arr)        //数据类型是引用数据类型,,object!!!!!
+
+/*for(var i=0;i<arr.length;i++){
+
+alert(arr[i])
+
+
+}*/
+
+var arr= ['崔秀山','李福玲','张延东','赵军朋','卢超','赵乘','王平原','李鹏','秦增福','马英博','张凯旋','顾乐威','陈化林','杨秀荣','闫成业','赵岩','邢延海','杜赞','徐龙杰','蔡尚卿','张亚楠','任龙飞','杨亚飞','王刚','大刘欢','小刘欢','李明','靳文龙','闫承惠','郭志迪','柳战鳌','吴涵','郎建强','张磊','周孟祥','冯伟星','刘博文','毛函','朱振凯','付贝贝','谢朋豆','魏国都','王凯','罗梦婷','张军杰'];
+
+for(var i=0;i<arr.length;i++){
+	if(i%5==0){
+	//document.write("<br>")  //控制变行
+	}
+	//document.write(arr[i]);//显示数组光标下的数据
+}
+
+arr1=[];
+for(var i=0;i<=5;i++){
+	arr1[i]="哈哈"+i
+}
+//document.write(arr1)
+//alert(parseInt(Math.random()*2))      //随机生成0-20的数
+//alert(parseInt(Math.random()*11)+5)   //随机生成5-15的数  min=5  ,  max=15
+function random(min,max){
+
+	return parseInt(Math.random()*(max-min+1))+min}
+//alert(random(1000,9999))
+
+num1=random(0,45)
+num2=random(0,45)
+num3=random(0,45)
+num4=random(0,45)
+document.write(arr[num1]+" "+arr[num2]+" "+arr[num3]+" "+arr[num4]+" ")
+
+
+
+//随机生成4位验证码!!
+window.onload=function(){
+	var oBtn=document.getElementById("btn");
+	var oBox=document.getElementById("box");
+	var oShu=document.getElementById("shu")
+	oBtn.onclick=function(){
+		var arr= ['崔秀山','李福玲','张延东','赵军朋','卢超','赵乘','王平原','李鹏','秦增福','马英博','张凯旋','顾乐威','陈化林','杨秀荣','闫成业','赵岩','邢延海','杜赞','徐龙杰','蔡尚卿','张亚楠','任龙飞','杨亚飞','王刚','大刘欢','小刘欢','李明','靳文龙','闫承惠','郭志迪','柳战鳌','吴涵','郎建强','张磊','周孟祥','冯伟星','刘博文','毛函','朱振凯','付贝贝','谢朋豆','魏国都','王凯','罗梦婷','张军杰'];
+		var cunt="";
+		var a=Number(oShu.value)
+		for(var i=0;i<a;i++){
+			var index=parseInt(Math.random()*arr.length)
+			cunt+=arr[index]
+		}
+		oBox.innerHTML=cunt+" "
+	}
+}
+
+function sum(){
+	var arg=arguments;
+	var Sun=0;
+	for(var i=0;i<arg.length;i++){
+	
+		Sun+=arg[i]
+	
+	}
+	return Sun
+
+} 
+alert(sum(1,2,3,4,5))
+alert()
+
+
+
+</script>
+</body>
+</html>

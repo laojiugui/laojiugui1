@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片翻转</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        ul{
+            list-style: none;
+        }
+        #box{
+            position:relative;
+            width:300px;
+            height:400px;
+            border:1px solid red;
+            margin:30px auto 0;
+        }
+        h2{
+            font-size:20px;
+            height:40px;
+            line-height:40px;
+            background:orange;
+            text-align:center;
+        }
+        #list{
+            width:300px;
+            padding:0 10px;
+        }
+        #list li{
+            width:122px;
+            height:77px;
+            float:left;
+            margin:10px 10px 0 10px;
+            position:relative;
+        }
+        #list li img{
+            border:1px solid red;
+            width:120px;
+            height:75px;
+            position:absolute;
+            left:0;
+            top:0;
+
+        }
+        #list li span{
+            border:1px solid red;
+            width:120px;
+            height:0px;
+            position:absolute;
+            left:0;
+            top:38px;
+            font-size:20px;
+            line-height:75px;
+            text-align:center;
+            background:#00aaFF;
+            display:none;
+        }
+
+    </style>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            var $iLi=$("#box #list li");
+            $iLi.each(function(){
+                $(this).hover(
+                        function(){
+                            var $iImg=$(this).children("img");
+                            $iImg.animate({top:37,height:0},500,function(){
+                                $iImg.hide();
+                                $iImg.next().show().animate({top:0,height:75},500)
+                            })
+                        },
+
+                        function(){
+                            var $span = $(this).children("span");
+                            $span.animate({top:37,height:0},500,function(){
+                                $span.hide();
+                                $span.prev().show().animate({top:0,height:75},500)
+                            })
+                        }
+                );
+
+            });
+
+        })
+
+
+    </script>
+</head>
+<body>
+<div id="box">
+    <h2>热门品牌推荐</h2>
+    <ul id="list">
+        <li>
+            <img src="img/1.jpg">
+            <span>纪灵</span>
+        </li>
+        <li>
+            <img src="img/2.jpg">
+            <span>纪灵</span>
+        </li>
+        <li>
+            <img src="img/3.jpg">
+            <span>纪灵</span>
+        </li>
+        <li>
+            <img src="img/4.jpg">
+            <span>纪灵</span>
+        </li>
+        <li>
+            <img src="img/5.jpg">
+            <span>纪灵</span>
+        </li>
+        <li>
+            <img src="img/6.jpg">
+            <span>纪灵</span>
+        </li>
+        <li>
+            <img src="img/7.jpg">
+            <span>纪灵</span>
+        </li>
+        <li>
+            <img src="img/8.jpg">
+            <span>纪灵</span>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

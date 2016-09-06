@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style>
+		table{background-color: #ccc;border: 1px solid #f00;}
+		td{background-color: #0f0;width: 50px;height: 20px;}
+		span{display:inline-block;width: 80px;height: 36px;background-color: #f5b;line-height: 36px;text-align: center;}
+	</style>
+</head>
+
+<body>
+<table id="tab">
+	
+</table>
+
+
+
+<script>
+//1.打印出2000-2016年中所有的闰年并输出
+for(var i=2000;i<=2016;i++){
+	if(i%4==0&&i%100!=0||i%400==0){
+		document.write(i+"&nbsp");
+	}
+}
+
+document.write("<br/>");
+document.write("<br/>");
+
+//2.打印出1-100里所有的奇数的和
+var count = 0;
+for(var i=1;i<=100;i++){
+	if (i%2==1) {
+		count += i;
+	}
+}
+document.write(count);
+
+document.write("<br/>");
+document.write("<br/>");
+
+//3.输出100以内所有除10,20,30,40,80,90以外的数的和
+var num3 = 0;
+for(var i=1;i<=100;i++){
+	num3 += i;
+}
+
+document.write(num3-10-20-30-40-80-90);
+
+document.write("<br/>");
+document.write("<br/>");
+
+//4.打印100以内 7的倍数
+for(var i=1;i<=100;i++){
+	if(i%7==0){
+		document.write(i+"&nbsp")
+	}
+}
+
+document.write("<br/>");
+document.write("<br/>");
+
+//5.求10的阶乘
+var sum5 = 1;
+for(var i=1;i<=10;i++){
+	sum5 *= i;
+}
+document.write(sum5);
+
+document.write("<br/>");
+document.write("<br/>");
+
+//6.输出20-80之间能被3整除的整数，每5个一行
+var num6 = 0;
+for(var i=20;i<=80;i++){
+	if(i%3==0){
+		document.write(i+"&nbsp");
+		num6++;
+	}
+	if(num6%5==0){
+		document.write("<br/>");
+	}
+}
+
+document.write("<br/>");
+
+//7.操场上有100-200人，3个人排队剩一个，4个人排队剩2个人，5个人排队剩3个人；
+for (var i=100;i<=200;i++){
+	if(i%3==1&&i%4==2&&i%5==3){
+		document.write("有"+i+"个人");
+	}
+}
+
+document.write("<br/>");
+document.write("<br/>");
+
+//8.求出1-1/2+1/3-1/4…..1/100的和 var i=1;  i*-1*-1
+var num8 = 0;
+for(var i=1;i<=100;i++){
+	if(i%2==1){
+		num8 += 1/i;
+	}
+	if(i%2==0){
+		num8 -= 1/i;
+	}
+}
+document.write(num8);
+
+document.write("<br/>");
+document.write("<br/>");
+
+//9.输出九九乘法表
+for(var i=1;i<10;i++){
+	for(var j=1;j<=i;j++){
+		document.write("<span>"+i+"&times;"+j+"="+i*j+"</span>"+"&nbsp");
+	}
+	document.write("<br/><br/>");
+}
+
+document.write("<br/>");
+document.write("<br/>");
+
+//10.打印100–200之间所有能被3或者7整除的数
+var num10 = 0;
+for(var i=100;i<=200;i++){
+	if(i%3==0||i%7==0){
+		document.write(i+"&nbsp");
+		num10++;
+	}
+	if(num10%7==0){
+		document.write("<br/>");
+	}
+}
+
+document.write("<br/>");
+document.write("<br/>");
+
+//12.小王入职时月工资10k元，每年涨工资10%，10年后小王的工资是多少？这10年小王共赚了多少钱？(选做)
+var gz = 10000;
+var gg = 120000;
+for(var i=1;i<10;i++){
+	gz *= 1.1;
+	for(var j=1;j<=12;j++){
+		gg += gz;
+
+	}
+	
+}
+document.write("小王10年以后的工资是"+parseInt(gz)+"元"+"<br/>");
+document.write("小王一共赚了"+parseInt(gg)+"元");
+
+document.write("<br/>");
+document.write("<br/>");
+
+//13.求100-999之间的水仙花数。（选做）
+//提示：水仙花数是指一个 n 位数 ( n≥3 )，它的每个位上的数字的 n 次幂之和等于它本身。（例如：1^3 + 5^3+ 3^3 = 153）
+for(var i=100;i<1000;i++){
+	var a = parseInt(i/100);
+	var b = parseInt(i%100/10);
+	var c = parseInt(i%10);
+	if(a*a*a+b*b*b+c*c*c==i){
+		document.write(i+"&nbsp");
+	}
+}
+
+document.write("<br/>");
+document.write("<br/>");
+
+//11.尝试做一个表格，行列可以自动生成
+/*
+var oTab = document.getElementById("tab");
+for (var i=1;i<=10;i++){
+	oTab.innerHTML += "<tr>";
+	for(var j=1;j<=10;j++){
+		oTab.innerHTML += "<td>+j+</td>";
+
+	}
+	oTab.innerHTML += "</tr>";
+}
+*/
+
+document.write("<table>");
+for(var i=1;i<=5;i++){
+	document.write("<tr>");
+	for(var j=1;j<=5;j++){
+		document.write("<td>"+"</td>");
+	}
+	document.write("</tr>")
+}
+document.write("</table>");
+
+
+
+
+
+</script>
+</body>
+</html>

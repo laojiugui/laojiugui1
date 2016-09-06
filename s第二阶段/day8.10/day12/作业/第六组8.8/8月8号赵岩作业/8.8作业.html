@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+<style>
+*{margin:20;padding:0;}
+.zi{color:#C30}
+#box{width:280px;height:400px;border:1px solid plum;border-bottom:0;overflow:auto;padding:0 10px}
+#btn{float:right;width:50px;height:50px;border:0;background:#ccc}
+#box li{list-style:none;}
+#box1{width:300px;height:50px;border:1px solid plum;border-top:1px solid #ccc;} 
+#box1 #txt{width:250px;height:46px;border:0;font-size:20px;line-height:46px;outline:none;}
+p{width:300px;text-align:left;color:#3C3}
+li{text-align:right}
+table{border-collapse:collapse;text-align:center;margin-left:1px}
+td{width:63px;height:20px;border:1px solid #ccc;border-top:0}
+#top1{border:1px solid #ccc;width:256px;height:30px;}
+i{float:left;font-style:normal;width:63px;height:30px;text-align:center;border-left:1px solid #ccc;
+line-height:30px
+}
+
+</style>
+<body>
+<div id="box">
+<p></p>
+</div>
+
+<div id="box1">
+<input type="button" value="发送" id="btn">
+<input type="text" value="" id="txt">
+<br><br><br>
+姓名<input type="text" id="btn1"><br>
+班级<input type="text" id="btn2"><br>
+性别<input type="text" id="btn3"><br>
+年龄<input type="text" id="btn4"><br>
+<input type="button" id="btn5" value="生成表格">
+<div id="top1">
+<i>姓名</i>
+<i>班级</i>
+<i>性别</i>
+<i>年龄</i>
+</div>
+<div id="top">
+
+
+</div>
+</div>
+<script>
+var btn=document.getElementsByTagName('input')[0]
+var box=document.getElementById('box')
+var box1=document.getElementById('box1')
+var txt=document.getElementById('txt')
+var p=document.getElementsByTagName('p')[0]
+window.onload=function(){
+btn.onclick=function(){
+//创建元素阶段
+var oli=document.createElement('li')
+var oli1=document.createElement('p')
+box.appendChild(oli);
+box.appendChild(oli1);
+//创建文本节点
+str=txt.value
+var txts=document.createTextNode(str);
+oli.appendChild(txts);
+var li=document.getElementsByTagName('li')[0]
+str1="等一下人嚒"
+box.inneHTML=str1
+var txt1=document.createTextNode(str1);
+setTimeout(function(){
+oli1.appendChild(txt1);	},500)
+var li=document.getElementsByTagName('li')[0]
+//创建属性节点
+var attr=document.createAttribute('class');
+attr.nodeValue='zi'
+
+oli.setAttributeNode(attr);
+}
+
+var btn1=document.getElementById('btn1')
+var btn2=document.getElementById('btn2')
+var btn3=document.getElementById('btn3')
+var btn4=document.getElementById('btn4')
+var btn5=document.getElementById('btn5')
+var top=document.getElementById('top')
+btn5.onclick=function(){
+	var rows=1
+	var cols=4
+	var table=document.createElement('table');//添加table
+
+	for(var i=0;i<1;i++){						//控制行							
+			var tr=document.createElement('tr');
+			for(var j=0;j<4;j++){				//控制列
+			var td=document.createElement('td');
+			
+			if(j==0){							//一行第一列
+			 
+			 var span=document.createElement('span')
+			 var txt=document.createTextNode(btn1.value)
+				span.appendChild(txt);
+				
+				td.appendChild(span)			
+			}
+			if(j==1){							//一行第二列
+			 var span=document.createElement('span')
+			 var txt=document.createTextNode(btn2.value)
+				span.appendChild(txt);
+				td.appendChild(span)			
+			}
+			if(j==2){                          //一行第三列
+			 var span=document.createElement('span')
+			 var txt=document.createTextNode(btn3.value)
+				span.appendChild(txt);
+				td.appendChild(span)			
+			}
+			if(j==3){                          //一行四列
+			 var span=document.createElement('span')
+			 var txt=document.createTextNode(btn4.value)
+				span.appendChild(txt);
+				td.appendChild(span)			
+			}
+		
+		tr.appendChild(td)
+		}table.appendChild(tr)
+	}	top.appendChild(table)	
+			
+	
+
+
+
+}
+
+
+
+
+
+
+
+}
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+p { border:10px solid #ccc; background:#FFC; width:400px; padding:20px; font-size:16px; font-family:微软雅黑; }
+span { background:yellow; }
+</style>
+
+</head>
+
+<body>
+
+<input type="text" />
+<input type="text" />
+<input type="button" value="替换" />
+
+<p>千锋教育是一支独具特色的IT培训团队，千锋反对传统IT教育枯燥乏味的教学模式，千锋提供一种全新的快乐学习方法！<br />
+2013年底，千锋堂最新推出"远程培训"服务，受到很多朋友们的喜爱与追捧，我们必将更加努力的帮助远程学习的朋友实现技术提升……</p>
+
+<script>
+var btn1=document.getElementsByTagName('input')[0];
+var btn2=document.getElementsByTagName('input')[1];
+var btn3=document.getElementsByTagName('input')[2];
+var oP=document.getElementsByTagName('p')[0];
+btn3.onclick=function(){
+	var str=btn1.value;   //千锋
+	if(!str){return;}
+	var newStr=btn2.value;
+	oP.innerHTML=oP.innerHTML.split(str).join('<span>'+newStr+'</span>');
+}
+</script>
+
+</body>
+</html>

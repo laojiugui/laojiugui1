@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul, ul > li, img{width:600px;height:300px;}
+        ul > li{position:absolute;list-style: none;
+            border:#ccc solid 1px;border-radius: 8px;display:none;}
+        img{border:#ccc solid 1px;border-radius: 8px;}
+        ul > li.first{display: block;}
+    </style>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+
+            $(function(){
+                var iIndex=$("li:visible").index();
+                setInterval(function(){
+                    iIndex++;
+                    if(iIndex>=$("li").size()){
+                        iIndex=0;
+                    }
+                    $("li").fadeOut(500);
+                    $("li").eq(iIndex).fadeIn(500);
+
+
+                },2000);
+
+
+            })
+    </script>
+</head>
+<body>
+<ul>
+    <li class="first"><img src="img/1.jpg"/></li>
+    <li><img src="img/2.jpg"/></li>
+    <li><img src="img/3.jpg"/></li>
+</ul>
+</body>
+</html>

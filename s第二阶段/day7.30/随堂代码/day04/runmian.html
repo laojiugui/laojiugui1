@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8"/>
+	<title>函数</title>
+	<style>
+		span{
+			display:inline-block;width:80px;height:30px;background:#fc0;
+			line-height:30px;
+			text-align:center;padding:2px 4px;margin:5px;
+		}
+	</style>
+	</head>
+	<body>
+		<input type="text" value="" id="year">
+		<input type="button" value="判断" onclick="year()">
+		<div id="box"></div>
+	
+		<button id="btn" onclick="jiujiu(5)">生成九九乘法表</button>
+		<script>
+			/*function year(){
+				var year=document.getElementById("year");
+				var box=document.getElementById("box");
+				//console.log(year);
+				var y=year.value;
+				if((y%4==0&&y%100!=0)||y%400==0){
+					box.innerHTML=y+"是闰年";
+				}else{
+					box.innerHTML="不是闰年";
+				}
+			}*/
+			//year();
+			
+			function jiujiu(aa){
+				//var shu=1;
+				//var shu=6;
+				var oBox=document.getElementById("box");
+				for(var i=1;i<=aa;i++){
+					for(var j=1;j<=i;j++){
+						oBox.innerHTML+="<span>"+i+"&times;"+j+"="+i*j+"</span>";
+					}
+					oBox.innerHTML+="<br>";
+				}
+			}
+			//参数   可以改变函数体里变化的值
+			//参数分为  1.形参   形式参数     2.实参  实际的参数   3.不定参
+			
+			//形参   在小括号里边    在创建函数的时候放入的参数
+			//实参   也在小括号里边   在调用的小括号里边的参数
+			/*function aa(){
+				alert(1);
+			}
+			
+			var bb=1;
+			//aa();
+			//alert(aa())
+			function aa(){
+				return 100;
+			}
+			//alert(aa)*/
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

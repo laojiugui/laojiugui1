@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+	<style>
+		span{
+			display:inline-block;width:80px;height:30px;padding:2px 4px;margin:5px;line-height:30px;text-align:center;background:#fc0;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">ytytyytytyt</div>
+	<script>
+	//函数的定义 ：将完成某一特定功能的代码集合起来，可以重复使用
+	//匿名函数
+	/*var aa=function(){
+	
+	}
+	
+	function aa(){
+	
+	}
+	window.onload=function(){
+	
+	}
+	对象.onclick=function(){
+	
+	}*/
+	
+	var aa=function(){
+		alert(1);
+	}
+	
+	//aa();  
+	
+	//不推荐大家使用函数自调用
+	//参数    形参  实参  不定参（创建函数的时候自动生成一个参数 arguments,是一个类数组的结构）
+	//无参函数  有参函数  
+	
+	//return 函数的返回值   返回值可以是任何数据类型 
+	//如果函数没有返回值，会自动赋值为undefined   
+	//并不是所有的函数都需要返回值
+	
+	//作用域   全局变量  局部变量  
+	
+	//函数内部可以访问外部的变量  而外层访问不到函数内部的变量
+	
+	//就近原则   查找变量，从内到外
+	
+	//递归函数  在函数内部自己调用自己
+	
+	
+	//数组 ：可以存放一系列数据的容器     []  Array
+	var oBox=document.getElementById("box");
+	//oBox.innerHTML="";
+	//alert(typeof oBox);
+	//var arr=[1,2,3,4,4,5,5,1,2,3,4,4,4,4];
+	//alert(arr);
+	//下标   索引    0 
+	//alert(typeof arr);
+	
+	//长度的属性  length
+	//alert(arr.length);
+	//innerHTML
+	//arr.length=0;   //可以清空数组
+	//alert(arr);
+	
+	//最大下标=长度-1
+	
+	//var arr=[];
+	//arr[0]=1;arr[1]=3;arr[2]=5;
+	//alert(arr);
+	
+	//var arr=new Array(10,5);
+	
+	//var arr=[10,5];
+	//alert(arr.length);
+	
+	var arr=["张三","李四","wangwu",1,3,4,7,true,function aa(){}];
+	//遍历数组   循环数组   取数组中的每一个元素
+	
+	//循环数组的第一种方法  for循环   
+		for(var i=0;i<arr.length;i++){
+			console.log(arr[i]);
+		}
+	//alert(arr);
+	
+	
+	var namelist = ['崔秀山','李福玲','张延东','赵军朋','卢超','赵乘','王平原','李鹏','秦增福','马英博','张凯旋','顾乐威','陈化林','杨秀荣','闫成业','赵岩','邢延海','杜赞','徐龙杰','蔡尚卿','张亚楠','任龙飞','杨亚飞','王刚','大刘欢','小刘欢','李明','靳文龙','闫承惠','郭志迪','柳战鳌','吴涵','郎建强','张磊','周孟祥','冯伟星','刘博文','毛函','朱振凯','付贝贝','谢朋豆','魏国都','王凯','罗梦婷','张军杰'];
+	
+	for(var i=0;i<namelist.length;i++){
+		document.write("<span>"+namelist[i]+"</span>");
+		if((i+1)%5==0){
+			document.write("<br>");
+		}
+	}
+	
+	var arr1=[];
+	for(var i=0;i<=5;i++){
+		arr1[i]="html"+i;
+	}
+	console.log(arr1);
+	
+	//在控制台以键值对的形式出现  左边是键（属性） 右边是值  中间用冒号隔开
+	
+	//获取随机数     Math.random()获取到的值在0~1之间
+	//alert(typeof Math)
+	//alert(parseInt(Math.random()*10));  //0~9
+	
+	//alert(parseInt(Math.random()*5)+49);  //5~15  5和15都要取到  max-min+1
+	
+	//获取49到53的随机数
+	
+	function  randomNumber(min,max){
+		return parseInt(Math.random()*(max-min+1))+min;
+	}
+	//alert(randomNumber(5,12));
+	//获取4位的随机验证码
+	
+	
+	
+	</script>
+</body>
+</html>

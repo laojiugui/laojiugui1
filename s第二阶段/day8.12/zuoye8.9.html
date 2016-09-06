@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>案例整理</title>
+<style>
+#box{width:220px;height:200px;background:red;margin:0 auto;}
+ul{list-style:none;padding:0;margin:0;}
+	.context-menu{display:none;position:absolute;top:10px;left:10px;width:160px;padding:2px;border:1px solid #ddd;line-height:1.5;color:#666;}
+	.context-menu li{padding:0 5px;border-bottom:1px solid #dfdfdf;}
+	.context-menu li:hover{background-color:#efefef;color:#333;}
+	.context-menu li:last-child{border-bottom:none;}
+	
+#lists{width:200px;height:250px;background:tan}	
+</style>
+</head>
+
+<body>
+
+<div id="box"></div>
+<div id="box1" class="context-menu">
+		<ul>
+			<li>菜单1</li>
+			<li>菜单2</li>
+			<li>菜单3</li>
+			<li>菜单4</li>
+			<li>菜单5</li>
+		</ul>
+</div>
+
+<input type="button" value="创建" id="btn">
+<ul id="lists">
+	<li>01</li>
+	<li>02</li>
+	<li>03</li>
+</ul><br><br>
+
+
+<input type="text" id="move" value="">
+<script>
+
+//获取文档的位置
+var box=document.getElementById("box")        //获取box内容
+box.onmousemove=function(e){           //创建鼠标移动事件匿名函数
+	var event=window.event||e          //处理浏览器事件兼容
+	box.innerHTML="鼠标坐标X:"+e.clientX+"鼠标坐标Y:"+e.clientY+"<br>"+"屏幕坐标X:"+e.screenX+"屏幕坐标Y:"+e.screenY+"<br>"+"偏离坐标X:"+e.offsetX+"偏离坐标Y:"+e.offsetY            //得出结果
+
+}
+
+box.onmousemove=function(e){
+	var event=window.event||e
+	box.innerHTML="鼠标坐标X:"+e.clientX+"鼠标坐标Y:"+e.clientY+"<br>"+"屏幕坐标X:"+e.screenX+"屏幕坐标Y:"+e.screenY+"<br>"+"偏离坐标X:"+e.offsetX+
+	"偏离坐标Y:"+e.offsetY
+}
+
+
+//自定义鼠标右键!!
+/*var box1=document.getElementsByClassName("context-menu")[0]       //获取元素内容
+document.oncontextmenu=function(ev){             //建立鼠标右键单击匿名函数
+	var event=window.event||ev             //处理事件兼容
+	window.event?ev.returnValue=false:ev.preventDefault();       //处理浏览器默认样式兼容问题
+	box1.style.display="block"             //box1的属性值改变
+	box1.style.left=ev.clientX+"px"          //box1的横向坐标改变
+	box1.style.top=ev.clientY+"px"         //box1的纵向坐标改变
+}
+
+document.onclick=function(eve){            //建立文档单击匿名函数
+	var event=window.event||eve           //处理事件兼容
+	box1.style.display="none"        //box1的属性值改变
+	box1.onclick=function(even){            //建立单击匿名函数
+		var event=window.event||event        //处理事件兼容
+		window.event?even.cancelBubble=true:even.stoppropagtion         //处理阻止冒泡兼容
+	}
+}*/
+
+var box1=document.getElementById("box1")
+document.oncontextmenu=function(ev){
+	var event=window.event||ev
+	window.event?ev.returnValue=false:ev.preventDefault();
+	box1.style.display="block"
+	box1.style.left=ev.clientX+"px"
+	box1.style.top=ev.clientY+"px"
+}
+
+document.onclick=function(){
+	box1.style.display="none"
+	box1.onclick=function(ev){
+		var event=window.event||ev
+		window.event?ev.cancelBubble=true:ev.stoppropation
+	}
+}
+
+
+
+//事件委托!!
+/*var lists=document.getElementById("lists")  //获取元素内容
+var btn=document.getElementById("btn")        //获取按钮里面内容
+lists.onclick=function(ve6){         //创建单击匿名函数
+	var event=window.event||ve6      //处理事件兼容
+	var tar=ve6.target||ve6.srcElement;       //处理事件委托兼容
+	if(tar.tagName.toLowerCase()=='li'){       //设置if成立条件
+		tar.innerHTML="我是接受委托执行的"      //执行里面的代码
+	}
+}
+btn.onclick=function(){                //        获取按钮内容
+	var li=document.createElement("li")         //创建元素节点
+
+	li.innerHTML="我是创造出来的"         //给创造出的元素节点赋值
+
+	lists.appendChild(li)           //把元素插入到父元素中
+}
+lists.onmouseover=function(ve6){         //创建单击匿名函数
+    var event=window.event||ve6      //事件兼容
+	var tar=ve6.target||ve6.srcElement;      //处理事件委托兼容
+	if(tar.tagName.toLowerCase()=="li"){        //设置if成立条件
+		tar.style.background="red"              //执行里面的代码
+	
+	}
+}
+lists.onmouseout=function(ve6){         //创建单击匿名函数
+    var event=window.event||ve6             //处理事件兼容
+	var tar=ve6.target||ve6.srcElement;         //处理事件委托兼容
+	if(tar.tagName.toLowerCase()=="li"){            //设置if成立条件
+		tar.style.background=""              //执行里面的代码
+	
+	}
+}*/
+
+
+var lists=document.getElementById("lists")  //获取元素内容
+var btn=document.getElementById("btn")        //获取按钮里面内容
+lists.onclick=function(ve6){         //创建单击匿名函数
+	var event=window.event||ve6      //处理事件兼容
+	var tar=ve6.target||ve6.srcElement;       //处理事件委托兼容
+	if(tar.tagName.toLowerCase()=='li'){       //设置if成立条件
+		tar.innerHTML="我是接受委托执行的"      //执行里面的代码
+	}
+}
+btn.onclick=function(){                //        获取按钮内容
+	var li=document.createElement("li")         //创建元素节点
+
+	li.innerHTML="我是创造出来的"         //给创造出的元素节点赋值
+
+	lists.appendChild(li)           //把元素插入到父元素中
+}
+lists.onmouseover=function(ve6){         //创建单击匿名函数
+    var event=window.event||ve6      //事件兼容
+	var tar=ve6.target||ve6.srcElement;      //处理事件委托兼容
+	if(tar.tagName.toLowerCase()=="li"){        //设置if成立条件
+		tar.style.background="red"              //执行里面的代码
+	
+	}
+}
+lists.onmouseout=function(ve6){         //创建单击匿名函数
+    var event=window.event||ve6             //处理事件兼容
+	var tar=ve6.target||ve6.srcElement;         //处理事件委托兼容
+	if(tar.tagName.toLowerCase()=="li"){            //设置if成立条件
+		tar.style.background=""              //执行里面的代码
+	
+	}
+}
+
+
+//键盘事件!!!
+var move=document
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

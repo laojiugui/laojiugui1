@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>8-8作业</title>
+		<style type="text/css">
+			*{margin:0;padding:0;}
+			li{list-style:none;min-height:30px;height:auto!important;height:30px;
+			line-height:30px;margin:12px;
+			padding:0 5px;width:350px;float:left;}
+			span{float:right;background:green;border-radius:10px;filter:alpha(opacity=80);opacity:0.8;}
+			#box-wrap{height:540px;width:400px;margin:50px auto;
+			background:url(img/bg1.jpg) no-repeat left top;border:5px solid #888;overflow:scroll;margin-bottom:0;border-bottom:0;}
+			#box{}
+			#put2{width:400px;height:30px;margin:0 auto;border-right:5px solid #888;border-bottom:5px solid #888;
+			border-left:5px solid #888;}
+			#txt{height:28px;border:1px solid #888;float:left;width:346px;}
+			#btn{height:28px;border:1px solid #888;float:left;width:50px;}
+			#work2 table{border:1px solid #000;border-collapse:collapse;margin:20px;}
+			td{border:1px solid #000;width:100px;height:30px;}
+			#work2 .btn4{width:100px;height:30px;border:0;background:#fff;text-align:center;}
+		</style>
+	</head>
+	<body>
+		<div id="box-wrap">
+			<div id="box"></div>
+			
+		</div>
+		<div id="put2">
+			<input type="text" id="txt">
+			<input type="button" value="输入" id="btn">
+		</div>
+		<div id="work2"></div>
+		<script>
+			function gid(x){return document.getElementById(x)}
+			var txt=gid("txt");
+			var btn=gid("btn");
+			var box=gid("box");
+			btn.onclick=function(){
+				var txt1=txt.value;
+				var li=document.createElement("li");
+				var span1=document.createElement("span");
+				var txtput=document.createTextNode(txt1);
+				span1.appendChild(txtput);
+				li.appendChild(span1);
+				box.appendChild(li);
+				txt.value="";
+			}
+			
+			/*var work2=gid("work2");
+			var table=document.createElement("table");
+			var tr=document.createElement("tr");
+			
+			for(var x=0;x<5;x++){
+				var td=document.createElement("td");
+				var btn=document.createElement("input");
+				btn.setAttribute("type","button");
+				btn.setAttribute("value"," 单元格");
+				btn.setAttribute("class","btn4");
+				btn.appendChild(txt);
+				td.appendChild(btn);
+				tr.appendChild(td);
+			}table.appendChild(tr);
+			work2.appendChild(table);
+			var btn4=document.getElementsByClassName("btn4");
+				for(var i=0;i<btn4.length;i++){
+					btn4[i].onclick=function(){
+				this.type="text";
+			}
+				btn4[i].onblur=function(){
+					this.type="button";
+				}
+			}
+			*/
+			
+			
+		</script>
+		
+		
+		
+		
+	</body>
+</html>
+
+
+
+
+
+

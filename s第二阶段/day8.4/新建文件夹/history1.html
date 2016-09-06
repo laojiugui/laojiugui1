@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>history对象</title>  
+<style>
+
+</style>
+</head>
+<body>
+	<div>我是第一页</div>
+	<a href="history2.html">下一页</a>
+	<button id="btn">前进</button>
+	<button id="btn1">刷新</button>
+<script>
+	window.onload=function(){
+		var tiaozhuan1=document.getElementById("btn");
+		tiaozhuan1.onclick=function(){
+			//history.forward();
+			history.go(2);
+		}
+		var reflash=document.getElementById("btn1");
+		reflash.onclick=function(){
+			//history.forward();
+			history.go(0);
+		}
+		
+			
+	}
+
+	
+	
+</script>
+</body>
+</html>

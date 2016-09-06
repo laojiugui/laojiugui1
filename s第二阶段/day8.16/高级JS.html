@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>运动</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+
+        }
+        #box{
+            width:50px;
+            height:50px;
+            position:absolute;
+            left:10px;
+            top:50px;
+            background:red;
+
+        }
+
+
+    </style>
+</head>
+<body>
+<input type="button" value="开始跑" id="btn">
+<div id="box"></div>
+<div id="box1"></div>
+<script>
+    var oBox=$("box"),
+        oBox1=$("box1"),
+         oBtn=$("btn");
+    oBtn.onclick=function(){
+        clearInterval(oTimer);
+             var sPeed=5,
+                  oTimer=null;
+        oTimer=setInterval(function() {
+            if (oBox.offsetLeft+ sPeed >= 1000) {
+                oBox.offsetLeft = "1000px";
+                sPeed *= -1;
+            } else if (oBox.offsetLeft + sPeed < 0) {
+                oBox.offsetLeft = 0;
+                sPeed *= -1;
+            } else {
+
+            oBox.style.left = oBox.offsetLeft + sPeed + "px";
+
+        }
+
+        },100);
+
+    }
+
+
+
+function $(id){
+
+    return document.getElementById(id)
+
+}
+
+
+</script>
+
+</body>
+</html>

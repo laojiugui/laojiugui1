@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+
+<style>
+#box4{width:300px;height:300px;border:1px solid #666}
+span{display:inline-block;width:20px;height:20px;}
+</style>
+</head>
+
+<body>
+<div id="box4"></div>
+<input type="text" value="" id="txt">
+<input type="button" value="输入" id="btn4"><br><br>
+
+
+
+<script>
+window.onload=function(){
+
+	//色块文字
+	var box4=document.getElementById("box4");
+	var btn4=document.getElementById("btn4");
+	var txt=document.getElementById("txt");
+	
+	btn4.onclick=function(){
+		var txt1=txt.value;
+		for(var t=0;t<txt1.length;t++){
+			box4.innerHTML+="<span>"+txt1[t]+"</span>"
+			var span=document.getElementsByTagName("span")
+			for(var t1=0;t1<span.length;t1++){
+				if(t1%10==0||t1%10==5){
+					span[t1].style.background="yellow"
+				}
+				if(t1%10==1||t1%10==6){
+					span[t1].style.background="blue"
+				}
+				if(t1%10==2||t1%10==7){
+					span[t1].style.background="tan"
+				}
+				if(t1%10==3||t1%10==8){
+					span[t1].style.background="orange"
+				}
+				if(t1%10==4||t1%10==9){
+					span[t1].style.background="pink"
+				}
+			}
+		}
+				
+		txt.value=""
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+</script>
+
+</body>
+</html>

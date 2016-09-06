@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<script src=""></script>
+
+<style type="text/css">
+
+</style>
+</head>
+<body>
+
+<script>
+
+var y=prompt('请输入年份');
+if((y%4==0&&y%100!=0)||(y%400==0)){
+	alert(y+'年是闰年');
+}else{
+	alert(y+'年非闰年');
+}
+
+
+var a=prompt('请输入数字');
+var b=parseInt(a);
+var c=parseFloat(a);
+if(b==c){
+	if(a>0){
+		alert(a+'是整数'+'并且大于0');
+	}else if(a==0){
+		alert(a+'是整数并且等于0');
+	}else{
+		alert(a+'是整数并且小于0');
+	}
+}else{
+	alert(a+'不是整数');
+}
+
+
+
+
+var d=Number(prompt('请输入一个整数'));
+if(d%3==0){
+	alert(d+'是3的倍数');
+}else{
+	alert(d+'不是3的倍数');
+}
+
+
+
+var height=Number(prompt('请输入身高(cm)'));
+var weight=2*Number(prompt('请输入体重(kg)'));
+var sweight=(height-108)*2;
+if(weight==sweight){
+	alert('身材完美!');
+}else if(weight<sweight-10){
+	alert('有点瘦哦，多吃点！');
+}else if(weight>sweight+10){
+	alert('有点胖哦，注意饮食！');
+}else{
+	alert('身材不错哦');
+}
+
+
+
+var f=Number(prompt('请输入你的分数'));
+
+if(f>100||f<0){
+	alert('分数输入错误，请重新输入');
+}else{
+	if(f>90){
+		alert('A级');
+	}else if(f>=80){
+		alert('B级');
+	}else if(f>=70){
+		alert('C级');
+	}else if(f>=60){
+		alert('D级');
+	}else{
+		alert('抱歉，留级');
+	}
+}
+
+
+
+
+var m=Number(prompt('请输入2016年某一月份'));
+switch(m){
+	case 1:
+	case 3:
+	case 5:
+	case 7:
+	case 8:
+	case 10:
+	case 12:alert('2016年'+m+'月有31天');break;
+	case 4:
+	case 6:
+	case 9:
+	case 11:alert('2016年'+m+'月有30天');break;
+	case 2:alert('2016年'+m+'月有29天');break;
+	default:alert('月份输入错误，重新输入');break;
+}
+
+
+
+var num=Number(prompt('请输入一个五位数'));
+var w=parseInt(num/10000);
+var q=parseInt((num-w*10000)/1000);
+var b=parseInt((num-w*10000-q*1000)/100);
+var s=parseInt((num-w*10000-q*1000-b*100)/10);
+var g=parseInt(num-w*10000-q*1000-b*100-s*10);
+
+alert('个位:'+g+'，十位：'+s+'，百位：'+b+'，千位：'+q+'，万位：'+w);
+
+
+
+
+var num1=Number(prompt('请输入数1'));
+var num2=Number(prompt('请输入数2'));
+var num3=Number(prompt('请输入数3'));
+if(num1>num2){
+	if(num1>num3){
+		alert('最大值为'+num1);
+	}else{
+		alert('最大值为'+num2);
+	}
+}else{
+	if(num2>num3){
+		alert('最大值为'+num2);
+	}else{
+		alert('最大值为'+num3);
+	}
+}
+
+
+
+
+var y=1000;
+var i=1;
+while(y<=2000){
+
+	if((y%4==0&&y%100!=0)||(y%400==0)){
+	
+		document.write(y+' ');
+		
+		if(i%4==0){
+			document.write('<br>');
+		}
+		i++;		
+	}
+	y++;
+}
+
+
+
+
+
+</script>
+
+</body>
+</html>

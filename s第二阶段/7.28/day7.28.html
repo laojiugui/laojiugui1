@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+table{border-collapse:collapse;border:1px solid red;width:100%}
+td{border:1px solid red;padding:10px;margin:10px;}
+</style>
+</head>
+
+<body>
+
+<input id=str type="text" value="" />行+
+<input id=str1 type="text" value="" />列
+<input type="button" value="生成" onclick="table(hang,lie)"/>
+
+<script>
+
+	
+var hang=document.getElementById("str")
+var lie=document.getElementById("str1")
+//console.log(hang)
+function table(h,l){
+	
+	
+	//var row=row||8
+	var	row=Number(h.value);
+	//var col=col||8
+	var	col=Number(l.value);
+	document.write("<table>")
+	for(var t=1;t<=row;t++){
+		document.write("<tr>")
+		for(var a=1;a<=col;a++){			
+			document.write("<td>"+"哈哈哈"+"</td>")
+		}	
+		document.write("</tr>")
+	}
+	document.write("</table>")
+	//return str;
+
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+</script>
+
+</body>
+</html>

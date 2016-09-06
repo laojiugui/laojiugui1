@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+span{margin:5px; background:red; display:inline-block;height:40px;width:100px;line-height:40px; text-align:center;color:#fff}
+span:hover{background:#9C9}
+h1{text-align:center;}
+
+</style>
+</head>
+
+<body>
+<div id="box"><h1>九九乘法表</h1></div>
+<script>
+
+	var oBox=document.getElementById("box");
+	console.log(oBox);
+	
+	//alert(oBox.innerHTML)
+	for (var i=1;i<=9;i++){
+		for(var j=1;j<=i;j++)
+	oBox.innerHTML+="<span>"+	
+			i +"&times;" +j +"=" +(i*j) +"&nbsp;"
+			+"</span>";
+	oBox.innerHTML+="<br>"
+	}
+	for (var i=8;i>=1;i--){
+		for(var j=1;j<=i;j++)
+	oBox.innerHTML+="<span>"+	
+			i +"&times;" +j +"=" +(i*j) +"&nbsp;"
+			+"</span>";
+	oBox.innerHTML+="<br>"
+	}
+
+	var i=1;
+	while(i<=40){
+		document.write("*")
+		if(i%10==0){
+			document.write("<br>")
+		}i++;
+	}
+
+
+
+	for(var i=1;i<=10;i++){
+		for(var j=1;j<=10;j++){
+		document.write("*")
+		}
+		document.write("<br>")
+	}
+
+
+
+
+	var i=1;
+	while(i<=7){
+		var j=1;
+		while(j<=i){
+			document.write("*");
+		j++;}//列
+		document.write("<br>");
+		i++;//行
+	
+	}
+
+	for(var i=1;i<=9;i++){
+		for(var j=1;j<=i;j++){
+			document.write("*");
+		}
+			document.write("<br>")
+	}
+
+
+
+	var i=4;
+	while(i>=1){
+		var j=1;
+		while(j<=i){
+			document.write("*");
+			j++;
+		}
+		document.write("<br>")
+		i--;
+	}
+
+	for(var i=9;i>=1;i--){
+		for(var j=1;j<=i;j++){
+		document.write("*")
+		}
+		document.write("<br>")
+	}
+
+	for(var i=1;i<=35;i++){
+		if(i*2+4*(35-i)==94){
+			document.write(i+"只鸡<br>")
+			document.write(35-i+"只兔子")
+		}
+	}
+	
+	for (var i=1;i<35;i++){
+		for(var j=1;j<35;j++){
+			if(i+j==35&&(i*2+j*4==94)){
+				document.write(i+"只鸡"+j+"只兔")
+			}
+		}
+	}
+
+
+
+
+	for(var i=1;i<=9;i++){
+		for(var j=1;j<=i;j++){	
+			document.write(i+"&times;"+j+"=" +(i*j)+" ")
+		}
+		document.write("<br>")
+	}
+	
+
+	
+	
+	
+</script>
+
+</body>
+</html>

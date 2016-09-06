@@ -1,0 +1,456 @@
+<!doctype html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>day3</title>
+
+<style type="text/css">
+
+span{margin:10px;padding:10px;background:yellow;display:inline-block;}
+
+</style>
+</head>
+
+<body>
+
+<!--
+	<div id="box"></div>
+	
+	<script>
+	var oBox=document.getElementById("box");
+	/*
+		var i =1;
+		while(i<=10){
+			document.write(i+"我在这里啊<br/>");//i+是每次都加1，体现外面的数字;
+			i++;//每次都是递增1;
+		}
+		
+//打印出1-100的数  *
+		var i = 1;
+		while(i<=100){
+			document.write(i+"<br/>")
+			i++;
+		}
+	*/
+	
+	/*
+		var i = 1;
+		var sum =0;
+		while(i<=100){
+			sum+=i;
+			i++
+		}
+		alert(sum);
+		
+//100以内偶数之和	
+		var i = 2;
+		var sum = 0;
+		while(i<=100){
+			
+			sum+=i;//sum=sum+i
+			i+=2;
+			console.log(i);
+		}
+		console.log(sum);//alert(sum);
+	*/	
+	 /*
+//100以内的奇数之和
+		var i = 1;
+		var sum =0;
+		while(i<=100){
+			
+			sum+=i;
+			i+=2;
+		}
+		alert(sum);
+		*/
+//打印出1000-2000年的闰年;四个一行排列;
+
+	/*	
+		var i = 1000;
+		var count = 0;
+		while(i<2000){
+			if((i%4==0&&i%100!=0)||(i%400==0)){
+			
+				document.write(i+" ");
+				count++;
+					if(count%4==0){
+					document.write("<br />")
+				}
+			}		
+			
+			i++		
+		}
+		
+		
+		
+		var num1 = Number(prompt("请输入第一个数字"));
+		var num2 = Number(prompt("请输入第二个数字"));
+		var num3 = Number(prompt("请输入第三个数字"));
+		var max =num1;
+		
+		if(num2>num1){
+			max=num2
+		}
+		if(num3>num2){
+			max=num3
+		}
+		alert("最大的数字"+max);
+	*/
+	/*
+//练习1000到2000以内的所有闰年;并且4个为1行		
+		var year = 1000;
+		var count = 0;//每个闰年出现的顺序;比如第一个闰年是1，遇到下一个闰年就是2;依次类推...
+		while(year<2000){
+			if((year%4==0&&year%100!=0)||year%400==0){
+				document.write(year+" ");//把1000到2000里所有的闰年都打印出来了,year+" "可以让打印出来的每个有间距;
+				count++
+				if(count%4==0){
+					document.write("<br />")
+				}
+			}	
+		year++  //不能省掉，省去了会变成死循环;
+		
+		}
+	*/
+
+	/*
+		var i = 1;		
+		while(i<=4){	
+			document.write("**********<br />")
+			i++
+		}
+	
+	*/	
+	/*
+	//每一行10个星星，一共有4行;
+		var i = 1,j =1;
+		
+		while(i<=4){    		//外层控制行数
+			var j =1;
+			
+			while(j<10){		//内层控制每行的个数
+				document.write("*");
+				j++;			
+			}
+			
+			document.write("<br />")
+		
+			i++;
+		}
+	
+	*/
+	/*
+	//每层星星的数不一样	
+		var i = 1,j =1;
+		
+		while(i<=4){    		//外层控制行数
+			var j =1;
+			while(j<=i){		//内层控制每行的个数
+				document.write("*");
+				j++;			
+			}
+			
+			document.write("<br />")
+			i++;
+		}
+	*/
+	
+	/*
+	
+//用for循环写上面的两个星星的例子
+		for(var i =1;i<=4;i++){			//外层控制行数
+			document.write("**********<br />")
+		}
+		
+		for(var i=1;i<=4;i++){		 //内层控制每行的个数
+			for(var j=1;j<=i;j++){
+			
+			document.write("*")
+			}			
+			document.write("<br />")
+		}
+	*/
+	/*
+
+//鸡和兔子同笼，头35，腿94；
+		
+		for(var c=1;c<35;c++){
+			for(var r=1;r<35;r++){
+				if((2*c+4*r==94)&&(c+r==35)){
+				document.write("鸡一共有"+c+"只<br />")
+				document.write("兔子一共有"+r+"只<br />")
+				}		
+			}
+		}
+		
+	*/
+	/*
+	
+		for(var i=1;i<=9;i++){
+			for(var t=1;t<=i;t++){
+				document.write(i+"&times"+t+"="+t*i+"&nbsp")	
+			}
+		
+		document.write("<br />");
+		}
+	*/
+	/*
+	
+	for(var i=1;i<=9;i++){
+			for(var t=1;t<=i;t++){
+				oBox.innerHTML+="<span>"+i+"&times;"+t+"="+t*i+"</span>"//innerHTML和box联系
+			}
+		
+		oBox.innerHTML+="<br />"
+		}
+	 
+     var cound = 0;
+			var a = 1;
+			for(var i =1; i<= 10; i++){
+				a = a * i;
+				cound =cound +a;
+			}
+		alert(cound)
+		
+		
+		var k=1;
+		 for(a=1;a<=10;a++){
+			k*=a;
+		 }
+		document.write(k);
+	*/
+	
+	</script>
+	
+	
+	
+	<script>
+	var oBox=document.getElementById("box");
+	/*
+		var i =1;
+		while(i<=10){
+			document.write(i+"我在这里啊<br/>");//i+是每次都加1，体现外面的数字;
+			i++;//每次都是递增1;
+		}
+		
+//打印出1-100的数  *
+		var i = 1;
+		while(i<=100){
+			document.write(i+"<br/>")
+			i++;
+		}
+	*/
+	
+	/*
+		var i = 1;
+		var sum =0;
+		while(i<=100){
+			sum+=i;
+			i++
+		}
+		alert(sum);
+		
+//100以内偶数之和	
+		var i = 2;
+		var sum = 0;
+		while(i<=100){
+			
+			sum+=i;//sum=sum+i
+			i+=2;
+			console.log(i);
+		}
+		console.log(sum);//alert(sum);
+	*/	
+	 /*
+//100以内的奇数之和
+		var i = 1;
+		var sum =0;
+		while(i<=100){
+			
+			sum+=i;
+			i+=2;
+		}
+		alert(sum);
+		*/
+//打印出1000-2000年的闰年;四个一行排列;
+
+	/*	
+		var i = 1000;
+		var count = 0;
+		while(i<2000){
+			if((i%4==0&&i%100!=0)||(i%400==0)){
+			
+				document.write(i+" ");
+				count++;
+					if(count%4==0){
+					document.write("<br />")
+				}
+			}		
+			
+			i++		
+		}
+		
+		
+		
+		var num1 = Number(prompt("请输入第一个数字"));
+		var num2 = Number(prompt("请输入第二个数字"));
+		var num3 = Number(prompt("请输入第三个数字"));
+		var max =num1;
+		
+		if(num2>num1){
+			max=num2
+		}
+		if(num3>num2){
+			max=num3
+		}
+		alert("最大的数字"+max);
+	*/
+	/*
+//练习1000到2000以内的所有闰年;并且4个为1行		
+		var year = 1000;
+		var count = 0;//每个闰年出现的顺序;比如第一个闰年是1，遇到下一个闰年就是2;依次类推...
+		while(year<2000){
+			if((year%4==0&&year%100!=0)||year%400==0){
+				document.write(year+" ");//把1000到2000里所有的闰年都打印出来了,year+" "可以让打印出来的每个有间距;
+				count++
+				if(count%4==0){
+					document.write("<br />")
+				}
+			}	
+		year++  //不能省掉，省去了会变成死循环;
+		
+		}
+	*/
+
+	/*
+		var i = 1;		
+		while(i<=4){	
+			document.write("**********<br />")
+			i++
+		}
+	
+	*/	
+	/*
+	//每一行10个星星，一共有4行;
+		var i = 1,j =1;
+		
+		while(i<=4){    		//外层控制行数
+			var j =1;
+			
+			while(j<10){		//内层控制每行的个数
+				document.write("*");
+				j++;			
+			}
+			
+			document.write("<br />")
+		
+			i++;
+		}
+	
+	*/
+	/*
+	//每层星星的数不一样	
+		var i = 1,j =1;
+		
+		while(i<=4){    		//外层控制行数
+			var j =1;
+			while(j<=i){		//内层控制每行的个数
+				document.write("*");
+				j++;			
+			}
+			
+			document.write("<br />")
+			i++;
+		}
+	*/
+	
+	/*
+	
+//用for循环写上面的两个星星的例子
+		for(var i =1;i<=4;i++){			//外层控制行数
+			document.write("**********<br />")
+		}
+		
+		for(var i=1;i<=4;i++){		 //内层控制每行的个数
+			for(var j=1;j<=i;j++){
+			
+			document.write("*")
+			}			
+			document.write("<br />")
+		}
+	*/
+	/*
+
+//鸡和兔子同笼，头35，腿94；
+		
+		for(var c=1;c<35;c++){
+			for(var r=1;r<35;r++){
+				if((2*c+4*r==94)&&(c+r==35)){
+				document.write("鸡一共有"+c+"只<br />")
+				document.write("兔子一共有"+r+"只<br />")
+				}		
+			}
+		}
+		
+	*/
+	/*
+	
+		for(var i=1;i<=9;i++){
+			for(var t=1;t<=i;t++){
+				document.write(i+"&times"+t+"="+t*i+"&nbsp")	
+			}
+		
+		document.write("<br />");
+		}
+	*/
+	/*
+	
+	for(var i=1;i<=9;i++){
+			for(var t=1;t<=i;t++){
+				oBox.innerHTML+="<span>"+i+"&times;"+t+"="+t*i+"</span>"//innerHTML和box联系
+			}
+		
+		oBox.innerHTML+="<br />"
+		}
+	 
+     var cound = 0;
+			var a = 1;
+			for(var i =1; i<= 10; i++){
+				a = a * i;
+				cound =cound +a;
+			}
+		alert(cound)
+		
+		
+		var k=1;
+		 for(a=1;a<=10;a++){
+			k*=a;
+		 }
+		document.write(k);
+	*/
+	
+
+	
+	</script>
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,800 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>day01作业</title>
+</head>
+
+<body>
+
+<!--菱形作业-->
+
+	<script>
+		document.write("&nbsp&nbsp&nbsp&nbsp*<br />");
+		document.write("&nbsp&nbsp***<br />");
+		document.write("&nbsp*****<br />");
+		document.write("*******<br />");
+		document.write("&nbsp*****<br />");
+		document.write("&nbsp&nbsp***<br />");
+		document.write("&nbsp&nbsp&nbsp&nbsp*<br />");
+	</script>
+
+<!--温度-->
+	<script>
+		var a = 80;
+		var b = 5/9*(a-32);
+		alert("华氏温度:"+80);
+		alert("摄氏度:"+parseInt(b));
+	</script>
+	<br />
+<!--5个div-->
+
+	<script>
+		var a = 8;
+		var b = 2;
+		
+
+		document.write("<div style='color:green;'>a+b=<span style='color:red;font-size:18px;font-weight:900;'>10</span></div>");
+		
+		document.write("<div style='color:green;'>a-b=<span style='color:red;font-size:18px;font-weight:900;'>6</span></div>");
+
+		document.write("<div style='color:green;'>a*b=<p style='display:inline;color:red;font-size:18px;font-weight:900;'>16</p></div>");
+
+		document.write("<div style='color:green;'>a/b=<p style='display:inline;color:red;font-size:18px;font-weight:900;'>4</p></div>");
+		
+		document.write("<div style='color:green;'>a%b=<p style='display:inline;color:red;font-size:18px;font-weight:900;'>0</p></div>");
+	</script>
+
+<!--上课练习-->
+	<script>
+//第一遍
+/*
+	//关系运算符（比较运算符）> < >= == === != !==
+		var num1 = 1;
+		var num2 = 2;
+		//alert(num1>num2);//结果：false;
+		//alert(num1<num2);//结果：true;
+        var num3 = 2;
+		//alert(num3!==num2);//===绝对等于，首先考虑数据类型，其次是结果
+		//alert(num2!=num3);//==代表比较或者判断 忽略数据类型 只比较结果；
+							//= 一个等号是赋值
+//赋值运算符 =;+=;-=;*=;/=;%=;
+
+		var a = 2;
+		a+=6//a=a+6;
+		alert(a);
+
+		var a = 30;
+		var b = 40;
+		var c = 2;
+		var d = 2;
+		a+=b;
+		a+=c;
+		a/=d;
+		a-=b;
+		alert(a);
+		
+//字符串的应用
+		var mz ="习大大";
+		var age =50;
+		document.write("中华人民共和国主席"+mz+",年龄"+age)
+		
+		var country = "中国";
+		var mianji ="960万平方公里";
+		document.write(country+"的面积是"+mianji);
+
+		1、要了解javaScript的发展历史
+		2、javaScript 的引入方式;引入(标签中间不能写代码);嵌入 可以在head里面写，也可以在body里面写;
+		3、注释 单行//  多行
+		4、声明变量并且要赋值;
+		5、document.write可以解析HTML的代码
+		6、alert是弹窗
+		7、数据类型：基本数据类型（数字型；布尔型；字符串型）
+					  特殊类型：undefined；null
+		8、关键字 typeof 检测数据类型
+		9、运算符
+			算术运算符：+ — * / 
+			关系运算符> < >= <= == === != !==;
+			赋值运算符 = += -= *= /= %= 
+
+		var num1 = "123a";
+		var num2 = 2;
+		alert(num1-num2);//NaN not a number;
+        var num3 = "12";
+		var num4 = "24";
+		var result=num4/num3;
+		alert(result);
+		//Number()把非数字的数据类型转换为数字
+		//把字符串转化为数字
+		var str ="123";
+		alert(Number(str));
+		var bool1 = false;//结果是0
+		alert(Number(bool1));
+		var bool2 =true;
+		alert(Number(bool2));//结果是1
+
+		var c;
+         alert(Number(c));//Nan
+		var nu = null;//空占位符
+		alert(Number(nu));//0
+
+		var aa ="123.33er23";
+		alert(parseInt(aa))//123
+		alert(parseFloat(aa))//123.33
+		
+	//算术运算符 + - * / %
+		var num1 = 12;
+		var num2 = 13;
+		alert(num1-mum2);
+		var a = "12";
+        var b = "15"
+		alert(a+b)//1215
+      //加号 可以字符串拼接，可以求和
+		var num3 = 24;
+		var num4 = 2;
+		alert(num3*num4);
+
+		var num5 = 24;
+		var num6 = 2;
+		alert(num5*num6);
+	
+		var num7 = 24;
+		var num8 = 2;
+		alert(num7/num8);
+		alert(num7%num8);
+		
+		var aa=12;bb=13;cc=14;dd=15;//同时声明多个变量并且赋值
+		var m,n,,x,y;   同时声明多个变量 分别赋值
+        m=1;
+		n=2;
+		x="a";
+        y="b";
+//上午练习
+
+	<script src="index.js"></script>
+	<script>
+	//js代码
+	//引入js不能在其标签对中间写js代码
+		//document.write("在script标签中不能嵌套script标签<br>");
+	</script>
+
+
+	<script>
+		//  单行注释
+		//多行注释 （块注释）  注释的内容 
+
+		document.write("可以放到head，也可以放到body<h1>标题一</h1>");
+		document.write("<div style=\"width:200px;height:300px;background:red;border-radius:50%;\">hghghghh</div>");
+
+		document.write('<div style=\'width:200px;height:300px;background:green;border-radius:50%;\'>hghghghh</div>');
+		//单引号 双引号的嵌套  
+		//声明变量   创建变量
+		//变量 ：可以用来存储数据的一个容器  可以用来保存任何数据类型
+		//关键字  var
+		//声明变量  变量赋值=
+		//var a=1; //声明变量  并且赋值  等号左边叫变量名   等号右边变量的值
+		//var str="我是字符串"; 字符串需要在英文状态下加引号或者单双引号都可以  
+		//变量的命名规则    可以是字母  下划线   $符号开头;有大小写之分 
+		//alert(str);
+		
+		//var $num1=23;
+		
+		//var $num1="符合符合";   //变量的覆盖  不要起一样的变量名
+		//var 9="字符串";
+		//alert($num1);
+		//typeof  用来检测数据类型
+		//数据类型分为基本数据类型和引用数据类型
+		//数据类型    1.number  2.string  3.boolean   （基本数据类型）	
+		//特殊类型   1.undefined      2.null	
+		//alert(typeof a);  //number  数字
+		//alert(typeof $num1);   //string  字符串	
+	    //boolean  布尔型  布尔型只有两个值（true  false）
+*/	
+
+//第二遍
+/*
+	//关系运算符（比较运算符）> < >= == === != !==
+		var num1 = 1;
+		var num2 = 2;
+		//alert(num1>num2);//结果：false;
+		//alert(num1<num2);//结果：true;
+        var num3 = 2;
+		//alert(num3!==num2);//===绝对等于，首先考虑数据类型，其次是结果
+		//alert(num2!=num3);//==代表比较或者判断 忽略数据类型 只比较结果；
+							//= 一个等号是赋值
+//赋值运算符 =;+=;-=;*=;/=;%=;
+
+		var a = 2;
+		a+=6//a=a+6;
+		alert(a);
+
+		var a = 30;
+		var b = 40;
+		var c = 2;
+		var d = 2;
+		a+=b;
+		a+=c;
+		a/=d;
+		a-=b;
+		alert(a);
+		
+//字符串的应用
+		var mz ="习大大";
+		var age =50;
+		document.write("中华人民共和国主席"+mz+",年龄"+age)
+		
+		var country = "中国";
+		var mianji ="960万平方公里";
+		document.write(country+"的面积是"+mianji);
+
+		1、要了解javaScript的发展历史
+		2、javaScript 的引入方式;引入(标签中间不能写代码);嵌入 可以在head里面写，也可以在body里面写;
+		3、注释 单行//  多行
+		4、声明变量并且要赋值;
+		5、document.write可以解析HTML的代码
+		6、alert是弹窗
+		7、数据类型：基本数据类型（数字型；布尔型；字符串型）
+					  特殊类型：undefined；null
+		8、关键字 typeof 检测数据类型
+		9、运算符
+			算术运算符：+ — * / 
+			关系运算符> < >= <= == === != !==;
+			赋值运算符 = += -= *= /= %= 
+
+		var num1 = "123a";
+		var num2 = 2;
+		alert(num1-num2);//NaN not a number;
+        var num3 = "12";
+		var num4 = "24";
+		var result=num4/num3;
+		alert(result);
+		//Number()把非数字的数据类型转换为数字
+		//把字符串转化为数字
+		var str ="123";
+		alert(Number(str));
+		var bool1 = false;//结果是0
+		alert(Number(bool1));
+		var bool2 =true;
+		alert(Number(bool2));//结果是1
+
+		var c;
+         alert(Number(c));//Nan
+		var nu = null;//空占位符
+		alert(Number(nu));//0
+
+		var aa ="123.33er23";
+		alert(parseInt(aa))//123
+		alert(parseFloat(aa))//123.33
+		
+	//算术运算符 + - * / %
+		var num1 = 12;
+		var num2 = 13;
+		alert(num1-mum2);
+		var a = "12";
+        var b = "15"
+		alert(a+b)//1215
+      //加号 可以字符串拼接，可以求和
+		var num3 = 24;
+		var num4 = 2;
+		alert(num3*num4);
+
+		var num5 = 24;
+		var num6 = 2;
+		alert(num5*num6);
+	
+		var num7 = 24;
+		var num8 = 2;
+		alert(num7/num8);
+		alert(num7%num8);
+		
+		var aa=12;bb=13;cc=14;dd=15;//同时声明多个变量并且赋值
+		var m,n,,x,y;   同时声明多个变量 分别赋值
+        m=1;
+		n=2;
+		x="a";
+        y="b";
+//上午练习
+
+	<script src="index.js"></script>
+	<script>
+	//js代码
+	//引入js不能在其标签对中间写js代码
+		//document.write("在script标签中不能嵌套script标签<br>");
+	</script>
+
+
+	<script>
+		//  单行注释
+		//多行注释 （块注释）  注释的内容 
+
+		document.write("可以放到head，也可以放到body<h1>标题一</h1>");
+		document.write("<div style=\"width:200px;height:300px;background:red;border-radius:50%;\">hghghghh</div>");
+
+		document.write('<div style=\'width:200px;height:300px;background:green;border-radius:50%;\'>hghghghh</div>');
+		//单引号 双引号的嵌套  
+		//声明变量   创建变量
+		//变量 ：可以用来存储数据的一个容器  可以用来保存任何数据类型
+		//关键字  var
+		//声明变量  变量赋值=
+		//var a=1; //声明变量  并且赋值  等号左边叫变量名   等号右边变量的值
+		//var str="我是字符串"; 字符串需要在英文状态下加引号或者单双引号都可以  
+		//变量的命名规则    可以是字母  下划线   $符号开头;有大小写之分 
+		//alert(str);
+		
+		//var $num1=23;
+		
+		//var $num1="符合符合";   //变量的覆盖  不要起一样的变量名
+		//var 9="字符串";
+		//alert($num1);
+		//typeof  用来检测数据类型
+		//数据类型分为基本数据类型和引用数据类型
+		//数据类型    1.number  2.string  3.boolean   （基本数据类型）	
+		//特殊类型   1.undefined      2.null	
+		//alert(typeof a);  //number  数字
+		//alert(typeof $num1);   //string  字符串	
+	    //boolean  布尔型  布尔型只有两个值（true  false）
+*/	
+
+//第三遍
+/*
+	//关系运算符（比较运算符）> < >= == === != !==
+		var num1 = 1;
+		var num2 = 2;
+		//alert(num1>num2);//结果：false;
+		//alert(num1<num2);//结果：true;
+        var num3 = 2;
+		//alert(num3!==num2);//===绝对等于，首先考虑数据类型，其次是结果
+		//alert(num2!=num3);//==代表比较或者判断 忽略数据类型 只比较结果；
+							//= 一个等号是赋值
+//赋值运算符 =;+=;-=;*=;/=;%=;
+
+		var a = 2;
+		a+=6//a=a+6;
+		alert(a);
+
+		var a = 30;
+		var b = 40;
+		var c = 2;
+		var d = 2;
+		a+=b;
+		a+=c;
+		a/=d;
+		a-=b;
+		alert(a);
+		
+//字符串的应用
+		var mz ="习大大";
+		var age =50;
+		document.write("中华人民共和国主席"+mz+",年龄"+age)
+		
+		var country = "中国";
+		var mianji ="960万平方公里";
+		document.write(country+"的面积是"+mianji);
+
+		1、要了解javaScript的发展历史
+		2、javaScript 的引入方式;引入(标签中间不能写代码);嵌入 可以在head里面写，也可以在body里面写;
+		3、注释 单行//  多行
+		4、声明变量并且要赋值;
+		5、document.write可以解析HTML的代码
+		6、alert是弹窗
+		7、数据类型：基本数据类型（数字型；布尔型；字符串型）
+					  特殊类型：undefined；null
+		8、关键字 typeof 检测数据类型
+		9、运算符
+			算术运算符：+ — * / 
+			关系运算符> < >= <= == === != !==;
+			赋值运算符 = += -= *= /= %= 
+
+		var num1 = "123a";
+		var num2 = 2;
+		alert(num1-num2);//NaN not a number;
+        var num3 = "12";
+		var num4 = "24";
+		var result=num4/num3;
+		alert(result);
+		//Number()把非数字的数据类型转换为数字
+		//把字符串转化为数字
+		var str ="123";
+		alert(Number(str));
+		var bool1 = false;//结果是0
+		alert(Number(bool1));
+		var bool2 =true;
+		alert(Number(bool2));//结果是1
+
+		var c;
+         alert(Number(c));//Nan
+		var nu = null;//空占位符
+		alert(Number(nu));//0
+
+		var aa ="123.33er23";
+		alert(parseInt(aa))//123
+		alert(parseFloat(aa))//123.33
+		
+	//算术运算符 + - * / %
+		var num1 = 12;
+		var num2 = 13;
+		alert(num1-mum2);
+		var a = "12";
+        var b = "15"
+		alert(a+b)//1215
+      //加号 可以字符串拼接，可以求和
+		var num3 = 24;
+		var num4 = 2;
+		alert(num3*num4);
+
+		var num5 = 24;
+		var num6 = 2;
+		alert(num5*num6);
+	
+		var num7 = 24;
+		var num8 = 2;
+		alert(num7/num8);
+		alert(num7%num8);
+		
+		var aa=12;bb=13;cc=14;dd=15;//同时声明多个变量并且赋值
+		var m,n,,x,y;   同时声明多个变量 分别赋值
+        m=1;
+		n=2;
+		x="a";
+        y="b";
+//上午练习
+
+	<script src="index.js"></script>
+	<script>
+	//js代码
+	//引入js不能在其标签对中间写js代码
+		//document.write("在script标签中不能嵌套script标签<br>");
+	</script>
+
+
+	<script>
+		//  单行注释
+		//多行注释 （块注释）  注释的内容 
+
+		document.write("可以放到head，也可以放到body<h1>标题一</h1>");
+		document.write("<div style=\"width:200px;height:300px;background:red;border-radius:50%;\">hghghghh</div>");
+
+		document.write('<div style=\'width:200px;height:300px;background:green;border-radius:50%;\'>hghghghh</div>');
+		//单引号 双引号的嵌套  
+		//声明变量   创建变量
+		//变量 ：可以用来存储数据的一个容器  可以用来保存任何数据类型
+		//关键字  var
+		//声明变量  变量赋值=
+		//var a=1; //声明变量  并且赋值  等号左边叫变量名   等号右边变量的值
+		//var str="我是字符串"; 字符串需要在英文状态下加引号或者单双引号都可以  
+		//变量的命名规则    可以是字母  下划线   $符号开头;有大小写之分 
+		//alert(str);
+		
+		//var $num1=23;
+		
+		//var $num1="符合符合";   //变量的覆盖  不要起一样的变量名
+		//var 9="字符串";
+		//alert($num1);
+		//typeof  用来检测数据类型
+		//数据类型分为基本数据类型和引用数据类型
+		//数据类型    1.number  2.string  3.boolean   （基本数据类型）	
+		//特殊类型   1.undefined      2.null	
+		//alert(typeof a);  //number  数字
+		//alert(typeof $num1);   //string  字符串	
+	    //boolean  布尔型  布尔型只有两个值（true  false）
+*/	
+
+//第四遍
+/*
+	//关系运算符（比较运算符）> < >= == === != !==
+		var num1 = 1;
+		var num2 = 2;
+		//alert(num1>num2);//结果：false;
+		//alert(num1<num2);//结果：true;
+        var num3 = 2;
+		//alert(num3!==num2);//===绝对等于，首先考虑数据类型，其次是结果
+		//alert(num2!=num3);//==代表比较或者判断 忽略数据类型 只比较结果；
+							//= 一个等号是赋值
+//赋值运算符 =;+=;-=;*=;/=;%=;
+
+		var a = 2;
+		a+=6//a=a+6;
+		alert(a);
+
+		var a = 30;
+		var b = 40;
+		var c = 2;
+		var d = 2;
+		a+=b;
+		a+=c;
+		a/=d;
+		a-=b;
+		alert(a);
+		
+//字符串的应用
+		var mz ="习大大";
+		var age =50;
+		document.write("中华人民共和国主席"+mz+",年龄"+age)
+		
+		var country = "中国";
+		var mianji ="960万平方公里";
+		document.write(country+"的面积是"+mianji);
+
+		1、要了解javaScript的发展历史
+		2、javaScript 的引入方式;引入(标签中间不能写代码);嵌入 可以在head里面写，也可以在body里面写;
+		3、注释 单行//  多行
+		4、声明变量并且要赋值;
+		5、document.write可以解析HTML的代码
+		6、alert是弹窗
+		7、数据类型：基本数据类型（数字型；布尔型；字符串型）
+					  特殊类型：undefined；null
+		8、关键字 typeof 检测数据类型
+		9、运算符
+			算术运算符：+ — * / 
+			关系运算符> < >= <= == === != !==;
+			赋值运算符 = += -= *= /= %= 
+
+		var num1 = "123a";
+		var num2 = 2;
+		alert(num1-num2);//NaN not a number;
+        var num3 = "12";
+		var num4 = "24";
+		var result=num4/num3;
+		alert(result);
+		//Number()把非数字的数据类型转换为数字
+		//把字符串转化为数字
+		var str ="123";
+		alert(Number(str));
+		var bool1 = false;//结果是0
+		alert(Number(bool1));
+		var bool2 =true;
+		alert(Number(bool2));//结果是1
+
+		var c;
+         alert(Number(c));//Nan
+		var nu = null;//空占位符
+		alert(Number(nu));//0
+
+		var aa ="123.33er23";
+		alert(parseInt(aa))//123
+		alert(parseFloat(aa))//123.33
+		
+	//算术运算符 + - * / %
+		var num1 = 12;
+		var num2 = 13;
+		alert(num1-mum2);
+		var a = "12";
+        var b = "15"
+		alert(a+b)//1215
+      //加号 可以字符串拼接，可以求和
+		var num3 = 24;
+		var num4 = 2;
+		alert(num3*num4);
+
+		var num5 = 24;
+		var num6 = 2;
+		alert(num5*num6);
+	
+		var num7 = 24;
+		var num8 = 2;
+		alert(num7/num8);
+		alert(num7%num8);
+		
+		var aa=12;bb=13;cc=14;dd=15;//同时声明多个变量并且赋值
+		var m,n,,x,y;   同时声明多个变量 分别赋值
+        m=1;
+		n=2;
+		x="a";
+        y="b";
+//上午练习
+
+	<script src="index.js"></script>
+	<script>
+	//js代码
+	//引入js不能在其标签对中间写js代码
+	//	document.write("在script标签中不能嵌套script标签<br>");
+	</script>
+
+
+	<script>
+		//  单行注释
+		//多行注释 （块注释）  注释的内容 
+
+		document.write("可以放到head，也可以放到body<h1>标题一</h1>");
+		document.write("<div style=\"width:200px;height:300px;background:red;border-radius:50%;\">hghghghh</div>");
+
+		document.write('<div style=\'width:200px;height:300px;background:green;border-radius:50%;\'>hghghghh</div>');
+		//单引号 双引号的嵌套  
+		//声明变量   创建变量
+		//变量 ：可以用来存储数据的一个容器  可以用来保存任何数据类型
+		//关键字  var
+		//声明变量  变量赋值=
+		//var a=1; //声明变量  并且赋值  等号左边叫变量名   等号右边变量的值
+		//var str="我是字符串"; 字符串需要在英文状态下加引号或者单双引号都可以  
+		//变量的命名规则    可以是字母  下划线   $符号开头;有大小写之分 
+		//alert(str);
+		
+		//var $num1=23;
+		
+		//var $num1="符合符合";   //变量的覆盖  不要起一样的变量名
+		//var 9="字符串";
+		//alert($num1);
+		//typeof  用来检测数据类型
+		//数据类型分为基本数据类型和引用数据类型
+		//数据类型    1.number  2.string  3.boolean   （基本数据类型）	
+		//特殊类型   1.undefined      2.null	
+		//alert(typeof a);  //number  数字
+		//alert(typeof $num1);   //string  字符串	
+	    //boolean  布尔型  布尔型只有两个值（true  false）
+*/	
+
+//第五遍
+/*
+	//关系运算符（比较运算符）> < >= == === != !==
+		var num1 = 1;
+		var num2 = 2;
+		//alert(num1>num2);//结果：false;
+		//alert(num1<num2);//结果：true;
+        var num3 = 2;
+		//alert(num3!==num2);//===绝对等于，首先考虑数据类型，其次是结果
+		//alert(num2!=num3);//==代表比较或者判断 忽略数据类型 只比较结果；
+							//= 一个等号是赋值
+//赋值运算符 =;+=;-=;*=;/=;%=;
+
+		var a = 2;
+		a+=6//a=a+6;
+		alert(a);
+
+		var a = 30;
+		var b = 40;
+		var c = 2;
+		var d = 2;
+		a+=b;
+		a+=c;
+		a/=d;
+		a-=b;
+		alert(a);
+		
+//字符串的应用
+		var mz ="习大大";
+		var age =50;
+		document.write("中华人民共和国主席"+mz+",年龄"+age)
+		
+		var country = "中国";
+		var mianji ="960万平方公里";
+		document.write(country+"的面积是"+mianji);
+
+		1、要了解javaScript的发展历史
+		2、javaScript 的引入方式;引入(标签中间不能写代码);嵌入 可以在head里面写，也可以在body里面写;
+		3、注释 单行//  多行
+		4、声明变量并且要赋值;
+		5、document.write可以解析HTML的代码
+		6、alert是弹窗
+		7、数据类型：基本数据类型（数字型；布尔型；字符串型）
+					  特殊类型：undefined；null
+		8、关键字 typeof 检测数据类型
+		9、运算符
+			算术运算符：+ — * / 
+			关系运算符> < >= <= == === != !==;
+			赋值运算符 = += -= *= /= %= 
+
+		var num1 = "123a";
+		var num2 = 2;
+		alert(num1-num2);//NaN not a number;
+        var num3 = "12";
+		var num4 = "24";
+		var result=num4/num3;
+		alert(result);
+		//Number()把非数字的数据类型转换为数字
+		//把字符串转化为数字
+		var str ="123";
+		alert(Number(str));
+		var bool1 = false;//结果是0
+		alert(Number(bool1));
+		var bool2 =true;
+		alert(Number(bool2));//结果是1
+
+		var c;
+         alert(Number(c));//Nan
+		var nu = null;//空占位符
+		alert(Number(nu));//0
+
+		var aa ="123.33er23";
+		alert(parseInt(aa))//123
+		alert(parseFloat(aa))//123.33
+		
+	//算术运算符 + - * / %
+		var num1 = 12;
+		var num2 = 13;
+		alert(num1-mum2);
+		var a = "12";
+        var b = "15"
+		alert(a+b)//1215
+      //加号 可以字符串拼接，可以求和
+		var num3 = 24;
+		var num4 = 2;
+		alert(num3*num4);
+
+		var num5 = 24;
+		var num6 = 2;
+		alert(num5*num6);
+	
+		var num7 = 24;
+		var num8 = 2;
+		alert(num7/num8);
+		alert(num7%num8);
+		
+		var aa=12;bb=13;cc=14;dd=15;//同时声明多个变量并且赋值
+		var m,n,,x,y;   同时声明多个变量 分别赋值
+        m=1;
+		n=2;
+		x="a";
+        y="b";
+//上午练习
+
+	<script src="index.js"></script>
+	<script>
+	//js代码
+	//引入js不能在其标签对中间写js代码
+	//	document.write("在script标签中不能嵌套script标签<br>");
+	</script>
+
+
+	<script>
+		//  单行注释
+		//多行注释 （块注释）  注释的内容 
+
+		document.write("可以放到head，也可以放到body<h1>标题一</h1>");
+		document.write("<div style=\"width:200px;height:300px;background:red;border-radius:50%;\">hghghghh</div>");
+
+		document.write('<div style=\'width:200px;height:300px;background:green;border-radius:50%;\'>hghghghh</div>');
+		//单引号 双引号的嵌套  
+		//声明变量   创建变量
+		//变量 ：可以用来存储数据的一个容器  可以用来保存任何数据类型
+		//关键字  var
+		//声明变量  变量赋值=
+		//var a=1; //声明变量  并且赋值  等号左边叫变量名   等号右边变量的值
+		//var str="我是字符串"; 字符串需要在英文状态下加引号或者单双引号都可以  
+		//变量的命名规则    可以是字母  下划线   $符号开头;有大小写之分 
+		//alert(str);
+		
+		//var $num1=23;
+		
+		//var $num1="符合符合";   //变量的覆盖  不要起一样的变量名
+		//var 9="字符串";
+		//alert($num1);
+		//typeof  用来检测数据类型
+		//数据类型分为基本数据类型和引用数据类型
+		//数据类型    1.number  2.string  3.boolean   （基本数据类型）	
+		//特殊类型   1.undefined      2.null	
+		//alert(typeof a);  //number  数字
+		//alert(typeof $num1);   //string  字符串	
+	    //boolean  布尔型  布尔型只有两个值（true  false）
+*/	
+
+
+
+	</script>
+	
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="UTF-8"/>
+	<title>闰年</title>
+	<head>
+		<script>
+			/*var i=1;  //声明变量并且赋值  行的初始值
+			while(i<=4){  //外层控制行数
+				var j=1;  //声明变量并且赋值  列的初始值
+				while(j<=i){ //内层控制每行的个数
+					document.write("*"); //代表每次要输出的内容
+					j++; //变量自增
+				}
+				document.write("<br>");//代表每次要输出的内容
+				i++;//变量自增
+			}*/
+			
+			
+			
+			/*var i=1;
+			while(i<=10){
+				document.write(i+".我喜欢你<br>");
+				i++; //i=i+1;
+			}*/
+			
+			/*for(①声明变量并且赋值;②循环终止条件;③变量自增){
+				//④循环体  重复执行的代码
+			}*/
+			for(var i=1;i<=4;i++){
+				document.write(i+".我喜欢你<br>");
+			}
+			//分析执行过程   
+			//第一次的执行过程  ①->②（true）->④
+			//第二次执行过程   ③->②（true）->④
+			//....
+			//最后一次执行过程  ③->②（false）->循环结束
+			
+			
+			//鸡兔同笼  共35个头  94只脚   问有几只鸡  几只兔？
+			
+			
+		
+		</script>
+		<style>
+			span{
+			  padding:4px;
+			  margin:10px;
+			  background:#ff6400;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script>
+			for(var i=0;i<5;i++){
+				box.innerHTML+="<span>"+i+"</span>"
+			}
+		</script>
+	</body>
+</html>

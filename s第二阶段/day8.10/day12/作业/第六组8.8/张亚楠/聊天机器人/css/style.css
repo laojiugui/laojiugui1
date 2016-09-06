@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img { margin:0; padding:0; }
+fieldset, img { border:none; }
+img{display: block;}
+address, caption, cite, code, dfn, th, var { font-style:normal; font-weight:normal; }
+ul, ol { list-style:none; }
+body { color:#333; padding:5px 0; font:12px/20px "SimSun","宋体","Arial Narrow",HELVETICA; background:#fff;/* overflow-y:scroll;*/ overflow-x:hidden;}
+a { color:#666; text-decoration:none; }
+a:visited { color:#666; }
+a:hover, a:active, a:focus { color:#ff8400; text-decoration:underline; }
+
+#open{display:block;margin:10px auto;}
+#wrap{width:584px;height:508px;margin:50px auto;background:url(../images/background.jpg);display:none;}
+#close{float:right;width:11px;height:11px;border:0;margin:9px 10px 0 0;background:url(../images/close.jpg);}
+
+#header{height:84px;}
+#dialog{width:445px;height:287px;float:left;overflow-y:scroll;}
+#dialog li{height:16px;font-size:16px;margin:10px 0;}
+#dialog li span{float:right;border-radius:8px;background:yellowgreen;padding:2px 10px;}
+#edit{width:445px;height:106px;float:left;padding-top:30px;}
+#content{width:430px;height:66px;background:#e9edee;border:0;margin-left:5px;font-size:20px;resize:none;outline:none;text-align:left;}
+#guan{float:right;width:70px;height:24px;margin-right:4px;background:0;border:0;}
+#send{float:right;width:88px;height:24px;margin-right:2px;background:0;border:0;}
+

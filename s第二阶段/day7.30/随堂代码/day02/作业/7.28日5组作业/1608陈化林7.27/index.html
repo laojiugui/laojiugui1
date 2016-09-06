@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script src=""></script>
+<script>
+
+</script>
+</head>
+<body>
+<script>
+/*var a="男";
+var b="170cm";
+var c="60kg";
+var d=60;
+var f=true;
+var g="";*/
+//alert("性别"+a+"，身高"+b+"，体重"+c);
+//alert (typeof Number(a));
+//alert (typeof Number(b));
+//alert (typeof String(a));
+//alert (String(c));
+//alert (Boolean(b));
+//alert (Boolean(g));
+//alert (typeof undefined)
+//alert("性别"+a+"，身高"+b+"，体重"+c);
+//alert (typeof Number(a));
+//alert (typeof Number(b));
+//alert (typeof String(a));
+//alert (String(c));
+//alert (Boolean(b));
+//alert (Boolean(g));
+//alert (typeof undefined)
+/*var num=prompt("好好输入一个数")
+if(num>0){if (num<10){alert(num+"在0到10之间");
+		}else if(num>=10&&num<50){num+"在10到50之间";
+		}else if(num>=50){num+"大到天了";
+		}
+}else if(num==0){alert("他就是一个圈");
+}else if(num<0){if(num<0&&num>=-10){alert(num+"在-10到0之间");
+		}else if(num<-10&&num>-50){alert(num+"在哪？")
+		}else if(num<-50){alert("水了一地")}
+}else{alert("你就是一个勺子")}
+var num1=Number (prompt("请输入一个数，一个数，一个数"))
+var num2=Number (prompt("请输入一个数，一个数，一个数"))
+var num3=prompt("请输入一个运算符，运算符，运算符")
+if(num3=="+"){alert(num1+num2);
+}else if(num3=="-"){alert(num1-num2);
+}else if(num3=="*"){alert(num1*num2);
+}else if(num3=="/"){alert(num1/num2);
+}else if(num3=="%"){alert(num1%num2);
+}else{alert("再瞎写，挖你墙角。")}*/
+/*var day=Number(prompt("请输入1-7"))
+switch (day){case 1:alert("周一未进状态");break;
+			case 2:alert("周二掉血一半");break;
+			case 3:alert("周三苟延残喘");break;
+			case 4:alert("周四行尸走肉");break;
+			case 5:alert("周五奄奄一息");break;
+			case 6:alert("周六昏昏沉沉");break;
+			case 7:alert("周日满血复活");break;
+			default:alert("要拐杖吗？")	
+}*/
+/*var year=Number(prompt("请输入年份"))
+if(year%4==0){if(year%100==0){if(year%400==0){alert("一道：闰年");
+							 }else{alert("二道：平年");}
+			}else{alert("三道：闰年");}	
+}else{alert("四道：平年")}*/
+/*var san=Number(prompt("输入一个数"))
+if(san%3==0){document.wirte(san+alert(san+"是3的倍数"));
+}else if(san%3>0||san%3<0){alert("不是");
+}else{alert("屁！")}*/
+/*var sg=Number(prompt("请输入身高（cm）"));
+var tz=Number(prompt("请输入体重"));
+var sg=(sg-108)*2;
+if(sg-10<=tz&&sg+10>=tz){
+	alert("身材完美");
+}else if(sg<tz-10){
+	alert("偏胖");
+}else if(sg>tz+10){
+	alert("偏瘦");
+}else{
+	alert("请正常输入");
+}*/
+/*var fen=Number(prompt("输入分数（0-100）"))
+if(fen>=90&&fen<=100){
+	alert("A,你NB.")
+}else if(80<=fen&&fen<90){
+	alert("B，很不错了")
+}else if(70<=fen&&fen<80){
+	alert("C，再接再厉")	
+}else if(60<=fen&&fen<70){
+	alert("D，刚好末班车")	
+}else if(0<=fen&&fen<60){
+	alert("这就尴尬了...")
+}else{alert("直接开除")}*/
+/*var yue=Number(prompt("请好好输入月份（1-12）"));
+switch(yue){
+	case 1:
+	case 3:
+	case 5:
+	case 7:
+	case 8:
+	case 10:
+	case 12:alert(yue+"月份有31天");break;
+	case 4:
+	case 6:
+	case 9:
+	case 11:alert(yue+"月份有30天");break;
+	case 2:alert("就你能，29天")
+}*/
+/*var shu=Number(prompt("请输入一位五位数"));
+var ge=shu%10
+var shi=(shu-ge)%100/10
+var shiw=(shu-ge)%100
+var bai=(shu-ge-shiw)%1000/100
+var baiw=(shu-shiw-ge)%1000
+var qian=(shu-baiw-ge-shiw)%10000/1000
+var qianw=(shu-baiw-ge-shiw)%10000
+var wan=(shu-qianw-baiw-shiw-ge)/10000
+if(10000<=shu&&shu<=99999){alert("个位数是"+ge+"，十位数是"+shi+"，百位数是"+bai+",千位数是"+qian+"，万位数是"+wan)	
+}else{alert("输入不符合规定")}*/
+var num11=Number(prompt("第一个数"));
+var num12=Number(prompt("第二个数"));
+var num13=Number(prompt("第三个数"));
+if(num11>num12&&num11>num13){if(num12>num13){alert(num11+">"+num12+">"+num13);
+			}else if(num12<num13){alert(num11+">"+num13+">"+num12);
+			}else{alert(num11+">"+num13+"="+num12);
+			}
+	}else if(num12>num11&&num12>num13){if(num11>num13){alert(num12+">"+num11+">"+		     num13);
+			}else if(num11<num13){alert(num12+">"+num13+">"+num11);
+			}else{alert(num12+">"+num13+"="+num11);
+			}
+	}else if(num13>num11&&num13>num12){if(num12>num11){alert(num13+">"+num12+">"+     num11);
+			}else if(num12<num11){alert(num13+">"+num11+">"+num12);
+			}else{alert(num13+">"+num11+"="+num12);
+			}
+	}else if(num11==num12&&num12==num13){alert("三者相等")
+	}else{alert("输入不对劲；")}
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

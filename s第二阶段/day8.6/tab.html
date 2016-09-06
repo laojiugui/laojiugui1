@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DOM</title>  
+<style>
+	/*div{
+		width:300px;
+		heigth:300px;
+		border:10px solid red;margin:30px;
+	}
+	.yangshi{
+		width:200px;height:300px;background:red;
+	}*/
+	span{display:inline-block;padding:5px 15px;background-color:#ddd;margin:0 3px;border:1px solid #ddd;border-bottom:none;}
+	.content{padding:15px;border:1px solid #ddd;font-size:24px;background-color:#efefef;display:none;}
+	#tab .active{background:red;}
+</style>
+</head>
+<body>
+	<!--<input type="button" value="获得浏览器窗口大小" id="btn" data-css="q32" name="container">	
+	<input type="text" value="获得浏览器窗口大小"  data-css="q32" name="container">	
+	<div class="box" name="container">1</div>
+	<div class="box" >1</div>
+	<div class="box" >1</div>
+	<div class="box">1</div>-->
+	<div id="tab"><span class="active">辣条</span><span>豆腐</span><span>方便面</span><span>桂林米粉</span></div>
+	<div class="content" style="display:block">我喜欢吃辣条</div>
+	<div class="content">吃完豆腐池辣条</div>
+	<div class="content">喜欢去超市捏方便面</div>
+	<div class="content">桂林米粉哪里最正宗</div>
+	
+	
+<script>
+	window.onload=function(){
+		/*var boxs=document.getElementsByClassName("box");
+		for(var i=0;i<boxs.length;i++){
+			boxs[i].onclick=function(){
+				for(var j=0;j<boxs.length;j++){
+					boxs[j].style.backgroundColor="";
+				}
+				this.style.backgroundColor="green";
+			}
+		}*/
+		var spans=document.getElementsByTagName("span");  //按钮
+		var cons=document.getElementsByClassName("content");  //内容
+		
+		/*for(var i=0;i<spans.length;i++){
+			spans[i].a=i;  //记录下标
+			spans[i].onclick=function(){
+				for(var j=0;j<spans.length;j++){
+					spans[j].className='';
+					cons[j].style.display="none";
+				}
+				this.className="active";
+				cons[this.a].style.display="block";
+			}
+		}*/
+		
+		
+		/*for(var i=0;i<spans.length;i++){
+			spans[i].onclick=function(){ //循环的给每个span标签添加单击事件
+				for(var j=0;j<spans.length;j++){//把所有的span再循环一次
+					if(this==spans[j]){
+						spans[j].className="active";
+						cons[j].style.display="block";
+					}else{
+						spans[j].className="";
+						cons[j].style.display="none";
+					}
+				}
+			}
+		}*/
+		
+	}
+
+	
+	
+</script>
+</body>
+</html>

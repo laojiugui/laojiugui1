@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>字符串案例</title>  
+</head>
+<body>
+	<span id="code"></span><input type="button" value="换一批" id="btn"><br>
+	<input type="text" id="user" placeholder="请输入用户名"><input type="button" value="确定" id="sure">
+	
+	<h1>过滤敏感字符</h1>
+	<input type="text" id="txt">  <input type="button" value="确定" id="btn1">
+	<ul id="list"></ul>
+<script>
+	//求一个字符串中大写和小写分别出现的次数
+	/*var str="AJGUELVdheejjEJGJdddwwq";
+	var small=0;
+	var big=0;
+	for(var i=0;i<str.length;i++){
+		var ascode=str.charCodeAt(i);
+		if(ascode>=65&&ascode<=90){
+			big++;
+		}else if(ascode>=97&&ascode<=122){
+			small++;
+		}
+	}
+	console.log("小写"+small+"=====大写"+big);*/
+	
+	
+	
+	
+	//生成一个验证码   0~9  48~57   A~Z  65~90  a~z 97~122
+	/*var oCode=document.getElementById("code");
+	var oBtn=document.getElementById("btn");
+	oBtn.onclick=function(){
+		var arr=[];
+		while(arr.length<4){
+			var n=parseInt(Math.random()*75+48);
+			//alert(n);
+			if((n>=48&&n<=57)||(n>=65&&n<=90)||(n>=97&&n<=122)){
+				arr.push(String.fromCharCode(n));
+			}
+		}
+		oCode.innerHTML=arr.join("");
+	}*/
+	
+	
+	//判断用户名  长度在6~14位   必须以字母开头   是数字  字母  _的组合
+	/*var oUser=document.getElementById("user");
+	var oSure=document.getElementById("sure");
+	oSure.onclick=function(){
+		var txt=oUser.value;
+		if(txt.length<6||txt.length>14){
+			alert("长度为6~14");
+		}
+		var f=txt[0].charCodeAt();
+		if((f>=65&&f<=90)||(f>=97&&f<=122)){
+			
+		}else{
+			alert("首字母不合法");
+		}
+		for(var i=0;i<txt.length;i++){
+			var s=txt[i].charCodeAt();
+			if((s>=65&&s<=90)||(s>=97&&s<=122)||(s>=48&&s<=57)||s==95){
+				
+			}else{
+				alert("您输入的不合法，可以输入一个字母数字下划线的组合，必须以字母开头");
+				break;
+			}
+		}
+	}
+	*/
+	
+	
+	//过滤敏感字符
+	
+	var oTxt1=document.getElementById("txt");
+	var oBtn2=document.getElementById("btn1");
+	console.log(oBtn2);
+	var oLists=document.getElementById("list");
+	var mingan="你妹,你大爷,fuck";
+		mingan=mingan.split(",");
+	oBtn2.onclick=function(){
+		//alert(1)
+		var wenzi=oTxt1.value;
+		for(var i=0;i<mingan.length;i++){
+			var reg=new RegExp(mingan[i],'gi');  //g 全局    i 忽略大小写   声明了一个正则对象
+			wenzi=wenzi.replace(reg,"**");
+		}
+		oLists.innerHTML+="<li>"+wenzi+"</li>";
+	}
+	
+	
+	
+	
+	
+	//var str="加几个几架飞机";
+	
+	//alert(str.replace("飞机","feiji"))
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</script>
+</body>
+</html>

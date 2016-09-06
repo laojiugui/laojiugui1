@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8"/>
+	<title>函数</title>
+	<script src="sum1.js"></script>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script>
+		//#3.输出100以内所有除10,20,30,40,80,90以外的数的和
+		
+		//break 直接终止后边的循环    continue  跳过当前循环或者跳过本次循环
+		/*for(var i=1;i<=5;i++){
+			if(i==3){
+				continue;
+			}
+			document.write(i+" ");
+		}*/
+		/*var sum=0;
+		for(var i=1;i<=100;i++){
+			if(i==10||i==20||i==30||i==40||i==80||i==90){
+				continue;
+			}
+			sum+=i;
+		}
+		alert(sum)*/
+		//#5.求10的阶乘  10*9*8*..*1
+		
+		/*var jiecheng=1;
+		for(var i=10;i>=1;i--){
+			jiecheng*=i;
+		}
+		alert(jiecheng);*/
+		
+		//#8.求出1-1/2+1/3-1/4…..1/100的和 
+		//(1+1/3+1/5+..+1/99)-(1/2+1/4+...+1/100)
+		/*var sum=0;
+		for(var i=1;i<=100;i++){
+			if(i%2==0){
+				sum-=1/i;
+			}else{
+				sum+=1/i;
+			}
+		}
+		alert(sum)*/
+		
+		//12.小王入职时月工资10k元，每年涨工资10%，10年后小王的工资是多少？这10年小王共赚了多少钱
+		//思路： 1. 一年：var wage=10000;    var sum=wage*12;
+		
+		//       2. 第二年 ：wage+wage*0.1;   (wage+wage*0.1)*12;
+		
+		//       3. 第二年 ：(wage+wage*0.1)+(wage+wage*0.1)*0.1;   (wage+wage*0.1)*12;
+		
+		/*var wage=10000;
+		var sum=wage*12;
+		for(var i=1;i<10;i++){
+			wage+=wage*0.1;
+			sum+=wage*12;
+		}
+		//toFixed()  保存小数位数  小括号里传数字，传几位，就是保留几位小数
+		alert(wage.toFixed(3))
+		alert(sum.toFixed(3))*/
+		
+		//123
+		
+		//var gw=123%10; //alert(gw)
+		//var sw=(123%100-gw)/10;  //alert(sw)
+		//var bw=(123-gw-sw*10)/100;alert(bw)
+		
+		//水仙花数
+		/*for(i=100;i<=999;i++){
+			var gw=i%10; //alert(gw)
+			var sw=(i%100-gw)/10;  //alert(sw)
+			var bw=(i-gw-sw*10)/100;//alert(bw)
+			if(gw*gw*gw+sw*sw*sw+bw*bw*bw==i){
+				document.write(i+" ");
+			}
+		}*/
+		
+		//求从1到50的和  
+		function sum(m){
+			var sum=0;
+			for(var i=1;i<=m;i++){
+				sum+=i;
+			}
+			return sum;
+			//alert(sum);
+		}
+		var s=sum(5);	
+		document.write(s);
+		//alert()
+		//alert() 
+		//var num=prompt()
+		//return  后面可以返回 数字  字符串  布尔型   函数   对象    数组
+		//不是所有的函数都需要返回值
+		//var box=document.getElementById("box");
+		function aa(){
+			return 1;
+		}
+		//alert(typeof aa)	
+		//window.alert()
+		console.log(aa())
+		//求从1到70的和
+			/*var sum=0;
+			for(var i=1;i<=70;i++){
+				sum+=i;
+			}
+			alert(sum);*/
+		//求从1到100的和
+			/*var sum=0;
+			for(var i=1;i<=100;i++){
+				sum+=i;
+			}
+			alert(sum);*/
+		
+		</script>
+	</body>
+</html>

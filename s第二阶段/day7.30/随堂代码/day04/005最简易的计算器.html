@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+	<meta charset="UTF-8"/>
+	<title></title>
+	<head>
+		<script>
+			function cal(){
+				//这里写计算的代码
+				//给变量起名字，要见名知意，要和谐
+				var number01 = num1.value;
+				//num2代表ID为"num2"的输入框，通过.value的形式，可以取出输入框中的文本内容
+				var number02 = num2.value;
+				//从输入框中取出的文本内容，在默认情况下是string类型的，需要手动转换
+				//最后，将两个数字相加的结果，赋值给result输入框的value
+				result.value = parseInt(number01) + parseInt(number02);
+			}
+		</script>
+	</head>
+	<body>
+		<input id="num1" type="text" />
+		+ <input id="num2" type="text"/> = <input id="result" type="text" />
+		<br>
+		<!-- 这里onclick=名字，要跟代码中的function 名字保持一致 -->
+		<button onclick="cal()">计算</button>
+	</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>树形菜单</title>
+    <style>
+        ul li{
+            list-style-image: url(img1/-.gif);
+        }
+    </style>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+           $("li:has(ul)").click(function(event){     //为包含ul的li创建点击事件;
+               if(this==event.target){        //判断li是否为当前触发的目标;
+                   if($(this).children().is(":hidden")){
+                       $(this).css("list-style-image","url(img1/-.gif)");
+                   }else{
+                       $(this).css("list-style-image","url(img1/1.gif)");
+                   }
+                    $(this).children().toggle("slow");
+               }
+           });
+            $("li:not(:has(ul))").css("list-style","none");
+        });
+    </script>
+</head>
+<body>
+<ul>
+    <li class="yiji">防守打法
+        <ul>
+            <li>防守打法
+                <ul>
+                    <li>知法犯法
+                        <ul>
+                            <li>哈哈哈</li>
+                            <li>哈哈哈</li>
+                            <li>哈哈哈</li>
+                            <li>哈哈哈</li>
+                            <li>哈哈哈</li>
+                        </ul>
+                    </li>
+                    <li>知法犯法</li>
+                    <li>知法犯法</li>
+                    <li>知法犯法</li>
+                    <li>知法犯法</li>
+                </ul>
+            </li>
+            <li>范德萨发</li>
+            <li>范德萨发</li>
+        </ul>
+    </li>
+    <li class="yiji">有车一族
+        <ul>
+            <li>没油钱</li>
+            <li>没油钱</li>
+            <li>没油钱</li>
+            <li>没油钱</li>
+        </ul>
+    </li>
+    <li>工具</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DOM</title>  
+<style>
+	div{
+		width:300px;
+		heigth:300px;
+		border:10px solid red;margin:30px;
+	}
+	.yangshi{
+		width:200px;height:300px;background:red;
+	}
+</style>
+</head>
+<body>
+	<input type="button" value="获得浏览器窗口大小" id="btn" data-css="q32" name="container">	
+	<input type="text" value="获得浏览器窗口大小"  data-css="q32" name="container">	
+	<div class="box" name="container">1</div>
+	<div class="box" >1</div>
+	<div class="box" >1</div>
+	<div class="box">1</div>
+	
+	
+	
+	<div class="one">1</div>
+	
+	
+	<p class="yangshi" style="border:1px solid green;" id="test"></p>
+	
+<script>
+	window.onload=function(){
+		//DOM  Document(文档) Object(对象)  Model(模型)
+		/*function aa(){
+			return document;
+		}
+		console.log(aa())*/
+		
+		//getElementById()    getElementsByClassName()    getElementsByTagName()   //getElementsByName()
+		var test=document.getElementById("test");
+		//alert(test.style.border);
+		//console.log(window.getComputedStyle(test,null));
+		//var aa=test.currentStyle.width;
+		//alert(aa);
+		var bb=getComputedStyle(test,false).width;
+		//alert(bb)
+		function getStyle(obj,style){
+			if(obj.currentStyle){  //IE
+				return obj.currentStyle[style];
+			}else{
+				return getComputedStyle(test,false)[style];//标准浏览器
+			}
+		} 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		var btn=document.getElementById("btn");
+		console.log(btn);
+		var boxs=document.getElementsByClassName("box");
+		console.log(boxs);
+		var one=document.getElementsByClassName("one");  //arr=[div.one]  arr[0]
+		console.log(one[0]);
+		/*boxs[0].onclick=function(){
+			boxs[0].style.backgroundColor="green";
+		}
+		boxs[1].onclick=function(){
+			boxs[1].style.backgroundColor="green";
+		}
+		boxs[2].onclick=function(){
+			boxs[2].style.backgroundColor="green";
+		}*/
+		
+		/*for(var i=0;i<boxs.length;i++){
+			boxs[i].index=i; //0   1   2   3
+			boxs[i].onclick=function(){
+				alert(this.index);       //this对象  你指向谁  就代表谁
+				//alert(boxs[i].index);
+				this.style.backgroundColor="green";	
+			}
+		}*/
+		
+		for(var i=0;i<boxs.length;i++){
+			//boxs[i].index=i;
+			boxs[i].onclick=function(){
+				for(var i=0;i<boxs.length;i++){
+					if(this==boxs[i]){
+						boxs[i].style.backgroundColor="green";
+					}else{
+						boxs[i].style.backgroundColor="";
+					}
+				}
+			}
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		btn.onclick=function(){
+			//alert(this)
+			this.value="我是ID";
+		}
+		
+		one[0].onclick=function(){
+			
+			one[0].innerHTML="ONE";
+		}
+		
+		//var obj = document.getElementsByName("container");  
+		//console.log(obj)
+		//obj[0].value="123";
+		
+	}
+
+	
+	
+</script>
+</body>
+</html>

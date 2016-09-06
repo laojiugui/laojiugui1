@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件冒泡</title>
+	<style>
+		*{margin: 0;padding: 0}
+		div{
+			padding: 100px;
+		}
+	</style>
+</head>
+<body>
+	<div style="background:red;">
+		<div style="background:green;">
+			<div style="background:blue;"></div>
+		</div>
+	</div>
+	<!-- <div id="box" style="background:red;">
+		<input type="button" value="我是冒泡" id="btn">
+	</div> -->
+	
+	<script>
+	//事件冒泡   事件从子节点向上依次传递给父节点  由内向外 
+
+	//由近到远
+
+	//阻止事件冒泡  兼容
+	var divs=document.getElementsByTagName('div');
+	divs[0].onclick=function(){
+		this.style.border="10px solid #000";
+		alert(this.style.backgroundColor);
+	}
+	divs[1].onclick=function(e){
+		window.event?e.cancelBubble=true:e.stopPropagation();
+		this.style.border="10px solid yellow";
+		alert(this.style.backgroundColor);
+	}
+	divs[2].onclick=function(e){
+		var e=e||window.event;
+		//e.stopPropagation(); //阻止冒泡  普通浏览器
+		//e.cancelBubble=true; //IE的方式
+		
+		//阻止冒泡的兼容
+		window.event?e.cancelBubble=true:e.stopPropagation();
+		this.style.border="10px solid purple";
+		alert(this.style.backgroundColor);
+	}
+
+	// var btn=document.getElementById('btn');
+	// btn.onclick=function(){
+	// 	alert(this);
+	// }
+	// var div=document.getElementById('box');
+	// div.onclick=function(){
+	// 	alert(this);
+	// }
+	// document.onclick=function(){
+	// 	alert(this);
+	// }
+	</script>
+</body>
+</html>

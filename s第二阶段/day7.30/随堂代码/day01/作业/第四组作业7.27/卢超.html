@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script src="js/index.js"></script>
+</head>
+
+<body>
+
+<script>
+//定义2个变量 计算2个变量+-*/% 分别用document.write()和alert()显示出运算结果
+
+var a=6;
+var b=4;
+document.write("a=6 b=4<br>");
+document.write("(1)a+b="+(a+b)+"<br>"+"(2)a-b="+(a-b)+"<br>"+"(3)a*b="+(a*b)+"<br>"+"(4)a/b="+(a/b)+"<br>"+"(5)a%b="+(a%b)+"<br>");
+
+var v="a+b="+(a+b);
+var w="a-b="+(a-b);
+var x="a*b="+(a*b);
+var y="a/b="+(a/b);
+var z="a%b="+(a%b);
+
+
+function demo1(){
+		alert("结果："+v+"  "+w+"  "+x+"  "+y+"  "+z);
+	}
+
+document.write("<br>");
+</script>
+<button onClick="demo1()">alert</button>
+<br>
+<br>
+<script>
+
+//使用document.write()显示一个用*组成菱形
+
+document.write("+ +*<br>");
+document.write("+ * * *<br>");
+document.write("+* * * * *<br>");
+document.write("* * * * * * *<br>");
+document.write("+* * * * *<br>");
+document.write("+ * * *<br>");
+document.write("+ +*<br>");
+
+
+document.write("<br>");
+document.write("<br>");
+//小明要到美国旅游，可是那里的温度是以华氏度为单位记录的。它需要一个程序将华氏温度（80度）转换为摄氏度，并以华氏度和摄氏度为单位分别显示该温度。提示：摄氏度与华氏度的转换公式为：摄氏度 = 5/9.0*(华氏度-32)
+document.write("当前华氏度：<span style='color:red;'>80</span>℉");
+var she= 5/9.0*(80-32);
+
+function demo2(){
+		alert(she+"℃");
+	}
+
+</script>
+<button onClick="demo2()">转为摄氏度</button>
+
+<br>
+<br>
+
+
+
+
+<script>
+
+document.write("<div style='float:left; width:200px; height:200px; background:yellow; margin-right:20px; font-size:14px;color:green; text-align:center;line-height:200px;'>2+3=<span style='font-weight:900;color:red;font-size:18px;'>5</span></div><div   style='float:left; width:200px; height:200px; background:yellow; margin-right:20px;font-size:14px;color:green; text-align:center;line-height:200px;'>10-3=<span style='font-weight:900;color:red;font-size:18px;'>7</span></div><div style='float:left; width:200px; height:200px; background:yellow; margin-right:20px;font-size:14px;color:green; text-align:center;line-height:200px;'>3*4=<p style='display:inline-block;font-weight:900;color:red;font-size:18px;'>12</p></div><div style='float:left; width:200px; height:200px; background:yellow; margin-right:20px;font-size:14px;color:green; text-align:center;line-height:200px;'>6/3=<p style='display:inline-block;font-weight:900;color:red;font-size:18px;'>2</p></div><div style='float:left; width:200px; height:200px; background:yellow; margin-right:20px;font-size:14px;color:green; text-align:center;line-height:200px;'>9%6=<p style='display:inline-block;font-weight:900;color:red;font-size:18px;'>3</p></div>");
+
+
+
+</script>
+
+<br><br><br><br><br><br><br><br><br><br>
+
+
+
+</body>
+</html>

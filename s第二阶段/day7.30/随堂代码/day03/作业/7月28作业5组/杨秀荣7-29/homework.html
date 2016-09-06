@@ -1,0 +1,294 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>7-28作业</title>
+		<style type=text/css>
+			table{
+				width:1000px;
+				border:1px solid #999;
+				border-collapse:collapse;
+				margin:0 auto;
+			}
+			table th{
+				border:1px solid #999;height:50px;
+				color:#999;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<!-- <div id="box"> </div> -->
+		<table id="box"> </table>
+		
+		<script>
+		
+			
+			/*var oBox=document.getElementById("box");
+			//alert(oBox.innerHTML);
+			for(i=1;i<=9;i++){
+				for(j=1;j<=i;j++){
+					oBox.innerHTML+="<span>"+i+"&times;"+j+"="+i*j+"</span>";
+				}
+				oBox.innerHTML+="<br>";
+			}*/
+		
+			/*var oBox=document.getElementById("box");
+			for(i=1;i<=9;i++){
+				for(j=1;j<=i;j++){
+					oBox.innerHTML+="<span>"+i+"&times;"+j+"="+i*j+"</span>"+" ";
+				}
+				oBox.innerHTML+="<br>";
+			}
+			*/
+			
+			//鸡兔同笼问题 i为兔，j为鸡
+			/*for(var i=1;i<35;i++){
+				for(var j=1;j<35;j++){
+					if((i+j==35)&&(4*i+2*j==94)){
+						document.write(i+" "+j)
+					}
+				}
+			}
+			for(var i=1;i<35;i++){
+				for(var j=1;j<35;j++){
+					if((i+j==35)&&(4*i+2*j==94)){
+						document.write(i+" "+j)
+					}
+				}
+			}
+			*/
+			/*for(var i=1;i<=5;i++){
+				for(var j=1;j<=i;j++){
+					document.write("*");
+				}
+				document.write("<br>");
+			}
+			*/
+			/*for(var i=1;i<=5;i++){
+				for(var j=1;j<=i;j++){
+					document.write("*");
+				}
+				document.write("<br>");
+			}
+			*/
+			/*var i=1;//i用来控制行数
+			while(i<=5){
+				var j=1;//j 用来控制每行的个数
+				while(j<=i){
+					document.write("*");
+					j++;
+				}
+				document.write("<br>");	
+				i++;
+			}*/
+			/*var i=1;//i用来控制行数
+			while(i<=5){
+				var j=1;//j 用来控制每行的个数
+				while(j<=i){
+					document.write("*");
+					j++;
+				}
+				document.write("<br>");	
+				i++;
+			}*/
+			/*var a=prompt("请输入第一个数");
+			var b=prompt("请输入第二个数");
+			var c=prompt("请输入第三个数");
+			var max=a;
+			if(b>a){
+				max=b;
+				
+			}if(c>max){
+					max=c;
+				}
+			alert("最大值是"+max);*/
+			/*var a=prompt("请输入第一个数");
+			var b=prompt("请输入第二个数");
+			var c=prompt("请输入第三个数");
+			var max=a;
+			if(b>a){
+				max=b;
+				
+			}if(c>max){
+					max=c;
+				}
+			alert("最大值是"+max);*/
+			/*var year=1000;
+			var count=0;
+			while(year<=2000){
+				if(year%4==0&&year%100!=0||year%400==0){
+					document.write(year);
+					count++;
+					if(count%5==0){
+						document.write("<br>");
+					}
+				}
+			}*/
+			/*var num=0;
+			for(var i=1;i<=100;i++){
+				num+=i;
+			}
+			document.write(num);
+			var num=0;
+			for(var i=1;i<=100;i++){
+				if(i%2==0){
+					num+=i;
+				}
+				
+			}document.write(num);
+			var num=0;
+			for(var i=1;i<=100;i++){
+				num+=i;
+			}
+			document.write(num);
+			var num=0;
+			for(var i=1;i<=100;i++){
+				if(i%2==0){
+					num+=i;
+				}
+				
+			}document.write(num);
+			*/
+			
+			
+			
+		
+			//作业1********************************************************
+			document.write("作业1<br>")
+			for(var i=2000;i<=2016;i++){
+				if((i%4==0&&i%100!=0)||i%400==0){
+					document.write(i+"<br>");
+				}
+			}
+			
+			//作业2********************************************************
+			document.write("<br><br><br>")
+			document.write("作业2<br>")
+			var num=0;
+			for(var i=1;i<=100;i++){
+				if(i%2!=0){
+				num+=i;
+				}
+			}
+			document.write(num);
+			
+			//作业3********************************************************
+			document.write("<br><br><br>")
+			document.write("作业3<br>")
+			var num=0;
+			for(var i=1;i<=100;i++){
+				if(i!=10&&i!=20&&i!=30&&i!=40&&i!=80&&i!=90){
+					num+=i;
+				}
+			}document.write(num);
+			//作业4********************************************************
+			document.write("<br><br><br>")
+			document.write("作业4.100以内7的倍数有：<br>")
+			for(var a=0;a<=100;a++){
+				if(a%7==0){
+					document.write(+a+"&nbsp;&nbsp;")
+				}
+			}
+			//作业5********************************************************
+			document.write("<br><br><br>")
+			document.write("作业5<br>")
+			var product=1;
+			for(var d=1;d<=10;d++){
+				product*=d;
+			}document.write(product);
+			
+			
+			//作业6********************************************************
+			document.write("<br><br><br>")
+			document.write("作业6.20-80之间能被3整除的整数<br>")
+			var c=0;
+			for(var b=20;b<=80;b++){
+				if(b%3==0){
+					document.write(b+" ");
+					c++;
+					if(c%5==0){
+						document.write("<br>");
+					}
+
+				}
+			}
+			//作业7********************************************************
+			document.write("<br><br><br>")
+			document.write("作业7<br>")
+			for(var e=100;e<=200;e++){
+				if(e%3==1&&e%4==2&&e%5==3){
+					document.write(e+"&nbsp;");
+				}
+			}
+			//作业8********************************************************
+			document.write("<br><br><br>")
+			document.write("作业8<br>")
+			var num=1,fu=-1,num1=1;;
+			for(var i=2;i<=100;i++){
+				num1*=fu;
+				num+=num1*1/i;
+			}document.write(num);
+			//作业9********************************************************
+			document.write("<br><br><br>")
+			document.write("作业9.九九乘法表<br>")
+			for(var i=1;i<=9;i++){
+				for(var j=1;j<=i;j++){
+					document.write(i+"&times;"+j+"="+i*j+" ");
+				}
+				document.write("<br>");
+			}
+			//作业10********************************************************
+			document.write("<br><br><br>")
+			document.write("作业10.<br>")
+			var a=0;
+			for(var i=100;i<=200;i++){
+				if(i%3==0||i%7==0){
+					document.write(i+" ");
+					a++;
+					if(a%20==0){
+						document.write("<br>");
+					}
+				}
+			}
+			//作业12********************************************************
+			document.write("<br><br><br>")
+			document.write("作业12.<br>")
+			var c=10000,b=1,num=c*12;
+			for(var i=2;i<=10;i++){
+				b=c*0.1;
+				c+=b;
+				num+=c*12
+			}document.write(c+"<br>");
+			document.write(num);
+			//作业13********************************************************
+			document.write("<br><br><br>")
+			document.write("作业13.<br>")
+			for(var i=100;i<=999;i++){
+				var a=i%10;
+				var b=((i-a)/10)%10;
+				var c=((i-i%100)/100)%10;
+				if(a*a*a+b*b*b+c*c*c==i){
+					document.write(i+" ");
+				}
+			}
+			//作业12********************************************************
+			document.write("<br><br><br>")
+			document.write("作业12.<br>")
+			var row=Number(prompt("请输入行数"));
+			var col=Number(prompt("请输入列数"));
+			var oBox=document.getElementById("box");
+			for(var i=1;i<=row;i++){
+				oBox.innerHTML+="<tr id='t"+i+"'></tr>";
+				var tr=document.getElementById("t"+i);	
+				for(var j=1;j<=col;j++){
+					tr.innerHTML+="<th>"+"单元格"+"</th>";
+				}
+			}
+			
+		
+		
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>图片无缝滚动</title>
+<style>
+*{margin:0;padding:0;}
+ul{list-style:none}
+div{width:600px;height:200px;margin:0 auto;position:relative;border:1px solid green;overflow:hidden}
+
+ul{width:800px;height:200px;position:absolute;left:0;top:0;}
+li{float:left;}
+img{width:200px;height:200px;}
+</style>
+
+</head>
+
+<body>
+
+
+<div id="box">
+	<ul id="list">
+		<li><img src="img/1.jpeg"/></li>
+		<li><img src="img/2.jpg"/></li>
+		<li><img src="img/3.jpg"/></li>
+		<li><img src="img/4.JPG"/></li>
+	</ul>
+</div>
+<input type="button" value="向左">
+<input type="button" value="向右">
+<script>
+var box=document.getElementById("box")
+var oul=document.getElementById("list")
+var oli=document.getElementsByTagName("li")
+var speed=2
+var btn=document.getElementsByTagName("input")
+oul.innerHTML=oul.innerHTML+oul.innerHTML;
+oul.style.width=(oli[0].offsetWidth*oli.length)+"px"
+var timer=setInterval(move,1)
+function move(){
+	if(oul.offsetLeft<-oul.offsetWidth/2){
+		oul.style.left=0
+	}	
+	if(oul.offsetLeft>0){
+		oul.style.left=-oul.offsetWidth/2+"px"
+	}
+	oul.style.left=oul.offsetLeft+speed+"px"
+}
+btn[0].onclick=function(){
+	speed=-2
+}
+btn[1].onclick=function(){
+	speed=2
+}
+box.onmouseover=function(){
+	clearInterval(timer);
+}
+box.onmouseout=function(){
+	timer=setInterval(move,1);	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

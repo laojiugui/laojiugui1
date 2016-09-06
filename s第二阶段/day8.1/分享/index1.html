@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>  
+<link rel="stylesheet" type="text/css" href="css/css.css">
+</head>
+
+<body>
+                      <!--setInterval()：间隔指定的毫秒数不停的执行指定代码
+                          setTimeout()：暂停指定的毫秒数后执行指定代码
+                             这两个都是window对象的方法-->
+
+<div id="box1"></div>
+<input id="kaishi1" type="button" value="开始出图" >
+<input id="jieshu1" type="button" value="结束出图" >
+<input id="qingkong1" type="button" value="清空" ><br/><br/><br/>
+
+
+<div id="box3"></div>
+<input id="kaishi" type="button" value="开始点名" >
+<input id="jieshu" type="button" value="结束点名" >
+<input id="qingkong" type="button" value="清空" ><br/><br/><br/>
+
+
+<div id="box2">0时0分0秒0毫秒</div>
+<input id="kaishi2" type="button" value="开始计时" >
+<input id="zhanting2" type="button" value="暂停计时" >
+<input id="qingkong2" type="button" value="停止计时" >
+
+
+
+<script>
+var kaishi1=document.getElementById("kaishi1");           //获取元素
+var qingkong1=document.getElementById("qingkong1");
+var jieshu1=document.getElementById("jieshu1");
+var oDiv1=document.getElementById("box1");
+function jishi(){
+					  //函数
+	var b="<img src='images/img2.gif'>"					
+	oDiv1.innerHTML+=b;
+}
+var se1;
+    kaishi1.onclick=function(){                           //点击事件
+			  
+	  se1=setInterval("jishi()",100)
+	 }	
+    jieshu1.onclick=function(){                           //结束调用函数
+	  clearInterval(se1);
+    }
+	qingkong1.onclick=function(){
+	  clearInterval(se1);
+	  oDiv1.innerHTML=""                                  //清空
+  }
+
+
+    var kaishi=document.getElementById("kaishi");
+	var jieshu=document.getElementById("jieshu");
+	var qingkong=document.getElementById("qingkong");
+	var oDiv3=document.getElementById("box3");
+	function dianming(){
+		var arr=['崔秀山','李福玲','张延东','赵军朋','卢超','赵乘','王平原','李鹏','秦增福','马英博','张凯旋','顾乐威','陈化林','杨秀荣','闫成业','赵岩','邢延海','杜赞','徐龙杰','蔡尚卿','张亚楠','任龙飞','杨亚飞','王刚','大刘欢','小刘欢','李明','靳文龙','闫承惠','郭志迪','柳战鳌','吴涵','郎建强','张磊','周孟祥','冯伟星','刘博文','毛函','朱振凯','付贝贝','谢朋豆','魏国都','王凯','罗梦婷','张军杰'];
+		var b=""
+		for(i=0;i<5;i++){
+			
+			 var a=parseInt(Math.random()*arr.length+" ")
+			 b+=arr[a]+" "	
+		}
+		oDiv3.innerHTML=b			
+}
+  var se;
+    kaishi.onclick=function(){
+			  
+	  se=setInterval("dianming()",10)
+	 }	
+    jieshu.onclick=function(){
+	  clearInterval(se);
+  }
+  qingkong.onclick=function(){
+	  clearInterval(se);
+	  oDiv3.innerHTML=""
+  }
+  
+
+
+var kaishi2=document.getElementById("kaishi2");
+var zhanting2=document.getElementById("zhanting2");
+var qingkong2=document.getElementById("qingkong2");
+var oDiv2=document.getElementById("box2");
+var h=0,m=0,s=0,ss=1;
+function second(){
+		if((ss%100)==0){
+			s+=1;ss=1;
+		}if(s>0&&(s%60==0)){
+			m+=1;s=0;
+		}if(m>0&&(m%60==0)){
+			h+=1;m=0;	
+		}	
+	oDiv2.innerHTML=h+"时"+m+"分"+s+"秒"+ss+"毫秒"
+	ss+=1;
+}
+var se3;
+    kaishi2.onclick=function(){			  
+	    se3=setInterval("second()",10)
+	}	
+    zhanting2.onclick=function(){
+	    clearInterval(se3);
+  	}
+	qingkong2.onclick=function(){
+	    clearInterval(se3);
+		ss=1;
+		m=h=s=0;
+	}
+
+</script>
+</body>
+</html>

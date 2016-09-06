@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<script>
+
+//1.在一个文本框输入一个年份，判断这年是不是闰年 能被4整除并且不能被100整除  能被400整除
+var year = Number(prompt("请输入年份"));
+if (year%4==0&&year%100!=0||year%400==0) {
+	alert("是闰年");
+}
+else{
+	alert("不是闰年");
+}
+
+//2.判断一个整数，属于哪个范围：大于0；小于0；等于0
+var x = Number(prompt("请输入一个整数"));
+if (x>0) {
+	alert("这个数大于零");
+}
+else if (x<0) {
+	alert("这个数小于零");
+}
+else if (x=0) {
+	alert("这个数是零");
+}
+else{
+	alert("这不是一个数");
+}
+
+//3.判断一个整数是否是3的倍数，并输出判断结果
+var y = Number(prompt("请输入一个整数"));
+if (y>0||y<0) {
+	if (y%3==0) {
+		alert("是3的倍数");
+	}
+	else{
+		alert("不是3的倍数");
+	}
+}
+else if (y==0) {
+	alert("不是3的倍数");
+}
+else{
+	alert("输入错误");
+}
+
+//4.开发一款软件，根据公式（身高-108）*2=体重，可以有10斤左右的浮动。来观察测试者体重是否合适
+var weight = parseInt(prompt("请输入你的体重"));
+var height = parseInt(prompt("请输入你的身高"));
+var sWeight = (height - 108)*2;
+if (weight==sWeight) {
+	alert("身材完美");
+}
+else if ((weight - sWeight)<=10&&(weight - sWeight)>=-10) {
+	alert("身体正常,继续保持");
+}
+else if ((weight - sWeight)>=10) {
+	alert("太胖了,地球都被你压瘪了");
+}
+else if ((weight - sWeight)<=-10) {
+	alert("瘦成一阵风,省了买票钱");
+}
+else{
+	alert("输入错误");
+}
+
+//5.给一个分数，判断它的等级，如果90以上为A  80-90为B 70-80为C 60-70为D 60以下  留级
+var  mark = parseInt(prompt("请输入你的分数"));
+if (mark<=100&&mark>=0) {
+	if (mark>=90) {
+		alert("A");
+	}
+	else if (mark<90&&mark>=80) {
+		alert("B");
+	}
+	else if (mark<80&&mark>=70) {
+		alert("C");
+	}
+	else if (mark<70&&mark>=60) {
+		alert("D");
+	}
+	else if (mark<60) {
+		alert("留级");
+	}
+}
+else{
+	alert("输入不合法");
+}
+
+//6.用switch case输出2016年一年中1月份，3月份，5月份，7月份，八月份，十月份，12月份是31天，四月份，六月份，九月份，11月份是30天，二月份是29天
+var  mon = Number(prompt("请输入月份"));
+switch (mon){
+	case 1:alert("31天");break;
+	case 2:alert("29天");break;
+	case 3:alert("31天");break;
+	case 4:alert("30天");break;
+	case 5:alert("31天");break;
+	case 6:alert("30天");break;
+	case 7:alert("31天");break;
+	case 8:alert("31天");break;
+	case 9:alert("30天");break;
+	case 10:alert("31天");break;
+	case 11:alert("30天");break;
+	case 12:alert("31天");break;
+	default :alert("输入错误"); 
+}
+
+//7.输入一个五位数，分别alert出它的个位 、十位、百位、千位、万位（选做）
+var sum = Number(prompt("请输入一个五位数"));
+var w = parseInt(sum/10000);
+var q = parseInt(sum%10000/1000);
+var b = parseInt(sum%1000/100);
+var s = parseInt(sum%100/10);
+var g = parseInt(sum%10);
+alert("这个数的个位是:"+g+",十位是:"+s+",百位是:"+b+",千位是:"+q+",万位是:"+w);
+
+//8.输入3个数  a,b,c中, 输出最大数的值（选做）
+var num1 = Number(prompt("请输入一个数"));
+var num2 = Number(prompt("请输入一个数"));
+var num3 = Number(prompt("请输入一个数"));
+if (num1>num2) {
+	var str = num1;
+	num1 = num2;
+	num2 = str;
+}
+if (num1>num3) {
+	var str =num1;
+	num1 = num3;
+	num3 = str;
+}
+if (num2>num3) {
+	var str = num2;
+	num2 = num3;
+	num3 = str;
+}
+alert("最大的数是"+num3);
+
+
+//9.打印出1000-2000年中所有的闰年，并以每行四个数的形式输出（选做+思考)
+var count = 0;
+for (var i=1000;i<=2000;i++){
+	if (i%4==0&&i%100!=0||i%400==0) {
+		count++;
+		document.write(i+"&nbsp");
+		if (count%4==0) {
+			document.write("<br/>");
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

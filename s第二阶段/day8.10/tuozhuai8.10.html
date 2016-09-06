@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+
+<style>
+#pic{position:absolute;left:0;top:0;}
+
+
+</style>
+</head>
+
+<body>
+<img src="bird.jpg" id="pic" width="50px"/>
+<script>
+var img=document.getElementById("pic")
+img.onmousedown=function(e){               //创建图片鼠标按下函数
+	var e=window.event||e          //处理事件兼容
+	var clientL=e.offsetX          
+	var clientT=e.offsetY
+	document.onmousemove=function(e){
+		var e=window.event||e
+		var L=document.documentElement.clientWidth
+		var H=document.documentElement.clientHight
+		var Left=e.clientX-clientL
+		var Top=e.clientY-clientT
+		var width1=img.width
+		var height1=img.height
+		if(Left>L-width1){
+			Left=L-width1
+		}else if(Left<0){
+			Left=0
+		}
+		if(Top>H-height1){
+			Top=H-height1
+		}else if(Top<0){
+			Top=0
+		}
+		img.style.left=Left+"px"
+		img.style.top=Top+"px"
+		window.event?e.returnValue=false:e.preventDefault();
+		
+	}
+	
+}
+img.onmouseup=function(){
+	//document.onmousemove=null
+	document.onmousemove=""
+}
+
+</script>
+</body>
+</html>

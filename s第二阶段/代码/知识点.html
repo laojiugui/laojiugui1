@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DOM</title> 
+<style>
+	div{
+		width: 300px;
+		height: 300px;
+		background: green;
+	}
+</style> 
+</head>
+<body>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box" id="box" style="border:10px solid red;"></div>
+
+<script>
+	//DOM 
+	//document.getElementsByClassName()    返回值是类数组  数组的长度  下标  循环   兼容 （IE8,7,6）;
+	
+	//document.getElementByTagName()   返回值是类数组  数组的长度  下标  循环 
+	var divs=document.getElementsByTagName("div");
+	console.log(divs)
+
+	//var boxs=document.getElementsByClassName("box");
+	//console.log(boxs)
+
+	//document.getElementById()     id唯一   
+
+
+	//获取非行间样式
+	var aa=document.getElementById("box")
+	//alert(aa.style.width)
+
+
+	//alert(getComputedStyle(aa,null).width)  标准
+	//alert(aa.currentStyle.width)   //IE
+
+
+
+	//获取属性的方法 getAttribute()   //传一个参数  要获取的属性名
+
+	//获取属性的方法 setAttribute()   //传两个参数   第一个属性  第二个是值    既可以是自定义属性 也可以是原来就有的属性
+
+	//删除属性 removeAttribtute()  //传一个属性  要删掉的属性名
+
+
+
+
+	//兼容  获取非行间样式
+		function getStyle(obj,style){
+			if(obj.currentStyle){  //IE8以下（包含IE8）
+				return obj.currentStyle[style];
+			}else{
+				return window.getComputedStyle(obj,false)[style];//标准写法
+			}
+		}
+	alert(getStyle(aa,"height"));
+	
+	var obj={name:'wamg',age:12};
+	//alert(obj.name)
+	//alert(obj['age'])
+</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+
+</head>
+
+<body>
+<script>
+
+
+	for(var year=2000;year<=2016;year++){
+		
+		if((year%4==0&&year%100!=0)||year%400==0)
+				{
+						document.write(year+" ");
+					count++;	
+					if(count%4==0)
+					{
+						document.write("<br>")
+					}
+		}
+	}
+
+	
+	
+	
+	
+		var i=1;
+		var sum=0;
+		while(i<=100){
+			sum+=i;
+			i=i+2;
+			}
+		document.write("奇数和为"+sum+"<br>")
+	
+
+
+
+
+		var sum=0;
+		for(var i=1;i<=100;i++){
+				sum+=i;
+				}
+				document.write("和为"+(sum-10-20-30-40-80-90)+"<br>")
+			
+			
+			
+			
+			
+		for(var i=1;i<=100;i++){
+			if(i%7==0){
+				document.write(i+"是7的倍数<br>")
+				}
+			}
+			
+			
+			
+			
+			
+	var jie=1;	
+	for(i=1;i<=10;i++){
+		jie*=i;
+		}
+	document.write("阶乘"+jie+"<br")
+	
+	
+	
+	
+	
+	var count=0;
+	for(i=20;i<=80;i++){
+		if(i%3==0){
+			document.write(i+" ")
+			count++;
+			if(count%5==0){
+				document.write("<br>")
+				}
+			}
+		}
+		
+		
+		
+		
+	for(i=100;i<=200;i++){
+		if(i%3==1&&i%4==2&&i%5==3){
+			document.write("操场站"+i+"<br>")
+			}
+		}
+		
+		
+		
+		
+			var sum=0;
+	for( var i=1;i<=100;i++){
+		if(i%2==0){
+			sum+=-1/i;
+		}else if(i%2==1){
+			sum+=1/i
+		}
+	}document.write("<br>"+"1-1/2+1/3-1/4…..1/100的和为"+sum+"<br>")
+		
+		
+		
+		
+	for(i=1;i<10;i++){
+				for(j=1;j<=i;j++){
+					document.write(i+"&times;"+j+"="+i*j+"&nbsp;&nbsp;" )
+				}
+				document.write("<br>")
+			}
+			
+			
+		for(i=100;i<=200;i++){
+			if((i%3==0)||(i%7==0)){
+				document.write(i+" ")
+				}  
+			}document.write("<br>")
+			
+		
+	var g=10000;
+	var sum=10000;
+	for(var i=1;i<=9;i++){
+		g=g*1.1
+		sum+=g
+	}document.write("小王10年后工资为"+g+"元<br>")
+	 document.write("小王10年共赚了"+sum*12+"元")		
+
+
+
+
+</script>
+</body>
+</html>

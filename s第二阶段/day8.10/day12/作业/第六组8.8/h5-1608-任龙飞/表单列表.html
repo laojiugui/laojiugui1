@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+
+<style>
+td{height:30px;border:1px solid #999;}
+table{border-collapse:collapse}
+</style>
+</head>
+
+<body>
+姓名:<input type="text" value="" id="xingming"><br><br>
+性别:男<input type="radio" name="ral" id="sex1">
+	女<input type="radio" name="ral" id="sex2">
+	第三性<input type="radio" name="ral" id="sex3"><br><br>
+收入:<input type="text" value="" id="shouru"><br><br>     
+爱好:篮球<input type="radio" name="ral2" id="bask">
+	足球<input type="radio" name="ral2" id="footer">
+	网游<input type="radio" name="ral2" id="games"><br><br>
+	自我介绍:<input type="text" value="" id="jieshao"><br><br>
+<input type="button" value="填入表格" id="btn"><br><br>
+
+<table>
+	<tr>
+    <td>姓名</td>
+    <td>性别</td>
+    <td>收入</td>
+    <td>爱好</td>
+    <td>自我介绍</td>
+    <td>操作</td>
+    </tr>
+
+</table>
+
+</body>
+
+<script>
+xm=document.getElementById("xingming")
+xs1=document.getElementById("sex1")
+xs2=document.getElementById("sex2")
+xs3=document.getElementById("sex3")
+sr=document.getElementById("shouru")
+play1=document.getElementById("bask")
+play2=document.getElementById("footer")
+play3=document.getElementById("games")
+js=document.getElementById("jieshao")
+btn=document.getElementById("btn")
+table=document.getElementsByTagName("table")[0]
+btn.onclick=function(){
+	var xms=xm.value
+	var srs=sr.value
+	var jss=js.value
+	
+	var tr=document.createElement("tr")
+	var td1=document.createElement("td")
+	var td2=document.createElement("td")
+	var td3=document.createElement("td")
+	var td4=document.createElement("td")
+	var td5=document.createElement("td")
+	var td6=document.createElement("td")
+	tr.appendChild(td1)
+	tr.appendChild(td2)
+	tr.appendChild(td3)
+	tr.appendChild(td4)
+	tr.appendChild(td5)
+	tr.appendChild(td6)
+	table.appendChild(tr)
+	
+	
+	var txt1=document.createTextNode(xms)
+	td1.appendChild(txt1)
+	var txt3=document.createTextNode(srs)
+	td3.appendChild(txt3)
+	var txt5=document.createTextNode(jss)
+	td5.appendChild(txt5)
+	
+	if(xs1.checked){
+	var txt2=document.createTextNode("男")
+	td2.appendChild(txt2)
+	}else if(xs2.checked){
+	var txt2=document.createTextNode("女")
+	td2.appendChild(txt2)	
+	}else{
+	var txt2=document.createTextNode("第三性")
+	td2.appendChild(txt2)		
+	}
+	
+	
+	
+	if(play1.checked){
+	var txt4=document.createTextNode("篮球")
+	td4.appendChild(txt4)
+	}else if(play2.checked){
+	var txt4=document.createTextNode("足球")
+	td4.appendChild(txt4)	
+	}else{
+	var txt4=document.createTextNode("网游")
+	td4.appendChild(txt4)		
+	}
+	
+	
+	
+	
+	var button=document.createElement("button")
+	var txt=document.createTextNode("删除")
+	button.appendChild(txt)
+	td6.appendChild(button)
+	button.onclick=function(){
+	var aa=this.parentNode.parentNode;
+	table.removeChild(aa)
+		
+	}
+			
+}
+
+</script>
+</html>

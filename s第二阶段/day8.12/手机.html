@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+#box{height:95px;width:400px;background:url(img/iphone.jpg) center;position:relative;margin:0 auto;padding-top:545px;padding-left:26px}
+img{position:absolute;top:0px;;left:0px;}
+#box1{height:65px;width:373px;border:1px solid #F33;position:relative;}
+</style>
+</head>
+
+<body>
+<div id="box">
+
+	<div id="box1"><img src="img/iphone2.jpg" style="left:0;top:0"/></div>
+</div>
+<script>
+var box=document.getElementById("box1");
+var img=document.getElementsByTagName("img")[0];
+//alert(img)
+img.onmousedown=function(e){
+	
+	e=window.event||e
+	//window.event?e.cancelBubble=true:e.stopPropagation();
+	window.event?e.returnValue=false:e.preventDefault();
+	var mouseL=e.offsetX
+	//var mouseT=e.offsetTop;
+	
+	document.onmousemove=function(ec){
+		
+		ec=window.event||ec
+		
+		window.event?ec.returnValue=false:ec.preventDefault();
+		var x=ec.clientX-mouseL
+		
+		if(x<454){x=454;}
+		else if(x>734){x=734;}
+		
+		img.style.left=x-454+"px"
+		//img.style.left=e.offsetLeft-mouseL+"px"
+		img.style.top=0+"px"
+		}
+		return false;
+}
+	img.onmouseup=function(){
+		
+		document.onmousemove=""
+		}
+
+
+
+
+</script>
+</body>
+</html>

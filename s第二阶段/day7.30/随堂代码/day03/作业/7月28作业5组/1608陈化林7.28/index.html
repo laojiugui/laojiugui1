@@ -1,0 +1,242 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+
+span{display:inline-block;margin:15px;background:#3F0;}
+	
+	
+</style>
+
+</head>
+<body>
+<div id="nan">好难啊啊啊！！！</div>
+<script>
+/*var a=1;
+while(a<=10){
+	document.write(a+"你好")
+	a++;
+	}
+	document.write("<br>")
+var b=1;
+while(b<=5){
+	document.write(b+"不好，很不好，非常不好！")
+	b++;
+	}*/
+	
+/*var c=1;
+while(c<=5){
+	document.write(c+"<br>");
+	c++;
+	}*/	
+/*var d=1;
+var sun=0;
+while(d<=100){
+	sun+=d;
+	d++;
+	}
+	document.write(sun)*/
+/*var d=1;
+var su=0;
+while(d<=100){
+	if(d%2==0){
+		su+=d
+		}
+	d++;
+	}
+document.write(su)*/
+/*var a=Number(prompt("请输入年份"))
+if(a%4==0&&a%100!=0||a%400==0){
+	alert(a+"是闰年。")
+	}else
+	{
+		alert(a+"不是闰年")
+		}*/
+/*var m=2000;
+var a=1;
+while(m<=2020){
+	if(m%4==0&&m%100!=0||m%400==0){
+		document.write(m);
+		a++;
+		if(a%1==0){document.write("<br>")
+			}
+		}
+		m++;
+	}*/
+/*var n=1;
+while(n<=5){
+	var t=1;
+	while(t<=5){
+		document.write("*")
+		t++;
+		}
+	document.write("<br>")
+	n++;
+	}*/
+	
+/*var h=1
+while(h<=5){
+	var j=1
+	while(j<=h){
+		document.write("*");
+		j++;
+		}
+	document.write("<br>")
+	h++;	
+	}*/
+	
+/*for(var a=1;a<=5;a++){
+	for(var b=1;b<=a;b++){
+		document.write("*")
+		}
+	document.write("<br>")	
+	}*/
+	
+/*for(var a=1;a<35;a++){
+	for(b=1;b<35;b++){
+		if(a+b==35&&a*2+b*4==94){
+			document.write("腿多的有"+b+"只");
+			}
+		}	
+	}*/         //练习代码
+	
+/*var a=2000;
+while(a<=2016){
+	if(a%4==0&&a%100!=0||a%400==0){
+		document.write(a+"<br>")
+		}
+	a++;
+	}*/         //第一题
+/*var a=Number(1);
+var jh=Number(0);
+while(a<=100){
+	if(a%2==1){
+		jh+=a;
+		}
+	a++;
+	}
+document.write(jh)*/        //第二题
+/*var m=1;
+var h=0;
+while(m<=100){
+	if(m!=10&&m!=20&&m!=30&&m!=40&&m!=50&&m!=60&&m!=70&&m!=80&&m!=90){
+		h+=m;
+		}
+	m++;
+	}
+alert("和就是"+h)*/     //第三题
+/*var a=7;
+while(a<=100){
+	if(a%7==0){
+		document.write(a+"是7的倍数"+"<br>")
+		}
+	a++;
+	}*/
+/*for(var a=7;a<=70;a++){
+	if(a%7==0){
+		document.write(a+"是七的倍数"+"<br>")
+		}
+	}*/              //第四题  两种方法
+/*var a=1;
+var b=1;
+while(a<=10){
+	b*=a;
+	a++;
+	}
+alert(b)*/       //第五题   
+/*var a=20;
+var b=0;
+while(a<=80){
+	if(a%3==0){
+		document.write(a+"&nbsp;")
+		b++;
+		if(b%5==0){document.write("<br>")}
+		}
+	a++;
+	}*/            //第六题
+/*var a=100;
+while(a<=200){
+	if(a%3==1&&a%4==2&&a%5==3){
+		document.write("一共是"+a+"个人")
+		}
+	a++;
+	}*/          //第七题
+/*var a=1;
+var h=0;
+var c=0;
+while(a<=100){
+	if(a%2==1){
+		h+=1/a;
+		}
+	if(a%2==0){
+		c-=1/a;
+		}
+	a++;
+	}
+document.write(h+c)*/        //第八题
+/*var oNan=document.getElementById("nan")
+oNan.innerHTML="真TM的难！"
+oNan.innerHTML+=("<br>")
+var a=1;
+while(a<=9){
+	var b=1
+	while(b<=a){
+		oNan.innerHTML+="<span>"+(a+"*"+b+"="+a*b)+"</span>"
+		b++;
+		}
+	oNan.innerHTML+=("<br>")
+	a++;
+	}*/           //第九题
+	
+/*for(var a=100;a<=200;a++){
+	if(a%3==0&&a%7==0){
+		document.write(a+"既是三的倍数，也是七的倍数。")
+		}
+	else if(a%3==0){
+		document.write(a+"是3的倍数")
+		}
+	else if(a%7==0){
+		document.write(a+"是七的倍数")
+		}
+		document.write("<br>")
+		a++;	
+	}*/            //第十题
+/*var a=1;
+var c=10;
+while(a<=120){
+	if(a%12==0){
+		c=1.1*c;
+		}
+	a++;
+	}
+document.write(c)*/
+/*var a=1;
+var c=120;
+var d=0;
+while(a<=10){
+	d+=c;
+	c+=0.1*c;
+	a++;
+	}
+document.write(d)*/        //第十二题
+var a=100;
+var b=0;
+var c=0;
+var d=0;
+while(a<=999){
+	b=a%10;
+	c=(a-b)/10%10;
+	d=(a-10*c-b)/100;
+	if(b*b*b+c*c*c+d*d*d==a){
+		document.write(a+"是坑货水莲花数"+"<br>")
+		}
+	a++;
+	}      //十三题
+	
+	
+
+</script>
+</body>
+</html>

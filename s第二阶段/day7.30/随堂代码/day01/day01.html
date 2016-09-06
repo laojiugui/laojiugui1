@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box{
+			width:300px;height:400px;background:red;
+		}
+		.box{
+			width:100px;height:100px;background:blue;
+		}
+	
+	</style>
+	<script src="index.js"></script>
+	<script>
+	//js代码
+	//引入js不能在其标签对中间写js代码
+		document.write("在script标签中不能嵌套script标签<br>");
+	</script>
+</head>
+<body>
+	<p class="box">哈哈哈哈</p>
+	<script>
+		//  单行注释
+		//多行注释 （块注释）  /* 注释的内容 */
+		document.write("可以放到head，也可以放到body<h1>标题一</h1>");
+		document.write("<div style=\"width:200px;height:300px;background:red;border-radius:50%;\"><div style=\'width:100px;height:100px;background:blue;border-radius:50%;\'>hghghghh</div></div>");
+		
+		
+		document.write('<div style=\'width:200px;height:300px;background:green;border-radius:50%;\'>hghghghh</div>');
+		//单引号 双引号的嵌套  
+		
+		
+		//声明变量   创建变量
+		
+		//变量 ：可以用来存储数据的一个容器  可以用来保存任何数据类型
+		
+		//关键字  var
+		
+		//声明变量  变量赋值=
+		var a=1; //声明变量  并且赋值  等号左边叫变量名   等号右边变量的值
+		var str="我是字符串";  //字符串需要加引号  单双引号都可以  但一定是英文状态下
+		//变量的命名规则    可以是字母  下划线   $开头   
+		//alert(str);
+		
+		//var $num1=23;
+		
+		//var $num1="符合符合符合符合";   //变量的覆盖  不要起一样的变量名
+		//var 9="字符串";
+		//alert($num1);
+		
+		
+		//typeof  用来检测数据类型
+		//数据类型分为基本数据类型和引用数据类型
+		//数据类型    1.number  2.string  3.boolean   （基本数据类型）
+		
+		//特殊类型   1.undefined      2.null
+		
+		//alert(typeof a);  //number  数字
+		
+		//alert(typeof $num1);   //string  字符串
+		
+		
+		var bool=true;     
+		alert(typeof bool);    //boolean  布尔型  布尔型只有两个值（true  false）
+	</script>
+	
+	<div style="width:300px;height:300px;background:red;">
+		<div style="width:100px;height:100px;background:green;"></div>
+	</div>
+</body>
+</html>

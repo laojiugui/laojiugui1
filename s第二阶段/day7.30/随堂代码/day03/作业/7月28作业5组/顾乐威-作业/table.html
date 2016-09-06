@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>顾乐威</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		#table { border-collapse: collapse; border-spacing: 0; margin-top: 100px;}
+		#table td { width: 100px; height: 20px; border: 1px solid firebrick; }
+	</style>
+</head>
+<body>
+	<h2>自动生成表格</h2>
+	<form>
+		<label for="rows">行数</label>
+		<input type="text" name="rows" id="rows">
+		<label for="cols">列数</label>
+		<input type="text" name="cols" id="cols">
+		<input type="button" name="create" value="生成" id="create">
+	</form>
+	<table id="table"></table>
+</body>
+<script type="text/javascript" src="js/tableCreater.js"></script>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+.sk{color:red;}
+table{border:1px solid red;border-collapse:collapse;}
+td{border:1px solid red}
+
+</style>
+</head>
+
+<body>
+<input type="button" value="创建li"><br><br>
+
+
+<input type="text" value+"" id="txt">行
+<input type="text" value+"" id="txt1">列
+<input type="button" value="生成" id="btn">
+
+
+
+<script>
+var input=document.getElementsByTagName("input")[0]
+input.onclick=function(){
+
+	//创建元素节点
+	var oLi=document.createElement("li");
+	document.body.appendChild(oLi);
+	
+	//创建文本节点
+	var text=document.createTextNode("我是大头")
+	oLi.appendChild(text)
+	
+	//创建属性节点
+	var attr=document.createAttribute("class")
+	attr.nodeValue="sk"        //给创建的属性赋值
+	oLi.setAttributeNode(attr)        //设置属性节点
+	 
+}
+
+var txt=document.getElementById("txt")
+var txt1=document.getElementById("txt1")
+var btn=document.getElementById("btn")
+btn.onclick=function(){
+	var rows=txt.value
+	var cols=txt1.value
+	var table=document.createElement("table")
+	for(var i=0;i<rows;i++){
+		var tr=document.createElement("tr")
+		for(var j=0;j<cols;j++){
+			var td=document.createElement("td")
+			tr.appendChild(td)
+			if(j==cols-1){
+				var btn1=document.createElement("button")
+				var txt4=document.createTextNode("删除")
+				btn1.appendChild(txt4)
+				td.appendChild(btn1)
+				btn1.onclick=function(){
+					var tr1=this.parentNode.parentNode
+					table.removeChild(tr1)
+				}
+			}else{
+			td.innerHTML="单元格"+(i+1)+(j+1);
+			}
+		}
+		table.appendChild(tr)
+	}
+
+	document.body.appendChild(table)
+
+
+}
+
+
+
+
+</script>
+
+</body>
+</html>

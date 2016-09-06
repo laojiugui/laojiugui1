@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+span{display:inline-block;background:yellow;width:50px;padding:10px;margin:10px;}
+</style>
+</head>
+<body>
+	<div id="box"></div>
+	<script>
+		var oBox=document.getElementById("box");
+		
+		for(var a=1;a<=9;a++){
+			for(var b=1;b<=a;b++){
+				oBox.innerHTML+=("<span>"+a+"&times"+b+"="+a*b+"</span>")
+			}
+			oBox.innerHTML+=("<br/>")
+		}
+	</script>
+
+</body>
+</html>

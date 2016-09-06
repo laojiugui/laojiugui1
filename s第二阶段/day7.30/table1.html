@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	span{background:red;}
+	
+	
+	</style>
+</head>
+<body>
+	<div id="box"></div>
+	<input type="text" id="hang"><input type="text" id="lie">
+	<button onclick="table()">生成表格</button><br><br><br>
+	<p>范德萨发的范德萨发第三方打发第三方范德萨发定时大多数范德萨发生的法师打发多少的撒范德萨范德萨发法师打发第三方第三方范德萨发范德萨发范德萨发撒旦法范德萨地方萨芬打发第三方的说法的发多少范德萨发大法师打发似的防守打法是的发送到范德萨范德萨发的说法是发的说法都是发多少</p>
+	<input value="" type="text"><input value="" type="text"><input value="替换" type="button">
+	
+	
+	
+	
+	
+	
+	
+	
+	<label>
+  <textarea name="textarea" cols="20" rows="5"></textarea>
+  </label>
+	
+	
+	
+	
+	
+	
+	<script>
+		function table(){
+			//var row=row||8;//行
+			//var col=col||8;//列
+			
+			var box=document.getElementById("box");
+			var r=Number(document.getElementById("hang").value)
+			var c=Number(document.getElementById("lie").value)
+			var str="<table>";
+			for(var i=1;i<=r;i++){
+				str+="<tr>";
+				for(var j=1;j<=c;j++){
+					str+="<td>第"+"哈哈"+"列单元格"+"</td>";
+				}
+					str+="</tr>";
+			}
+			str+="</table>";
+			box.innerHTML=str;
+			
+		}
+		var txt=document.getElementsByTagName("input")[2]
+		var txt1=document.getElementsByTagName("input")[3]
+		var btn=document.getElementsByTagName("input")[4]
+		var op=document.getElementsByTagName("p")[0]
+		btn.onclick=function(){
+			var str=txt.value;
+			if(!str){return}
+			var newstr=txt1.value;
+			op.innerHTML=op.innerHTML.split(str).join("<span>"+newstr+"</span>");
+		
+		}
+		
+	</script>
+</body>
+</html>

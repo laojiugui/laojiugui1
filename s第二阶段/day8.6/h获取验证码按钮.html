@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+
+<input type="button" id="btn" value="免费获取验证码" onclick="settime(this)" ><br><br><br>
+
+
+
+ 1 全选<input type="button" id="All" value="全选" /><br />
+ 2 不选<input type="button" id="uncheck" value="不选" /><br />
+ 3 反选<input type="button" id="othercheck" value="反选" /><br />
+ 4 <div id="div">
+ 5     <input type="checkbox" /><br />
+ 6     <input type="checkbox" /><br />
+ 7     <input type="checkbox" /><br />
+ 8     <input type="checkbox" /><br />
+ 9     <input type="checkbox" /><br />
+10     <input type="checkbox" /><br />
+11     <input type="checkbox" /><br />
+12     <input type="checkbox" /><br />
+13     <input type="checkbox" /><br />
+14     <input type="checkbox" /><br />
+15     <input type="checkbox" /><br />
+16     <input type="checkbox" /><br />
+17     <input type="checkbox" /><br />
+18     <input type="checkbox" /><br />
+19     <input type="checkbox" /><br />
+20     <input type="checkbox" /><br />
+21     <input type="checkbox" /><br />
+22     <input type="checkbox" /><br />
+23     <input type="checkbox" /><br />
+24     <input type="checkbox" /><br />
+25 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>                 //创建一个自由获取验证码的按钮
+	var countdown=3;          //设置一个变量
+	function settime(val) {            //创建一个settime的函数
+		if (countdown == 0) {             //设置条件变量
+			val.removeAttribute("disabled");       //给按钮删除禁用属性disabled
+			val.value="免费获取验证码";            //重新设置里面的内容
+			countdown = 3;                 //重新给变量赋值
+		} else { 
+			val.setAttribute("disabled", true);       //给其重新赋值新的属性和属性值
+			val.value="重新发送(" + countdown + ")";        //改变其中的内容
+			countdown--;                                      //变量随其数值越来越少
+		} 
+		setTimeout(function() {                         //设置一个定时器变量
+			settime(val) 
+		},1000)                     //每一秒运行一次
+	} 
+	
+	
+
+	
+	
+	
+	//创建多选,反选,不选按钮
+  window.onload=function(){
+      var CheckAll=document.getElementById('All');
+     var UnCheck=document.getElementById('uncheck');
+     var OtherCheck=document.getElementById('othercheck');
+     var div=document.getElementById('div');
+     var    CheckBox=div.getElementsByTagName('input');
+     CheckAll.onclick=function(){
+             for(i=0;i<CheckBox.length;i++){
+                    CheckBox[i].checked=true;
+                };
+         };
+    UnCheck.onclick=function(){            for(i=0;i<CheckBox.length;i++){
+                   CheckBox[i].checked=false;                };
+        };     othercheck.onclick=function(){
+            for(i=0;i<CheckBox.length;i++){
+                    if(CheckBox[i].checked==true){
+                            CheckBox[i].checked=false;
+                        }
+                     else{
+                        CheckBox[i].checked=true                        }
+                    
+               };
+        };
+ };
+ 
+	
+	
+	
+	
+</script>
+</body>
+</html>

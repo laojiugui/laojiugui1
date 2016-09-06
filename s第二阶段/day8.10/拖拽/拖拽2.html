@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>拖拽</title>
+		<style type="text/css">
+			img{
+				position: absolute;top: 0;left: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<img src="hg.jpg" alt="" / id="pic" width="100">
+		<script type="text/javascript">
+			window.onload=function(){
+				
+				var imgs=document.getElementById("pic");
+				imgs.onmousedown=function(e){
+					var e=window.event||e;
+					var offsetL=e.offsetX;
+					var offsetT=e.offsetY;
+					document.onmousemove=function(e){
+						var e=window.event||e;
+						var cw=document.documentElement.clientWidth;
+						var ch=document.documentElement.clientHeight;
+						var imgw=imgs.width;
+						var imgh=imgs.height;
+						var Left=e.clientX-offsetL;
+						var Top=e.clientY-offsetT;
+						//边界判断
+						if(Left>cw-imgw){
+							Left=cw-imgw
+						}else if(Left<0){
+							Left=0;
+						}
+						if(Top>ch-imgh){
+							Top=ch-imgh;
+						}else if(Top<0){
+							Top=0;
+						}
+						imgs.style.left=Left+'px';
+						imgs.style.top=Top+'px';
+						window.event?e.returnValue=false:e.preventDefault();	
+					}
+					return false;
+				}
+				imgs.onmouseup=function(){
+					//清空事件  null
+//					document.onmousemove=null;
+					document.onmousemove='';
+				}
+			}
+		</script>
+	</body>
+</html>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>

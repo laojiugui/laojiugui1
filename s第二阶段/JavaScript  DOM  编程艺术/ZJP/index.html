@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片轮播</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        ul{
+            list-style:none;
+        }
+        img{
+            vertical-align:bottom;
+        }
+        body{
+            background:#000;
+        }
+        #box{
+            position:relative;
+            width:754px;
+            height:292px;
+            margin:115px auto 0;
+        }
+        #box img{
+            position:absolute;
+            cursor: pointer;
+        }
+        #box .first{
+            width:120px;
+            height:150px;
+            left:134px;
+            top:71px;
+            z-index: 1;
+        }
+        #box .second{
+            width:130px;
+            height:170px;
+            left:0px;
+            top:61px;
+            z-index: 1;
+        }
+        #box .third{
+            width:170px;
+            height:218px;
+            left:110px;
+            top:37px;
+            z-index: 2;
+        }
+        #box .forth{
+            width:224px;
+            height:288px;
+            left:262px;
+            top:0px;
+            z-index: 3;
+        }
+        #box .fifth{
+            width:170px;
+            height:218px;
+            left:468px;
+            top:37px;
+            z-index: 2;
+        }
+        #box .sixth{
+            width:130px;
+            height:170px;
+            left:620px;
+            top:61px;
+            z-index: 1;
+        }
+        #box .seventh{
+            width:120px;
+            height:150px;
+            left:496px;
+            top:71px;
+            z-index: 1;
+        }
+
+    </style>
+    <script src="buffer_move.js"></script>
+</head>
+<body>
+<div id="box">
+    <ul>
+        <li><a href="#"><img src="img/1.jpg" class="first"></a></li>
+        <li><a href="#"><img src="img/2.jpg" class="second"></a></li>
+        <li><a href="#"><img src="img/3.jpg" class="third"></a></li>
+        <li><a href="#"><img src="img/4.jpg" class="forth"></a></li>
+        <li><a href="#"><img src="img/5.jpg" class="fifth"></a></li>
+        <li><a href="#"><img src="img/6.jpg" class="sixth"></a></li>
+        <li><a href="#"><img src="img/7.jpg" class="seventh"></a></li>
+    </ul>
+</div>
+<script>
+    var oBox=$("box"),
+        oImg=byTagName(oBox,"img"),
+        sAttr=["width","height","left","top","zIndex"],
+        oTarget=[],
+        iCenter=3,
+        oTimer=null;
+
+    //页面初始化获得位置
+        for(var i=0;i<oImg.length;i++){
+            var oTemp={index:i};
+            for(var j=0;j<sAttr.length;j++){
+                oTemp[sAttr[j]]=parseInt(getStyle(oImg[i],sAttr[j]))
+            }
+            oTarget.push(oTemp);
+        }
+        oTimer=setInterval(function(){
+            oTarget.unshift(oTarget.pop());
+            move();
+        },1000);
+
+        oBox.onmouseenter=function(){
+            clearInterval(oTimer);
+        };
+        oBox.onmouseleave=function(){
+            oTimer=setInterval(function(){
+                oTarget.unshift(oTarget.pop());
+                move();
+            },1000);
+        };
+
+    oTarget.unshift(oTarget.pop());
+    move();
+    function move(){
+        for(var i=0;i<oImg.length;i++){
+            oImg[i].index=oTarget[i].index;
+            bufferMove(oImg[i],oTarget[i])
+        }
+    }
+
+    for(var z =0; z< oImg.length; z++) {
+        oImg[z].onclick = function () {
+            if(this.index < iCenter) {
+                // 往右走
+                for(var j = 0; j < iCenter - this.index; j++) {
+                    oTarget.push(oTarget.shift());
+                }
+                move();
+            } else if(this.index > iCenter) {
+                // 往左走
+                for(var j = 0; j < this.index - iCenter; j++) {
+                    oTarget.unshift(oTarget.pop());
+                }
+                move();
+            }
+        }
+    }
+
+
+
+
+
+    //通过Id名获取dom节点
+    function $(id){
+        return document.getElementById(id)
+    }
+    //通过标签获取列表项
+    function byTagName(obj,sTagName){
+        return obj.getElementsByTagName(sTagName);
+    }
+    //获取属性值
+    function getStyle(obj,sAttr){
+        if(obj.currentStyle){
+             return   obj.currentStyle[sAttr]
+        }else{
+            return getComputedStyle(obj,null)[sAttr];
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件委托</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		#lists{
+			width: 500px;height: 300px;background: purple;
+		}
+	</style>
+</head>
+<body>
+	<input type="button" value="创建li" id="btn">
+	<ul id="lists">
+		<li>001</li>
+		<li>002</li>
+		<li>003</li>
+		<li>004</li>
+	</ul>
+	<script>
+		//事件委托   子元素 委托给父元素 执行       父元素 委托给子元素   
+		//target    srcElement(源元素)   //目标元素   返回值是你点击的元素
+		//适用的环境   动态添加的元素
+
+		var lists=document.getElementById('lists');
+		lists.onclick=function(e){
+			var e=e||window.event;   //事件对象的兼容
+			var tar=e.target||e.srcElement;  //获取目标元素的
+			//alert(e.srcElement.tagName)
+			//console.log(e.target);
+			if(tar.tagName.toLowerCase()=='li'){
+				tar.innerHTML="我是事件委托执行的";
+			}
+		}
+		// var lis=document.getElementsByTagName('li');
+		// for(var i=0;i<lis.length;i++){
+		// 	lis[i].onmouseover=function(){
+		// 		this.style.backgroundColor="green";
+		// 	}
+		// 	lis[i].onmouseout=function(){
+		// 		this.style.backgroundColor="";
+		// 	}
+		// }
+
+
+		var btn=document.getElementById('btn');
+		btn.onclick=function(){
+			var li=document.createElement('li');
+			li.innerHTML="我是动态创建出来的";
+			lists.appendChild(li);
+		}
+		lists.onmouseover=function(e){
+			var e=e||window.event;
+			var tar=e.target||e.srcElement;
+			if(tar.tagName.toLowerCase()=="li"){
+				tar.style.backgroundColor="green";
+			}
+		}
+
+		lists.onmouseout=function(e){
+			var e=e||window.event;
+			var tar=e.target||e.srcElement;
+			if(tar.tagName.toLowerCase()=="li"){
+				tar.style.backgroundColor="";
+			}
+		}
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>作业讲解</title>  
+</head>
+<body>
+	<input type="button" value="点击" id="btn">
+	<input type="text" id='num'><input type="button" value="插入数字" id="btn1">
+	<div id="div1"></div>
+	<input type="text" id="num1"><input type="button" value="条形码" id="btn2">
+<script>
+	//找出所有1-100之间7的倍数和包含7的数字  用数组输出结果
+	/*function qi(){
+		var arr=[];
+		for(var i=1;i<=100;i++){
+			if(i%7==0){
+				arr.push(i);
+			}else if(i==17||i==27||i==37||i==47||i==57||i==67||i==71||i==87||i==97||i==72||i==73||i==74||i==75||i==76||i==78||i==79){
+				arr.push(i);
+			}
+		}
+		return arr;
+	}
+	console.log(qi());*/
+	
+	//5.开发一个标题为“FlipFlop”的游戏应用程序。它从1计数到100，遇到3的倍数就替换为单词“Flip”，5的倍数就替换为单词“Flop”，既为3的倍数又为5的倍数则替换为单词“FlipFlop”。
+	/*var arr=[];
+	for(var i=0;i<=100;i++){
+		if(i%3==0&&i%5==0){
+			arr.push("FlipFlop");
+		}else if(i%5==0){
+			arr.push("Flop");
+		}else if(i%3==0){
+			arr.push('Flip');
+		}else{
+			arr.push(i);
+		}
+	}
+	var j=0;
+	var oBtn=document.getElementById("btn");
+	oBtn.onclick=function(){
+		j++;
+		if(j>100){j=0};
+		oBtn.value=arr[j];
+	}*/
+	
+	
+	//4.有一个从小到大排好序的数组。现输入一个数，要求按原来的规律将它插入数组中。
+	/*	var oNum=document.getElementById('num');
+		var oBtn1=document.getElementById("btn1");
+		var oDiv=document.getElementById("div1");
+		
+		var arr=[2,4,6,7,15,16];
+		oDiv.innerHTML=arr;
+		oBtn1.onclick=function(){
+			//var _num=Number(oNum.value);
+			var _num=oNum.value;
+			for(var i=0;i<arr.length;i++){
+				if(_num<=arr[i]){
+					arr.splice(i,0,_num);
+					break;
+				}else if(i==arr.length-1){
+					arr.push(_num);
+					break;
+				}
+			}
+			oDiv.innerHTML=arr;
+		}
+	*/
+	//6.?生成13位条形码(6K)
+	//Ean-13码规则：第十三位数字是前十二位数字经过计算得到的校验码。
+	//例如：690123456789
+	//第三位计算其校验码的过程为：
+	//@前十二位的奇数位和6+0+2+4+6+8=26
+	//@前十二位的偶数位和9+1+3+5+7+9=34
+	//@将奇数和与偶数和的三倍相加26+34*3=128
+	//@取结果的个位数：128的个位数为8
+	//@用10减去这个个位数10-8=2
+	//所以校验码为2（注：如果取结果的个位数为0，那么校验码不是（10-0=10），而是0）实现方法ean13（）计算验证码，输入12位条码，返回带验证码的条码。
+	//例如：输入：692223361219输出：6922233612192
+		var oBtn2=document.getElementById("btn2");
+		var oNum1=document.getElementById("num1");
+		var arr=[];  
+		
+		oBtn2.onclick=function(){
+			var _num=oNum1.value;
+			arr=_num.split("");  //arr=['1','4','5']
+			//arr.push(_num);
+			
+			if(_num.length!=12){
+				alert("请输入12位数");
+			}else{
+				var result1=0,result2=0;
+				for(var i=0;i<arr.length;i++){
+					if(i%2==0){
+						result1+=arr[i];
+					}else{
+						result2+=arr[i];
+					}
+				}	
+				var iNum=(result1+result2*3)%10;
+				if(iNum==0){
+					iNum=0;
+				}else{
+					iNum=10-iNum;
+				}
+				arr.push(iNum);
+			}
+			 //arr=['1','4','5',1]     
+			oNum1.value=arr.join("");
+		}
+	
+	
+	//?随机生成一个五位以内的数，然后输出该数共有多少位，每位分别是什么
+	//Math.random()   0~1之间的数 但是取不到0和1
+	/*var n1,n2,n3,n4,n5;   
+	n1=Math.floor(Math.random()*10);
+	n2=Math.floor(Math.random()*10);
+	n3=Math.floor(Math.random()*10);
+	n4=Math.floor(Math.random()*10);
+	n5=Math.floor(Math.random()*10);
+	var num=n1*10000+n2*1000+n3*100+n4*10+n5;
+	console.log(num);
+	//alert(n1);
+	var str=num+"";
+	console.log(str.length);*/
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	/*var a=0.1;
+	var b=0.2;
+	var c=a+b;
+	//alert(c.toFixed(1));
+	
+	var d=0.7;
+	var e=180;
+	var f=d*e;
+	alert(Math.round(f));   */
+	//※ Math.round()   四舍五入
+	//var a=3.2;
+	//alert(Math.round(a));
+	//※ Math.floor();  //向下取整
+	//alert(Math.floor(a));
+	
+	//※ Math.ceil();  //向上取整
+	//alert(Math.ceil(a));
+	//Math.abs()   //取绝对值
+	//var a=-1;
+	//alert(Math.abs(a));
+	//Math.sqrt()  开方  求平方根
+	//var b=9;
+	//alert(Math.sqrt(b));
+	
+	//※ Math.random();  随机数
+	
+	//Math.max()   //传两个参数
+	
+	//alert(Math.max(5,7));
+	
+	//Math.min()   //传两个参数
+	//alert(Math.min(5,7));
+	
+	//Math.pow(x,y);  x作为底数   y作为幂   
+	//alert(Math.pow(5,3));
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+<script type="text/javascript">
+for(var year=2000;year<=2016;year++){
+	if(year%4==0&&year%100!=0||year%400==0){
+		document.write('闰年有'+year+';&nbsp;');	
+	}	
+}
+document.write('<hr style="border:5px inset red;" />');
+var sum=0;
+for(var i=1;i<=100;i++){
+	if(i%2!=0){
+		document.write(i);
+		if(i!=99){
+				document.write('+');
+		}
+		sum+=i;	
+	}
+		
+}
+document.write('='+sum);
+document.write('<hr style="border:5px inset red;" />');
+var sum2=0;
+for(var i=1;i<=100;i++){
+	document.write(i);
+	if(i!=100){
+		document.write('+');
+	}
+	sum2+=i;
+	if(i==50){
+		document.write('<br />');
+	}			
+}
+sum2=sum2-10-20-30-40-80-90;
+document.write('-10-20-30-40-80-90='+sum2);
+document.write('<hr style="border:5px inset red;" />');
+for(var i=1;i<=100;i++){
+	if(i%7==0){
+		document.write(i+'&nbsp;&nbsp;');
+	}
+				
+}
+document.write('<hr style="border:5px inset red;" />');
+var mul=1;
+for(var i=1;i<=10;i++){
+	document.write(i);
+	if(i!=10){
+		document.write('&times;');
+	}
+	mul*=i;
+}
+document.write('='+mul);
+document.write('<hr style="border:5px inset red;" />');
+var a=1;
+for(var i=20;i<=80;i++){
+	if(i%3==0){
+		document.write(i+'&nbsp;');
+		if(a%5==0){
+			document.write('<br />');
+		}
+		a++;
+	}
+	
+}
+document.write('<hr style="border:5px inset red;" />');
+document.write('人数有');
+for(var i=100;i<=200;i++){
+	if(i%3==1&&i%4==2&&i%5==3){
+		document.write(i+"&nbsp;&nbsp;&nbsp;");	
+	}	
+}
+document.write('<hr style="border:5px inset red;" />');
+var sum3=1;
+for(var i=1;i<=100;i++){
+		var tmp=1;
+		if(i==1){
+			document.write('1');
+		}else{
+			document.write('1'+'/'+i+'&nbsp;');	
+		}
+		if(i%2==0&&i!=100){
+			document.write('+');	
+		}else{
+			if(i!=100){
+				document.write('-');
+			}
+		}
+		for(var j=1;j<=i;j++)
+		{
+			tmp*=(-1);
+			
+		}
+		sum3=sum3+1/(i+1)*tmp;
+		
+}
+sum3-=1/101;
+document.write('='+sum3);
+document.write('<hr style="border:5px inset red;" />');
+for(var i=1;i<=9;i++){
+	for(var j=1;j<=i;j++){
+		document.write('<a href="#">'+i+'&times;'+j+'='+i*j+'&nbsp;&nbsp;&nbsp;'+"</a>");	
+	}
+	document.write("<br />");	
+}
+document.write('<hr style="border:5px inset red;" />');
+
+for(var i=100;i<=200;i++){
+	if(i%3==0||i%7==0){
+		document.write(i+'&nbsp;')	
+	}	
+}
+document.write('<hr style="border:5px inset red;" />');
+var sal=10;
+var sum2=120;
+for(var i=1;i<=9;i++){
+	
+	sal*=(1+0.1);	
+	sum2+=sal*12;
+}
+document.write('共赚了'+sum2+'k十年后'+sal+'k')
+document.write('<hr style="border:5px inset red;" />');
+for(var i=100;i<=999;i++){
+	var a=parseInt(i/100);
+	var b=parseInt((i-a*100)/10);
+	var c=i-a*100-b*10;
+	if(i==a*a*a+b*b*b+c*c*c){
+		document.write(i+'&nbsp;');	
+	}	
+		
+}
+document.write('<hr style="border:5px inset red;" />');
+
+
+
+
+
+
+</script>
+</body>
+</html>

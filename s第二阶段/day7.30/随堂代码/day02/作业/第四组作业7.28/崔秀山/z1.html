@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+<script>
+	//闰年
+	/*var num=prompt("请输入年份");
+	if(num%4==0){
+		alert(num+"闰年");
+	}else {
+		alert(num+"不是闰年");
+	};*/
+	
+	//整数范围
+	/*var num=Number(prompt("请输入一个整数"));
+	if(num>0){
+		alert(num+"大于0");
+	}else if(num<0){
+		alert(num+"小于0");
+	}else if(num==0){
+		alert(num+"等于0");
+	};*/
+	
+	//是否为3的倍数
+	/*var num=Number(prompt("请输入一个整数"));
+	if(num%3==0){
+		alert(num+"是3的倍数");
+	}else{
+		alert(num+"不是3的倍数");
+	};*/
+	
+	//体重问题
+	/*var height=Number(prompt("请输入你的身高"));
+	var weight=Number(prompt("请输入你的体重"));
+	if (weight==(height-108)*2){
+		alert("你的身材完美");
+	}else if(weight>(height-108)*2){
+		if(weight > (height-108)*2 + 10){
+			alert("你的体重高于标准体重10以外不合适");
+		}else {
+			alert("你的体重高于标准体重10以内合适");
+		}
+	}else if(weight<(height-108)*2){
+		if(weight < (height-108)*2 - 10){
+			alert("你的体重低于标准体重10以外不合适");
+		}else {
+			alert("你的体重低于标准体重10以内合适");
+		}
+	};*/
+	
+	//判断等级
+	/*var score=Number(prompt("请输入你的分数"));
+	if (score>=90){
+		alert("A");
+	}else if(score<90&&score>=80){
+		alert("B");
+	}else if(score<80&&score>=70){
+		alert("C");
+	}else if(score<70&&score>=60){
+		alert("D");
+	}else if(score<60){
+		alert("留级");
+	};*/
+	
+	//月份
+	/*var month=Number(prompt("请输入月份"));
+	switch (month){
+		case 1:alert(month+"月份有31天");break;
+		case 2:alert(month+"月份有29天");break;
+		case 3:alert(month+"月份有31天");break;
+		case 4:alert(month+"月份有30天");break;
+		case 5:alert(month+"月份有31天");break;
+		case 6:alert(month+"月份有30天");break;
+		case 7:alert(month+"月份有31天");break;
+		case 8:alert(month+"月份有31天");break;
+		case 9:alert(month+"月份有30天");break;
+		case 10:alert(month+"月份有31天");break;
+		case 11:alert(month+"月份有30天");break;
+		case 12:alert(month+"月份有31天");break;
+		default:("完事");
+	};*/
+	
+	//五位数
+	var num=Number(prompt("请输入一个五位数"));
+	var num1=num/10000;
+	var num2=parseInt (num1);
+	var num3=(num-(num2*10000))/1000;
+	var num4=parseInt (num3);
+	var num5=(num-(num2*10000)-(num4*1000))/100;
+	var num6=parseInt (num5);
+	var num7=(num-(num2*10000)-(num4*1000)-(num6*100))/10;
+	var num8=parseInt (num7);
+	var num9=num-(num2*10000)-(num4*1000)-(num6*100)-(num8*10);
+	alert(parseInt (num1)+"我是万位");
+	alert(parseInt (num3)+"我是千位");
+	alert(parseInt (num5)+"我是百位");
+	alert(parseInt (num7)+"我是十位");
+	alert(parseInt (num9)+"我是个位");
+	
+	//最大的值
+	/*var a=Number(prompt("请输入一个数"));;
+	var b=Number(prompt("请输入一个数"));;
+	var c=Number(prompt("请输入一个数"));;
+	if (a>b&&b>c){
+		alert(a+"是最大值");
+	}else if(a<b&&b>c){
+		alert(b+"是最大值");
+	}else if(a<b&&b<c){
+		alert(c+"是最大值");
+	};*/
+	
+</script>
+</body>
+</html>

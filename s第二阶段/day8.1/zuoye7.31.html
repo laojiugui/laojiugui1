@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>周末作业</title>
+<style>
+span{display:inline-block;margin:5px;padding:5px;background:red;}
+</style>
+</head>
+
+<body>
+<div id="box"></div>
+抽取<input id="shu" type="text" value="" />个
+<input id="btn" type="button" value="随机抽取" />
+<input id="paixun" type="button" value="1到100循环再到1" />
+
+<input id="sum" type="button" value="1!+2!+...+10!" />
+<input id="boqie" type="button" value="波切数组" />
+<script>
+
+// 随机点名表
+
+	var oBtn=document.getElementById("btn");
+	var oBox=document.getElementById("box");
+	var oShu=document.getElementById("shu")
+	oBtn.onclick=function(){
+		var arr= ['<span>崔秀山</span>','<span>李福玲</span>','<span>张延东</span>','<span>赵军朋</span>','<span>卢超</span>','<span>赵乘</span>','<span>王平原</span>','<span>李鹏</span>','<span>秦增福</span>','<span>马英博</span>','<span>张凯旋</span>','<span>顾乐威</span>','<span>陈化林</span>','<span>杨秀荣</span>','<span>闫成业</span>','<span>赵岩</span>','<span>邢延海</span>','<span>杜赞</span>','<span>徐龙杰</span>','<span>蔡尚卿</span>','<span>张亚楠</span>','<span>任龙飞</span>','<span>杨亚飞</span>','<span>王刚</span>','<span>大刘欢</span>','<span>小刘欢</span>','<span>李明</span>','<span>靳文龙</span>','<span>闫承惠</span>','<span>郭志迪</span>','<span>柳战鳌</span>','<span>吴涵</span>','<span>郎建强</span>','<span>张磊</span>','<span>周孟祥</span>','<span>冯伟星</span>','<span>刘博文</span>','<span>毛函</span>','<span>朱振凯</span>','<span>付贝贝</span>','<span>谢朋豆</span>','<span>魏国都</span>','<span>王凯</span>','<span>罗梦婷</span>','<span>张军杰</span>'];
+		var cunt="";       //用来保存下标的元素
+		var a=Number(oShu.value)    //在表框中赋值
+		for(var i=0;i<a;i++){
+			var index=parseInt(Math.random()*arr.length)  //提取数组中的下标
+			cunt+=arr[index]  //字符串拼接
+		}
+		oBox.innerHTML=cunt     //提取成果
+	}
+
+
+
+//  随机排列1.2.3.3...100.99.98...1
+var paixun=document.getElementById("paixun")
+paixun.onclick=function num(){
+	for(var a=1;a<=100;a++){
+		oBox.innerHTML+="<span>"+a+"</span>"  //先出来1...100
+	}
+	for(var b=99;b>=1;b--){
+		oBox.innerHTML+="<span>"+b+"</span>"   //再出来 99...1的序列
+	}
+}
+
+//计算 1!+2!+...+10!的和
+
+var Sum=document.getElementById("sum")
+/*var sum=0
+	function jiecheng(x){
+
+		if(x==1){
+		
+		return 1
+		}	
+		return x*jiecheng(x-1)
+	}document.write(jiecheng(x));*/
+	
+	
+Sum.onclick=function jiecheng(){		
+		var sum=0
+		for(var jie=1;jie<=10;jie++){
+			var he=1
+			for (var cheng=1;cheng<=jie;cheng++){	
+				he*=cheng			
+			}		
+			sum+=he	
+		}
+		
+		
+		oBox.innerHTML="<span>"+sum+"</span>"	
+}
+
+	//   斐波那契数列的第20项
+function m(n){
+	if(n==1){
+		return 1
+	}	
+	if(n==0){
+		return 0
+	}	
+		return m(n-1)+m(n-2)
+	
+}boqie.onclick=function(){oBox.innerHTML=m(20)};
+	
+	
+	
+
+</script>
+</body>
+</html>

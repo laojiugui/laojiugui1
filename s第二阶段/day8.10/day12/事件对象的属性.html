@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件对象的属性</title>
+</head>
+<body>
+
+	<script>
+	//获取鼠标的坐标  clientX  clientY
+	//属性  button 
+	 // 事件对象兼容
+		//alert(ev.button);
+
+		//普通浏览器  0 左键   1 滚轮   2 右键
+
+		//IE浏览器  1 左键   4 滚轮   2 右键
+	document.onmousedown=function(eve){
+		var eves=window.event||eve;
+		var isIE;
+		if(!eve){
+			isIE=true;
+		}
+		//alert(isIE)
+		if(eves.button==0||(isIE && eves.button==1)){
+			document.body.innerHTML="你点的是左键";
+		}else if(eves.button==1||(isIE&&eves.button==4)){
+			document.body.innerHTML="你点的是滚轮";
+		}else if(eves.button==2){
+			document.body.innerHTML="你点的是右键";
+		}
+	}
+
+
+	// document.onmousedown = function(eve){
+	// 	// 判断是否为ie低版本浏览器
+	// 	var isIE;
+	// 	if(!eve){
+	// 		isIE = true;
+	// 	}
+	// 	// 获取event对象的兼容写法
+	// 	var ev = eve || window.event;
+	// 	//console.log(window.event);
+	// 	if(ev.button == 0 || (isIE && ev.button == 1)){
+	// 		document.body.innerHTML = '你点击了鼠标左键';
+	// 	}else if(ev.button == 1 || (isIE && ev.button == 4)){
+	// 		document.body.innerHTML = '你滚了';
+	// 	}else if(ev.button == 2){
+	// 		document.body.innerHTML = '你点击了右键';
+	// 	}
+	// }
+
+
+
+
+	</script>
+</body>
+</html>

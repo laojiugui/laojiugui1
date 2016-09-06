@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>多个物体运动</title>
+    <style>
+    *{
+    margin:0;
+    padding:0;
+
+    }
+    #red{
+    width:50px;
+    height:50px;
+    position:absolute;
+    left:0px;
+    top:50px;
+    background:red;
+
+    }
+    #green{
+        width:50px;
+        height:50px;
+        position:absolute;
+        left:0px;
+        top:200px;
+        background:green;
+
+    }
+
+    </style>
+
+
+</head>
+<body>
+<input type="button" value="开始跑" id="btn">
+<div id="red"></div>
+<div id="green"></div>
+
+
+<script>
+var
+     oBtn=$("btn"),
+     oReg=$("red"),
+     oGreen=$("green"),
+     oObj=[{
+         moveObj:oReg,
+         isSpeed:10,
+         isTarget:800
+
+     },{
+         moveObj:oGreen,
+         isSpeed:9,
+         isTarget:1000
+
+     }]
+oBtn.onclick=function() {
+    for (var i = 0; i < oObj.length; i++) {
+        move(oObj[i])
+    }
+}
+
+
+
+function move(oObj){
+    clearInterval( oObj["moveObj"].timer);
+    oObj["moveObj"].timer=setInterval(function(){
+        var star=oObj["moveObj"].offsetLeft+oObj["isSpeed"];
+        if(star>=oObj["isTarget"]){
+            star=oObj["isTarget"];
+            clearInterval( oObj["moveObj"].timer);
+        }
+        oObj["moveObj"].style.left=star+"px"
+    },10);
+
+}
+
+    function $(id){
+
+        return document.getElementById(id)
+
+    }
+</script>
+
+
+</body>
+</html>

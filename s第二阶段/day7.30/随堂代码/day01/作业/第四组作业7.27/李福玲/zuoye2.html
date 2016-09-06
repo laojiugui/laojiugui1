@@ -1,0 +1,480 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script src="js/index.js"></script><!--引入式，在引入式中间不能写东西，另外在这里也不能嵌套script标签-->
+<script><!--嵌入式-->
+document.write("这是作业第一遍")
+</script>
+</head>
+
+<body>
+<script>//语句的嵌套：方法一   方法二
+document.write("<div style=\"width:100px;height:200px;background:red;\"></div>")
+document.write('<div style=\"width:100px;height:200px;background:blue;\"></div>')
+document.write("电话即可对方即可九分裤<h1>回复东方酒店</h1>")//document.write可以解析HTML标签；
+
+//注释的两种类型;单行注释，多行注释；
+//注释内容
+/*注释内容*/
+
+//变量：可以用来存储任何数据类型的容器；
+//变量的声明 变量的赋值
+
+var a=1; var $f=12; var _hj=34 //var是变量的关键字  a是变量的名字；1是变量的值
+//变量的命名规则：1、区分大小写；2、可以用字母、_、以及$符号作为名字的开头；3、数字不能作为变量名的开始；
+var a="fkjk kj"//字符串必须要加引号，单双引号都可以；
+var a="jkfjkf fk"
+alert(a)//变量会覆盖，不要起一样的变量名；
+
+//typeof是用来检测数据类型的
+
+var a="jkjkjkkjkj"
+alert(typeof(a))//显示结果为string;
+var b=445455564
+alert(typeof(b))//显示结果为number;
+var bool=true
+alert(typeof(bool))//显示结果为boolean;
+//以上三种数据类型是基本类型，还有两种是特殊数据类型
+
+var c=null
+alert(typeof(c))//此结果显示为object;
+
+var d
+alert(typeof(d))//此结果显示为undefined;
+
+//两个div的嵌套用Js代码完成
+document.write("<div style='width:300px;height:200px;background:red'><div style='width:100px;height:100px;background:blue'></div></div>")
+
+//js运算符
+
+//算术运算符 + - * /  %（取余或取模）
+
+var num1=10
+var num2=3
+alert(num1+num2);
+alert(num1-num2);
+alert(num1*num2);
+alert(num1/num2);
+alert(num1%num2);
+
+//Number()把非数据数据类型转换为数字
+var str="1334cj"
+alert(Number(str))//此结果显示的是NaN；
+var str="1334"
+alert(Number(str))//此结果显示的是1334；
+var bool=true
+alert(Number(bool))//此结果显示的是1；false显示的是0；
+var e=""
+alert(Number(e))//此结果显示的是0;
+var f=" "
+alert(Number(f))//此结果显示的是0;
+var g
+alert(Number(g))//此结果显示的是NaN；
+parseInt()//提取数字，不过不能是字母开头，只能是数字开头
+var num7="1332dd"
+alert(parseInt(num7));//显示的是1332；
+
+var num8="aa348fdf"
+alert(parseInt(num8));//显示的是NaN；
+parseFlow()//提取小数点后的数字；
+
+
+//关系运算符 >  <  >=   <=   ==  ===  !=  !==
+
+var num3=4
+var num4=6
+alert(num3<num4)//true//运算出来的结果只有两个：一个是true；一个是false;
+alert(num3>num4)//false
+alert(num3>=num4)//false
+alert(num3<=num4)//true
+alert(num3==num4)//false
+alert(num3===num4)//false
+alert(num3!=num4)//true
+alert(num3!==num4)//true
+
+//赋值运算符  =    +=  -=   *=   /=   %=
+
+var a=5
+a+=5 //那么a=10；
+
+var name="李白"
+var singer="李荣浩"
+document.write(name+"这首歌是"+singer+"唱的"+"也是"+singer+"作的曲")
+</script>
+<script>//语句的嵌套：方法一   方法二
+document.write("<div style=\"width:100px;height:200px;background:red;\"></div>")
+document.write('<div style=\"width:100px;height:200px;background:blue;\"></div>')
+document.write("电话即可对方即可九分裤<h1>回复东方酒店</h1>")//document.write可以解析HTML标签；
+
+//注释的两种类型;单行注释，多行注释；
+//注释内容
+/*注释内容*/
+
+//变量：可以用来存储任何数据类型的容器；
+//变量的声明 变量的赋值
+
+var a=1; var $f=12; var _hj=34 //var是变量的关键字  a是变量的名字；1是变量的值
+//变量的命名规则：1、区分大小写；2、可以用字母、_、以及$符号作为名字的开头；3、数字不能作为变量名的开始；
+var a="fkjk kj"//字符串必须要加引号，单双引号都可以；
+var a="jkfjkf fk"
+alert(a)//变量会覆盖，不要起一样的变量名；
+
+//typeof是用来检测数据类型的
+
+var a="jkjkjkkjkj"
+alert(typeof(a))//显示结果为string;
+var b=445455564
+alert(typeof(b))//显示结果为number;
+var bool=true
+alert(typeof(bool))//显示结果为boolean;
+//以上三种数据类型是基本类型，还有两种是特殊数据类型
+
+var c=null
+alert(typeof(c))//此结果显示为object;
+
+var d
+alert(typeof(d))//此结果显示为undefined;
+
+//两个div的嵌套用Js代码完成
+document.write("<div style='width:300px;height:200px;background:red'><div style='width:100px;height:100px;background:blue'></div></div>")
+
+//js运算符
+
+//算术运算符 + - * /  %（取余或取模）
+
+var num1=10
+var num2=3
+alert(num1+num2);
+alert(num1-num2);
+alert(num1*num2);
+alert(num1/num2);
+alert(num1%num2);
+
+//Number()把非数据数据类型转换为数字
+var str="1334cj"
+alert(Number(str))//此结果显示的是NaN；
+var str="1334"
+alert(Number(str))//此结果显示的是1334；
+var bool=true
+alert(Number(bool))//此结果显示的是1；false显示的是0；
+var e=""
+alert(Number(e))//此结果显示的是0;
+var f=" "
+alert(Number(f))//此结果显示的是0;
+var g
+alert(Number(g))//此结果显示的是NaN；
+parseInt()//提取数字，不过不能是字母开头，只能是数字开头
+var num7="1332dd"
+alert(parseInt(num7));//显示的是1332；
+
+var num8="aa348fdf"
+alert(parseInt(num8));//显示的是NaN；
+parseFlow()//提取小数点后的数字；
+
+
+//关系运算符 >  <  >=   <=   ==  ===  !=  !==
+
+var num3=4
+var num4=6
+alert(num3<num4)//true//运算出来的结果只有两个：一个是true；一个是false;
+alert(num3>num4)//false
+alert(num3>=num4)//false
+alert(num3<=num4)//true
+alert(num3==num4)//false
+alert(num3===num4)//false
+alert(num3!=num4)//true
+alert(num3!==num4)//true
+
+//赋值运算符  =    +=  -=   *=   /=   %=
+
+var a=5
+a+=5 //那么a=10；
+
+var name="李白"
+var singer="李荣浩"
+document.write(name+"这首歌是"+singer+"唱的"+"也是"+singer+"作的曲")
+</script>
+<script>//语句的嵌套：方法一   方法二
+document.write("<div style=\"width:100px;height:200px;background:red;\"></div>")
+document.write('<div style=\"width:100px;height:200px;background:blue;\"></div>')
+document.write("电话即可对方即可九分裤<h1>回复东方酒店</h1>")//document.write可以解析HTML标签；
+
+//注释的两种类型;单行注释，多行注释；
+//注释内容
+/*注释内容*/
+
+//变量：可以用来存储任何数据类型的容器；
+//变量的声明 变量的赋值
+
+var a=1; var $f=12; var _hj=34 //var是变量的关键字  a是变量的名字；1是变量的值
+//变量的命名规则：1、区分大小写；2、可以用字母、_、以及$符号作为名字的开头；3、数字不能作为变量名的开始；
+var a="fkjk kj"//字符串必须要加引号，单双引号都可以；
+var a="jkfjkf fk"
+alert(a)//变量会覆盖，不要起一样的变量名；
+
+//typeof是用来检测数据类型的
+
+var a="jkjkjkkjkj"
+alert(typeof(a))//显示结果为string;
+var b=445455564
+alert(typeof(b))//显示结果为number;
+var bool=true
+alert(typeof(bool))//显示结果为boolean;
+//以上三种数据类型是基本类型，还有两种是特殊数据类型
+
+var c=null
+alert(typeof(c))//此结果显示为object;
+
+var d
+alert(typeof(d))//此结果显示为undefined;
+
+//两个div的嵌套用Js代码完成
+document.write("<div style='width:300px;height:200px;background:red'><div style='width:100px;height:100px;background:blue'></div></div>")
+
+//js运算符
+
+//算术运算符 + - * /  %（取余或取模）
+
+var num1=10
+var num2=3
+alert(num1+num2);
+alert(num1-num2);
+alert(num1*num2);
+alert(num1/num2);
+alert(num1%num2);
+
+//Number()把非数据数据类型转换为数字
+var str="1334cj"
+alert(Number(str))//此结果显示的是NaN；
+var str="1334"
+alert(Number(str))//此结果显示的是1334；
+var bool=true
+alert(Number(bool))//此结果显示的是1；false显示的是0；
+var e=""
+alert(Number(e))//此结果显示的是0;
+var f=" "
+alert(Number(f))//此结果显示的是0;
+var g
+alert(Number(g))//此结果显示的是NaN；
+parseInt()//提取数字，不过不能是字母开头，只能是数字开头
+var num7="1332dd"
+alert(parseInt(num7));//显示的是1332；
+
+var num8="aa348fdf"
+alert(parseInt(num8));//显示的是NaN；
+parseFlow()//提取小数点后的数字；
+
+
+//关系运算符 >  <  >=   <=   ==  ===  !=  !==
+
+var num3=4
+var num4=6
+alert(num3<num4)//true//运算出来的结果只有两个：一个是true；一个是false;
+alert(num3>num4)//false
+alert(num3>=num4)//false
+alert(num3<=num4)//true
+alert(num3==num4)//false
+alert(num3===num4)//false
+alert(num3!=num4)//true
+alert(num3!==num4)//true
+
+//赋值运算符  =    +=  -=   *=   /=   %=
+
+var a=5
+a+=5 //那么a=10；
+
+var name="李白"
+var singer="李荣浩"
+document.write(name+"这首歌是"+singer+"唱的"+"也是"+singer+"作的曲")
+</script>
+<script>//语句的嵌套：方法一   方法二
+document.write("<div style=\"width:100px;height:200px;background:red;\"></div>")
+document.write('<div style=\"width:100px;height:200px;background:blue;\"></div>')
+document.write("电话即可对方即可九分裤<h1>回复东方酒店</h1>")//document.write可以解析HTML标签；
+
+//注释的两种类型;单行注释，多行注释；
+//注释内容
+/*注释内容*/
+
+//变量：可以用来存储任何数据类型的容器；
+//变量的声明 变量的赋值
+
+var a=1; var $f=12; var _hj=34 //var是变量的关键字  a是变量的名字；1是变量的值
+//变量的命名规则：1、区分大小写；2、可以用字母、_、以及$符号作为名字的开头；3、数字不能作为变量名的开始；
+var a="fkjk kj"//字符串必须要加引号，单双引号都可以；
+var a="jkfjkf fk"
+alert(a)//变量会覆盖，不要起一样的变量名；
+
+//typeof是用来检测数据类型的
+
+var a="jkjkjkkjkj"
+alert(typeof(a))//显示结果为string;
+var b=445455564
+alert(typeof(b))//显示结果为number;
+var bool=true
+alert(typeof(bool))//显示结果为boolean;
+//以上三种数据类型是基本类型，还有两种是特殊数据类型
+
+var c=null
+alert(typeof(c))//此结果显示为object;
+
+var d
+alert(typeof(d))//此结果显示为undefined;
+
+//两个div的嵌套用Js代码完成
+document.write("<div style='width:300px;height:200px;background:red'><div style='width:100px;height:100px;background:blue'></div></div>")
+
+//js运算符
+
+//算术运算符 + - * /  %（取余或取模）
+
+var num1=10
+var num2=3
+alert(num1+num2);
+alert(num1-num2);
+alert(num1*num2);
+alert(num1/num2);
+alert(num1%num2);
+
+//Number()把非数据数据类型转换为数字
+var str="1334cj"
+alert(Number(str))//此结果显示的是NaN；
+var str="1334"
+alert(Number(str))//此结果显示的是1334；
+var bool=true
+alert(Number(bool))//此结果显示的是1；false显示的是0；
+var e=""
+alert(Number(e))//此结果显示的是0;
+var f=" "
+alert(Number(f))//此结果显示的是0;
+var g
+alert(Number(g))//此结果显示的是NaN；
+parseInt()//提取数字，不过不能是字母开头，只能是数字开头
+var num7="1332dd"
+alert(parseInt(num7));//显示的是1332；
+
+var num8="aa348fdf"
+alert(parseInt(num8));//显示的是NaN；
+parseFlow()//提取小数点后的数字；
+
+
+//关系运算符 >  <  >=   <=   ==  ===  !=  !==
+
+var num3=4
+var num4=6
+alert(num3<num4)//true//运算出来的结果只有两个：一个是true；一个是false;
+alert(num3>num4)//false
+alert(num3>=num4)//false
+alert(num3<=num4)//true
+alert(num3==num4)//false
+alert(num3===num4)//false
+alert(num3!=num4)//true
+alert(num3!==num4)//true
+
+//赋值运算符  =    +=  -=   *=   /=   %=
+
+var a=5
+a+=5 //那么a=10；
+
+var name="李白"
+var singer="李荣浩"
+document.write(name+"这首歌是"+singer+"唱的"+"也是"+singer+"作的曲")
+</script>
+<script>//语句的嵌套：方法一   方法二
+document.write("<div style=\"width:100px;height:200px;background:red;\"></div>")
+document.write('<div style=\"width:100px;height:200px;background:blue;\"></div>')
+document.write("电话即可对方即可九分裤<h1>回复东方酒店</h1>")//document.write可以解析HTML标签；
+
+//注释的两种类型;单行注释，多行注释；
+//注释内容
+/*注释内容*/
+
+//变量：可以用来存储任何数据类型的容器；
+//变量的声明 变量的赋值
+
+var a=1; var $f=12; var _hj=34 //var是变量的关键字  a是变量的名字；1是变量的值
+//变量的命名规则：1、区分大小写；2、可以用字母、_、以及$符号作为名字的开头；3、数字不能作为变量名的开始；
+var a="fkjk kj"//字符串必须要加引号，单双引号都可以；
+var a="jkfjkf fk"
+alert(a)//变量会覆盖，不要起一样的变量名；
+
+//typeof是用来检测数据类型的
+
+var a="jkjkjkkjkj"
+alert(typeof(a))//显示结果为string;
+var b=445455564
+alert(typeof(b))//显示结果为number;
+var bool=true
+alert(typeof(bool))//显示结果为boolean;
+//以上三种数据类型是基本类型，还有两种是特殊数据类型
+
+var c=null
+alert(typeof(c))//此结果显示为object;
+
+var d
+alert(typeof(d))//此结果显示为undefined;
+
+//两个div的嵌套用Js代码完成
+document.write("<div style='width:300px;height:200px;background:red'><div style='width:100px;height:100px;background:blue'></div></div>")
+
+//js运算符
+
+//算术运算符 + - * /  %（取余或取模）
+
+var num1=10
+var num2=3
+alert(num1+num2);
+alert(num1-num2);
+alert(num1*num2);
+alert(num1/num2);
+alert(num1%num2);
+
+//Number()把非数据数据类型转换为数字
+var str="1334cj"
+alert(Number(str))//此结果显示的是NaN；
+var str="1334"
+alert(Number(str))//此结果显示的是1334；
+var bool=true
+alert(Number(bool))//此结果显示的是1；false显示的是0；
+var e=""
+alert(Number(e))//此结果显示的是0;
+var f=" "
+alert(Number(f))//此结果显示的是0;
+var g
+alert(Number(g))//此结果显示的是NaN；
+parseInt()//提取数字，不过不能是字母开头，只能是数字开头
+var num7="1332dd"
+alert(parseInt(num7));//显示的是1332；
+
+var num8="aa348fdf"
+alert(parseInt(num8));//显示的是NaN；
+parseFlow()//提取小数点后的数字；
+
+
+//关系运算符 >  <  >=   <=   ==  ===  !=  !==
+
+var num3=4
+var num4=6
+alert(num3<num4)//true//运算出来的结果只有两个：一个是true；一个是false;
+alert(num3>num4)//false
+alert(num3>=num4)//false
+alert(num3<=num4)//true
+alert(num3==num4)//false
+alert(num3===num4)//false
+alert(num3!=num4)//true
+alert(num3!==num4)//true
+
+//赋值运算符  =    +=  -=   *=   /=   %=
+
+var a=5
+a+=5 //那么a=10；
+
+var name="李白"
+var singer="李荣浩"
+document.write(name+"这首歌是"+singer+"唱的"+"也是"+singer+"作的曲")
+</script>
+
+</body>
+</html>

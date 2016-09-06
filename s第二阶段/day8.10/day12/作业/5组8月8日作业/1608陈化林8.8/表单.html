@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+姓名<input type="text" value="" id="xingm" />
+性别<input type="text" value="" id="xingb" />
+年龄<input type="text" value="" id="nianl" />
+<input type="button" value="生成" id="btn"/>
+<div id="box"></div>
+<script>
+var xingm=document.getElementById("xingm");
+var xingb=document.getElementById("xingb");
+var nianl=document.getElementById("nianl");
+var btn=document.getElementById("btn");
+var box=document.getElementById("box");
+btn.onclick=function(){
+	var xm=xingm.value;
+	var xb=xingb.value;
+	var nl=nianl.value;
+	var table=document.createElement("table");
+	var tr=document.createElement("tr");
+	var td1=document.createElement("td");
+	var td2=document.createElement("td");
+	var td3=document.createElement("td");
+	var tet1=document.createTextNode(xm);
+	var tet2=document.createTextNode(xb);
+	var tet3=document.createTextNode(nl);
+	td1.appendChild(tet1);
+	td2.appendChild(tet2);
+	td3.appendChild(tet3);
+	tr.appendChild(td1);
+	tr.appendChild(td2);
+	tr.appendChild(td3);
+	table.appendChild(tr);
+	box.appendChild(table);
+	}
+
+
+</script>
+</body>
+</html>

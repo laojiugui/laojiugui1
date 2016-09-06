@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+    <style type="text/css">
+		*{margin:0;padding:0;font-size:14px;font-family:"微软雅黑";}
+		.header{width:500px;margin:20px auto;border-bottom:1px solid #d9d9d9;text-align:center;}
+		#container{
+			width:500px;margin:20px auto;background:#F5F5F5;
+		}
+		#container td{
+			border:1px solid #d9d9d9;text-align:center;width:30%;height:38px;
+		}
+		#container .td1{
+			width:70%;background:#fff;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<div class="header"><img src="img.png"></div>
+		<table id="container" cellpadding="0" cellspacing="1">
+			<tr>
+				<td>体重：</td>
+				<td class="td1" style="text-align:left;">&nbsp;&nbsp;<input type="text" id="tz"> </td>
+			</tr>
+			<tr>
+				<td>身高：</td>
+				<td class="td1" style="text-align:left;">&nbsp;&nbsp;<input type="text" id="sg"> </td>
+			</tr>
+			<tr><td class="td1" colspan="2"><img src="btn.png" id="btn"></td></tr>
+			<tr>
+				<td>健康值：</td>
+				<td class="td1" style="text-align:left;" id="txt1"> </td>
+			</tr>
+			<tr>
+				<td>系统评价：</td>
+				<td class="td1" style="text-align:left;" id="txt2"> </td>
+			</tr>
+		</table>
+	</div>
+	<div id="box"></div>
+	<script>
+		function test(){
+			var oSg=document.getElementById("sg");
+			var oTz=document.getElementById("tz");
+			var oTxt1=document.getElementById("txt1");
+			var oTxt2=document.getElementById("txt2");
+			
+			var s=Number(oSg.value);
+			var t=Number(oTz.value);
+			var bz=(s-108)*2;//标准体重
+			if(t>bz+10){
+				oTxt1.innerHTML="你超重了！！！！";
+				oTxt2.innerHTML="你没人要了！！！！";
+			}else if(t<bz-10){
+				oTxt1.innerHTML="你要被风吹走了！！！！";
+				oTxt2.innerHTML="你是要被飘到哪！！！！";
+			}else{
+				oTxt1.innerHTML="你是标准身材！！！！";
+				oTxt2.innerHTML="完美！！！！！！！！"
+			}	
+			
+		}
+		var oBtn=document.getElementById("btn");
+		oBtn.onclick=function(){
+			test();
+		}
+		
+		//对象.事件名称=function(){
+		//
+		//}
+		
+		//写一个函数  判断一个数是否是质数或素数  质数的条件就是约数只有1和它本身
+		function isPrime(x){
+			var count=0;
+			for(var i=1;i<=x;i++){
+				if(x%i==0){
+					count++;
+				}
+			}
+			if(count==2){
+				//alert(x+"是质数");
+				return true;
+			}else{
+				//alert(x+"不是质数");
+				return false;
+			}
+		}
+		console.log(isPrime(1));
+		
+		//写一个函数 该函数可以计算1~n之间所有非质数的平均值
+		function avg(n){
+			var count=0; //保存非质数的个数
+			var sum=0;
+			for(var i=1;i<=n;i++){
+				if(!isPrime(i)){
+					count++;
+					sum+=i;
+				}
+			}
+			return sum/count;	
+		}
+		var avg1=avg(6);
+		//alert(avg1);
+		function getId(id){
+			return document.getElementById(id);
+		}
+		
+		var oBox=getId("box");
+		//console.log(oBox);
+		
+		function aa(){
+			return 1;
+		}
+		console.log(aa())
+	
+	</script>
+</body>
+</html>

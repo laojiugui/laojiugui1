@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+	ul{list-style:none;padding:0;margin:0;}
+	.context-menu{display:none;position:absolute;top:10px;left:10px;width:160px;padding:2px;border:1px solid #ddd;line-height:1.5;color:#666;}
+	.context-menu li{padding:0 5px;border-bottom:1px solid #dfdfdf;}
+	.context-menu li:hover{background-color:#efefef;color:#333;}
+	.context-menu li:last-child{border-bottom:none;}
+	#box{width:50px;height:50px;background:red;}
+</style>
+</head>
+
+<body>
+
+<div class="context-menu">
+		<ul>
+			<li>菜单1</li>
+			<li>菜单2</li>
+			<li>菜单3</li>
+			<li>菜单4</li>
+			<li>菜单5</li>
+		</ul>
+	</div><br><br>
+	
+<div id="box"></div>	
+<script>
+var oDiv=document.getElementsByTagName("div")[0]
+document.oncontextmenu=function(e){
+	var event=window.event||e
+	window.event?e.returnValue=false:e.preventDefault();
+	oDiv.style.display="block"
+	oDiv.style.left=e.clientX+"px"
+	oDiv.style.top=e.clientY+"px"
+
+}
+document.onclick=function(){
+
+oDiv.style.display="none"
+oDiv.onclick=function(e){
+var event=window.event||e
+	window.event?e.cancelBubble=true:e.stoppropagation();
+
+}
+}
+
+
+
+
+
+
+
+//事件捕获!!
+
+var box=document.getElementById("box")
+box.onmouseover=function(){
+alert(1);
+
+};
+box.onmouseover=function(){
+alert(2);
+
+};
+  
+  
+  
+  //普通浏览器兼容
+/*box.addEventListener("mouseover",function(){
+alert(1)
+},false)
+box.addEventListener("mouseover",function(){
+alert(2)
+},false)*/
+
+
+
+//IE兼容
+box.attachEvent("onmouseover",function(){
+alert(1)
+})
+box.attachEvent("onmouseover",function(){
+alert(2)
+})
+
+
+
+
+
+
+</script>
+</body>
+</html>

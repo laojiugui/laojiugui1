@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+
+
+
+<style>
+span{display:inline-block;margin:10px;padding:10px;background:tan;}
+</style>
+</head>
+
+<body>
+<div id="box3"></div>
+<input id="txt" type="text" value="" />
+<input id="btn" type="button" value="添加" />
+
+	<ul id="list">
+		
+	<ul>
+<input id=tui type="button" value="生成" />
+<div id="box"></div>
+<script>
+/*var arr=[2,5,1]
+arr.push(2,1)
+alert(arr)
+alert(arr.push())
+arr.pop()
+alert(arr)
+arr.unshift(10,20)
+alert(arr)
+arr.shift()
+alert(arr)
+ 
+ 
+ var obj1={name:"冯小刚",age:18}
+ 
+ console.log(obj1.name)
+ console.log(obj1['name'])*/
+ 
+ 
+ /*var arr=["猪肉荣","猪大肠","猪头肉"]
+ arr.splice(1,1,"猪头")
+ //alert(arr)
+ 
+ var arr1="abcdef"
+
+ //console.log(arr1.split("").reverse().join(""))
+ 
+ 
+ //1.2.3...100.99.98...1的开关思想
+ var sum=0
+ for(var i=1;i<=100;){
+	 document.write(i);
+	 if(i==100){
+		sum=1
+	 }if(sum==0){
+		i++
+	 }else{
+		i--
+	 }if(i==0){
+	 break
+	 } 
+ }
+ 
+ //1!+2!+3!+...+10!阶乘之和
+ 
+ function sUm(x){
+	if(x==1){
+		return 1
+	}var Sum=1
+	for(var y=1;y<=x;y++){
+	
+		
+		Sum*=y
+	
+	}
+	return Sum+sUm(x-1)
+ }
+ 
+//alert(sUm(10))
+
+
+
+
+
+
+//1到100能被3或7整除,合并成一个数组
+
+var arr=[];   //建立空数组
+
+//console.log(arr)
+
+function arrs(n){                     //建立封装函数
+
+	for(var num=1;num<=n;num++){
+		if(num%3==0||num%7==0){
+			arr.push(num+" ")  //把得到的元素推进数组
+			}
+
+	}
+	return arr     //用来保存函数的值
+}
+arrs(100)          //调用函数,,函数不调用不执行!!!
+document.write(arrs(100))       //在控制台用来检测成果!!!!!!!
+//alert(num)
+
+
+//数组去重
+
+var arr=[1,4,4,5,6,6,8,8]
+for(var i=0;i<arr.length;i++){         //下标
+	for(var j=i+1;j<arr.length;j++){     //下标与数组长度的关系
+		if(arr[i]==arr[j]){                  //开始比较
+			arr.splice(j,1)      //如果一样的话就删除一个
+			j--;     //数组长度
+		}
+	}
+}console.log(arr)
+
+
+//二维数组
+
+var arr=[[1,4,5,2,4],[5,7,4,1,2],[5,4,1,2]]
+for(var i=0;i<arr.length;i++){
+
+	for(var j=0;j<arr[i].length;j++){
+		console.log(arr[i][j])
+	}
+}
+
+
+
+//把数组里面的元素全部都取出来
+var arr=[1,2,'html',[1,2,4,'html2'],true,[5,4,'javascript']]
+for(var i=0;i<arr.length;i++){             
+	
+	if(typeof arr[i]==="object"){      //判断数组里面元素类型
+		for(var j=0;j<arr[i].length;j++){
+			console.log(arr[i][j])		  //先取出二位数组里面的元素
+		}
+	}else{
+		
+		console.log(arr[i])
+	}
+	
+}
+
+var btn=document.getElementById("btn");
+var txt=document.getElementById("txt") ;
+var list=document.getElementById("list");
+var arr1=['范德萨发撒旦法范德萨','范德萨发撒旦法范德萨','范德萨发撒旦法范德萨']
+num1();  //调用函数
+btn.onclick=function (){    //单击事件函数
+	var news=txt.value  //获取文本框的值
+	arr1.unshift(news)  //把元素推到数组首位
+	num1();   //调用函数
+	txt.value=""  //文本框清零
+}
+function num1(){          //相同的代码封装成函数
+	var arr="";
+	for(var i=0;i<arr1.length;i++){
+	arr+='<li><a href="#">'+arr1[i]+'</a></li>'
+	}
+	list.innerHTML=arr
+
+}
+//console.log(btn) */
+
+
+
+		/*var arr=[];
+		while(arr.length<4){
+			var n=parseInt((Math.random)*58+65);
+			if((n>=65&&n<=90)||(n>=97&&n<=122)){
+				arr.push(String.fromCharCode(n));
+			}
+		
+		}
+		alert(arr.join(""))*/
+
+
+
+		
+var tui=document.getElementById("tui")   
+var box=document.getElementById("box")
+
+tui.onclick=function(){    
+	var arr=[]    //建立空数组
+	while(arr.length<4){           //限制数组长度
+		var n=parseInt(Math.random()*75+48);        //设置ascii码变量
+		if((n>=65&&n<=90)||(n>=97&&n<=122)){     //设置变量条件
+			arr.push(String.fromCharCode(n));            //把ascii码转成数组
+		}	
+	}
+	box.innerHTML=arr.join("");  // arr.join是去除数组里面逗号
+
+}
+		
+	var tui=document.getElementById("tui")
+	var box3=document.getElementById("box3")
+	
+	tui.onclick=function(){
+		var arr=[];
+		while(arr.length<4){
+			var n=parseInt((Math.random)*58+65)
+			if((n>=65&&n<=90)||(n>=97&&n<=122)){
+				arr.push(String.fromChartCode(n))
+			}
+		}
+			box3.innerHTML=arr.jion("");
+	}
+		
+
+</script>
+</body>
+</html>

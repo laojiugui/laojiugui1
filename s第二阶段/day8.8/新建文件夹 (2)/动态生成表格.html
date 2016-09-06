@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>动态生成表格并且可以删除所在的行</title>
+	<style>
+	table{margin-top:20px;width:100%;border:1px solid #ddd;border-collapse: collapse;}
+	td{padding:5px 15px;border:1px solid #ddd;}
+	</style>
+</head>
+<body>
+	行：<input type="text" id="row">
+	列：<input type="text" id="col">
+	行：<input type="button" id="btn" value="生成表格">
+	<script>
+	var row=document.getElementById('row');
+	var col=document.getElementById('col');
+	var btn=document.getElementById('btn');
+	btn.onclick=function(){
+		var rows=row.value;
+		var cols=col.value;
+		var table=document.createElement('table');  //创建元素节点
+		for(var i=0;i<rows;i++){//控制行
+			var tr=document.createElement('tr'); //创建元素节点
+			for(var j=0;j<cols;j++){//控制列
+				var td=document.createElement('td'); //创建元素节点
+				if(j==cols-1){//如果是最后一列  就变成删除按钮
+					var button=document.createElement('button'); //创建节点
+					var txt=document.createTextNode('删除');//创建文本节点
+					button.appendChild(txt);//把文本节点插入到元素节点中
+					td.appendChild(button);
+					button.onclick=function(){
+						var currentTr=this.parentNode.parentNode;//通过节点关系找到删除按钮所在的行
+						table.removeChild(currentTr);//删除tr
+					}
+
+				}else{
+					td.innerHTML="单元格"+(i+1)+(j+1);
+				}
+				tr.appendChild(td);
+			}
+			table.appendChild(tr);
+		}
+		
+		document.body.appendChild(table);
+	}
+
+
+
+
+	// var aa=1;
+	// function aaa(){
+	// 	alert(a);
+	// 	var a=1111;
+	// }
+	// aaa();
+	// alert(aa);
+	// alert(a);
+	</script>
+</body>
+</html>

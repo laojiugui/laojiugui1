@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>[案例]愤怒的小鸟</title>
+	<style>
+		#bird{position:absolute;width:100px;top:0;left:10px;}
+		.d-right{transform:rotateY(180deg);}
+	</style>
+	<script>
+		window.onload = function(){
+			var bird=document.getElementById('bird');
+			document.onkeydown=function(e){
+				var e=window.event||e;
+				var startL=parseInt(bird.style.left);
+				var startT=parseInt(bird.style.top);
+				if(e.keyCode==37){
+					bird.className="";
+					bird.style.left=startL-10+'px';
+				}else if(e.keyCode==38){
+					bird.style.top=startT-10+'px';
+				}else if(e.keyCode==39){
+					bird.className="d-right";
+					bird.style.left=startL+10+'px';
+				}else if(e.keyCode==40){
+
+					bird.style.top=startT+10+'px';
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<img src="images/bird.jpg" id="bird" style="left:10px;top:10px;">
+</body>
+</html>

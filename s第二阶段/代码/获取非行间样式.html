@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DOM</title>  
+<style>
+	#box{width:400px;height:400px;background:red;}
+</style>
+</head>
+<body>
+	<div class="content">我喜欢吃辣条</div>
+	<div class="content">吃完豆腐池辣条</div>
+	<div class="content">喜欢去超市捏方便面</div>
+	<div class="content" id="s">桂林米粉哪里最正宗</div>	
+	
+	<p id="box" style="border:10px solid pink;">hfhffhfhfhfh</p>
+<script>
+	window.onload=function(){
+		//获取类名
+		function  getClassName(classname){
+			var arr=[];
+			if(document.getElementsByClassName==undefined){
+				var eles=document.getElementsByTagName("*");
+				for(var i=0;i<eles.length;i++){
+					if(eles[i].className==classname){
+						arr.push(eles[i]);
+					}
+				}
+				return arr;
+			
+			}else{
+				return document.getElementsByClassName(classname);
+			}
+		}
+		//获取id
+		function getId(id){
+			return document.getElementById(id);
+		}
+		
+		var box=getId("box");
+		//alert(box.style.width);
+		//alert(window.getComputedStyle(box,false)["width"])
+		//alert(box.currentStyle['width']);
+		
+		//getComputedStyle 
+		//兼容  获取非行间样式
+		function getStyle(obj,style){
+			if(obj.currentStyle){  //IE8以下（包含IE8）
+				return obj.currentStyle[style];
+			}else{
+				return window.getComputedStyle(obj,false)[style];//标准写法
+			}
+		}
+		
+		//alert(getStyle(box,"height"));
+		
+		
+	}
+
+	
+	
+</script>
+</body>
+</html>

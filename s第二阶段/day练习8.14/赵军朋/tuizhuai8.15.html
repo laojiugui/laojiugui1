@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>拖拽!</title>
+<style>
+	*{margin:0;padding:0}
+</style>
+</head>
+
+<body>
+<div id="box" style="width:500px;height:500px;background:red;position:absolute;left:0;top:0;"></div>
+<script>
+	var box=document.getElementById("box")
+	box.onmousedown=function(e){
+		var ev=window.event||e,
+		    offsetL=e.offsetX,
+		    offsetT=e.offsetY;
+		document.onmousemove=function(e){
+			var ev=window.event||e,
+				L=e.clientX,
+				T=e.clientY,
+				Left=L-offsetL,
+				Top=T-offsetT,
+				W=document.documentElement.clientWidth,
+				H=document.documentElement.clientHeight,
+				Width=parseInt(box.style.width),
+				Height=parseInt(box.style.height);
+
+
+				if(Left<0){
+
+					Left=0
+				}else if(Left>W-Width){
+					Left=W-Width
+
+				}
+
+				else if(Top<0){
+
+					Top=0
+				}else if(Top>H-Height){
+					Top=H-Height
+
+				}
+
+				box.style.left=Left+"px"
+				box.style.top=Top+"px"
+			window.event?e.returnValue=false:e.preventDefault();
+		}
+
+	}
+
+
+	box.onmouseup=function(){
+
+		document.onmousemove="";
+	}
+
+
+
+
+</script>
+</body>
+</html>

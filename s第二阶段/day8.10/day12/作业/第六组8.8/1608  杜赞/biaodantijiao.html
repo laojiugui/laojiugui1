@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+
+<style>
+td{height:30px;border:1px solid #999;}
+table{border-collapse:collapse}
+</style>
+</head>
+
+<body>
+姓名:<input type="text" value="" id="xingming"><br><br>
+性别: 男<input type="radio" name="ral" id="xingbie1">
+	  女<input type="radio" name="ral" id="xingbie2">
+	  人妖<input type="radio" name="ral" id="xingbie3"><br><br>
+收入:<input type="text" value="" id="shouru"><br><br>     
+性取向: 男<input type="radio" name="ral2" id="xingbie4">
+	  女<input type="radio" name="ral2" id="xingbie5">
+	  人妖<input type="radio" name="ral2" id="xingbie6"><br><br>
+自我介绍:<input type="text" value="" id="jieshao"><br><br>
+<input type="button" value="填入表格" id="btn"><br><br>
+
+<table>
+	<tr>
+    <td>姓名</td>
+    <td>性别</td>
+    <td>收入</td>
+    <td>性取向</td>
+    <td>自我介绍</td>
+    <td>操作</td>
+    </tr>
+
+</table>
+
+</body>
+
+<script>
+xm=document.getElementById("xingming")
+xb1=document.getElementById("xingbie1")
+xb2=document.getElementById("xingbie2")
+xb3=document.getElementById("xingbie3")
+sr=document.getElementById("shouru")
+xb4=document.getElementById("xingbie4")
+xb5=document.getElementById("xingbie5")
+xb6=document.getElementById("xingbie6")
+js=document.getElementById("jieshao")
+btn=document.getElementById("btn")
+table=document.getElementsByTagName("table")[0]
+btn.onclick=function(){
+	var xms=xm.value
+	var srs=sr.value
+	var jss=js.value
+	
+	var tr=document.createElement("tr")
+	var td1=document.createElement("td")
+	var td2=document.createElement("td")
+	var td3=document.createElement("td")
+	var td4=document.createElement("td")
+	var td5=document.createElement("td")
+	var td6=document.createElement("td")
+	tr.appendChild(td1)
+	tr.appendChild(td2)
+	tr.appendChild(td3)
+	tr.appendChild(td4)
+	tr.appendChild(td5)
+	tr.appendChild(td6)
+	table.appendChild(tr)
+	
+	
+	var txt1=document.createTextNode(xms)
+	td1.appendChild(txt1)
+	var txt3=document.createTextNode(srs)
+	td3.appendChild(txt3)
+	var txt5=document.createTextNode(jss)
+	td5.appendChild(txt5)
+	
+	if(xb1.checked){
+	var txt2=document.createTextNode("男")
+	td2.appendChild(txt2)
+	}else if(xb2.checked){
+	var txt2=document.createTextNode("女")
+	td2.appendChild(txt2)	
+	}else{
+	var txt2=document.createTextNode("人妖")
+	td2.appendChild(txt2)		
+	}
+	
+	
+	
+	if(xb4.checked){
+	var txt4=document.createTextNode("男")
+	td4.appendChild(txt4)
+	}else if(xb5.checked){
+	var txt4=document.createTextNode("女")
+	td4.appendChild(txt4)	
+	}else{
+	var txt4=document.createTextNode("人妖")
+	td4.appendChild(txt4)		
+	}
+	
+	
+	
+	
+	var button=document.createElement("button")
+	var txt=document.createTextNode("删除")
+	button.appendChild(txt)
+	td6.appendChild(button)
+	button.onclick=function(){
+	var aa=this.parentNode.parentNode;
+	table.removeChild(aa)
+		
+	}
+	
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+</html>

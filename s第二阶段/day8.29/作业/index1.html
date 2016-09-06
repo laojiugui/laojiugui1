@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>导航切换</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #box{
+            position:relative;
+            width:770px;
+            margin:50px auto 0;
+        }
+        ul{
+            list-style:none;
+        }
+        #list li{
+            float:left;
+        }
+        #list a{
+            display:inline-block;
+            width:150px;
+            float:left;
+            height:50px;
+            line-height:50px;
+            text-decoration:none;
+            color:#222222;
+            font-size:20px;
+            background:#00CCFF;
+            text-align:center;
+            border-right:1px solid red;
+        }
+        #box1,#box2,#box3,#box4,#box5{
+            position:absolute;
+            top:50px;
+            margin-right:1px;
+            display:none;
+        }
+        #box1{
+            left:0;
+        }
+        #box2{
+            left:151px;
+        }
+        #box3{
+            left:302px;
+        }
+        #box4{
+            left:453px;
+        }
+        #box5{
+            left:604px;
+        }
+        a{
+            margin-top:1px;
+            display:inline-block;
+            width:150px;
+            height:50px;
+            line-height:50px;
+            text-decoration:none;
+            color:#222222;
+            font-size:20px;
+            background:tan;
+            text-align:center;
+        }
+
+    </style>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            $("#list1").mouseenter(function(){
+                $("#box1").slideDown(500);
+            });
+            $("#list1").mouseleave(function(){
+                $("#box1").mouseleave(function(){
+                    $("#box1").slideUp(500);
+                });
+            });
+
+            $("#list2").mouseenter(function(){
+                $("#box2").slideDown(500);
+            });
+            $("#list2").mouseleave(function(){
+                $("#box2").mouseleave(function(){
+                    $("#box2").slideUp(500);
+                });
+            });
+
+            $("#list3").mouseenter(function(){
+                $("#box3").slideDown(500);
+            });
+            $("#list3").mouseleave(function(){
+                $("#box3").mouseleave(function(){
+                    $("#box3").slideUp(500);
+                });
+            });
+            $("#list4").mouseenter(function(){
+                $("#box4").slideDown(500);
+            });
+            $("#list4").mouseleave(function(){
+                $("#box4").mouseleave(function(){
+                    $("#box4").slideUp(500);
+                });
+            });
+            $("#list5").mouseenter(function(){
+                $("#box5").slideDown(500);
+            });
+            $("#list5").mouseleave(function(){
+                $("#box5").mouseleave(function(){
+                    $("#box5").slideUp(500);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="box">
+        <ul id="list">
+            <li><a href="#" id="list1">网站首页</a></li>
+            <li><a href="#" id="list2">关于我们</a></li>
+            <li><a href="#" id="list3">联系客服</a></li>
+            <li><a href="#" id="list4">优惠活动</a></li>
+            <li><a href="#" id="list5" style="border:0">客户反馈</a></li>
+        </ul>
+    <div id="box1">
+        <ul>
+            <li><a href="#">范德萨发</a></li>
+            <li><a href="#">范德萨发</a></li>
+            <li><a href="#">范德萨发</a></li>
+            <li><a href="#">范德萨发</a></li>
+        </ul>
+    </div>
+    <div id="box2">
+        <ul>
+            <li><a href="#">范德萨发</a></li>
+            <li><a href="#">范德萨发</a></li>
+            <li><a href="#">范德萨发</a></li>
+            <li><a href="#">范德萨发</a></li>
+        </ul>
+    </div>
+    <div id="box3">
+        <ul>
+            <li><a href="#">范德萨发</a></li>
+            <li><a href="#">范德萨发</a></li>
+            <li><a href="#">范德萨发</a></li>
+            <li><a href="#">范德萨发</a></li>
+        </ul>
+    </div>
+    <div id="box4">
+        <ul>
+            <li><a href="#">范德萨发</a></li>
+            <li><a href="#">范德萨发</a></li>
+            <li><a href="#">范德萨发</a></li>
+            <li><a href="#">范德萨发</a></li>
+        </ul>
+    </div>
+    <div id="box5">
+        <ul>
+            <li><a href="#">范德萨发</a></li>
+            <li><a href="#">范德萨发</a></li>
+            <li><a href="#">范德萨发</a></li>
+            <li><a href="#">范德萨发</a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

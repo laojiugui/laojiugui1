@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        ul, ul > li, img{width:600px;height:300px;}
+        ul > li{position:absolute;list-style: none;
+            border:#ccc solid 1px;border-radius: 8px;display:none;}
+        img{border:#ccc solid 1px;border-radius: 8px;}
+        ul > li.first{display: block;}
+
+    </style>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+           var iIndex=0;
+            setInterval(function(){
+                iIndex++;
+                if(iIndex>=$("li").size()){
+
+                    iIndex=0;
+                }
+                move(iIndex);
+
+            },2000);
+
+
+            //创建运动函数
+            function move(i){
+                $("li").fadeOut(500);
+                $("li").eq(i).fadeIn(500);
+            }
+        });
+    </script>
+</head>
+<body>
+<ul>
+    <li class="first"><img src="img/1.jpg"></li>
+    <li><img src="img/2.jpg"></li>
+    <li><img src="img/3.jpg"></li>
+</ul>
+</body>
+</html>

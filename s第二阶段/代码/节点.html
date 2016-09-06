@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>节点</title>
+	</head>
+	<body>
+		<div id="box" class="box22"><!--我是注释节点FHKFHKHEILIHN ^^^^-->
+			<ul id="lists">
+				<li>001</li><li>002</li><li>003</li><li>004</li>
+			</ul>oiiioo</div>
+		<script>
+		//1.文档节点   2.元素节点  3.属性节点  4.文本节点 5.注释节点
+
+		//节点属性的关系  
+		//用来获取父元素 parentNode
+		//用来获取子元素 childNodes
+		//用来获取兄弟元素 nextSibling   previousSibling 
+		//用来获取第一个子元素  firstChild
+		//用来获取最一个子元素  lastChild
+			var box=document.getElementById('box');
+			var lists=document.getElementById('lists');
+			var lis=lists.childNodes;
+			//console.log(lis[1])
+			var next=lis[1].nextSibling;
+			//console.log(next)
+			var prev=lis[1].previousSibling;
+			//console.log(prev)
+			var first=lists.firstChild;
+			//console.log(first)
+			var last=lists.lastChild;
+			//console.log(last)
+			//console.log(lists.parentNode)
+			//console.log(box);
+			//var childs=box.childNodes;
+			//console.log(childs.length);
+			//                                                                          console.log(box.ownerDocument.nodeType); //用来获取整个文档
+			//console.log(document);   
+
+			//nodeType  节点类型
+			//nodeValue  节点值
+			//nodeName  节点名字
+
+			//元素节点
+			//console.log(box.nodeType);  //1
+			//console.log(box.nodeName);  //返回值是标签名
+			//console.log(box.nodeValue);  //null
+
+
+			//属性节点  
+
+			//属性attributes
+
+			var attr=box.attributes;   //返回对象的形式  {}
+			//console.log(attr)
+			//console.log(attr[1].nodeType);  //2
+			//console.log(attr[1].nodeName);  //返回属性名
+			//console.log(attr[1].nodeValue);  //返回属性值
+
+
+			//注释节点
+			var zs=box.firstChild;
+			//console.log(zs.nodeType);  //8
+			//console.log(zs.nodeName);  //#comment
+			//console.log(zs.nodeValue);  //注释内容
+
+
+			//文本节点
+			var txt=box.lastChild;
+			//console.log(txt.nodeType);  //3
+			//console.log(txt.nodeName);  //#text
+			//console.log(txt.nodeValue); //返回  文本空白和写的文字
+
+			//文档节点
+			var doc=box.ownerDocument;
+			//console.log(doc.nodeType);   //9
+			//console.log(doc.nodeName);  //#document
+			//console.log(doc.nodeValue);  //null
+
+
+			/*function  getChildNodes(nodelists){
+				var arr=[];
+				for(var i=0;i<nodelists.length;i++){
+					if(nodelists[i].nodeType==1){
+						arr.push(nodelists[i]);
+					}
+				}
+				return arr;
+
+			}		
+			alert(getChildNodes(box.childNodes));*/
+
+
+
+		</script>
+	</body>
+</html>

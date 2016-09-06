@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>查找与替换</title>
+<style>
+span{background:red;}
+</style>
+
+</head>
+
+<body>
+<div id="box">范德萨发快点删了几个空连接卡夫卡的撒娇付款了都是坑垃圾狗浮夸开发大就卡死的监控房价快速搭建费范德萨开发及端口是否健康山东交罚款疯狂送大家爱看房间都是开放接口发的是咖啡可都是风景卡萨九个分裤固定分公司答复都是范德萨发生的范德萨发十大地方撒上打发似的法师打发第三方士大夫范德萨发大水防守打法答复都是范德萨范德萨发大水阿范德萨范德萨发第三方法师打发多少范德萨范德萨发范德萨发大水范德萨发范德萨发客服说大家快放假看的撒加罚款发的是咖啡加开的时间反馈开发技术的咖啡加开的时间反馈健康辅导时间按客服即可发到空间放大看附件</div><br>
+<input id="txt1" type="text" value=""><br>
+<input id="btn" type="button" value="查找">
+<input id="btn1" type="button" value="替换">
+
+
+<script>
+window.onload=function(){
+    //文字查找与替换!!
+	var txt1=document.getElementById("txt1")       //获取txt1的内容
+	var btn=document.getElementById("btn")        //获取按钮内容
+	var btn1=document.getElementById("btn1")     //同上
+	var box=document.getElementById("box")
+	var txt2=document.getElementById("txt2")
+	var box1=box.innerHTML                    //获取div里的内容
+	var arr=[];                            //建立空数组
+	var arr1=box1.split("")                  //把字符串转变成数组
+	
+	//console.log(box2)
+	btn.onclick=function(){	            //建立单机按钮匿名函数
+		var box2=arr1.join("")             //把数组转变成字符串
+		for(var i=0;i<arr1.length;i++){       //创建for循环
+			var txt2=txt1.value               //获取文本框的值
+			if(txt2==arr1[i]){                      //创建if条件
+				var zhengze=new RegExp(arr1[i],"g")     //建立正则替换!!!!!!!!!!!!!!
+				
+				box.innerHTML=box2.replace(zhengze,"<span>"+txt2+"</span>")     //把所有相等的都替换
+				txt1.value=""              //清空文本框
+				btn1.onclick=function(){          //创建btn1单击匿名函数
+					var txt2=txt1.value             //获取文本框里的内容
+					var zhengze1=new RegExp("<span>"+txt2+"</span>","g")         //创建正则事件
+					var bOx=box.innerHTML=box2.replace(zhengze,"<span>"+txt2+"</span>")       //把原来的内容转变成文本框的值
+					txt1.value=""  					//清空文本
+					
+					
+					
+				}
+				
+			}	
+		}	
+		return bOx
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+</script>
+</body>
+</html>

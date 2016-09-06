@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>文档碎片</title>
+</head>
+<body>
+	<button>开始</button>
+	<script>
+		//创建文档碎片
+		var oFragmeng = document.createDocumentFragment(); 
+		var btn=document.getElementsByTagName('button')[0];
+		btn.onclick=function(){
+			var start=new Date().getTime();
+			for(var i=0;i<10000;i++){
+				var oLi=document.createElement('li');
+				oFragmeng.appendChild(oLi);
+			}
+			document.body.appendChild(oFragmeng);
+			alert(new Date().getTime()-start);
+		}
+
+	</script>
+</body>
+</html>

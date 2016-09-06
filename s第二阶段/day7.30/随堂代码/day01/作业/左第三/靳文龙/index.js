@@ -1,0 +1,1 @@
+document.write(<p style='width:200px;height:200px;border:2px solid red;border-radius:10px;'></p>);

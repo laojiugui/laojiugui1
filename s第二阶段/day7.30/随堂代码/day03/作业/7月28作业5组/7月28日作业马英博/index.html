@@ -1,0 +1,206 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+<style>
+  span{ display:inline-block; padding:5px; margin:5px;
+       background:red;
+	  }
+</style>
+
+<div id="box"></div>
+<table id="tbox"></table>
+
+<body>
+
+
+<script>
+//1.打印出2000-2016年中所有的闰年并输出
+
+    for(var a=2000;a<=2016;a++){
+	  if((a%4==0&&a%100!=0)||a%400){
+		  
+	   document.write(a+" ");
+	  }
+    }
+
+</script>
+
+
+<script>
+
+//2.打印出1-100里所有的奇数的和
+    var b=0;
+	for(var ji=1;ji<=100;ji++){
+		if((ji+1)%2==0){
+		b=b+ji;
+		 }	
+	}document.write(b);
+</script>
+
+<script>
+
+//3.输出100以内所有除10,20,30,40,80,90以外的数的和
+   
+   var sum=0; 
+   for(var d=1;d<100;d++){
+	   if((d!=10)&&(d!=20)&&(d!=30)&&(d!=40)&&(d!=80)&&(d!=90)){
+       
+       sum+=d;
+	   }
+   }document.write(sum);
+
+</script>
+
+
+
+<script>
+
+//4.打印100以内 7的倍数
+   for(var qi=1;qi<=100;qi++){
+	  if(qi%7==0){
+		  
+	  document.write(qi+" "); 
+	  } 
+	}
+   
+
+</script>
+
+
+
+<script>
+
+//5.求10的阶乘
+	 var pshi=1;
+	 for(var shi=1;shi<=10;shi++){
+		
+		pshi=shi*pshi;	
+			
+	 }document.write(pshi);
+</script>
+
+<script>
+
+//6.输出20-80之间能被3整除的整数，每5个一行
+  
+  	var er=0;
+	for(var san=20;san<=80;san++){
+		if(san%3==0){
+		 er++;	
+		 document.write(san+" ");
+		 if(er%5==0){
+	     document.write("<br>");		 
+		}	
+		}	
+	}
+</script>
+
+
+<script>
+//7.操场上有100-200人，3个人排队剩一个，4个人排队剩2个人，5个人排队剩3个人；
+	 for(var ren=100;ren<=200;ren++){
+		if(((ren-1)%3==0)&&((ren-2)%4==0)&&(ren-3)%5==0){
+			
+			document.write(ren+" ");
+			} 
+	 }
+</script>
+
+
+
+<script>
+//8.求出1-1/2+1/3-1/4…..1/100的和 var i=1;  i*-1*-1
+	
+	var baif1=0;
+	var baif2=0;
+	
+   for(var i=1;i<=100;i++){
+	   if((i+1)%2==0){
+		 baif1=baif1+(1/i);  
+	   }else{
+		 baif2=baif2-(1/i);  
+		   }
+   }document.write(baif1+baif2);
+</script>-->
+
+<script>
+//9.输出九九乘法表;
+	var aBcd=document.getElementById("box");
+	
+	 
+   for(var lie=1;lie<=9;lie++){
+	   hang=1;
+	   for(var hang=1;hang<=lie;hang++){
+		   aBcd.innerHTML+=("<span>"+lie+"&times"+hang+"="+(lie*hang)+"</span>");
+		   }
+	   aBcd.innerHTML+=("<br>");
+	   }
+</script>
+
+
+<script>
+//10.打印100–200之间所有能被3或者7整除的数
+	 for(var sq=100;sq<=200;sq++){
+		 if((sq%3==0)||(sq%7==0)){
+		
+		document.write(sq+" ");	 
+	     }
+	 }
+</script>-->
+
+<script>
+//12.小王入职时月工资10k元，每年涨工资10%，10年后小王的工资是多少？这10年小王共赚了多少钱？(选做)
+	  var gz=12; zong=0; 
+	 for(var nf=1;nf<=10;nf++){
+		 
+         if(nf>1){
+			 gz=gz*1.1;
+           zong+=gz*1.1
+         }
+         } document.write(gz+" ");
+           document.write(zong+" ");
+</script>-->
+
+
+<script>
+     var gew=0; sww=0; bws=0;
+	for(var sxh=100; sxh<999;sxh++){
+		gew=sxh%10;
+		sww=(sxh-gew)*0.1%10;
+		bws=(sxh-gew-sww*10)*0.01%10;
+		gew=gew*gew*gew;
+		sww=sww*sww*sww;
+		bws=bws*bws*bws;
+		if(sxh==gew+sww+bws){
+		//gew=sxh%10
+		//document.write(gew^3+" "+"<br>");
+		//}if(sxh==gew^3+sww^3+bws^3){
+		//sww=(sxh-gew)*0.1%10
+		//document.write(sww^3+" "+"<br>");
+		//}if(sxh==gew^3+sww^3+bws^3){
+		//bws=(sxh-gew-sww*10)*0.01%10
+		//document.write(bws^3+" ");	
+		document.write(sxh+" ");
+		}
+	}
+</script>
+<script>
+//12.尝试做一个表格，行列可以自动生成
+var bGzz=document.getElementById("tbox")
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
+
+
+
+

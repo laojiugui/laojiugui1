@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+
+<style tyle="text/css">
+span{display:inline-block;width:100px;height:30px;border:1px solid #000;margin:0;}
+
+
+</style>
+</head>
+
+<body>
+
+
+<div id="box"></div>
+
+<script>
+
+//打印出2000-2016年中所有的闰年并输出
+
+var y=2000;
+while(y<=2016){
+
+	if((y%4==0&&y%100!=0)||(y%400==0)){
+		document.write(y+' ');
+	}
+	y++;
+}
+
+
+//打印出1-100里所有的奇数的和
+
+var num=0;
+for(var a=1;a<=100;a++){
+	if(a%2!==0){
+		num=num+a;
+	}
+}
+document.write('1-100中的奇数和为'+num);
+
+
+
+//输出100以内所有除10,20,30,40,80,90以外的数的和
+
+var sum=0;
+for(var a=1;a<=100;a++){
+	if(a%10!==0){
+		sum+=a;  //sum=sum+a;
+	}
+}
+alert('100以内所有除10,20,30,40,80,90以外的数的和为'+sum);
+
+
+
+//打印100以内 7的倍数
+
+document.write('100以内7的倍数：');
+for(var a=1;a<=100;a++){
+	if(a%7==0){
+		document.write(a+'&nbsp;');
+	}
+}
+
+
+//求10的阶乘
+
+var sum=1;
+for(var a=1;a<=10;a++){
+		sum*=a;     //sum=sum*a;
+}
+alert('10!='+sum);
+
+
+
+//输出20-80之间能被3整除的整数，每5个一行
+
+var num2=1;
+for(var num1=20;num1<=80;num1++){
+	if(num1%3==0){
+		document.write(num1+'&nbsp;');
+		if(num2%5==0){
+			document.write('<br>');	
+		}
+		num2++;
+	}
+}
+
+
+
+//操场上有100-200人，3个人排队剩一个，4个人排队剩2个人，5个人排队剩3个人；
+
+for(var i=100;i<=200;i++){
+	if((i%3==1)&&(i%4==2)&&(i%5==3)){
+		alert('操场有'+i+'人');
+	}
+}
+
+
+
+//求出1-1/2+1/3-1/4…..1/100的和
+
+var sum=0;
+for(var i=1;i<=100;i++){
+	if(i%2!==0){
+		
+		sum=sum+1/i;
+		
+	}else{
+		
+		sum=sum-1/i;
+		
+	}
+}
+alert(sum);
+
+
+
+//输出九九乘法表
+
+for(var i=1;i<=9;i++){
+	for(var j=1;j<=i;j++){
+		document.write(i+'&times;'+j+'='+i*j+'&nbsp;&nbsp;');
+	}
+	document.write('<br>');
+}
+
+
+//打印100–200之间所有能被3或者7整除的数
+
+document.write('100-200中能被3和7整除的数：<br>');
+var a=100;
+while(a<=200){
+	if((a%3==0)||(a%7==0)){
+		document.write(a+'&nbsp;&nbsp;');
+	}
+	a++;
+}
+
+
+//小王入职时月工资10k元，每年涨工资10%，10年后小王的工资是多少？这10年小王共赚了多少钱？(选做)
+
+var money=10000;
+var sum=10000;
+for(var i=1;i<=10;i++){
+	money=money*(1+0.1);  //i年后的月薪
+	sum=sum+12*money;
+}
+document.write('十年后小王的工资：'+money+'元<br>'+'10年共挣了'+sum+'元');
+
+
+
+//求100-999之间的水仙花数。（选做）水仙花数是指一个 n 位数 ( n≥3 )，它的每个位上的数字的 n 次幂之和等于它本身。（例如：1^3 + 5^3+ 3^3 = 153）
+
+document.write('100-999中的水仙花数：');
+for(var num=100;num<=999;num++){
+	
+	var b=parseInt(num/100);         //百位
+	var s=parseInt((num-b*100)/10);  //十位
+	var g=parseInt(num-b*100-s*10);  //个位
+
+	if(g*g*g+s*s*s+b*b*b==num){
+		document.write(num+'&nbsp;&nbsp;');
+	}
+}
+
+
+
+//尝试做一个表格，行列可以自动生成
+
+var a=Number(prompt('输入行数'));
+var b=Number(prompt('输入列数'));
+
+for(var i=1;i<=a;i++){	
+		for(var j=1;j<=b;j++){
+			document.getElementById("box").innerHTML+="<span>"+"我的表格"+"</span>";
+		}
+		document.getElementById("box").innerHTML+='<br/>';
+}
+
+
+
+
+</script>
+
+</body>
+</html>

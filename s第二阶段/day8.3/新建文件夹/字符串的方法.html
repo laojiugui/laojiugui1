@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>字符串</title>  
+</head>
+<body>
+<script>
+	//var str="千锋教育"; //字面量声明
+	//alert(typeof str); //string
+	//字符串的方法
+	//1.获取类方法
+	  //charAt()   返回指定位置的字符
+	  
+	//alert(str.charAt(1));
+	
+	//charCodeAt()  返回指定字符的unicode编码  ascii码
+	//var str1="";
+	//alert(str1.charCodeAt());  //0~9   A~Z   a~z  _
+	
+	//fromCharCode();  把ascii码转成字符
+	//alert(str.charCodeAt());  //21315
+	
+	//alert(String.fromCharCode(21315)); //静态方法  对象固定
+	/*for(var i=10000;i<=40000;i++){
+		str1+=String.fromCharCode(i)+" ";
+	}
+	document.body.innerHTML=str1;*/
+	
+	//2.查找类方法     找不到指定位置的字符串返回-1；
+	//var str="千锋教育房间看了看见了附件见附件加法，千锋教育减肥减肥经济法了几分飞机加防腐剂；千锋教育回复后回复哈佛哦哦额我！";
+	//indexOf()  查找字符串首次出现的位置
+	//var s="千锋教育";
+	//alert(str.indexOf(s,4));  //第一个你要找的字符串  第二个指定的下标
+	//var i=0;
+	//while(str.indexOf(s,i)!=-1){
+		//alert(str.indexOf(s,i));
+		//i=str.indexOf(s,i)+s.length;
+	//}
+	//lastIndexOf(); //找到最后一次出现的位置
+	//alert(str.lastIndexOf(s,18));  //第一个你要找的字符串  第二个指定的下标
+	
+	//3.转换类方法
+		//split()  把字符串转成数组
+		//toUpperCase()  //全部转换为大写
+		//toLowerCase()  //全部转换为小写
+		
+		//var str="HTTP://www.BaiDU.Com/";
+		//alert(str.toUpperCase());
+		//alert(str.toLowerCase());
+	//4.截取类方法
+		//slice()  //开始位置   结束位置   可以取到开始 ，但不包括结束
+		var str="恢复符合符合符合就非法拘禁";
+		//alert(str.slice(1,4));
+		//alert(str.slice(2));  //从起始位置取到结束
+		//alert(str.slice(2,-1))
+		
+		//substring()
+		//alert(str.substring(1));  //不识别负参数  可以取到开始 ，但不包括结束
+		
+		//substr()
+		//alert(str.substr(2,9));  //第一个参数起始位置  第二个截取的长度
+		
+		//alert(str.substr(2));
+
+	
+
+</script>
+</body>
+</html>

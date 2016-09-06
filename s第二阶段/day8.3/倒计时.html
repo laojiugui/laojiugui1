@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>倒计时</title>  
+</head>
+<body>
+<input type="checkbox" name="ha" checked="checked"/>
+<input type="checkbox" name="ha"/>
+<input type="checkbox" name="ha"/>
+<input type="checkbox" name="ha"/>
+
+
+
+<script>
+	//获取当前时间
+	var newTime=new Date(2016,10,5,18,0,0);
+	fnTime();
+	setInterval(fnTime,1000)
+	function fnTime(){
+	var nowTime=new Date();
+	var t=Math.floor((newTime-nowTime)/1000);
+
+	var day=Math.floor(t/86400);
+	var hours=Math.floor(t%86400/3600);
+	var minutes=Math.floor(t%86400%3600/60);
+	var seconds=t%60;
+	var str="";
+	str=day+"天"+hours+"小时"+minutes+"分"+seconds+"秒结束";
+	//document.body.innerHTML=str;
+	}
+	
+</script>
+</body>
+</html>

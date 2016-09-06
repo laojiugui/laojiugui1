@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<style>
+#iFocusx{position:relative; height:547px;};
+.w-slider{width:100%; overflow:hidden;z-index:1;}
+.pos-abs{position:absolute;}
+.pos-rel{position:relative; height:547px; width:100%; overflow:hidden;}
+.slider-scroll{width:100%; background:transparent;}
+.slider-main{position: absolute;top: 0; left: 0;height:547px; width:4323px;}
+.slider-main .current{ display:block;}
+.slider-main li{width:1441px;height:547px; text-align:center; float: left; overflow:hidden;}
+.slider-ctrl{ width:1441px; margin:0 auto;  text-align:center; height:35px;z-index:9999;  position: absolute;top:370px;}
+.slider-ctrl .slider-ctrl-con{ display:inline-block;width:30px;height:10px;margin:0 1px;background-color: #fafafa;text-indent:-10em;overflow:hidden;cursor:pointer;border-radius:5px;-moz-box-shadow:1px 1px 1px #A9A9A9 inset;-webkit-box-shadow:1px 1px 1px #A9A9A9 inset;box-shadow:1px 1px 1px #A9A9A9 inset;background:#D3D3D3; margin-top:140px; vertical-align:top}
+.slider-ctrl .current{background-color: #009896;-moz-box-shadow:1px 1px 1px #1678A0 inset;-webkit-box-shadow:1px 1px 1px #1678A0 inset;box-shadow:1px 1px 1px #1678A0 inset;}
+.slider-ctrl .slider-ctrl-prev,.slider-ctrl .slider-ctrl-next{opacity:.5;position:absolute;z-index:1;overflow:hidden;width:30px;height:35px;cursor:pointer;text-indent:-10em;}
+.slider-ctrl .slider-ctrl-prev:hover,.slider-ctrl .slider-ctrl-next:hover{opacity:1;}
+.slider-ctrl .slider-ctrl-prev{background-position:6px top;left:0;top:0; display:none;}
+.slider-ctrl .slider-ctrl-next{background-position:-6px -45px;right:0; top:-35px;}
+
+</style>
+</head>
+<body>
+<!--banner内容-->
+<div id="iFocusx">
+  <div id="js_slider" class="w-slider pos-rel">
+     <ul class="slider-main">
+     	<li class="slider-main-img" style="background:url(http://www.lycmd.com/uploads/allimg/141107/1-14110G620140-L.jpg) no-repeat center">
+            <div class="w clearfix"> <b></b> <a href="/show/shouyehuandengpian/2014/1107/77.html" class="i_f_links track"></a> </div>
+          </li>
+<li class="slider-main-img" style="background:url(http://www.lycmd.com/uploads/allimg/141010/003.jpg) no-repeat center">
+            <div class="w clearfix"> <b></b> <a href="/show/shouyehuandengpian/2014/1010/29.html" class="i_f_links track"></a> </div>
+          </li>
+<li class="slider-main-img" style="background:url(http://www.lycmd.com/uploads/allimg/141010/002.jpg) no-repeat center">
+            <div class="w clearfix"> <b></b> <a href="/show/shouyehuandengpian/2014/1010/28.html" class="i_f_links track"></a> </div>
+          </li>
+<li class="slider-main-img" style="background:url(http://www.lycmd.com/uploads/allimg/141010/ima_29.jpg) no-repeat center">
+            <div class="w clearfix"> <b></b> <a href="/show/shouyehuandengpian/2014/1010/27.html" class="i_f_links track"></a> </div>
+          </li>
+      
+    </ul>
+      <div class="slider-ctrl" id="slider-ctrl">
+         <span class="slider-ctrl-con">1</span> 
+         <span class="slider-ctrl-con">2</span> 
+         <span class="slider-ctrl-con">3</span>
+          <span class="slider-ctrl-con">4</span>
+      </div>
+  </div>
+</div>
+<script src="http://www.lycmd.com/js/jquery-1.7.1.min.js"></script>
+<script>
+    //当改变窗口时重新设置下盒子宽度
+    var win_w = document.body.offsetWidth;
+    window.onresize = function(){
+        win_w = document.body.offsetWidth;
+        $("#js_slider .slider-main li").width(win_w);
+        $(".slider-main").width(win_w*$("#js_slider .slider-main li").length);
+        rolling();
+    };
+    $("#js_slider .slider-main li").width(win_w);
+    $(".slider-main").width(win_w*$("#js_slider .slider-main li").length);
+    
+    window.onload = rolling();
+    function rolling(){
+        var oDiv = document.getElementById("js_slider");	
+        var oUl =   oDiv.getElementsByTagName("ul")[0];
+        var oLi = oUl.getElementsByTagName("li");
+        var aLi = document.getElementById("slider-ctrl").getElementsByTagName("span");
+        var now = 0;		
+        for(var i= 0; i<aLi.length;i++)
+        {
+            aLi[i].index = i;
+            aLi[i].onmouseover = function(){
+                now=this.index;
+                tab();
+            }	
+        }
+        
+        function tab(){
+            for(var i= 0; i<aLi.length;i++){
+                aLi[i].className ="slider-ctrl-con";
+                }
+                startMove(oUl, {left: -win_w*now});
+                aLi[now].className+=" current";	
+        }
+        
+        function next()
+        {
+            now++
+            if(now==aLi.length)
+            {
+                now=0;
+            }
+            tab();
+        }
+        var timer=setInterval(next, 6000);
+        oDiv.onmouseover=function ()
+        {
+            clearInterval(timer);
+        };
+        
+        oDiv.onmouseout=function ()
+        {
+            timer=setInterval(next, 6000);
+        };
+    }
+
+
+
+    function getStyle(obj, name)
+{
+    if(obj.currentStyle)
+    {
+        return obj.currentStyle[name];
+    }
+    else
+    {
+        return getComputedStyle(obj, false)[name];
+    }
+}
+
+
+//startMove(oDiv, {width: 400, height: 400})
+
+
+function startMove(obj, json, fnEnd)
+{
+    clearInterval(obj.timer);
+    obj.timer=setInterval(function (){
+        var bStop=true;		//假设：所有值都已经到了
+        
+        for(var attr in json)
+        {
+            var cur=0;
+            
+            if(attr=='opacity')
+            {
+                cur=Math.round(parseFloat(getStyle(obj, attr))*100);
+            }
+            else
+            {
+                cur=parseInt(getStyle(obj, attr));
+            }
+            
+            var speed=(json[attr]-cur)/6;
+            speed=speed>0?Math.ceil(speed):Math.floor(speed);
+            
+            if(cur!=json[attr])
+                bStop=false;
+            
+            if(attr=='opacity')
+            {
+                obj.style.filter='alpha(opacity:'+(cur+speed)+')';
+                obj.style.opacity=(cur+speed)/100;
+            }
+            else
+            {
+                obj.style[attr]=cur+speed+'px';
+            }
+        }
+        
+        if(bStop)
+        {
+            clearInterval(obj.timer);
+                        
+            if(fnEnd)fnEnd();
+        }
+    }, 30);
+}
+</script>
+</body>
+</html>

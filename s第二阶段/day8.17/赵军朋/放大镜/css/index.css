@@ -1,0 +1,67 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background:tan;
+}
+ul{
+    list-style:none;
+}
+img{
+    vertical-align:bottom
+}
+#box{
+    position: relative;
+    padding:10px;
+    margin:10px;
+    width:350px;
+    background:#fff;
+}
+#middle-box{
+    position:relative;
+    cursor: pointer;
+}
+#middle-img{
+    width:350px;
+    height:350px;
+}
+#zoom{
+    position:absolute;
+    left:0;
+    top:0;
+    width:200px;
+    height:200px;
+    display:none;
+    background:url(../images/icon.png) repeat left top;
+}
+#big-box{
+    position:absolute;
+    left:400px;
+    top:0;
+    width:350px;
+    height:350px;
+    overflow:hidden;
+    display:none;
+}
+#big-box img{
+    width:700px;
+    height:700px;
+    position:absolute;
+}
+#small-box{
+    margin-top:10px;
+    height:64px;
+}
+#small-box img{
+    width:60px;
+    height:60px;
+    border:2px solid #fff;
+}
+#small-box li{
+    float:left;
+    margin-right:4px;
+}
+#small-box .active{
+    border:2px solid red;
+}

@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>数组案例</title>  
+</head>
+<body>
+<script>
+	//输出结果在一个数组中，从1到100，能被3或能被5整除的数
+	/*var arr=[];
+		for(var i=1;i<=n;i++){
+			if(i%3==0||i%5==0){
+				arr.push(i);
+			}
+		}
+	console.log(arr);*/
+	/*function arrSort(n){
+		var arr=[];
+		for(var i=1;i<=n;i++){
+			if(i%3==0||i%5==0){
+				arr.push(i);
+			}
+		}
+		//return arr;
+	}
+	var a=arrSort(50);
+	console.log(a);*/
+	
+	//数组去重
+	/*var arr=[1,4,4,5,6,2,4,6,3];
+	for(var i=0;i<arr.length;i++){
+		for(var j=i+1;j<arr.length;j++){
+			if(arr[i]==arr[j]){
+				arr.splice(j,1);
+				j--;
+			}
+		}
+	}
+	console.log(arr);*/
+	
+	//扩展知识   多维数组  二维数组
+	
+	/*var arr=[[1,2,3],[4,5,6,99,4],[7,8,9,3]];
+	//console.log(arr);
+	//alert(arr.length);
+	//arr[0];  arr[0]=[1,2,3];
+	
+	for(var i =0;i<arr.length;i++){
+		//console.log(arr[i]);
+		for(var j=0;j<arr[i].length;j++){
+			console.log(arr[i][j]);
+		}
+	}*/
+	
+	var arr=[1,2,'html4',[3,4,'html5'],true,[7,8,'javaScript'],function(){}];
+	for(var i=0;i<arr.length;i++){
+		//console.log(arr[i])
+		if(typeof arr[i]==="object"){
+			for(var j=0;j<arr[i].length;j++){
+				console.log(arr[i][j]);
+			}
+		}
+		if(typeof arr[i]==="function"){
+			console.log(arr[i]);
+		}
+	}
+	
+	
+	
+	
+</script>
+</body>
+</html>

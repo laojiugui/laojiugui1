@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>聊天框</title>
+<style>
+#box{width:290px;height:400px;margin:0 auto;border:1px solid #666;padding-left:10px;padding-top:10px;}
+#box1{width:280px;height:320px;border:1px solid #666;overflow:auto;padding-top:5px;background:#666}
+#box2{width:280px;height:30px;margin-top:10px;border:1px solid #666;margin-bottom:5px;overflow:auto;background:tan}
+span{display:inline-block;background:red;float:right;border-radius:10px;background:red}
+table{border-collapse:collapse}
+td{border:1px solid red}
+</style>
+</head>
+
+<body>
+<div id="box">
+	<div id="box1"><span style="display:inline-block;float:left;background:green;border-radius:5px;">你是猪头吗??</span><br><br><span>是你!!!</span><br><br><span style="display:inline-block;float:left;background:green;border-radius:5px;">是你!!!</span><br><br><span style="display:inline-block;float:left;background:green;border-radius:5px;">是你!!!</span><br><br><span>是你!!!</span><br></div>
+	<input id="box2" value="" type="text">
+	<input type="button" value="发送">
+
+</div>
+
+
+姓名:<input type="text" value="" ><br>
+性别:男<input type="radio" name="rad">女<input type="radio" name="rad"><br>
+年龄:<input type="text" value="" ><br>
+爱好:<input type="text" value="" ><br>
+学历:<select id="student" name="bottom">
+		<option>博士后</option>
+		<option>博士</option>
+		<option>研究生</option>
+		<option>本科</option>
+		<option>专科</option>
+	</select><br>
+专业:<input type="text" value="" ><br>
+简介:<textarea id="jianjie" name="like" cols="20" rows="2"></textarea><br>
+<input type="button" value="添加">
+
+
+
+
+
+<script>
+//  聊天框
+var box=document.getElementById("box1")         //获取里面的内容
+var input=document.getElementsByTagName("input")        //获取按钮
+input[1].onclick=function(){                     //创建单机匿名函数
+	box.innerHTML+="<br><span>"+input[0].value+"</span><br>"             //把文本框里的值替换到box内
+	input[0].value=""                                          //清空文本框
+}
+
+
+
+
+//添加表单框
+var student=document.getElementById("student")
+var jianjie=document.getElementById("jianjie")
+input[8].onclick=function(){
+	var table=document.createElement("table")
+	for(var i=0;i<1;i++){
+		var tr=document.createElement("tr")
+		for(var j=0;j<=6;j++){
+			var td=document.createElement("td")
+			tr.appendChild(td)
+			td.innerHTML="姓名"
+		}
+		table.appendChild(tr)
+	}
+
+	document.body.appendChild(table)
+
+}
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

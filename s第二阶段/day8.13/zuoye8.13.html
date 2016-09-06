@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标移动变色</title>
+    <style>
+    #box{background:red;margin:0 auto;}
+    form{width:300px;height:120px;margin:0 auto}
+    #box1{margin:0 auto;}
+    #box2{width:177px;height:177px;background:#A9A9A9;padding-left:23px;padding-top:23px;}
+    #box3{width:150px;height:100px;overflow: scroll}
+    </style>
+</head>
+<body>
+<div id="box" style="height:100px;width:800px;"></div><br><br><br><br>
+<form method="post" name="fom" action="">
+    属性名:<input type="text" value="" style="margin:0 auto"><br><br>
+    属性值:<input type="text" value=""><br><br>
+    <input type="button" value="确定">
+    <input type="button" value="重置">
+</form>
+<div id="box1" style="width:400px;height:150px;background:pink;">
+    <span style="color:#e84a7e">输入属性值,改变div的样式!</span>
+</div><br><br><br>
+<div id="box2">
+    <img src="images/big_4.jpg" style="display:none" />
+</div><br>
+<div id="box3">
+    <img src="images/small_1.jpg" />
+    <img src="images/small_2.jpg" />
+    <img src="images/small_3.jpg" />
+    <img src="images/small_4.jpg" />
+    <img src="images/small_5.jpg" />
+    <img src="images/small_6.jpg" />
+    <img src="images/small_7.jpg" />
+    <img src="images/small_8.jpg" />
+    <img src="images/small_9.jpg" />
+    <img src="images/small_10.jpg" />
+    <img src="images/small_11.jpg" />
+</div>
+<script>
+
+    //划过不同区域显示不同颜色!
+    var oDiv=document.getElementById("box")
+    //console.log(oDiv)
+    oDiv.onmousemove=function(e){
+        var event=window.event||e;
+        var offsetL=e.offsetX;
+        var oLeft=parseInt(oDiv.style.width)
+        if(offsetL>0&&offsetL<oLeft/3){
+            oDiv.style.background="red"
+        }
+        else if(offsetL>=oLeft/3&&offsetL<oLeft*(2/3)){
+            oDiv.style.background="blue"
+        }else if(offsetL>oLeft*(2/3)&&offsetL<=oLeft){
+            oDiv.style.background="tan"
+        }
+    }
+
+    //输入属性和属性值改变大小!
+    var input=document.getElementsByTagName("input");
+    var oBox=document.getElementById("box1")
+    //console.log(oStyle)
+    input[2].onclick=function(){
+        var oStyle=input[0].value;
+        var oAttribute=input[1].value;
+
+    }
+
+
+    //点击图片改变!!
+    var oImg=document.getElementsByTagName("img")
+    var oBox1=document.getElementById("box2")
+
+
+
+    oImg[4].onclick()=function(){
+        oImg.style.display="block"
+
+    }
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style type="text/css">
+span{
+	background:red;
+	display:inline-block;
+	text-align:left;
+	width:76px;
+	padding:3px 10px;
+	margin:10px;
+}
+</style>
+</head>
+
+<body>
+<div id="box"></div>
+<script>
+	var i=1;
+	while(i<=100){
+		document.write("我喜欢你");
+		i++;
+	}
+	document.write("<br>");
+	
+	i=1;
+	while(i<=100){
+		document.write(i+" ");
+		i++;
+	}
+	document.write("<br>");
+	
+	var sum=0;
+	i=1;
+	while(i<=100){
+		sum+=i
+		i++;
+	}
+	document.write(sum);
+	document.write("<br>");
+	
+	sum=0;
+	i=0;
+	while(i<=100){
+		sum+=i;
+		i+=2;
+	}
+	document.write(sum);
+	document.write("<br>");
+	
+	sum=0;
+	i=1;
+	while(i<=100){
+		sum+=i;
+		i+=2;
+	}
+	document.write(sum);
+	document.write("<br>");
+	
+	
+	
+	
+	
+	var year=1000;
+	var e=0;  
+	while(year<=2000){
+		if((year%4==0&&year%100!=0)||year%400==0){    
+			e++;
+			document.write(year+"年 ");
+		}
+		if(e%4==0){           
+			
+			document.write("<br>");	
+		}
+		year++;
+	}
+	document.write("<br>");
+	e=0;
+	for(year=1000;year<=2000;year++){
+		if((year%4==0&&year%100!=0)||year%400==0){    
+			e++;
+			document.write(year+"年 ");
+			if(e%4==0){           
+				document.write("<br>");	
+			}
+			
+		}
+	}
+	document.write("<br>");
+	
+	
+	var num1=Number(prompt("请为num1输入一个数字"));
+	var num2=Number(prompt("请为num2输入一个数字"));
+	var num3=Number(prompt("请为num3输入一个数字"));
+	var max=num1;
+	if(num2>max){
+		max=num2;
+	}
+	if(num3>max){
+	max=num3;	
+	}
+	document.write(max);
+	document.write("<br>");
+	
+	i=1;
+	while(i<=4){
+		document.write("*******");
+		document.write("<br>");
+		i++;
+	}
+	var j=1;
+	for(i=1;i<=4;i++){
+		for(j=1;j<=10;j++){
+			document.write("*");
+		}
+		document.write("<br>");
+	}
+	var num1=1;
+	var num2=1
+	while(num1<=5){   
+		num2=1;   
+		while(num2<=num1){    
+			document.write("*");
+			num2+=1;
+		}
+		num1++;
+		document.write("<br>");
+	}
+	
+	
+	while(num1<=5){
+		num2=1;
+		while(num2<=5-num1){
+			document.write("+ ");
+			num2+=1;
+		}
+		num2=1;
+		while(num2<=2*num1-1){
+			document.write(" *");
+			num2+=1;
+		}
+		num1++;
+		document.write("<br>");
+	}
+	num1=2;
+	while(num1<=5){
+		num2=1;
+		while(num2<=num1-1){
+			document.write("+ ");
+			num2+=1;
+		}
+		num2=1;
+		while(num2<=11-2*num1){
+			document.write(" *");
+			num2+=1;
+		}
+		num1++;
+		document.write("<br>");
+	}
+	var tu;
+	var ji;
+	for(tu=1;tu<35;tu++){
+		for(ji=1;ji<=35-tu;ji++){
+			if((4*tu+2*ji==94)&&(ji+tu==35)){
+				document.write(tu+"只兔子,"+ji+"只鸡<br>");
+			}
+		}
+
+	}
+	for(var i=1;i<=9;i++){
+		for(j=1;j<=i;j++){
+			document.write(i+"&times;"+j+"="+i*j+" ");
+		}
+		document.write("<br>");
+	}
+	
+	
+	
+	
+	
+	var oBox=document.getElementById("box");
+	/*
+	console.log(oBox);
+	alert(oBox.innerHTML);
+	oBox.innerHTML="圣诞节疯狂的减肥就看书记得发";
+	*/
+	oBox.innerHTML="<b>九九乘法表</b>";
+	oBox.innerHTML+="<br>";
+	for(var i=1;i<=9;i++){
+		for(j=1;j<=i;j++){
+			oBox.innerHTML+="<span>"+i+"&times;"+j+"="+i*j+"</span>"
+		}
+		oBox.innerHTML+="<br>";
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</script>
+</body>
+</html>

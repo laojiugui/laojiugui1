@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link href="d换肤.css" type="text/css" rel="stylesheet"/>
+<style>
+#box{width:200px;height:200px;background:#666;margin:10px;display:none;}
+
+</style>
+</head>
+
+<body>
+
+<input id="btn1" type="button" value="红色">
+<input id="btn2" type="button" value="绿色">
+
+<div id="box"></div>
+
+<script>
+var btn1=document.getElementById("btn1")
+var btn2=document.getElementById("btn2")
+var link=document.getElementsByTagName("link")[0]         //获取到的对象是一个类数组的结构,数组不能进行任何操作,要想操作数组必须下面加下标!!!!!!!!! 
+btn1.setAttribute("ha","s换肤.css");
+btn2.setAttribute("ha","d换肤.css");
+
+//console.log(link)
+
+btn1.onclick=function(){
+	link.href=this.getAttribute("ha")
+}
+btn2.onclick=function(){
+	link.href=this.getAttribute("ha")
+}
+
+
+
+
+
+var box=document.getElementById("box")
+btn2.onmouseover=function(){
+
+	box.style.display="block"
+}
+btn2.onmouseout=function(){
+	box.style.display="none"
+}
+</script>
+</body>
+</html>

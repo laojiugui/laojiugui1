@@ -1,0 +1,1006 @@
+
+//第一遍。。。。。。。。。。。。。。。。。。
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+.box{width:300px;height:400px;background:red;}
+.box{width:100px;height:100px;background:blue;}
+
+
+</style>
+<script src="目标文件路径"></script>
+//js代码
+//引入js不能在其标签对中间写js代码
+	document.write(在script标签中不能嵌套标签<br>);
+
+</head>
+
+<body>
+<script>
+
+//上午内容
+
+	<p class="box1">嘿嘿额</p>
+	//单行注释
+	//多行注释（块注释）   
+	/*注释的内容*/
+	document.write(可以放到head，也可以放到body里)
+	
+	document.write("<div style=\"width:200px;height:300px;background:red;border-radius:50%;\"><div style='width:80px;height:80px;background:green;border-radius:50%;'>我是谁谁</div></div>");
+	
+	document.write("<div style='width:150px;height:150px;background:yellow;border-radius:50%;'>我是那谁谁</div>");
+	
+	//单引号双引号嵌套
+	
+	//声明变量  创建变量；
+	//变量：可以用来储存数据的一个容器 可以用来保存任何数据类型
+	
+	//关键字var
+	
+	//声明变量 变量赋值号“=”
+	
+	var a=1;  //声明变量，并且赋值，等号左边叫变量名，等号右边叫变量的值；
+	
+	var str="我就是我"；  //字符串需要加引号，单双引号都可以，但一定要在英文状态下。
+	
+	//变量的命名规则 可以是字母 下划线 $开头
+	
+	//alert(str);
+	//var $num1=23;
+	//var $num1="哈哈哈哈"；变量的覆盖，不要起一样的变量名
+	
+	//var 9="字符串";   //变量名不能为数字开头，更不能是数字；
+	
+	//typeof 用来检测数据类型（数据类型分为基本数据类型和引用数据类型）
+	
+	//数据类型   1.number   2.string    3.boolean（基本数据类型）
+	
+	//特殊类型   1.undefind    2.null
+	
+	//alert(typeof a); //number 数字；
+	var $num1="哈哈哈哈";
+	//alert(typeof $num1);  //string 字符串
+	
+	var bool=true；
+	alert(typeof bool);    //boolean ；布尔型 布尔型有两种结果true和false；
+	
+	
+	
+//下午内容
+
+
+//算术运算符    +   -   *   /    %（取余/取模）
+var num1=12;
+var num2=10;
+//alert(a+b);
+//加法有两个作用，1.求和   2.字符串拼接
+如：var num1=12;
+	var num2="ab";
+	alert(a+b);输出结果为12ab;
+	
+var num1=12;
+var num2=22;
+//alert(num1+num2);
+
+var num1=3;
+var num2=4;
+//alert(num1*num2);
+
+var num1=4;
+var num2=2;
+//alert(num1/num2);
+
+var num1=7;
+var num2=3;
+//alert(num1%num2);
+
+var a=1,b=2,c=3,d=4;//同时声明多个变量并且赋值
+var m,n,x,y;同事声明多个变量分别赋值；
+	m=1;
+	n=2;
+	x=3;
+	y=4;
+
+//关系运算符，（比较运算符）>   <  >=  <=  ==  ===   !=  !==
+
+var num1=1;
+var num2=2;
+//alert(num1>num2);输出结果为false；
+
+//alert(num1<num2);输出结果为true；
+
+//alert(num1>=num2);输出结果为false；
+
+//alert(num1<=num2);输出结果为true;
+
+//alert(num1==num2);输出结果为false;
+
+若 var num3="2";
+//allert(num2==num3);输出结果为true；//==代表或比较判断；会忽略数据类型，之比较结果，这里也是隐含着吧num3转化为number类型。
+
+//allert(num2===num3);  ===绝对等于，比较时首先比较数据类型，数据类型不一样直接为false；
+
+// !=   与  ==是互反的一对；
+// !==  与  ===是互反的一对；
+
+//赋值运算符     =   +=  -=  *=  /=  %=
+
+var a=2;
+	a+=6;
+	//alert(a);输出结果为8；
+	a-=1;
+	//alert(a);输出结果为1；
+	
+	a*=2;
+	a/=2;
+	a%=1;
+	
+	var a=10;
+	var b=20;
+	var c=30;
+	var d=40;
+	a+=b;//a=30;
+	a*=c;//a=300;
+	
+	a/=d;//a=0.25;
+	a-=b;//a=-10;
+	
+	
+	
+var mz="我是前锋学员";
+
+var a=50;
+
+document.write(mz+",我们班的人数为:"+a);
+
+
+var country="中国";
+var mj="960万平方公里";
+document.write(country+mj+"国土面积世界第三");
+
+document.write("*<br>");
+document.write("**<br>");
+document.write("***<br>");
+document.write("****<br>");
+
+var number1="123a";
+car number2=2;
+//alert(number1-number2);//输出结果为NaN;  Not a Number;
+
+var num1="12";
+var num2="15";
+var result=num1/num2;
+alert(result); 
+输出结果为0.8;
+
+//Number()   把非数字的数据转华为数字;把字符串转化为数字；
+//在字符串里面空格和空字符串用Number()调用之后的结果为0；
+
+var bool=true;
+alert(Number(bool));//把布尔类型转化为数字，true为1，false为0；
+
+//把undefind转化为数字，结果为NaN，
+即：
+var c;
+alert(Number(c));//输出结果为NaN；
+
+var nu=null；
+alert(Number(nu));//空占位符，输出结果为0；
+
+car aa="123.33er133";
+alert(parseInt(aa));//强字符串中的数字转化为数字提取出来；
+alert(parseFloat(aa));将字符串并且将字符串中包含的小数的字符串转化为数字；
+
+</script>
+</body>
+</html>
+
+
+
+//第二遍。。。。。。。。。。。。。。。。。。
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+.box{width:300px;height:400px;background:red;}
+.box{width:100px;height:100px;background:blue;}
+
+
+</style>
+<script src="目标文件路径"></script>
+//js代码
+//引入js不能在其标签对中间写js代码
+	document.write(在script标签中不能嵌套标签<br>);
+
+</head>
+
+<body>
+<script>
+
+//上午内容
+
+	<p class="box1">嘿嘿额</p>
+	//单行注释
+	//多行注释（块注释）   
+	/*注释的内容*/
+	document.write(可以放到head，也可以放到body里)
+	
+	document.write("<div style=\"width:200px;height:300px;background:red;border-radius:50%;\"><div style='width:80px;height:80px;background:green;border-radius:50%;'>我是谁谁</div></div>");
+	
+	document.write("<div style='width:150px;height:150px;background:yellow;border-radius:50%;'>我是那谁谁</div>");
+	
+	//单引号双引号嵌套
+	
+	//声明变量  创建变量；
+	//变量：可以用来储存数据的一个容器 可以用来保存任何数据类型
+	
+	//关键字var
+	
+	//声明变量 变量赋值号“=”
+	
+	var a=1;  //声明变量，并且赋值，等号左边叫变量名，等号右边叫变量的值；
+	
+	var str="我就是我"；  //字符串需要加引号，单双引号都可以，但一定要在英文状态下。
+	
+	//变量的命名规则 可以是字母 下划线 $开头
+	
+	//alert(str);
+	//var $num1=23;
+	//var $num1="哈哈哈哈"；变量的覆盖，不要起一样的变量名
+	
+	//var 9="字符串";   //变量名不能为数字开头，更不能是数字；
+	
+	//typeof 用来检测数据类型（数据类型分为基本数据类型和引用数据类型）
+	
+	//数据类型   1.number   2.string    3.boolean（基本数据类型）
+	
+	//特殊类型   1.undefind    2.null
+	
+	//alert(typeof a); //number 数字；
+	var $num1="哈哈哈哈";
+	//alert(typeof $num1);  //string 字符串
+	
+	var bool=true；
+	alert(typeof bool);    //boolean ；布尔型 布尔型有两种结果true和false；
+	
+	
+	
+//下午内容
+
+
+//算术运算符    +   -   *   /    %（取余/取模）
+var num1=12;
+var num2=10;
+//alert(a+b);
+//加法有两个作用，1.求和   2.字符串拼接
+如：var num1=12;
+	var num2="ab";
+	alert(a+b);输出结果为12ab;
+	
+var num1=12;
+var num2=22;
+//alert(num1+num2);
+
+var num1=3;
+var num2=4;
+//alert(num1*num2);
+
+var num1=4;
+var num2=2;
+//alert(num1/num2);
+
+var num1=7;
+var num2=3;
+//alert(num1%num2);
+
+var a=1,b=2,c=3,d=4;//同时声明多个变量并且赋值
+var m,n,x,y;同事声明多个变量分别赋值；
+	m=1;
+	n=2;
+	x=3;
+	y=4;
+
+//关系运算符，（比较运算符）>   <  >=  <=  ==  ===   !=  !==
+
+var num1=1;
+var num2=2;
+//alert(num1>num2);输出结果为false；
+
+//alert(num1<num2);输出结果为true；
+
+//alert(num1>=num2);输出结果为false；
+
+//alert(num1<=num2);输出结果为true;
+
+//alert(num1==num2);输出结果为false;
+
+若 var num3="2";
+//allert(num2==num3);输出结果为true；//==代表或比较判断；会忽略数据类型，之比较结果，这里也是隐含着吧num3转化为number类型。
+
+//allert(num2===num3);  ===绝对等于，比较时首先比较数据类型，数据类型不一样直接为false；
+
+// !=   与  ==是互反的一对；
+// !==  与  ===是互反的一对；
+
+//赋值运算符     =   +=  -=  *=  /=  %=
+
+var a=2;
+	a+=6;
+	//alert(a);输出结果为8；
+	a-=1;
+	//alert(a);输出结果为1；
+	
+	a*=2;
+	a/=2;
+	a%=1;
+	
+	var a=10;
+	var b=20;
+	var c=30;
+	var d=40;
+	a+=b;//a=30;
+	a*=c;//a=300;
+	
+	a/=d;//a=0.25;
+	a-=b;//a=-10;
+	
+	
+	
+var mz="我是前锋学员";
+
+var a=50;
+
+document.write(mz+",我们班的人数为:"+a);
+
+
+var country="中国";
+var mj="960万平方公里";
+document.write(country+mj+"国土面积世界第三");
+
+document.write("*<br>");
+document.write("**<br>");
+document.write("***<br>");
+document.write("****<br>");
+
+var number1="123a";
+car number2=2;
+//alert(number1-number2);//输出结果为NaN;  Not a Number;
+
+var num1="12";
+var num2="15";
+var result=num1/num2;
+alert(result); 
+输出结果为0.8;
+
+//Number()   把非数字的数据转华为数字;把字符串转化为数字；
+//在字符串里面空格和空字符串用Number()调用之后的结果为0；
+
+var bool=true;
+alert(Number(bool));//把布尔类型转化为数字，true为1，false为0；
+
+//把undefind转化为数字，结果为NaN，
+即：
+var c;
+alert(Number(c));//输出结果为NaN；
+
+var nu=null；
+alert(Number(nu));//空占位符，输出结果为0；
+
+car aa="123.33er133";
+alert(parseInt(aa));//强字符串中的数字转化为数字提取出来；
+alert(parseFloat(aa));将字符串并且将字符串中包含的小数的字符串转化为数字；
+
+</script>
+</body>
+</html>
+
+//第三遍。。。。。。。。。。。。。。。。。。。。。。。。。
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+.box{width:300px;height:400px;background:red;}
+.box{width:100px;height:100px;background:blue;}
+
+
+</style>
+<script src="目标文件路径"></script>
+//js代码
+//引入js不能在其标签对中间写js代码
+	document.write(在script标签中不能嵌套标签<br>);
+
+</head>
+
+<body>
+<script>
+
+//上午内容
+
+	<p class="box1">嘿嘿额</p>
+	//单行注释
+	//多行注释（块注释）   
+	/*注释的内容*/
+	document.write(可以放到head，也可以放到body里)
+	
+	document.write("<div style=\"width:200px;height:300px;background:red;border-radius:50%;\"><div style='width:80px;height:80px;background:green;border-radius:50%;'>我是谁谁</div></div>");
+	
+	document.write("<div style='width:150px;height:150px;background:yellow;border-radius:50%;'>我是那谁谁</div>");
+	
+	//单引号双引号嵌套
+	
+	//声明变量  创建变量；
+	//变量：可以用来储存数据的一个容器 可以用来保存任何数据类型
+	
+	//关键字var
+	
+	//声明变量 变量赋值号“=”
+	
+	var a=1;  //声明变量，并且赋值，等号左边叫变量名，等号右边叫变量的值；
+	
+	var str="我就是我"；  //字符串需要加引号，单双引号都可以，但一定要在英文状态下。
+	
+	//变量的命名规则 可以是字母 下划线 $开头
+	
+	//alert(str);
+	//var $num1=23;
+	//var $num1="哈哈哈哈"；变量的覆盖，不要起一样的变量名
+	
+	//var 9="字符串";   //变量名不能为数字开头，更不能是数字；
+	
+	//typeof 用来检测数据类型（数据类型分为基本数据类型和引用数据类型）
+	
+	//数据类型   1.number   2.string    3.boolean（基本数据类型）
+	
+	//特殊类型   1.undefind    2.null
+	
+	//alert(typeof a); //number 数字；
+	var $num1="哈哈哈哈";
+	//alert(typeof $num1);  //string 字符串
+	
+	var bool=true；
+	alert(typeof bool);    //boolean ；布尔型 布尔型有两种结果true和false；
+	
+	
+	
+//下午内容
+
+
+//算术运算符    +   -   *   /    %（取余/取模）
+var num1=12;
+var num2=10;
+//alert(a+b);
+//加法有两个作用，1.求和   2.字符串拼接
+如：var num1=12;
+	var num2="ab";
+	alert(a+b);输出结果为12ab;
+	
+var num1=12;
+var num2=22;
+//alert(num1+num2);
+
+var num1=3;
+var num2=4;
+//alert(num1*num2);
+
+var num1=4;
+var num2=2;
+//alert(num1/num2);
+
+var num1=7;
+var num2=3;
+//alert(num1%num2);
+
+var a=1,b=2,c=3,d=4;//同时声明多个变量并且赋值
+var m,n,x,y;同事声明多个变量分别赋值；
+	m=1;
+	n=2;
+	x=3;
+	y=4;
+
+//关系运算符，（比较运算符）>   <  >=  <=  ==  ===   !=  !==
+
+var num1=1;
+var num2=2;
+//alert(num1>num2);输出结果为false；
+
+//alert(num1<num2);输出结果为true；
+
+//alert(num1>=num2);输出结果为false；
+
+//alert(num1<=num2);输出结果为true;
+
+//alert(num1==num2);输出结果为false;
+
+若 var num3="2";
+//allert(num2==num3);输出结果为true；//==代表或比较判断；会忽略数据类型，之比较结果，这里也是隐含着吧num3转化为number类型。
+
+//allert(num2===num3);  ===绝对等于，比较时首先比较数据类型，数据类型不一样直接为false；
+
+// !=   与  ==是互反的一对；
+// !==  与  ===是互反的一对；
+
+//赋值运算符     =   +=  -=  *=  /=  %=
+
+var a=2;
+	a+=6;
+	//alert(a);输出结果为8；
+	a-=1;
+	//alert(a);输出结果为1；
+	
+	a*=2;
+	a/=2;
+	a%=1;
+	
+	var a=10;
+	var b=20;
+	var c=30;
+	var d=40;
+	a+=b;//a=30;
+	a*=c;//a=300;
+	
+	a/=d;//a=0.25;
+	a-=b;//a=-10;
+	
+	
+	
+var mz="我是前锋学员";
+
+var a=50;
+
+document.write(mz+",我们班的人数为:"+a);
+
+
+var country="中国";
+var mj="960万平方公里";
+document.write(country+mj+"国土面积世界第三");
+
+document.write("*<br>");
+document.write("**<br>");
+document.write("***<br>");
+document.write("****<br>");
+
+var number1="123a";
+car number2=2;
+//alert(number1-number2);//输出结果为NaN;  Not a Number;
+
+var num1="12";
+var num2="15";
+var result=num1/num2;
+alert(result); 
+输出结果为0.8;
+
+//Number()   把非数字的数据转华为数字;把字符串转化为数字；
+//在字符串里面空格和空字符串用Number()调用之后的结果为0；
+
+var bool=true;
+alert(Number(bool));//把布尔类型转化为数字，true为1，false为0；
+
+//把undefind转化为数字，结果为NaN，
+即：
+var c;
+alert(Number(c));//输出结果为NaN；
+
+var nu=null；
+alert(Number(nu));//空占位符，输出结果为0；
+
+car aa="123.33er133";
+alert(parseInt(aa));//强字符串中的数字转化为数字提取出来；
+alert(parseFloat(aa));将字符串并且将字符串中包含的小数的字符串转化为数字；
+
+</script>
+</body>
+</html>
+
+
+//第四遍。。。。。。。。。。。。。。。。。。。。。
+
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+.box{width:300px;height:400px;background:red;}
+.box{width:100px;height:100px;background:blue;}
+
+
+</style>
+<script src="目标文件路径"></script>
+//js代码
+//引入js不能在其标签对中间写js代码
+	document.write(在script标签中不能嵌套标签<br>);
+
+</head>
+
+<body>
+<script>
+
+//上午内容
+
+	<p class="box1">嘿嘿额</p>
+	//单行注释
+	//多行注释（块注释）   
+	/*注释的内容*/
+	document.write(可以放到head，也可以放到body里)
+	
+	document.write("<div style=\"width:200px;height:300px;background:red;border-radius:50%;\"><div style='width:80px;height:80px;background:green;border-radius:50%;'>我是谁谁</div></div>");
+	
+	document.write("<div style='width:150px;height:150px;background:yellow;border-radius:50%;'>我是那谁谁</div>");
+	
+	//单引号双引号嵌套
+	
+	//声明变量  创建变量；
+	//变量：可以用来储存数据的一个容器 可以用来保存任何数据类型
+	
+	//关键字var
+	
+	//声明变量 变量赋值号“=”
+	
+	var a=1;  //声明变量，并且赋值，等号左边叫变量名，等号右边叫变量的值；
+	
+	var str="我就是我"；  //字符串需要加引号，单双引号都可以，但一定要在英文状态下。
+	
+	//变量的命名规则 可以是字母 下划线 $开头
+	
+	//alert(str);
+	//var $num1=23;
+	//var $num1="哈哈哈哈"；变量的覆盖，不要起一样的变量名
+	
+	//var 9="字符串";   //变量名不能为数字开头，更不能是数字；
+	
+	//typeof 用来检测数据类型（数据类型分为基本数据类型和引用数据类型）
+	
+	//数据类型   1.number   2.string    3.boolean（基本数据类型）
+	
+	//特殊类型   1.undefind    2.null
+	
+	//alert(typeof a); //number 数字；
+	var $num1="哈哈哈哈";
+	//alert(typeof $num1);  //string 字符串
+	
+	var bool=true；
+	alert(typeof bool);    //boolean ；布尔型 布尔型有两种结果true和false；
+	
+	
+	
+//下午内容
+
+
+//算术运算符    +   -   *   /    %（取余/取模）
+var num1=12;
+var num2=10;
+//alert(a+b);
+//加法有两个作用，1.求和   2.字符串拼接
+如：var num1=12;
+	var num2="ab";
+	alert(a+b);输出结果为12ab;
+	
+var num1=12;
+var num2=22;
+//alert(num1+num2);
+
+var num1=3;
+var num2=4;
+//alert(num1*num2);
+
+var num1=4;
+var num2=2;
+//alert(num1/num2);
+
+var num1=7;
+var num2=3;
+//alert(num1%num2);
+
+var a=1,b=2,c=3,d=4;//同时声明多个变量并且赋值
+var m,n,x,y;同事声明多个变量分别赋值；
+	m=1;
+	n=2;
+	x=3;
+	y=4;
+
+//关系运算符，（比较运算符）>   <  >=  <=  ==  ===   !=  !==
+
+var num1=1;
+var num2=2;
+//alert(num1>num2);输出结果为false；
+
+//alert(num1<num2);输出结果为true；
+
+//alert(num1>=num2);输出结果为false；
+
+//alert(num1<=num2);输出结果为true;
+
+//alert(num1==num2);输出结果为false;
+
+若 var num3="2";
+//allert(num2==num3);输出结果为true；//==代表或比较判断；会忽略数据类型，之比较结果，这里也是隐含着吧num3转化为number类型。
+
+//allert(num2===num3);  ===绝对等于，比较时首先比较数据类型，数据类型不一样直接为false；
+
+// !=   与  ==是互反的一对；
+// !==  与  ===是互反的一对；
+
+//赋值运算符     =   +=  -=  *=  /=  %=
+
+var a=2;
+	a+=6;
+	//alert(a);输出结果为8；
+	a-=1;
+	//alert(a);输出结果为1；
+	
+	a*=2;
+	a/=2;
+	a%=1;
+	
+	var a=10;
+	var b=20;
+	var c=30;
+	var d=40;
+	a+=b;//a=30;
+	a*=c;//a=300;
+	
+	a/=d;//a=0.25;
+	a-=b;//a=-10;
+	
+	
+	
+var mz="我是前锋学员";
+
+var a=50;
+
+document.write(mz+",我们班的人数为:"+a);
+
+
+var country="中国";
+var mj="960万平方公里";
+document.write(country+mj+"国土面积世界第三");
+
+document.write("*<br>");
+document.write("**<br>");
+document.write("***<br>");
+document.write("****<br>");
+
+var number1="123a";
+car number2=2;
+//alert(number1-number2);//输出结果为NaN;  Not a Number;
+
+var num1="12";
+var num2="15";
+var result=num1/num2;
+alert(result); 
+输出结果为0.8;
+
+//Number()   把非数字的数据转华为数字;把字符串转化为数字；
+//在字符串里面空格和空字符串用Number()调用之后的结果为0；
+
+var bool=true;
+alert(Number(bool));//把布尔类型转化为数字，true为1，false为0；
+
+//把undefind转化为数字，结果为NaN，
+即：
+var c;
+alert(Number(c));//输出结果为NaN；
+
+var nu=null；
+alert(Number(nu));//空占位符，输出结果为0；
+
+car aa="123.33er133";
+alert(parseInt(aa));//强字符串中的数字转化为数字提取出来；
+alert(parseFloat(aa));将字符串并且将字符串中包含的小数的字符串转化为数字；
+
+</script>
+</body>
+</html>
+
+
+//第五遍。。。。。。。。。。。。。。。。。。。。。。。。。
+
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+.box{width:300px;height:400px;background:red;}
+.box{width:100px;height:100px;background:blue;}
+
+
+</style>
+<script src="目标文件路径"></script>
+//js代码
+//引入js不能在其标签对中间写js代码
+	document.write(在script标签中不能嵌套标签<br>);
+
+</head>
+
+<body>
+<script>
+
+//上午内容
+
+	<p class="box1">嘿嘿额</p>
+	//单行注释
+	//多行注释（块注释）   
+	/*注释的内容*/
+	document.write(可以放到head，也可以放到body里)
+	
+	document.write("<div style=\"width:200px;height:300px;background:red;border-radius:50%;\"><div style='width:80px;height:80px;background:green;border-radius:50%;'>我是谁谁</div></div>");
+	
+	document.write("<div style='width:150px;height:150px;background:yellow;border-radius:50%;'>我是那谁谁</div>");
+	
+	//单引号双引号嵌套
+	
+	//声明变量  创建变量；
+	//变量：可以用来储存数据的一个容器 可以用来保存任何数据类型
+	
+	//关键字var
+	
+	//声明变量 变量赋值号“=”
+	
+	var a=1;  //声明变量，并且赋值，等号左边叫变量名，等号右边叫变量的值；
+	
+	var str="我就是我"；  //字符串需要加引号，单双引号都可以，但一定要在英文状态下。
+	
+	//变量的命名规则 可以是字母 下划线 $开头
+	
+	//alert(str);
+	//var $num1=23;
+	//var $num1="哈哈哈哈"；变量的覆盖，不要起一样的变量名
+	
+	//var 9="字符串";   //变量名不能为数字开头，更不能是数字；
+	
+	//typeof 用来检测数据类型（数据类型分为基本数据类型和引用数据类型）
+	
+	//数据类型   1.number   2.string    3.boolean（基本数据类型）
+	
+	//特殊类型   1.undefind    2.null
+	
+	//alert(typeof a); //number 数字；
+	var $num1="哈哈哈哈";
+	//alert(typeof $num1);  //string 字符串
+	
+	var bool=true；
+	alert(typeof bool);    //boolean ；布尔型 布尔型有两种结果true和false；
+	
+	
+	
+//下午内容
+
+
+//算术运算符    +   -   *   /    %（取余/取模）
+var num1=12;
+var num2=10;
+//alert(a+b);
+//加法有两个作用，1.求和   2.字符串拼接
+如：var num1=12;
+	var num2="ab";
+	alert(a+b);输出结果为12ab;
+	
+var num1=12;
+var num2=22;
+//alert(num1+num2);
+
+var num1=3;
+var num2=4;
+//alert(num1*num2);
+
+var num1=4;
+var num2=2;
+//alert(num1/num2);
+
+var num1=7;
+var num2=3;
+//alert(num1%num2);
+
+var a=1,b=2,c=3,d=4;//同时声明多个变量并且赋值
+var m,n,x,y;同事声明多个变量分别赋值；
+	m=1;
+	n=2;
+	x=3;
+	y=4;
+
+//关系运算符，（比较运算符）>   <  >=  <=  ==  ===   !=  !==
+
+var num1=1;
+var num2=2;
+//alert(num1>num2);输出结果为false；
+
+//alert(num1<num2);输出结果为true；
+
+//alert(num1>=num2);输出结果为false；
+
+//alert(num1<=num2);输出结果为true;
+
+//alert(num1==num2);输出结果为false;
+
+若 var num3="2";
+//allert(num2==num3);输出结果为true；//==代表或比较判断；会忽略数据类型，之比较结果，这里也是隐含着吧num3转化为number类型。
+
+//allert(num2===num3);  ===绝对等于，比较时首先比较数据类型，数据类型不一样直接为false；
+
+// !=   与  ==是互反的一对；
+// !==  与  ===是互反的一对；
+
+//赋值运算符     =   +=  -=  *=  /=  %=
+
+var a=2;
+	a+=6;
+	//alert(a);输出结果为8；
+	a-=1;
+	//alert(a);输出结果为1；
+	
+	a*=2;
+	a/=2;
+	a%=1;
+	
+	var a=10;
+	var b=20;
+	var c=30;
+	var d=40;
+	a+=b;//a=30;
+	a*=c;//a=300;
+	
+	a/=d;//a=0.25;
+	a-=b;//a=-10;
+	
+	
+	
+var mz="我是前锋学员";
+
+var a=50;
+
+document.write(mz+",我们班的人数为:"+a);
+
+
+var country="中国";
+var mj="960万平方公里";
+document.write(country+mj+"国土面积世界第三");
+
+document.write("*<br>");
+document.write("**<br>");
+document.write("***<br>");
+document.write("****<br>");
+
+var number1="123a";
+car number2=2;
+//alert(number1-number2);//输出结果为NaN;  Not a Number;
+
+var num1="12";
+var num2="15";
+var result=num1/num2;
+alert(result); 
+输出结果为0.8;
+
+//Number()   把非数字的数据转华为数字;把字符串转化为数字；
+//在字符串里面空格和空字符串用Number()调用之后的结果为0；
+
+var bool=true;
+alert(Number(bool));//把布尔类型转化为数字，true为1，false为0；
+
+//把undefind转化为数字，结果为NaN，
+即：
+var c;
+alert(Number(c));//输出结果为NaN；
+
+var nu=null；
+alert(Number(nu));//空占位符，输出结果为0；
+
+car aa="123.33er133";
+alert(parseInt(aa));//强字符串中的数字转化为数字提取出来；
+alert(parseFloat(aa));将字符串并且将字符串中包含的小数的字符串转化为数字；
+
+</script>
+</body>
+</html>

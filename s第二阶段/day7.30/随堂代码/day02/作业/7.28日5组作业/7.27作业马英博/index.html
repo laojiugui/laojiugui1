@@ -1,0 +1,346 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+<script>//作业1
+	var years=Number(prompt("请输出年份"));
+	if(years%400==0){
+		alert(years+"是闰年")	
+	}else if(years%4==0&&years%100!=0){
+		alert(years+"是闰年");
+	}else{
+		alert(years+"不是闰年");	
+	}
+</script>
+
+
+<script>//作业2
+	var num=Number(prompt("请输入整数"));
+	if(num>0){
+		alert(num+"是一个大于0的整数");
+	}else
+	if(num<0){
+		alert(num+"是一个小于于0的整数");
+	}else
+	if(num==0){
+		alert(num+"是一个等于0的整数");
+	}else{
+    	alert("你这是弄啥哩");
+    }
+</script>
+
+
+
+<script>//作业3
+	var tree=Number(prompt("请输入整数"));
+		result=tree/3;
+	if(tree%3==0){
+	 alert(tree+"是3的倍数，结果是"+result);	
+	}else{
+	 alert(tree+"不是是3的倍数，结果是"+result);
+	};
+</script>
+
+<script>//作业4
+
+	var height=Number(prompt("请输入身高CM"));
+	var weight1=(height-108)*2-10;
+	var weight2=(height-108)*2+10;
+	
+	if(height>108){
+		alert("您的体重在"+weight1+"到"+weight2+"之间");
+	}else{
+        alert("您输入的有误");
+    }
+</script>
+
+
+<script>//作业5
+	var fen=Number(prompt("请输入分数"));
+	if(fen>90&&fen<=100){
+		alert("大神您的成绩为A");
+	}else if(fen>=80&&fen<90){
+		alert("奋青您的成绩为B");
+	}else if(fen>=70&&fen<80){
+		alert("骚年您的成绩为C");
+	}else if(fen>=60&&fen<70){
+		alert("您的成绩为D");
+	}else if(fen<60){
+		alert("下一届的老大");
+	}else{
+		alert("少侠您又调皮了！")
+		}
+</script>
+
+
+<script>//作业6
+     var months=Number(prompt("请输入2016年月份"));
+	 switch(months){
+		 case 1:alert;
+		 case 3:alert;
+		 case 5:alert;
+		 case 7:alert;
+		 case 8:alert;
+	     case 10:alert;
+	     case 12:alert(months+"月份是31天");break;
+		 case 4:alert;
+		 case 6:alert;
+		 case 9:alert;
+		 case 11:alert(months+"月份是30天");break;
+		 case 2:alert(months+"月份是29天");break;
+		default:alert("你是火星人？");
+	}
+
+
+
+
+
+
+</script>
+
+
+<script>//作业7
+	var fnum=Number(prompt('请输入5位数字'));
+	var	gw=fnum%10;
+	alert(gw+"为个位数字");
+	var sw=(fnum-gw)/10%10;
+	alert(sw+"为十位数字");
+	var bw=(fnum-gw-sw*10)/100%10;
+	alert(bw+"为百位数字");
+	var qw=(fnum-gw-sw*10-bw*100)/1000%10;
+	alert(qw+"为千位数字");
+	var ww=(fnum-gw-sw*10-bw*100-qw*1000)/10000%10;
+	alert(ww+"为万位数字");
+</script>
+
+<script>//作业8
+	var a=Number(prompt("请输入一个数字"));
+	var b=Number(prompt("请输入一个数字"));
+	var c=Number(prompt("请输入一个数字"));
+	if(a-b>0){
+		if(a-c>0){
+			alert(a+"是最大值");
+			}else{
+			alert(c+"是最大值");	
+			}
+	}else if(b-c>0){
+		alert(b+"是最大值");
+		}else{
+			
+		alert(c+"是最大值");	
+		}
+</script>
+
+
+
+
+
+<!--练习-->
+<script>
+
+	var All=89;
+	var day=All/24;
+	var hours=All%24;
+	alert(parseInt (day));
+	alert(hours);
+	alert("为抵抗洪水，战士连续作战89小时，编程计算共"+parseInt (day)+"天零"+hours+"小时");
+	
+	var All=89;
+	var day=All/24;
+	var hours=All%24;
+	alert(parseInt (day));
+	alert(hours);
+	alert("为抵抗洪水，战士连续作战89小时，编程计算共"+parseInt (day)+"天零"+hours+"小时");
+
+
+	
+	
+	
+	
+	var a=prompt("请输入一个整数",1);
+	if(a>0){alert(typeof a);
+				alert("这是一个大于0的数");
+			}else if(a==0){
+				alert("这是一个等于0的数");
+			}else if(a<0){
+				alert("这是一个小于0的数");
+			}else{
+				alert("这不是一个数");
+			};
+	var a=prompt("请输入一个整数",1);
+	if(a>0){alert(typeof a);
+				alert("这是一个大于0的数");
+			}else if(a==0){
+				alert("这是一个等于0的数");
+			}else if(a<0){
+				alert("这是一个小于0的数");
+			}else{
+				alert("这不是一个数");
+			};
+
+
+
+
+
+	var num1=Number(prompt("请输入第一个数"));
+	var num2=Number(prompt("请输入第二个数"));
+	var ysf=prompt("请输入运算符");
+	if(ysf=="+"){
+		alert(num1+num2);
+		}else if(ysf=="-"){
+		alert(num1-num2);
+		}else if(ysf=="*"){
+		alert(num1*num2);
+		}else if(ysf=="/"){
+		alert(num1/num2);
+		}else if(ysf=="%"){
+		alert(num1%num2);
+		}else{
+		alert("您输入的不合法");
+		}
+	var num1=Number(prompt("请输入第一个数"));
+	var num2=Number(prompt("请输入第二个数"));
+	var ysf=prompt("请输入运算符");
+	if(ysf=="+"){
+		alert(num1+num2);
+		}else if(ysf=="-"){
+		alert(num1-num2);
+		}else if(ysf=="*"){
+		alert(num1*num2);
+		}else if(ysf=="/"){
+		alert(num1/num2);
+		}else if(ysf=="%"){
+		alert(num1%num2);
+		}else{
+		alert("您输入的不合法");
+		}
+		
+		
+		
+		
+	var num=prompt("请输入一个数字");
+	if(num>0){
+		if(num<=10){
+		alert("您输入的数字在0到10");
+		}else if(num>10&num<=50){
+		alert("您输入的数字在11到50");	
+		}else if(num>50&num<=100){
+		alert("您输入的数字在51到100");	
+		}else{
+		alert("您输入的数字大于100")
+		}
+		}else if(num<0){
+		alert("您输入的数字小于0")
+		}else {
+		alert("您是不是有问题")
+		}
+	var num=prompt("请输入一个数字");
+	if(num>0){
+		if(num<=10){
+		alert("您输入的数字在0到10");
+		}else if(num>10&num<=50){
+		alert("您输入的数字在11到50");	
+		}else if(num>50&num<=100){
+		alert("您输入的数字在51到100");	
+		}else{
+		alert("您输入的数字大于100")
+		}
+		}else if(num<0){
+		alert("您输入的数字小于0")
+		}else {
+		alert("您是不是有问题")
+		}
+		
+		
+		
+		
+		
+		var num=prompt("请输入数字");
+	b=num%2;
+	if(num>=0&&b==0){
+		    alert("这是正偶数")	
+		}else if(num<0&&b==0){
+			alert("这是负偶数")		
+		}else if(num>=0&&b!=0){
+			alert("这是正奇数")		
+		}else if(num<0&&b!=0){
+			alert("这是负奇数")	
+		}
+		
+		var num=prompt("请输入数字");
+	b=num%2;
+	if(num>=0&&b==0){
+		    alert("这是正偶数")	
+		}else if(num<0&&b==0){
+			alert("这是负偶数")		
+		}else if(num>=0&&b!=0){
+			alert("这是正奇数")		
+		}else if(num<0&&b!=0){
+			alert("这是负奇数")	
+		}
+		
+		
+		
+		var p=Number(prompt("想要输入什么数字"))
+	switch(p){
+		case 1:alert("正常上课");
+		case 2:alert("正常上课");
+		case 3:alert("正常上课");
+		case 4:alert("正常上课");
+		case 5:alert("正常上课");
+		case 6:alert("妈的补课、上自习");
+		case 7:alert("(～﹃～)~zZ、LLLLLLL撸");
+		default:alert("您输入的我认识哦");
+		}
+		var p=Number(prompt("想要输入什么数字"))
+	switch(p){
+		case 1:alert("正常上课");
+		case 2:alert("正常上课");
+		case 3:alert("正常上课");
+		case 4:alert("正常上课");
+		case 5:alert("正常上课");
+		case 6:alert("妈的补课、上自习");
+		case 7:alert("(～﹃～)~zZ、LLLLLLL撸");
+		default:alert("您输入的我认识哦");
+		}
+		
+		
+		
+		var num1=Number(prompt("敲数字"));
+	var num2=Number(prompt("敲数字"));
+	var ysf=prompt("敲运算符");
+	switch(ysf){
+		case "+": alert(num1+num2);	
+		case "-": alert(num1-num2);
+		case "*": alert(num1*num2);
+		case "/": alert(num1/num2);
+		default:alert("敲得是啥");
+	}
+	
+	var num1=Number(prompt("敲数字"));
+	var num2=Number(prompt("敲数字"));
+	var ysf=prompt("敲运算符");
+	switch(ysf){
+		case "+": alert(num1+num2);	
+		case "-": alert(num1-num2);
+		case "*": alert(num1*num2);
+		case "/": alert(num1/num2);
+		default:alert("敲得是啥");
+	}
+		
+		
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

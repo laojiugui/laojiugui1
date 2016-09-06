@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>广告弹出关闭</title>
+	<script type="text/javascript">
+		window.onload=function(){
+			var odiv=document.getElementById('div1');
+			var s=5;
+			var timer=setInterval(function(){
+				s--;
+				odiv.style.display="block";
+				document.getElementById('spanText').innerHTML="我是一条广告"+s+"秒后关闭";
+				if(s==0){
+					clearInterval(timer);
+					odiv.style.display="none";
+				}
+			},1000)
+			document.getElementById('close').onclick=function(){
+				clearInterval(timer);
+				odiv.style.display="none";
+			}
+
+		}
+	</script>
+</head>
+<body>
+	<div id="div1" style="background: url(img.png);width:406px; height: 214px; position: fixed; right: 0;bottom: 0; display: none; padding-top: 10px;">
+		<span id="spanText" style="font-family: 微软雅黑;font-size:14px;color:#666666;">我是一条广告5秒后关闭</span>
+		<span id="close" style="float:right">关闭</span>
+	</div>
+</body>
+</html>

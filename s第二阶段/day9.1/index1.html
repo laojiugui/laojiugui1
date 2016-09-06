@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+           $("#container").load(
+             "http://http://localhost:63342/s%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5/day8.29/%E4%BD%9C%E4%B8%9A/index3.html?_ijt=92532j13o7s83m470lfn6g1ru8",
+                   function(response,status,xhr){
+                        console.log(response);
+                       console.log(status);
+                       console.log(xhr.status);
+                       console.log(xhr.statusText);
+
+                   }
+
+           );
+
+        });
+
+    </script>
+</head>
+<body>
+<div id="container"></div>
+</body>
+</html>

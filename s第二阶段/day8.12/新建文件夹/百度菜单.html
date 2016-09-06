@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>拖拽百度搜索框</title>
+<style>
+#box{background:url(1.png) no-repeat center;position:absolute;left:100px;top:200px;display:none}
+span{float:right;}
+
+</style>
+
+</head>
+
+<body>
+<input type="button" value="按钮" id="btn">
+
+<div id="box" style="width:394px;height:448px"><span>关闭&times;</span></div>
+
+
+<script>
+var btn=document.getElementById("btn")
+var box=document.getElementById("box")
+var span=document.getElementsByTagName("span")[0]
+btn.onclick=function(){
+	box.style.display="block"	
+}
+span.onclick=function(){
+	box.style.display="none"
+	btn.disabled=""
+}
+box.onmousedown=function(e){
+	var e=window.event||e
+	var offsetL=e.offsetX
+	var offsetT=e.offsetY
+	document.onmousemove=function(e){
+		var e=window.event||e
+		var left1=e.clientX-offsetL
+		var top1=e.clientY-offsetT
+		var bW=document.documentElement.clientWidth
+		var bH=document.documentElement.clientHeight
+		var bow=parseInt(box.style.width)
+		var boh=parseInt(box.style.height)
+		if(left1>bW-bow){
+			left1=bW-bow
+		}else if(left1<0){
+			left1=0
+		}
+		if(top1>bH-boh){
+			top1=bH-boh
+		}else if(top1<0){
+			top1=0
+		}
+		box.style.left=left1+"px"
+		box.style.top=top1+"px"
+		window.event?e.returnValue=false:e.preventDefault();
+	}
+btn.disabled="disabled"
+}
+box.onmouseup=function(){
+	document.onmousemove=null
+	
+}
+
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body style="height:2000px;">
+<div id="box2" style="background:red;position:fixed;top:0;height:200px;width:100%;display:none;"></div>
+
+<div id="box" style="width:500px;height:10px;margin:0 auto;border:1px solid red;border-radius:5px;">
+	<div id="box1" style="width:0%;height:10px;background:green;border-radius:5px;"></div>
+	<span id="txt" style="display:block;text-align:center;padding-top:6px;">0%</span>
+</div><br><br><br><br><br>
+
+<input type="button" id="tui" value="生成字母随机数" />
+<div id="box3"></div><br><br><br>
+
+
+<div id="box4" style="width:400px;height:400px;background:#666;position:fixed;bottom:0;right:0;text-align:center;line-height:400px;display:none">我是大大滴广告窗<input type="button" value="关闭&times" id="btn1" style="float:right"></div>
+
+
+<div id="btn2" style="width:100px;height:150px;position:fixed;bottom:50px;left:50px;background:#666;text-align:centre;line-height:150px;">↑</div>
+
+<script>
+window.onload=function(){              //创建页面加载匿名函数
+
+	//进度条
+	var box1=document.getElementById("box1")      //获取box1内容
+	var txt=document.getElementById("txt")         //获取txt内容
+	var i=0                                  //设置i变量
+	var timer=setInterval(function(){              //创建定时器匿名函数
+			i++;                            //i随着定时器自动+1
+			box1.style.width=i+"%"             //box1随i的变化也变化
+			txt.innerHTML=i+"%"                     //txt内容也随i变化
+			if(i==100){                        //限制i的变量条件
+				clearInterval(timer)            //当i变为100时,则定时器清零
+			
+			}
+
+	},200)                           //每200毫秒运行一次
+
+
+
+	//吸顶菜单
+	var box2=document.getElementById("box2")          //获取box2的内容
+	
+	window.onscroll=function(){                        //创建window滚动时匿名函数
+		var stop=document.documentElement.scrollTop||document.body.scrollTop         //获取当前文档滚动高度
+		if(stop>400){                 //当滚动的高度达到400以上时的限制条件
+			box2.style.display="block"           //box2的display属性变为block可见
+		}else{
+			box2.style.display="none"           //反之则display的属性变为none.不可见
+		}
+	}
+
+
+	
+	//随机生成字母随机数
+	var tui=document.getElementById("tui")      //获取tui里面的内容
+	var box3=document.getElementById("box3")       //获取box3里面的内容
+	 
+	tui.onclick=function(){                   //创建单机事件匿名函数
+		var arr=[];                //建立空数组
+		while(arr.length<4){                         //设置随机数的长度
+			var n=parseInt(Math.random()*58+65)     //生成随机的ascii码值
+			if((n>=65&&n<=90)||(n>=97&&n<=122)){      //设置ascii成立的条件
+				arr.push(String.fromCharCode(n))        //把符合条件的ascii码转变成字符串并推进数组
+			}
+		}
+			box3.innerHTML=arr.join("");              //把数组转变成字符串,并把中间默认的,去除
+	} 
+
+
+
+	
+	//广告弹窗!!!!
+	var btn1=document.getElementById("btn1")  //获取btn1里面的内容
+	var box4=document.getElementById("box4")   //获取box4里面的内容
+	setInterval(function(){              //创建定时器
+		box4.style.display="block"      //开启定时器时,box4的属性值改变
+	},5000)                              //每两秒运行一次
+	btn1.onclick=function(){               //创建单机事件匿名函数
+		box4.style.display="none"           //单击时,box4的属性值改变
+	}
+
+	
+	//返回顶部
+	var btn2=document.getElementById("btn2")
+	
+	btn2.onclick=function(){
+		document.documentElement.scrollTop = document.body.scrollTop =0;
+	}
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+</script>
+</body>
+</html>

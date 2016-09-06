@@ -1,0 +1,370 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>循环while语句，for语句，do-while语句</title>
+</head>
+<style>
+span{display:inline-block;width:80px;text-align:center;}
+a{color:#333;background:yellow;display:inline-block;margin:5px;padding:10px;}
+</style>
+<body>
+<div id="box"></div>
+<script>
+/*	var i=1;
+	while(i<11){
+		document.write(i+"我要上天<br>");
+		i++;
+	}
+*/                                      //while语句 循环
+/*	var i=1;
+	var s=0;
+	while(i<101){
+		s+=i;
+		i++;
+	}
+	document.write(s);
+*/	
+/*	var i=0;
+	var s=0;
+	while(i<101){
+		s+=i;
+		i+=2;
+	}
+	alert(s);                     //100以内偶数和
+*/	
+/*
+    var i=1000,a=0;
+	while(i<2001){
+		if(i%400==0){
+			document.write(i+" ");
+			a++;
+		}else if(i%100!=0&&i%4==0){
+			document.write(i+" ");
+			a++;
+		}else if(a%4==0){
+			document.write("<br>");   //<br>输出数量不对。
+		}
+		i++;                                 //打印出1000-2000年中所有的闰年，并以每行四个数的形式输出
+	}
+*/
+/*
+	var i=1000,a=0;
+	while(i<=2000){
+		if(i%400==0||(i%100!=0&&i%4==0)){
+			document.write(i+" ");
+			a++;
+			if(a%4==0){
+				document.write("<br>");
+			}
+		}                                     //简写
+		i++;                                 //打印出1000-2000年中所有的闰年，并以每行四个数的形式输出
+	}
+*/
+
+/*
+    var num1=prompt("输入第一个数");
+	var num2=prompt("输入第二个数");
+	var num3=prompt("输入第三个数");
+	var max=num1;
+	if(num2>max){
+		max=num2;
+	}
+	if(num3>max){
+		max=num3;
+	}
+	alert(max);                      //三个数比大小  事件if的运用，优化
+*/
+/*
+	var a=0;
+	while(a<5){                       //做while循环
+		var b=0;                      //声明 列b  的值
+		while(b<=a){                  //做第一行 列b 的循环
+			document.write("*");      //输出*
+			b++;                     //列b 的自增， 如果没有自增 循环就不会停止 就会陷入死循环。
+		}
+		document.write("<br>");      //列b 循环到结尾  输出换行符 进行下一行
+		a++;                        // 行a 的自增， 如果没有，外层 行a 的循环就会陷入死循环
+	}
+	
+*/
+/*
+	var a=0;
+	var c=3;
+	while(a<5){
+		var b=0;
+		while(b<=c&&c>=0){
+			document.write("+");
+			b++;
+		}
+		var b=0;
+		while(b<=a){                                         //  做出图形如下
+			document.write("*");                             //   +++++*
+			b++;                                             //   ++++**
+		}                                                    //   +++***    
+		c--;                                                 //   ++****
+		document.write("<br>");                               //  +*****
+		a++;
+	}                                                   
+*/
+/*	for(声明变量，变量赋值;循环条件;自增){
+		循环体
+	}                                             //for循环结构
+*/
+/*	var i,j;
+	for(i=1;i<5;i++){
+		for(j=1;j<11;j++){
+			document.write("*");
+		}
+		document.write("<br>");
+	}
+*/
+/*	var i,j;
+	for(i=1;i<5;i++){
+		for(j=1;j<=i;j++){
+			document.write("*");
+		}
+		document.write("<br>"); 
+	}
+*/
+
+/*
+	var i,j;                                  //35个头 94只脚
+	for(i=1;i<=35;i++){                             
+		for(j=1;j<=35;j++){
+			if((2*i+4*j)==94&&(i+j)==35){
+				document.write(i+"只鸡<br>");
+				document.write(j+"只兔");
+			}
+		}
+	}
+
+*/
+/*	var i,j;                                  //35个头 94只脚
+	for(i=1;i<=35;i++){                             
+		for(j=1;j<35;j++){
+			if((i+j)==35){
+				document.write(i+"只鸡");
+				document.write(j+"只兔");
+				var m=2*i+4*j;
+				document.write("，共有"+m+"只脚<br>");
+			}
+		}
+	}
+*/
+/*	var i,j             //i是鸡  j是脚
+	for(i=0,j=140;i<=35;i++,j-=2){
+		if(j==94){
+			document.write(i+"只鸡<br>");
+			document.write((35-i)+"只兔");
+		}
+	}
+*/
+/*
+	var i,j;
+	for(i=1;i<10;i++){
+		for(j=1;j<=i;j++){
+			document.write("<span style='display:inline-block;background:yellow;padding:15px;margin:10px;width:50px;text-align:center;'>"+i+"&times;"+j+"="+i*j+"</span>");
+		}
+		document.write("<br>");
+	}
+*/
+/*
+var oBox=document.getElementById("box");    //通过id获取想要的对象
+console.log(oBox);                         
+alert(oBox.innerHTML);                     //  对象。属性  获取标签中的内容
+oBox.innerHTML="我去也";                  //   可以改写标签中的内容
+*/
+
+	var oBox=document.getElementById("box");
+	console.log(oBox);
+	var i,j;
+	for(i=1;i<10;i++){
+		for(j=1;j<=i;j++){
+			oBox.innerHTML+="<a href='#'>"+"<span>"+i+"&times;"+j+"="+i*j+"</span>"+"</a>";
+		}
+		oBox.innerHTML+="<br>";
+	}
+/*	do{
+		执行语句
+	}while（条件）                                 //do。。while语句结构     先执行语句   在判断条件是否true
+*/	
+</script>
+<script>
+/*	var i=1;
+	while(i<11){
+		document.write(i+"我要上天<br>");
+		i++;
+	}
+*/                                     
+/*	var i=1;
+	var s=0;
+	while(i<101){
+		s+=i;
+		i++;
+	}
+	document.write(s);
+*/	
+/*	var i=0;
+	var s=0;
+	while(i<101){
+		s+=i;
+		i+=2;
+	}
+	alert(s);                     
+*/	
+
+/*
+	var i=1000,a=0;
+	while(i<=2000){
+		if(i%400==0||(i%100!=0&&i%4==0)){
+			document.write(i+" ");
+			a++;
+			if(a%4==0){
+				document.write("<br>");
+			}
+		}                                     
+		i++;                                
+	}
+*/
+
+/*
+    var num1=prompt("输入第一个数");
+	var num2=prompt("输入第二个数");
+	var num3=prompt("输入第三个数");
+	var max=num1;
+	if(num2>max){
+		max=num2;
+	}
+	if(num3>max){
+		max=num3;
+	}
+	alert(max);                     
+*/
+/*
+	var a=0;
+	while(a<5){                       
+		var b=0;                     
+		while(b<=a){                 
+			document.write("*");     
+			b++;                  
+		}
+		document.write("<br>");     
+		a++;                       
+	}
+	
+*/
+/*
+	var a=0;
+	var c=3;
+	while(a<5){
+		var b=0;
+		while(b<=c&&c>=0){
+			document.write("+");
+			b++;
+		}
+		var b=0;
+		while(b<=a){                                       
+			document.write("*");                           
+			b++;                                            
+		}                                                    
+		c--;                                                 
+		document.write("<br>");                              
+		a++;
+	}                                                   
+*/
+
+/*	var i,j;
+	for(i=1;i<5;i++){
+		for(j=1;j<11;j++){
+			document.write("*");
+		}
+		document.write("<br>");
+	}
+*/
+/*	var i,j;
+	for(i=1;i<5;i++){
+		for(j=1;j<=i;j++){
+			document.write("*");
+		}
+		document.write("<br>"); 
+	}
+*/
+
+/*
+	var i,j;                                 
+	for(i=1;i<=35;i++){                             
+		for(j=1;j<=35;j++){
+			if((2*i+4*j)==94&&(i+j)==35){
+				document.write(i+"只鸡<br>");
+				document.write(j+"只兔");
+			}
+		}
+	}
+
+*/
+/*	var i,j;                                  
+	for(i=1;i<=35;i++){                             
+		for(j=1;j<35;j++){
+			if((i+j)==35){
+				document.write(i+"只鸡");
+				document.write(j+"只兔");
+				var m=2*i+4*j;
+				document.write("，共有"+m+"只脚<br>");
+			}
+		}
+	}
+*/
+/*	var i,j             //i是鸡  j是脚
+	for(i=0,j=140;i<=35;i++,j-=2){
+		if(j==94){
+			document.write(i+"只鸡<br>");
+			document.write((35-i)+"只兔");
+		}
+	}
+*/
+
+/*
+var oBox=document.getElementById("box");    
+console.log(oBox);                         
+alert(oBox.innerHTML);                    
+oBox.innerHTML="我去也";                 
+*/
+/*
+	var oBox=document.getElementById("box");
+	console.log(oBox);
+	var i,j;
+	for(i=1;i<10;i++){
+		for(j=1;j<=i;j++){
+			oBox.innerHTML+="<a href='#'>"+"<span>"+i+"&times;"+j+"="+i*j+"</span>"+"</a>";
+		}
+		oBox.innerHTML+="<br>";
+	}
+	do{
+		执行语句
+	}while（条件）                                 
+*/	
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

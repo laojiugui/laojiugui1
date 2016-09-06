@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+
+<style>
+
+#box{width:403px;height:50px;border:1px solid red;margin:0 auto;}
+#sp{display:inline-block;border-right:1px solid orange;width:100px;height:50px;text-align:center;line-height:50px}
+#box1{width:403px;height:100px;border:1px solid orange;margin:0 auto;display:none;text-align:center;line-height:100px;}
+.active{background:orange;}
+
+#box2{width:50px;height:50px;background:red;}
+#box3{width:100px;height:100px;background:#666;margin:10px;display:none;}
+#box4{width:300px;height:300px;border:1px solid #666}
+</style>
+
+
+</head>
+
+<body>
+<div id="box2"></div>
+<div id="box3"></div>
+<div id="box"><span id="sp" class="active">充话费</span><span id="sp">充流量</span><span id="sp">充固话</span><span id="sp" style="border:0">充宽带</span></div>
+<div id="box1" class="box2" style="border-top:0;display:block;">充话费送媳妇一只</div>
+<div id="box1" class="box2" style="border-top:0;background:yellow">充流量送大白菜一颗</div>
+<div id="box1" class="box2" style="border-top:0;background:tan">充固话送馒头一斤</div>
+<div id="box1" class="box2" style="border-top:0;background:orange">充宽带送半瓶水</div><br><br><br>
+<input type="button" id="btn" value="获取验证码"><br><br><br>
+
+
+<input type="button" id="btn1" value="全选">
+<input type="button" id="btn2" value="不选">
+<input type="button" id="btn3" value="反选"><br>
+<input type="checkbox" name="ha">
+<input type="checkbox" name="ha">
+<input type="checkbox" name="ha">
+<input type="checkbox" name="ha">
+<input type="checkbox" name="ha">
+<input type="checkbox" name="ha">
+<input type="checkbox" name="ha">
+<input type="checkbox" name="ha">
+<input type="checkbox" name="ha">
+<input type="checkbox" name="ha">
+<input type="checkbox" name="ha"><br><br>
+
+
+
+<script>
+
+	
+	
+window.onload=function(){
+
+	//选项卡制作!!!
+	var span=document.getElementsByTagName("span")           //获取span标签
+	var box2=document.getElementsByClassName("box2")           //获取类名组
+	//console.log(span)
+	for(var i=0;i<span.length;i++){                       //开始for循环
+		span[i].index=i                                   //储存下标的值
+		span[i].onclick=function(){                      //建立span单击匿名函数
+			for(var j=0;j<span.length;j++){                //再建立for循环
+				span[j].className=""                    //把收盘的class名清空
+				box2[j].style.display="none"            //让box2的属性值都为隐藏转台
+			}
+			this.className="active"                  //单击该span标签时,让他的class名字转换成active
+			box2[this.index].style.display="block"     //同时让box2的属性值变为可见
+		}
+	
+	}
+
+
+	//鼠标划过事件!!!!
+	var oBox=document.getElementById("box2")              //获取id名box2的内容
+	var oBOx=document.getElementById("box3")            //获取id名为box3的内容
+	oBox.onmouseover=function(){                  //当鼠标划过oBox时候,oBOx的属性值变为可见
+		oBOx.style.display="block"
+	}
+	oBox.onmouseout=function(){ 	//当鼠标离开oBox是偶,oBOx的属性值在两秒后变为隐藏
+		timers=setTimeout(function(){
+		oBOx.style.display="none"
+		},2000)
+	}
+		
+	oBOx.onmouseover=function(){        //当鼠标划过oBOx时,清除定时器
+		clearTimeout(timers)
+	}
+	oBOx.onmouseout=function(){         //当鼠标离开oBOx时,他的属性变为隐藏
+		setTimeout(function(){
+			oBOx.style.display="none"
+			
+		},2000)
+	}
+	
+	
+
+
+
+
+	//获取验证码
+	var btn=document.getElementById("btn")
+	var times=3;                //设置时间变量
+	function times1(val){                  //建立变量函数
+		if(times==0){            //设置条件
+			val.removeAttribute("disabled");    //删除禁用属性
+			val.value="获取验证码";		        //改变按钮内容
+			times=3;				//从新设置时间变量
+			return false
+		}else{                                   //当条件不成立时执行的代码
+			val.setAttribute("disabled", true);         //添加新的属性和属性值
+			val.value="重新获取验证码("+times+")";       //改变按钮内容
+			times--                                    //time自动变量
+		}
+		
+		
+		var timer=setTimeout(function(){           //设置多长时间执行一次代码
+			times1(val)			              //要执行的代码
+			},1000)		
+		
+	}
+
+	btn.onclick=function(){times1(this)}         //创建单击匿名函数
+
+
+
+    //全选按钮
+	var btn1=document.getElementById("btn1")       //获取按钮里面的内容
+	var btn2=document.getElementById("btn2")       //获取按钮里面的内容
+	var btn3=document.getElementById("btn3")          // //获取按钮里面的内容
+	var name=document.getElementsByName("ha")      //获取标签里面的内容
+	//console.log(name)
+	btn1.onclick=function(){                      //单击btn1是执行的函数代码
+		for(var k=0;k<name.length;k++){		      
+			name[k].checked=true                     //执行的结果
+		}
+	} 
+	btn3.onclick=function(){                       //单击btn3时执行的代码
+		for(var k=0;k<name.length;k++){		
+			name[k].checked=false                       //执行后的结果
+		}
+	}
+	btn2.onclick=function(){                        //单击ben2时执行的代码
+		for(var k=0;k<name.length;k++){		
+			if(name[k].checked==true){                 //创建if条件,当他们被选中时
+			
+				name[k].checked=false                      //单击后得到的结果是false
+			}else{		
+				name[k].checked=false                    //其余的都是false结果
+			}		 
+		}
+	}
+	
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+}
+
+
+
+
+</script>
+</body>
+</html>

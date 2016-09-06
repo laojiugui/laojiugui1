@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>javascript第二天</title>
+	<style>
+		
+	</style>
+</head>
+<body>
+	<script>
+		//switch  case
+		/*switch(条件){
+			case 1: //条件成立时执行的代码 ;break;
+			case 2: //条件成立时执行的代码 ;break;
+			case 3: //条件成立时执行的代码 ;break;
+			default: //以上条件都不成立时执行的代码;break;
+		}*/
+		
+		var day=prompt("请输入一个数");
+		switch(day){
+			case '1':
+			case '2':
+			case '3':
+			case '4':
+			case '5':alert("正常上课");break;
+			case '6':alert("嘻嘻，自由了，可以自习");break;
+			case '7':alert("哈哈，我们可以LOL");break;
+			default:alert("输入的不合法");
+		}
+		//switch(){} 和if(){} else if()的区别
+		//1.if 条件表达式   switch  变量
+		//2.if ==    switch === 绝对等于
+		//3.if 适用范围  switch 适用固定的值
+		
+		/*var num1=Number(prompt("请输入第一个数"));
+		var num2=Number(prompt("请输入第二个数"));
+		var ysf=prompt("请输入运算符");
+		switch(ysf){
+			case "+":alert(num1+num2);break;
+			case "-":alert(num1-num2);break;
+			case "*":alert(num1*num2);break;
+			case "/":alert(num1/num2);break;
+			case "%":alert(num1%num2);break;
+			default:alert("不合法");
+		}*/
+		
+	</script>
+</body>
+</html>

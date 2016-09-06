@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>作业讲解</title>  
+</head>
+<body>
+<script>
+	//用一个循环来输出从1到100,100再到1    开关的思想
+	var _flag=0;
+	for(var i=1;i<=100;){
+		document.write(i+",");
+		if(i==100){
+			_flag=1;
+		}
+		if(_flag==0){
+			i++;
+		}else{
+			i--;
+		}
+		if(i==0){
+			break;
+		}
+	}
+	//计算1！+2！+3！+4！+...+10!
+	
+	function recSum(num){
+		if(num==1){
+			return 1;
+		}
+		var result=1;
+		for(var i=1;i<=num;i++){
+			result*=i;  //1 2
+		}
+		
+		return result+recSum(num-1);  //result+=recSum(num-1)   //result=result+recSum(num-1)
+	}
+	var sum=recSum(3);
+	alert(sum)
+	//var num=prompt()
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+</script>
+</body>
+</html>

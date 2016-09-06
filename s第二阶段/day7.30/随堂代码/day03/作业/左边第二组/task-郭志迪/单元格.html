@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<title>day7.28task</title>
+<meta charset="utf-8">
+<style>
+span{display:inline-block;background:red;padding:1px;margin:3px;}
+span input{width:70px;height:30px;border:0;color:red;padding:0;font-size:20px;}
+</style>
+</head>
+<body>
+<div id="box"></div>
+<script>
+	var a=Number(prompt("请输入行数"));
+	var b=Number(prompt("请输入列数"));
+	var oBox=document.getElementById("box");
+	for(var m=1;m<=a;m++){
+		for(var n=1;n<=b;n++){
+			oBox.innerHTML+="<span><input type=\"text\" /></span>"
+		}
+		oBox.innerHTML+="<br>"
+	}
+</script>
+</body>
+</html>

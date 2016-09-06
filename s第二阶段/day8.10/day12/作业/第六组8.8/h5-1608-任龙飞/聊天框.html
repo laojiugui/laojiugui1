@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+	*{margin:0;padding:0;}
+	#wrop{width:580px;height:505px;border: 1px solid #999;margin:50px auto;}
+	#wrop input{float:right;margin-left:10px;width:80px;height:30px;display:block;font-size:18px;}
+	#top{width:580px;height:80px;text-align:center;font-size:24px;line-height:80px;color:#CCC;background:#60F;}
+	#center{width:442px;height:288px;border:1px solid #666;}
+	#bottom{width:442px;height:105px;}	
+	#txt{width:440px;height:105px;}
+	#newlists{ list-style:none;}
+	#logo{width:138px;height:425px;background:#00F;float:right;}
+	.wen{text-align:right;}
+	span{height:40px;display:inline-block;line-height:40px;padding:0 15px;}
+</style>
+</head>
+
+<body>
+<div id="wrop">
+	<div id="top">聊天对话</div>
+    <div id="logo"><img src="imgs/2016-08-08_203811.png"></div>
+    <div id="center">
+    </div>
+    <div id="bottom">
+    	<textarea name="textareal" id="txt">
+        	
+        </textarea>
+    </div>
+    <input type="button"  value="发送">
+    <input type="button"  value="关闭">
+    
+</div>
+<script>
+window.onload=function(){
+	var btn1=document.getElementsByTagName("input")[0];
+	var btn2=document.getElementsByTagName("input")[1];
+	var txt=document.getElementById("txt");
+	var tet=document.getElementById("center");
+	btn1.onclick=function(){
+		Te=txt.value;
+		var p=document.createElement("p")
+		var p=document.createElement('p');
+		tet.appendChild(p);
+		var span=document.createElement("span")
+		p.appendChild(span);
+		var bne=document.createTextNode(Te);
+		span.appendChild(bne);
+		var attr=document.createAttribute("class")
+		attr.nodeValue="wen"
+		p.setAttributeNode(attr)
+	}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+ table td{height:100px;width:100px;border:1px solid #999;}
+</style>
+</head>
+
+<body>
+	<table id="tables"><tr id="trs"></tr></table>
+
+		<script>
+		  /*  var i=0;
+        	for(var years=2000;years<=2016;years++)
+			{
+				if((years%4==0&&years%100!=0)||years%400==0)
+				{
+					document.write(years+" ")
+					i++;
+					if(i%8==0){
+						document.write("<br>")
+						}
+					}
+				} 
+				document.write("<hr>")
+				var sum=0;
+				for(var a=1;a<=100;a++)
+				{
+					if(a%2!=0){
+						sum+=a;
+						}
+					}document.write("sum="+sum)
+					document.write("<hr>")
+					var sum=0;
+					for(var b=1;b<=100;b++)
+					{
+						sum=b+sum;
+						}
+						sum=sum-10-20-30-40-80-90;
+        			document.write("sum="+sum);	
+					document.write("<hr>")
+					var i=0;
+					for(var c=1;c<=100;c++)
+					{
+					if(c%7==0)
+					{
+						document.write(c+"  ");
+						i++;
+						if(i%8==0){
+							document.write("<br>")
+							}
+						}	
+						}
+						document.write("<hr>")
+						var product=1;
+				for(var d=1;d<=10;d++)
+				{
+					product*=d;
+					}document.write("10的阶乘为:"+product);
+					document.write("<hr>")
+				var i=0;
+				for(var a=20;a<=80;a++)
+				{
+					if(a%3==0)
+					{
+					document.write(a+" ");
+					i++;
+					if(i%5==0)
+					{
+						document.write("<br>")
+						}	
+						}
+					}
+					document.write("<hr>")	
+					for(var a=100;a<=200;a++)
+					{
+						if(a%3==1&&a%4==2&&a%5==3)
+						{
+						document.write("人数为:"+a)	
+							}
+						}
+						document.write("<hr>")
+						var c=0,d=0,sum=0;	
+						for(var a=1;a<=100;a++)
+						{
+						if(a%2==0)	
+						{
+							c=c+1/(a*(-1));
+							}else 
+							{
+							d=d+1/(a*1);
+							}
+							
+						}sum=c+d;
+						document.write("和为:"+sum)
+						document.write("<hr>")
+					for(var a=1;a<10;a++)
+					{
+						for(var b=1;b<=a;b++)
+						{
+							document.write(a+ "&times;" + b +"=" + a*b + " ");
+							}
+							document.write("<br>");
+						}	
+							document.write("<hr>")
+			document.write("能被3或7整除的数有:<br>")
+			var i=0;
+				for(var a=100;a<=200;a++)
+				{
+				if(a%3==0||a%7==0)
+				{
+				document.write(a+" ")
+				i++;
+				if(i%8==0)
+				{
+					document.write("<br>")
+					}	
+					}
+					}
+				document.write("<hr>")
+				var sum=120000,b=0;
+				for(var a=2;a<=10;a++)
+				{
+				sum=sum+sum*0.1;
+				b+=sum;
+					}b=b+120000
+				document.write("十年后工资为:"+sum+"<br>")
+				document.write("十年赚了:"+b+"<br>")
+				document.write("<hr>")
+				var a,b,c,d;
+				for(var a=100;a<=999;a++)
+				{
+					b=parseInt(a/100);
+                    c=parseInt((a-b*100)/10);
+                    d=a-b*100-c*10
+
+
+                 if((b*b*b)+(c*c*c)+(d*d*d)==a)
+				 {
+					 document.write(a+" "+"<br>");
+					 }
+					}
+					document.write("<hr>")*/
+					
+					var a=Number(prompt ("请输入行"));
+					var b=Number(prompt ("请输入列"));
+					 var oTables=document.getElementById("tables")
+					 console.log(oTables);
+					 for(var c=1;c<=a;c++)
+					 {
+					oTables.innerHTML+="<tr>"+"</tr>"
+					var oTables=document.getElementById("tables")
+					 console.log(oTables); 
+                      for(var d=1;d<=b;d++)
+							{oTables.innerHTML+="<td>"+d+"</td>"
+						} 
+					 }
+					
+        </script>
+
+
+
+
+</body>
+</html>

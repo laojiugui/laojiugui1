@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件</title>
+</head>
+<body>
+	<input type="button" id="btn" value="单击">
+	<div></div>
+	<button>弹1111</button>
+	<input type="button" id="key">
+	<input type="text" id="txt">
+	<script>
+	//事件驱动  1.事件   2.事件源  3.执行函数
+	// document.onmousemove=function(){
+	// 	alert(1);
+	// }
+	//1.鼠标事件  
+	//onclick  单击
+	 //ondblclick   双击
+	 //onmouseover  鼠标移入
+	 //onmouseout  鼠标离开
+	 //onmousemove 鼠标移动
+	 //onmousedown  鼠标按下
+	 //onmouseup 鼠标抬起
+
+	 //2.键盘事件
+
+	 //onkeydown 键盘按下
+	 //onkeyup 键盘抬起
+
+	 //3.表单事件
+	 //onsubmit
+	 //onfocus   获得焦点
+	 //onblur   失去焦点
+
+	 //4.页面事件
+	 //onload
+	 //onscroll
+	 //onresize
+	 var btn=document.getElementById('btn');
+	 var div=document.getElementsByTagName('div')[0];
+	 // btn.onclick=function(){
+	 // 	this.value="123";
+	 // 	this.type="text";
+	 // }
+
+	 // btn.ondblclick=function(){
+	 // 	this.value="123";
+	 // 	this.type="text";
+	 // }
+
+	 btn.onmouseover=function(){
+	 	// div.style.width="400px";
+	 	// div.style.height="400px";
+	 	// div.style.backgroundColor="red";
+	 	// div.style.display="block";
+	 	div.style.cssText="width:300px;height:500px;background:blue;display:block;margin-left:50px";
+
+	 }
+
+	 btn.onmouseout=function(){
+	 	// div.style.width="400px";
+	 	// div.style.height="400px";
+	 	// div.style.backgroundColor="red";
+	 	div.style.display="none";
+	 }
+
+	 var btn1=document.getElementsByTagName('button')[0];
+	 btn1.onmousedown=function(){
+	 	this.innerHTML="11111";
+	 }
+	 btn1.onmouseup=function(){
+	 	this.innerHTML="弹1111";
+	 }
+
+
+	 var key=document.getElementById('key');
+	 key.onkeypress=function(){
+	 	key.value="123";
+	 	key.type="text";
+	 }
+
+	 var txt=document.getElementById('txt');
+	txt.onblur=function(){
+	 	txt.value="123";
+	 	txt.type="button";
+	 }
+	</script>
+</body>
+</html>

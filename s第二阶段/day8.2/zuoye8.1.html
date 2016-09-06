@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+<input type="button" value="冒泡顺序" id="maopao" />
+<input type="button" value="100内被7整除和带7的数" id="seven" />
+<input type="button" value="小和尚挑水" id="he" />
+<input type="text" value="" id="ji" />
+<input type="button" value="插入" id="dian" />
+
+
+<div id="box1"></div>
+<div id="box"></div>
+<script>
+
+
+//冒泡顺序
+var arr=[5,2,4,8,9,12,78]      //建立数组
+var maopao=document.getElementById("maopao")     //与input链接
+var box=document.getElementById("box")           //与div链接
+//console.log(box)                          //检测链接是否成功
+maopao.onclick=function(){             //创建单机事件匿名函数
+	for(var i=1;i<arr.length;i++){              //找到数组里面下标1以后的元素
+
+		for(var j=0;j<arr.length-i;j++){          //找到数组里面的所有元素
+			if(arr[j]>arr[j+1]){                      //让前一个元素与后一个元素相比
+				var sum=arr[j]                  //把大的元素提取出来
+				
+				arr[j]=arr[j+1]                   //大的元素与小的元素开始交换位置
+				arr[j+1]=sum                   //位置交换成功
+			}
+		
+		}
+
+	}box.innerHTML=arr              //把div里面的内容替换成数组
+}
+
+
+
+//1-100以内能被7整除和带7的数合成数组
+var seven=document.getElementById("seven")          //跟上面的按钮链接起来
+var arr1=[];                                      //建立空数组
+seven.onclick=function(){                           //建立单机匿名函数
+		for(var num=1;num<=100;num++){                  //限制数的范围
+			if(num%7==0){                         //提取7 的倍数
+				arr1.push(num)                //把7 的倍数推进数组
+				
+			}if(num%7!=0&&num%10==7){              //提取个位数是7且不是7 的倍数
+				arr1.push(num)                  //把结果推进数组
+			
+			}if(num%7!=0&&(num-num%10)/10==7){          //提取十位数是7且不是7 的倍数
+				arr1.push(num)                        //把结果推进数组
+			}
+
+		
+		}
+			box.innerHTML=arr1                    //把div内容替换成新数组
+	
+		
+}	
+
+
+
+//小和尚挑水
+var he=document.getElementById("he")          //与上面按钮链接
+var max=50;          //总共能装的水的数量
+var min=15;             //还剩下水的数量
+var tiao=5;              //挑一次的水量
+
+he.onclick=function(){                  //创建单机事件匿名函数
+	for(var x=1;x<10;x++){          //设置次数变量
+		if(x*tiao==max-min){        //设置变量条件
+		
+			box.innerHTML=x       //得出结果
+		}
+	}
+}
+     
+	 
+//正常数组插入一个数,按数组正常顺序排列	 
+var ji=document.getElementById("ji")
+var box1=document.getElementById("box1")
+var arr2=[2,6,7,8,50,20,25]
+var oji=ji.value
+box1.innerHTML=arr2
+arr2.push(oji)
+arr2.sort(function(a,b){return b-a}.reverse())
+
+</script>
+</body>
+</html>

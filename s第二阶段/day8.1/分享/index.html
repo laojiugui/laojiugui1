@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link rel="stylesheet" type="text/css" href="css/css.css">
+</head>
+<div id="box1"></div>
+<div id="box3"></div>
+<body>
+<input name="s" type="button" value="开始计时" onClick="startclock()">
+<input name="s" type="button" value="暂停计时" onClick="pauseclock()">
+<input name="s" type="button" value="停止计时" onClick="stopclock()">
+<input name="showtime" type="text" value="0时0分0秒" id="showtime">
+<script>
+
+/*var oDiv1=document.getElementById("box1");
+function jishi(){
+	a="<img src='images/111.GIF'>";			
+	oDiv1.innerHTML+=a
+}
+var se;
+se=setInterval("jishi()",1000)
+
+
+
+	var oDiv3=document.getElementById("box3");
+	function dianming(){
+		var arr=['崔秀山','李福玲','张延东','赵军朋','卢超','赵乘','王平原','李鹏','秦增福','马英博','张凯旋','顾乐威','陈化林','杨秀荣','闫成业','赵岩','邢延海','杜赞','徐龙杰','蔡尚卿','张亚楠','任龙飞','杨亚飞','王刚','大刘欢','小刘欢','李明','靳文龙','闫承惠','郭志迪','柳战鳌','吴涵','郎建强','张磊','周孟祥','冯伟星','刘博文','毛函','朱振凯','付贝贝','谢朋豆','魏国都','王凯','罗梦婷','张军杰'];
+		var b=""
+		for(i=0;i<5;i++){
+			
+			 var a=parseInt(Math.random()*arr.length+" ")
+			 b+=arr[a]+" "	
+		}
+		oDiv3.innerHTML=b			
+}
+var se;
+se=setInterval("dianming()",100)
+	
+function pauseclock(){
+	clearInterval(se);
+}
+	*/
+
+
+
+
+
+
+
+
+
+
+
+var h=0,m=0,s=0,ss=1;
+function second(){
+		if((ss%100)==0){
+			s+=1;ss=1;
+		}if(s>0&&(s%60==0)){
+			m+=1;s=0;
+		}if(m>0&&(m%60==0)){
+			h+=1;m=0;	
+		}	
+	document.getElementById("showtime").value=h+"时"+m+"分"+s+"秒"
+	ss+=1
+}
+var se;
+function startclock(){
+	se=setInterval("second()",1)		
+}
+function pauseclock(){
+	clearInterval(se);
+}
+function stopclock(){
+	clearInterval(se);
+	ss=1;
+	m=h=s=0;	
+}
+
+
+
+</script>
+</body>
+</html>

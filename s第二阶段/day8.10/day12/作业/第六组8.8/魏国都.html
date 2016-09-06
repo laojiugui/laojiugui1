@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+	/*li{ width:800px; height:50px; list-style:none; border:1px solid #ccc;}*/
+	
+	#main{ width:620px; height:620px; border:1px solid blue; margin:156px auto; padding:20px;}
+	#box{ width:600px; height:360px; border:1px dotted #ccc; margin-left:10px; overflow-y: scroll; }
+	#txt{ width:600px; height:160px; margin:10px; }
+	#btn { width:80px; float:right;}
+	span{ height:30px; line-height:30px; border:1px solid #ccc; margin:5px; border-radius:10px; }
+	p{ height:30px; line-height:30px; margin:5px; border-radius:10px; }
+	.fl{float:left; background-color:lightgrey; }
+	.fr{float:right; background-color:yellowgreen;}
+</style>
+</head>
+<body>
+	<!--<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>-->
+	
+	<div id="main">
+		<div id="box"></div>
+		<textarea id="txt"></textarea>
+		<input type="button" id="btn" value="发送" />
+	</div>
+<script>
+/*
+	//移动变色
+	var lis = document.getElementsByTagName("li");
+	for(var i=0;i<lis.length;i++){
+		if(i%2==0){
+			lis[i].style.backgroundColor = "red";
+		}
+		else{
+			lis[i].style.backgroundColor = "green";
+		}
+		lis[i].onmouseover = function(){
+			this.style.backgroundColor = "black";
+		}
+		lis[i].index = i;
+		lis[i].onmouseout = function(){
+			if(this.index%2==0){
+				this.style.backgroundColor = "red";
+			}
+			else{
+				this.style.backgroundColor = "green";
+			}
+		}
+	}
+*/	
+	//模拟聊天
+	window.onload = function(){
+		var box = document.getElementById("box");
+		var txt = document.getElementById("txt");
+		var oBtn = document.getElementById("btn");
+			oBtn.onclick = function(){
+				var str ="";
+				str = txt.value;
+				var ps = document.createElement("p");
+				box.appendChild(ps);
+				var spans = document.createElement("span");
+				ps.appendChild(spans);
+				spans.setAttribute("class","fr");
+				var ans = document.createTextNode(str);
+				spans.appendChild(ans);
+				txt.value = "";
+				var timer = setTimeout(function(){
+					str = txt.value;
+					var ps = document.createElement("p");
+					box.appendChild(ps);
+					var spans = document.createElement("span");
+					ps.appendChild(spans);
+					spans.setAttribute("class","fl");
+					var ans = document.createTextNode("你说的是什么,我看不清...");
+					spans.appendChild(ans);
+				},1000);
+			}
+			
+	}
+</script>
+
+</body>
+</html>

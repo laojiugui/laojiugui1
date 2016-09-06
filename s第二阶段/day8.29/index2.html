@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器</title>
+    <style>
+        input{
+            width: 85px;
+            height:40px;
+            border:0;
+            background:#ccc;
+            border-radius:5px;
+            cursor:pointer;
+        }
+    </style>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+
+            $("#first").click(function(){
+                $("li:first").css("color","red");
+            });
+            $("#last").click(function(){
+                $("li:last") .css("color","blue")
+            });
+            $("#eq").click(function(){
+               $("li:eq(2)").css("color","yellow")
+            });
+            $("#even").click(function(){
+               $("li:even") .css("background","tan")
+            });
+            $("#odd").click(function(){
+               $("li:odd").css("background","pink")
+            });
+            $("#gt").click(function(){
+               $("li:gt(3)").css("color","red")
+            });
+            $("#lt").click(function(){
+                $("li:lt(3)").css("color","orange")
+            });
+            $("#not").click(function(){
+                $("li:not(.list)").css("color","red")
+            });
+            $("#contains").click(function(){
+               $("li:contains('l')").css("border","1px solid red")
+            });
+            $("#empty").click(function(){
+               $("li:empty").css("border","1px solid blue")
+            });
+            $("#has").click(function(){
+               $("ul:has(li)").css("border","1px solid yellow")
+            });
+            $("#first-child").click(function(){
+               $("ul:first-child").css("background","orange")
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="first选择器" id="first">
+<input type="button" value="last选择器" id="last">
+<input type="button" value="eq选择器" id="eq">
+<input type="button" value="even选择器" id="even">
+<input type="button" value="odd选择器" id="odd">
+<input type="button" value="gt选择器" id="gt">
+<input type="button" value="lt选择器" id="lt">
+<input type="button" value="not选择器" id="not">
+<input type="button" value="contains选择器" id="contains">
+<input type="button" value="empty选择器" id="empty">
+<input type="button" value="has选择器" id="has">
+<input type="button" value="first-child选择器" id="first-child">
+<ul id="list">
+    <li>测试案例</li>
+    <li></li>
+    <li>测试l案例</li>
+    <li>测试l案例</li>
+    <li>
+        <ul>
+            <li>多少答复方法</li>
+            <li>多少答复方法</li>
+            <li>多少答复方法</li>
+            <li>多少答复方法</li>
+            <li>多少答复方法</li>
+        </ul>
+    </li>
+    <li class="list list1">测试案例</li>
+    <li class="list">测试案例</li>
+    <li class="list">测试案例</li>
+    <li>测试案例</li>
+    <p></p>
+    <p></p>
+</ul>
+</body>
+</html>

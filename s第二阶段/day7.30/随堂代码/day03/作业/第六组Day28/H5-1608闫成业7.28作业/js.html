@@ -1,0 +1,374 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>7.28作业</title>
+</head>
+
+<body>
+<script>
+	for(var i=2000;i<=2016;i++){         //2000-2016的闰年
+		if((i%4==0&&i%100!=0)||i%400==0){
+			document.write(i+' ');	
+		}
+	}document.write('<br / >')
+	
+	var sum=0;                           //1-100奇数的和
+	for(var a=1;a<=100;a+=2){
+		sum+=a;
+	}		
+	document.write(sum);document.write('<br / >')
+	
+	var sum=0;                 //100以内除10,20,30,40,80,90数的和
+	for(b=1;b<=100;b++){
+		if(b!=10&&b!=20&&b!=30&&b!=40&&b!=80&&b!=90){
+		sum+=b;
+		}
+	}document.write(sum);document.write('<br / >')
+	
+	
+	for(var c=1;c<=100;c++){             //7的倍数
+		if(c%7==0){
+			document.write(c+' ')
+		}
+	}document.write('<br / >')
+
+	
+	for(var d=1,add=1;d<=10;d++){       //10的阶乘
+		add*=d;
+	}document.write(add+' ');document.write('<br / >')
+
+	
+	for(var e=20,f=1;e<=80;e++){           //20-80被3整除的数 
+			if(e%3==0){
+				document.write(e+' ')
+				f++;
+				if(f>5){
+					document.write('<br />');
+					f=1;
+				}
+			}
+	}document.write('<br / >')
+
+	
+	for(var g=100;g>=100&&g<=200;g++){        //操场站队问题
+	if(g%3==1&&g%4==2&&g%5==3){
+		document.write(g+' ')	
+	}
+	}document.write('<br / >')
+
+	
+	var h=1;                     //1-1/2+1/3的和
+	var sum=0;
+	while(h<=100){
+		for(var j=1;j<=100;j++){
+			if(j%2==0){
+				sum-=1/h;	
+			}else{
+				sum+=1/h;	
+			}
+			h++;	
+		}document.write(sum)	
+	}document.write('<br / >')
+	
+	for(var k=1;k<=9;k++){           //99乘法表
+		for(var l=1;l<=k;l++){
+			document.write(k+'&times'+l+'='+k*l+' ');	
+		}
+		document.write("<br />");	
+	}document.write('<br / >')
+	
+	for(var m=100;m<=200;m++){        //100-200能被3或7整除的数
+		if(m%3==0||m%7==0){
+			document.write(m+' ');	
+		}	
+	}document.write('<br / >')
+	
+	
+	for(var n=1,o=10,sum=0;n<=10;n++){    //小王工资问题
+			o*=1.1;
+			sum+=o;
+	}document.write(o+' ');
+	document.write(sum);document.write('<br / >')
+	
+	for(var p=100;p<=999;p++){             //水仙花数
+		q=parseInt(p/100);
+		r=parseInt(p/10%10);
+		s=parseInt(p%10);
+		if(q*q*q+r*r*r+s*s*s==p){
+			document.write(p+' ');	
+		}	
+	}document.write('<br / >')
+
+
+	var oTxt1;
+	var oTxt2;
+	var oTab;
+	var oTr;
+	oTr=document.getElementById('tr');
+	oTab=document.getElementById('tab');
+	oTxt1=document.getElementById('txt1');
+	Otxt2=document.getElementById('txt2');
+	for(var txt1;txt1<=oTxt1;txt1++){
+		oTab.innerHTML="<tr></tr>";
+		for(var txt2;txt2<=oTxt2;txt2++){
+			oTr.innerHTML="<td></td>";
+				
+		}
+	}
+	
+	
+
+
+
+
+
+
+
+
+
+
+</script>
+行数<input id="txt1" type="text" value="" />列数<input id="txt2" type="text" value="" />
+<input id="btn" type="button" value="生成表格">
+<table id="tab">
+	<tr id="tr"></tr>
+</table>
+
+
+
+
+
+
+
+		var a=1;
+	while(a<=10){
+		document.write(a+'.i love you<br />');
+		a++;	
+	}
+	
+    var a=1;
+	while(a<=10){
+		document.write(a+'.i love you<br />');
+		a++;	
+	}
+
+	
+    var i=1;
+    while(i<=100){
+    	document.write(i+'<br />');
+        i++;
+    }
+    
+    var i=1;
+    while(i<=100){
+    	document.write(i+'<br />');
+        i++;
+   	}
+    
+    var b=1;
+    var sum=0;
+    while(b<=100){
+    	sum+=b;
+        b++;
+    }
+    
+    var b=1;
+    var sum=0;
+    while(b<=100){
+    	sum+=b;
+        b++;
+     }
+     
+     var c=1;
+     var osh=0;
+     while(c<=100){
+     	if(c%2==0){
+        	osh+=c;
+        }
+        c++;
+     }
+     
+     var c=1;
+     var osh=0;
+     while(c<=100){
+     	if(c%2==0){
+        	osh+=c;
+        }
+        c++;
+     }
+     
+     var c=1;
+     var osh=0;
+     while(c<=100){
+     	if(c%2==0){
+        	osh+=c;
+        }
+        c++;
+     }
+     
+     var year=1000;
+     var i=1;
+     while(year<=2000){
+     	if(year%4==0&&year%100!=0||year%400==0){
+        	document.write(year+' ');
+            i++;
+            if(i>4){
+            	document.write('<br>')
+                i=1;
+            }
+       	}
+        year++;
+     }
+     
+     var year=1000;
+     var i=1;
+     while(year<=2000){
+     	if(year%4==0&&year%100!=0||year%400=0){
+        	document.write(year+'')
+            i++;
+            if(i>4){
+            	document.write('<br>')
+                i=1; 	
+            }
+        }
+        year++;
+     }
+     
+     var n1=Number(prompt('please'));
+     var n2=Number(prompt('please'));
+     var n3=Number(prompt('please'));
+	 var max=n1;
+     if(n2>max){
+     	max=n2;
+     }
+     if(n3>max){
+     	max=n3;
+     }alert('max'+max);
+     
+     var n1=Number(prompt('please'));
+	 var n2=Number(prompt('please'));
+     var n3=Number(prompt('please'));
+     var max=n1;
+     if(n2>max){
+     	max=n2;
+     }
+     if(n3>max){
+     	max=n3;
+     }alert(max);	
+     
+     var a=1;
+     var i=0;
+     while(a<=24){
+     	document.write('*');
+        i++;
+        while(i>5){
+        	document>write('<br>')
+            i=0
+        }
+        a++;
+     }
+     
+	var a=1;
+    var i=0;
+    while(a<=24){
+    	document.write('*');
+        i++;
+        while(i>5){
+        	document.write('<br>')
+            i=0;
+        }
+        a++;
+    }     
+	
+    var a=1;
+    var b=1;
+    while(a<=4){
+    	while(b<=a){
+        	document.write('*')
+            b++;
+        }
+        document.write('<br>')
+        b=1;
+        a++;
+    }
+    
+    var a=1;
+    var b=1;
+    while(a<+4){
+    	while(b<=a){
+        	document.write('*')
+            b++
+        }
+        document.write('<br>')
+		b=1;
+        a++;
+    }
+
+
+
+	for(var a=1;a<+4;a++){
+    	for(var b=1;b<=4;b++){
+        	document.write('*')
+        }
+        document.write('<br>')
+    }
+    
+    for(var a=1;a<=4;a++){
+    	for(var b=1;b<=4;b++){
+        	document.write('*')
+        }
+        document.write('<br>')
+    }
+    
+    
+    for(var i=1;i<=35;i++){
+    	for(var j=1;j<=35;j++){
+        	if(i+j==35&&(i*2+j*4==94))
+            document.write( i,j);
+        }
+    }
+    
+    for(var i=1;i<=35;i++){
+    	for(var j=1;j<=35;j++){
+        	if(i+j=35&&(i*2+j*4==94))
+            document.write(i,j);
+        }
+    }
+    <div id="box"></div>
+    var oBox=document.getElementById('box')
+    for(var i=1;i<+9;i++){
+    	for(var j=1;j<=i;j++){
+        	oBox.innerHTML+='<span>'+i+'&times;'+j+'='+i*j+'</span>'
+        }
+        if(j>i){
+        	oBox.innerHTML+='<br>'
+        }
+    }
+    
+    <div id="box"></div>
+    var oBox=document.getElementById('box')
+    for(var i=1;i<=9;i++){
+    	for(var j=1;j<=i;j++){
+        	oBOx.innerHTML+='<span>'+i+'&times;'+j+'='+i*j+'</span>'
+        }
+        if(>i){
+        	oBox.innerHTML+='<br>'
+        }
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

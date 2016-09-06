@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title></title>
+</head>
+<body>
+	
+	<script>
+	var year=prompt("请输入年数");
+		
+		if(year%400==0){
+			alert(year+"年是闰年");
+		}else if(year%100==0&&year%400!=0){
+			alert(year+"年不是闰年")
+		}
+		else if(year%100!=0&&year%4==0){
+			alert(year+"年是闰年")
+		}
+		else {
+			alert(year+"年不是闰年")
+		}
+			 
+	</script>
+
+</body>
+</html>

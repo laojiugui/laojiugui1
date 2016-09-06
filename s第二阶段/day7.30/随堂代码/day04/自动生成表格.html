@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8"/>
+	<title>自动生成表格</title>
+	<style>
+		table{
+			border:1px solid red;border-collapse:collapse;width:100%;
+		}
+		td{
+			border:1px solid green;padding:5px 10px;
+		}
+	</style>
+	<script src="table.js"></script>
+	</head>
+	<body>
+		<div id="box"></div>
+		
+		<script>
+			//var bb=document.getElementById("box1");
+			//console.log(bb);
+			
+			//document.write(tab);
+			//alert(undefined&&6);
+			
+			//alert(4||8)
+			
+			//作用域   就是指代码的作用范围
+			//变量   全局变量（函数外的变量）    局部变量 （函数内部的变量）
+			/*var aaa=10086;  //全局变量
+			var bbb=110;
+			function test(){
+				var aaa=10010;  //局部变量  
+				alert("aaa是"+aaa);  //10010
+				alert(bbb);
+			}
+			test();
+			alert(aaa);//10086*/
+			
+			//函数内部可以访问函数以外的变量  
+			//函数外访问不到函数内部的变量  
+			//找变量    就近原则   
+			//查找变量的顺序    从内向外
+			
+			
+			var aa="我是全局变量";
+			var bb="我也是全局变量";
+			var cc="2222222222";
+			function  test1(){
+				var aa="我是局部变量";
+				var bb="我也是局部变量";
+				var dd="hhhhhhh";
+				function test(){
+					console.log(aa);
+					var aa="woshijububianliang";
+					alert("aa是"+aa);
+					alert(bb);
+					alert(cc);
+				}
+				test();
+			}
+			test1();
+			alert(aa);
+			alert(dd);
+			
+			//alert(a);
+			//var a=1;
+			
+			//值传递
+			/*var a=100;
+			function aa(n){
+				n++;
+				++n;
+				alert(n);
+			}
+			aa(a);
+			alert(a);*/
+			
+			
+      //	递归函数		
+			
+		</script>
+	</body>
+</html>

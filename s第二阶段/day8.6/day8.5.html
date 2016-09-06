@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+
+<style>
+div{
+	width:1000px;
+	height:50px;
+	border:1px solid red;
+	
+	
+}
+.box5{display:none}
+
+span{display:inline-block;width:100px;height:50px;background:#666;text-align:center;line-height:50px;margin-left:20px;}
+.active{background:red;}
+</style>
+</head>
+
+<body>
+<div id="box">2</div>
+<div class="box2">5</div>
+
+
+<div class="box1"></div>
+<div class="box1"></div>
+<div class="box1"></div>
+<div class="box1"></div>
+<br><br><br><br><br><br><br><br><br>
+
+<div id="tab"><span class="active">方便面</span><span>大馒头</span><span>冰镇啤酒</span><span>猪头肉</span></div>
+<div class="box5" style="display:block">去超市捏碎</div>
+<div class="box5">比较硬</div>
+<div class="box5">倍爽</div>
+<div class="box5">好吃</div>
+
+
+<script>
+window.onload=function(){
+
+	//获取可视高度
+	/*function getheight(){
+		var rheight
+		if(window.innerHeight){
+			rheight=window.innerHeight
+		}else{
+			if(document.compactMode="CSS1Compat"){
+				rheight=document.documentElement.clientHeight
+			
+			}else{
+				rheight=document.body.clientHeight
+			
+			}
+		}
+		return rheight
+	}
+
+	//alert(getheight());
+
+	
+	
+	
+	
+	   //dom  选项卡制作
+	var box=document.getElementById("box")
+	box.onclick=function(){
+			box.innerHTML="haha"
+
+	}
+	var box2=document.getElementsByClassName("box2")
+
+
+	box2[0].onclick=function(){
+			box2[0].innerHTML="哈哈"
+			box2[0].style.background="green"
+	}
+
+
+	var boxs=document.getElementsByClassName("box1")
+
+	for(var i=0;i<boxs.length;i++){
+
+		//
+		boxs[i].onclick=function(){
+			for(var j=0;j<boxs.length;j++){
+				boxs[j].style.background="";
+			}
+		
+			this.style.background="red"       // this
+		}
+
+		
+	}*/
+	
+	var tab=document.getElementsByTagName("span")
+	var box=document.getElementsByClassName("box5")
+	for(var i=0;i<tab.length;i++){
+		tab[i].index=i
+		tab[i].onclick=function(){
+			for(var j=0;j<tab.length;j++){		
+				tab[j].className=""
+				box[j].style.display="none"					
+			}
+			this.className="active"
+			box[this.index].style.display="block"
+		}
+	}
+
+
+	
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+	
+}
+
+
+
+</script>
+</body>
+</html>

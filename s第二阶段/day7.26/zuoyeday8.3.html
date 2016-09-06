@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+
+<input type="text" id="txt" value="">
+<input type="button" id="btn" value="查询">
+
+<div id="box"></div><br><br>
+&nbsp;&nbsp;&nbsp;当前系统时间:<input type="text" id="txt2" value="">  <br>
+当前页面已停留时间:<input type="text" id="txt3" value=""><br>
+&nbsp;&nbsp;&nbsp;&nbsp;请输入字符:<input type="text" id="txt4" value="">
+<input type="button" id="btn2" value="执行">
+<div id="box1"></div>
+<script>
+
+
+//闰年封装函数
+var txt=document.getElementById("txt")
+var btn=document.getElementById("btn")
+var box=document.getElementById("box")
+var n=txt.value;
+btn.onclick=function(){
+	function runnian(n){                    //建立一个新函数
+		if((n%4==0&&n%100!=0)||n%400==0){        //设置闰年成立条件
+		
+			return "这是闰年";                      //当条件成立时的返回值
+		}else{
+			return "不是闰年";               //当条件不成立时的返回值
+		}
+	} box.innerHTML=runnian(txt.value)          //把得到的结果保存到div里面
+	txt.value="";                                //把文本框清零
+}
+
+
+
+//每个月的天数封装成函数
+	function getmonth(month){        //创建新函数
+		switch(month){              //设置月份变量
+			case 1:
+			case 3:
+			case 5:
+			case 7:
+			case 8:
+			case 10:
+			case 12:return 31;
+			case 2:return 28;
+			case 4:
+			case 6:
+			case 9:
+			case 11:return 30;
+			default:break;             //月份变量与天数条件
+		}
+	}  //alert(getmonth(12))            //检验 结果
+	
+	
+	
+	//判断两日期相差的天数
+	function getdiffer(date1,date2){        //建设一个拥有两个变量日期的函数
+		var time1=date1.getTime();           //第一个日期取毫秒数
+		var time2=date2.getTime();              //第二个日期取毫秒数
+		return Math.floor(Math.abs(time1-time2)/(1000*60*60*24));     //把毫秒转换成天数
+	} 
+	var inew=new Date();            //取现在的日期变量
+	var inow=new Date(2016,8,9);       //取未来相差的日期变量
+	//alert(getdiffer(inew,inow))       //检测结果
+			
+	function gethaffer(date1,date2){
+		var time1=date1.getTime();
+		var time2=date2.getTime();
+		return Math.floor(Math.abs(time1-time2)/(1000*60*60*24))
+	}
+	var inew=new Date();
+	var inow=new Date(2016,9,8)
+	//document.write(gethaffer(inew,inow))
+	
+	
+	
+	//获得n天以后的日期
+	function date1(n){       //新建一个名称是date1的形参为天数n的函数
+		var Time=new Date();         //取出现在的日期
+		var Time1=Time.getTime();      // 把取出的日期装换成毫秒
+		Time1+=n*86400*1000              //求出n天后的毫秒数
+		return new Date(Time1)          //把求出的毫秒数转换成日期
+	} //alert(date1(3))               //检测成果
+	
+	function date1(n){
+		var Time=new Date();
+		var Time1=Time.getTime();
+		Time1=n*86400*1000
+		return new Date(Time1);
+	} //alert(date1(5))
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	//按指定的分隔符,分隔日期,,,如2016-12-13或者2016/14/15
+/*	function fenge(datestr,str){
+		var datestr1=datestr.split(str);
+		var datestr2=darestr1.join("-");
+		var times=Date.pase(datestr2);
+		var times1=new Date(times);
+		return times1;
+	}
+ 
+ 
+ //把2016.12.18转换成2016-12-18
+ var str="2016.12.18"         //建立字符串
+ var str1=str.split(".")         //把字符串转变成数组
+ var str2=str1.join("-")             //把数组转变成字符串并以"-"相连接
+ //document.write(str2)   */                 //检测成果
+
+
+	
+	//字符串去重函数!!
+var str="123545459"           //建立有重复的数字的字符串
+function str1(){	              //建立封装函数
+	var str1=str.split("");          //把字符串转换成数组
+	//console.log(str1)
+	for(var i=0;i<str1.length;i++){          //取出数组里面所有元素
+		for(var y=i+1;y<str1.length;y++)         //取出下标为i+1后面的元素
+			if(str1[i]==str1[y]){             //  如果有两个元素一样
+				str1.splice(y,1) 				//把相同的两个元素删除一个
+				y--
+			} 
+	}var str2=str1.join("");                     //把数组转换成字符串
+	document.write(str2)                    //检测成果
+	
+}str1();                          //调用函数
+	
+	
+	
+	//页面要求
+	var txt2=document.getElementById("txt2")  //与txt2文本框链接
+	var txt3=document.getElementById("txt3")   //与txt3链接
+	
+function tIme(){	         //创建新函数
+	var mytime=new Date();         //获取系统日期
+	var year=mytime.getFullYear();   //获取系统年限
+	var month=mytime.getMonth()+1;       //获取系统月份
+	var date=mytime.getDate();         //获取系统日期
+	var hours=mytime.getHours();          //获取系统小时
+	var minutes=mytime.getMinutes();        //获取系统分钟
+	var seconds=mytime.getSeconds();        //获取系统秒数
+
+
+	var date1=year+","+month+","+date         //把年月日拼接成有,的字符串
+	var date2=date1.split(",")                 //把字符串转成数组
+	var date3=date2.join("-")             //把数组转成字符串
+	
+	var time5=to(hours)+":"+to(minutes)+":"+to(seconds)       //获取系统时间
+	txt2.value=date3+"  "+time5                         //把获得的时间赋值到文本框中
+}tIme();	
+	setInterval(tIme,1000)                //开启定时器.自动计时
+	
+	
+	var s=0,m=0,H=0;                 //设置 小时,分,秒的变量
+setInterval(function(){           //开启定时器
+	s+=1                            //s随定时器变化
+	if(s%60==0){                  //当达到60秒的时候
+		m+=1;s=0;                   //分钟数加1,且秒数从新为0
+		if(m%60==0){                //当分钟数是60时
+		H+=1;m=0;              //小时数加1且分钟数变为1
+	}
+	}txt3.value=H+"时"+m+"分"+s+"秒"    //把自动变量拼接起来且赋值到链接的文本框中
+},0.1)
+	
+	
+	function to(n){                      
+		return n<=9?"0"+n:""+n             //让时分秒里面都能储存两位数
+	}
+	//console.log(date2)
+	var txt4=document.getElementById("txt4");        //与文本框相连接
+	var btn2=document.getElementById("btn2")           //取btn2里面的值
+	var box1=document.getElementById("box1")          //取box1里面的值
+	btn2.onclick=function(){                      //创建单机匿名函数
+		var tXt4=txt4.value;                  //取文本框里的值
+		var TXt4=tXt4.charCodeAt();              //把文本框里的字符串转换成ascii码
+	box1.innerHTML="您当前输入的字符串是"+tXt4+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+"ascii码值为"+TXt4
+	}
+	
+	
+	
+	
+</script>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style> 
+#box{width:200px;height:200px;background:red;display:none}
+#box1{width:100px;height:100px;background:yellow;float:left;}
+#box2{width:100px;height:100px;background:blue;float:left;margin-left:20px;display:none}
+</style>
+</head>
+
+<body>
+<input id="txt" type="text" value="">
+<input id="btn" type="button" value="按钮">
+<div id="box"></div><br><br>
+<div id="box1"></div>
+<div id="box2"></div>
+<script>
+var btn=document.getElementById("btn")
+/*btn.onclick=function(){
+
+	//btn.value="哈哈"
+}
+
+btn.ondblclick=function(){
+
+	//btn.value="哈哈"
+}*/
+
+
+var box=document.getElementById("box")
+/*btn.onmouseover=function(){
+
+	//box.style.display="block"
+}
+
+btn.onmouseout=function(){
+
+	//box.style.display="none"
+}
+
+btn.onmousedown=function(){
+
+	//btn.value="嘟嘟"
+}
+
+
+btn.onmouseup=function(){
+
+	//btn.value="按钮"
+}*/
+
+document.onmousemove=function(){
+
+	box.style.display="block"
+}
+
+var txt=document.getElementById("txt")
+txt.onfocus=function(){
+	txt.type="button"
+	txt.value="哈哈"
+}
+
+var box1=document.getElementById("box1")
+var box2=document.getElementById("box2")
+var timer=null
+box1.onmouseover=box2.onmouseover=function(){
+	clearTimeout(timer)
+	box2.style.display="block"
+}
+box1.onmouseout=box2.onmouseout=function(){
+	var timer=setTimeout(function(){
+	
+		box2.style.display="none"
+	},1000)
+	
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,518 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+	var n=Number(prompt("请输入年份"))
+	if(n>0&&n<=9999){
+		if(n%100!=0){
+			if(n%4==0){
+				alert(n+"是闰年")
+			}else if(n%4!=0){
+				alert(n+"不是闰年")
+			}
+		}else if(n%100==0){
+			if(n%400==0){
+				alert(n+"是闰年")
+			}else{
+				alert(n+"不是闰年")
+			}	
+		}
+	}else{
+		alert("这都不是年")
+	}
+	
+	
+	
+	var num=Number(prompt("请输入一个数"));
+	if(num>0){
+		alert(num+"大于零")	
+	}else if(num==0){
+		alert(num+"等于零")	
+	}else if(num<0){
+		alert(num+"小于零")
+	}else{
+		alert("你输入是个什么？？？")	
+	}
+	
+	
+	
+	var a=Number(prompt("请输入一个数判断是否是三的倍数"));
+		b=a%3;
+		switch(b){
+			case 1:
+			case 2:alert(a+"不是三的倍数");break;
+			case 0:alert(a+"是三的倍数");break;
+			default:alert("输入不正确、请输入数字")
+		}
+	
+	var height=Number(prompt("请输入身高"));
+	var weight=Number(prompt("请输入体重"));
+	var sWeight=(height-108)*2;
+	var cha=weight-sWeight;
+	if(cha==0){
+		alert("哇！！完美身材")	
+	}else if(cha>=-10&&cha<=10){
+		alert("你体重在正常范围之内")
+	}else if(cha<-10){
+		alert("你偏瘦"+-cha+"斤")
+	}else if(cha>10){
+		alert("你偏胖"+cha+"斤")
+	}else{
+		alert("输入不对吧")
+		}
+	
+	
+	var fen=Number(prompt("请输入成绩"));
+	if(fen>=0&&fen<=100){
+		if(fen>=90){
+			alert("A级，哎吆不错哦")	
+		}else if(fen>=80){
+			alert("B级，还有进步空间")	
+		}else if(fen>=70){
+			alert("c级，好好努力")	
+		}else if(fen>=60){
+			alert("D级，危险了")	
+		}else{
+			alert("这门课不适合你，留级吧")	
+		}	
+	}else{
+		alert("熊孩子，让你输成绩！！！")	
+	}
+	
+	var moon=Number(prompt("请输入月份"));
+	switch(moon){
+		case 1: 
+		case 3:
+		case 5:
+		case 7:
+		case 8:
+		case 10:
+		case 12:alert(moon+"月有31天");break;
+		case 4: 
+		case 6:
+		case 9:
+		case 11:alert(moon+"月有30天");break;
+
+		case 2:alert(moon+"月有28天");break;
+		default:alert("输入不对")
+	}
+	
+	var shu=Number(prompt("请输入一个5位数"));
+	if(shu<=99999&&shu>=10000){
+	var a=shu%10;
+	var b=parseInt(shu%100/10)
+	var c=parseInt(shu%1000/100)
+	var d=parseInt(shu%10000/1000)
+	var e=parseInt(shu/10000)
+	
+	alert(shu+"的个位数为"+a+",十位数为"+b+",百位数为"+c+",千位数为"+d+",万位数为"+e)
+	}else{
+		alert("输入的不对吧")
+	}
+	
+	
+	
+	var a=Number(prompt("输入a的数值"))
+	var b=Number(prompt("输入b的数值"))
+	var c=Number(prompt("输入c的数值"))
+	var m;
+	if(a>b){
+		if(a>c){
+			m=a
+		}else{
+			m=c
+				
+		}
+	}else{
+		if(c>b){
+			m=c
+		}else{
+			m=b	
+		}
+	}
+	
+	alert("最大数为"+m)
+	
+	
+	
+
+	var a=0;
+	for(n=1000;n<=2000;n++)
+	{
+	if(n%100!=0){
+		if(n%4==0){
+			document.write(n+" ")
+			a++;
+			if(a%4==0){document.write("<br>")}
+		}
+	}else{
+		if(n%400==0){
+			document.write(n+" ")
+			a++;
+			if(a%4==0){document.write("<br>")}	
+		}
+	}
+	
+	}
+	
+	
+/*  var age=18;
+	var height=175;
+	var shili=5;
+	var like="五官端正";
+	
+	alert(age>=18&&age<=25&&height>=175&&shili>=5&&like=='五官')
+	var a=null;
+
+	alert(Number(a))
+	
+	var a="86";
+	var t1=a/24;
+	var t2=parseInt(t1);
+	var h=a%24;
+	alert("为抵抗洪水，战士连续工作"+a+"小时，转换后为"+t2+"天"+h+"小时");
+	
+	var a=2558;
+	
+	if(a==2558){
+		alert("密码正确")
+		}
+	else{
+			alert("请从新输入")	
+			}
+			
+			
+	var a=8
+	if(a>18){
+		alert("大于十八岁")
+		}
+	else{
+		alert("未成年人")
+		}
+		
+	var a=51;
+	if(a%2==1){
+		alert("奇数")
+		}
+	else{
+		alert("偶数")
+		}
+	
+	
+	var num=prompt("请输入一个整数","sb吗")
+	if(num>0){
+		alert(num+"大于零")
+		
+	}else if(num<0){
+		alert(num+"小于零")
+		
+	}else if(num==0){
+		alert("这个数是零")
+		
+	}else{
+		alert("这是整数么？")
+		}
+		
+	var num2=prompt("请输入一个数","赶紧的")
+	if (num2>=10){
+		alert("输这么大干嘛")
+		
+	}else if(num<=1&&num>=0){
+		alert("有这么小的整数吗 sb？")
+	}else if(num<0){
+		alert("特码的这是负值")	
+	}else if((typeof num)){
+		alert("这就对了")	
+	}
+		
+		var num1=Number(prompt("请输入第一个数"))
+		//var num2=Number(prompt("请输入第二个数"))
+		var ysf=prompt("请输入运算符")
+		
+		if(ysf=="+"){
+			alert(num1+num2)
+		}else if(ysf=="-"){
+			alert(num1-num2)	
+		}else if(ysf=="*"){
+			alert(num1*num2)	
+		}else if(ysf=="/"){
+			alert(num1/num2)	
+		}else if(ysf=="%"){
+			alert(num1%num2)	
+		}else if(num1==NaN){
+			alert("不是数字")	
+		}else{
+			alert("结束")
+		}
+		
+
+	var num=Number(prompt("请输入成绩"))
+	//alert(num)
+	if(num==""){
+		alert("这是成绩么")
+	}else if(num>=60){
+		if(num<80){
+		alert("及格了")	
+		}else if(num>=80&&num<=100){
+			alert("优秀")
+		}else{
+			alert("有这么高成绩？？？")
+		}
+	}else if(num<60){
+		
+		if(num<20){
+			alert("太差了，没救了")
+		}else{
+			alert("不是太差。好好努力")
+			}
+	}else{
+		alert("sb 让你输成绩")	
+	}
+	
+	var num=Number(prompt("请输入一个数"))
+	if(num>=0){
+		if(num%2==1){
+			alert("这是奇数")	
+		}else{
+			alert("这是偶数")
+		}
+	}else if(num<0){
+		alert("请输入一个正数")
+	}else{
+		alert("这都不是数")	
+	}
+	
+	
+	var n=Number(prompt("请输入年份"))
+	
+	if(n%100!=0){
+		if(n%4==0){
+			alert(n+"是闰年")
+		}else if(n%4!=0){
+			alert(n+"不是闰年1")
+		}
+	}else if(n%100==0){
+		if(n%400==0){
+			alert(n+"是闰年")
+		}else{
+			alert(n+"不是闰年2")
+		}	
+	}else{
+			alert("这都不是年")
+		}
+	
+	var day=Number(prompt("今天星期几"))
+	
+	switch(day){
+		case 1:alert("1好好上课");break
+		case 2:alert("2好好上课");break
+		case 3:alert("3好好上课");break
+		case 4:alert("4好好上课");break
+		case 5:alert("5好好上课");break
+		case 6:alert("6好好上课");break
+		case 7:alert("7 可以休息");break
+		default:alert("输入不合法")
+		
+	}
+	
+	var num1=Number(prompt("请输入第一个数"));
+	var num2=Number(prompt("请输入第二个数"));
+	var ysf=prompt("请输入运算符");
+	switch(ysf){
+		case "+":alert("和为"+(num1+num2));break;
+		case "-":alert("和为"+(num1-num2));break;
+		case "*":alert("和为"+(num1*num2));break;
+		case "/":alert("和为"+(num1/num2));break;
+
+		
+
+	}
+	
+	 var age=18;
+	var height=175;
+	var shili=5;
+	var like="五官端正";
+	
+	alert(age>=18&&age<=25&&height>=175&&shili>=5&&like=='五官')
+	var a=null;
+
+	alert(Number(a))
+	
+	var a="86";
+	var t1=a/24;
+	var t2=parseInt(t1);
+	var h=a%24;
+	alert("为抵抗洪水，战士连续工作"+a+"小时，转换后为"+t2+"天"+h+"小时");
+	
+	var a=2558;
+	
+	if(a==2558){
+		alert("密码正确")
+		}
+	else{
+			alert("请从新输入")	
+			}
+			
+			
+	var a=8
+	if(a>18){
+		alert("大于十八岁")
+		}
+	else{
+		alert("未成年人")
+		}
+		
+	var a=51;
+	if(a%2==1){
+		alert("奇数")
+		}
+	else{
+		alert("偶数")
+		}
+	
+	
+	var num=prompt("请输入一个整数","sb吗")
+	if(num>0){
+		alert(num+"大于零")
+		
+	}else if(num<0){
+		alert(num+"小于零")
+		
+	}else if(num==0){
+		alert("这个数是零")
+		
+	}else{
+		alert("这是整数么？")
+		}
+		
+	var num2=prompt("请输入一个数","赶紧的")
+	if (num2>=10){
+		alert("输这么大干嘛")
+		
+	}else if(num<=1&&num>=0){
+		alert("有这么小的整数吗 sb？")
+	}else if(num<0){
+		alert("特码的这是负值")	
+	}else if((typeof num)){
+		alert("这就对了")	
+	}
+		
+		var num1=Number(prompt("请输入第一个数"))
+		var num2=Number(prompt("请输入第二个数"))
+		var ysf=prompt("请输入运算符")
+		
+		if(ysf=="+"){
+			alert(num1+num2)
+		}else if(ysf=="-"){
+			alert(num1-num2)	
+		}else if(ysf=="*"){
+			alert(num1*num2)	
+		}else if(ysf=="/"){
+			alert(num1/num2)	
+		}else if(ysf=="%"){
+			alert(num1%num2)	
+		}else if(num1==NaN){
+			alert("不是数字")	
+		}else{
+			alert("结束")
+		}
+		
+
+	var num=Number(prompt("请输入成绩"))
+	//alert(num)
+	if(num==""){
+		alert("这是成绩么")
+	}else if(num>=60){
+		if(num<80){
+		alert("及格了")	
+		}else if(num>=80&&num<=100){
+			alert("优秀")
+		}else{
+			alert("有这么高成绩？？？")
+		}
+	}else if(num<60){
+		
+		if(num<20){
+			alert("太差了，没救了")
+		}else{
+			alert("不是太差。好好努力")
+			}
+	}else{
+		alert("sb 让你输成绩")	
+	}
+	
+	var num=Number(prompt("请输入一个数"))
+	if(num>=0){
+		if(num%2==1){
+			alert("这是奇数")	
+		}else{
+			alert("这是偶数")
+		}
+	}else if(num<0){
+		alert("请输入一个正数")
+	}else{
+		alert("这都不是数")	
+	}
+	
+	
+	var n=Number(prompt("请输入年份"))
+	
+	if(n%100!=0){
+		if(n%4==0){
+			alert(n+"是闰年")
+		}else if(n%4!=0){
+			alert(n+"不是闰年1")
+		}
+	}else if(n%100==0){
+		if(n%400==0){
+			alert(n+"是闰年")
+		}else{
+			alert(n+"不是闰年2")
+		}	
+	}else{
+			alert("这都不是年")
+		}
+	
+	var day=Number(prompt("今天星期几"))
+	
+	switch(day){
+		case 1:alert("1好好上课");break
+		case 2:alert("2好好上课");break
+		case 3:alert("3好好上课");break
+		case 4:alert("4好好上课");break
+		case 5:alert("5好好上课");break
+		case 6:alert("6好好上课");break
+		case 7:alert("7 可以休息");break
+		default:alert("输入不合法")
+		
+	}
+	
+	var num1=Number(prompt("请输入第一个数"));
+	var num2=Number(prompt("请输入第二个数"));
+	var ysf=prompt("请输入运算符");
+	switch(ysf){
+		case "+":alert("和为"+(num1+num2));break;
+		case "-":alert("和为"+(num1-num2));break;
+		case "*":alert("和为"+(num1*num2));break;
+		case "/":alert("和为"+(num1/num2));break;
+
+		
+
+	}
+	
+
+	
+	*/
+	
+	
+	
+	
+
+</script>
+</head>
+
+<body>
+</body>
+</html>

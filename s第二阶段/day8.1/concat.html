@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>数组方法</title>  
+</head>
+<body>
+<script>
+	//数组方法  concat()  合并数组
+	
+	var arr=[1,8,67,10,7,4,5,6];
+	var arr1=[7,9,10];
+	//alert(arr.concat(arr1));   //返回值是拼接的数组
+	
+	//join()   可以把数组变成字符串  
+	//console.log(arr);
+	//console.log(arr.join("=="));   //不传参数  默认逗号分隔    可以传参
+	
+	//split()  可以把字符串变成数组   字符串的方法
+	
+	var str="abcdef";   //arr=["a","b","c"];
+	var str1="hell world";
+	//console.log(str1.split(" "));
+	//console.log(str.split(""));
+	
+	//sort()   //排序   默认排序是字符串   里边可以传参数 参数是一个匿名函数
+	
+	var arrs=['a','d','s','f','z'];
+	//console.log(arr.sort(function(a,b){
+		//return b-a;
+	//}));
+	
+	var arrPx=['234px','45px','67px','19px','1000px'];
+	/*console.log(arrPx.sort(function(a,b){
+		return parseInt(a)-parseInt(b);
+	}));*/
+	
+	//reserve()   反置  颠倒
+	var arr2=[1,2,3,4,5];
+	console.log(arr2.reverse());
+	
+	var str="abcdef";  //str1="fedcba"
+	console.log(str.split("").reverse().join(""));
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+
+</script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+	<style>
+		#box{
+			width:500px;
+			height:400px;
+			border:10px solid red;
+			text-align:center;
+			line-height:400px;
+			font-size:30px;
+			color:gree;
+		}
+	</style>
+</head>
+<body>
+	<div id="box"></div><input type="button" id="btn" value="点击获取验证码">
+	<script>
+	
+	//在控制台以键值对的形式出现  左边是键（属性） 右边是值  中间用冒号隔开
+	
+	//获取随机数     Math.random()获取到的值在0~1之间
+	//alert(typeof Math)
+	//alert(parseInt(Math.random()*10));  //0~9
+	
+	//alert(parseInt(Math.random()*5)+49);  //5~15  5和15都要取到  max-min+1
+	
+	//获取49到53的随机数
+	
+	/*function  randomNumber(min,max){
+		return parseInt(Math.random()*(max-min+1))+min;
+	}*/
+	//alert(randomNumber(5,12));
+	//获取4位的随机验证码
+	window.onload=function(){
+		var oBtn=document.getElementById("btn");//获取要操作的对象
+		var oDiv=document.getElementById("box"); //获取div 里边要放验证码
+		//给按钮添加单击事件
+		oBtn.onclick=function(){
+			var arr=[0,1,2,3,4,5,6,7,8,9,"a","b","c","A","Z"]; //声明一个数字组
+			var codeStr="";  //声明一个空字符串 用来保存验证码
+			for(var i=0;i<4;i++){ //把验证码中的每一位遍历出来
+				var index=parseInt(Math.random()*arr.length);  //随机的去取数组的下标
+				//alert(index);
+				codeStr+=arr[index];  //把每次取到的元素拼接到一起
+			}
+			oDiv.innerHTML=codeStr; //把找到的验证码放到div中
+		}
+
+		//函数的不定参    在声明函数的时候，隐式创建一个arguments对象
+		function sum(){
+			//alert(arguments[5]);
+			var arg=arguments;
+			var sum=0;
+			for(var i=0;i<=arg.length-1;i++){
+				sum+=arg[i];
+			}
+			return sum;
+		}
+		//alert(sum(2,4,5,6,2,4,4,4,4,4,42,3));
+		
+		//根据传入的参数，找最大值
+		
+		function max(){
+			var _max=arguments[0];
+			for(var i=0;i<arguments.length;i++){
+				if(_max<arguments[i]){
+					_max=arguments[i];
+				}
+			}
+			return _max;
+		}
+		
+		alert(max(3,45,6,68,9,92));
+		
+	}
+	
+	
+	</script>
+</body>
+</html>

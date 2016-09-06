@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>BOM</title>  
+<style>
+</style>
+</head>
+<body>
+	<input type="button" id="btn" value="跳转">
+	<a href="1.html">连接</a>
+<script>
+	// BOM  browser object  model (浏览器对象模型)
+	//BOM 里的核心对象是window  最顶层对象是window
+	
+	function aa(){
+		return window;
+	}
+	console.log(aa());
+	//window.alert();   //alert()
+	//window.aa()   //aa()
+	
+	var aaa=1;
+	b=1;
+	delete window.aaa;
+	delete window.b;
+	console.log(window.aaa)
+	console.log(window.b)
+// 通过var关键字声明的全局变量不能删除
+// 不用var声明的变量能删除
+	//window.prompt()
+	//alert(prompt())   //如果在输入框中输东西，按确定按钮，返回的是string   //如果按取消，返回null
+	//window.confirm();   //警告
+	//alert(confirm("你确定要关闭吗？"));  //返回值  确定是true   取消是false
+	//alert();     //只能确定，不能取消
+	//prompt();
+	
+	//location对象  是window下的一个子对象
+	var btn=document.getElementById("btn");
+	btn.onclick=function(){
+		//window.location.href="http://www.baidu.com";
+		//location.href="http://www.baidu.com";
+		//location.href="1.html#?keyword=?????";
+		
+		//location.assign("http://lol.qq.com");  assign()
+		//location.reload(true);  //默认参数是false
+		
+		location.replace("1.html");
+		
+//loaction.reload(false)和location.reload(true)  有差别啊，一个是先判断页面有没修改，有的话就从服务器下载页面，没有就直接从缓存里拿（这个会提升响应性能）而把该方法的参数设置为true，那么无论文档的最后修改日期是什么，它都会绕过缓存，直接从服务器上重新下载该文档。
+
+	}
+	
+	//location对象的属性  （重点掌握href）
+	//location对象的方法 《assign()    reload()  replace()》
+	
+	
+</script>
+</body>
+</html>

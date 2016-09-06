@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+<script>
+
+	/*第一部分*/
+	var num=Number(prompt("请输入年份"));
+	if(num%400==0){
+		alert(num+"年是闰年");
+	}else if(num%100!=0&&num%4==0){
+		alert(num+"年是闰年");
+	}else{
+		alert(num+"年是平年");
+	}
+	
+	
+	/*第二部分*/
+	
+	var num1=Number(prompt("亲，请输入一个整数"));
+	if(num1%1==0){
+		if(num1<0){
+			alert("您输入的数小于0");
+		}else if(num1>0){
+			alert("您输入的数大于0");
+		}else{
+			alert("您输入的数为0");
+		}
+	}else{
+		alert("您输入的不是整数");
+	}
+	
+	/*第三部分*/
+	
+	var num2=Number(prompt("请输入一个数"));
+	if(num2%3==0){
+		alert("您输入的数是3的倍数");		
+	}else{
+		alert("您输入的数不是3的倍数");
+	}
+	
+	
+	/*第四部分*/
+	var height=Number(prompt("请输入您的身高"));
+	var weigh=Number(prompt("请输入您的体重"));
+	var sweigh=(height-108)*2;
+	if(weigh-sweigh>10){
+		alert("您该给身体减负了");	
+	}else if(weigh-sweigh<-10){
+		alert("您的身体需要增加重量了");
+	}else if((weigh-sweigh>0)&&(weigh-sweigh<=10)){
+		alert("您该锻炼身体了");
+	}else if((weigh-sweigh<0)&&(weigh-sweigh>-10)){
+		alert("您有点微瘦");
+	}else{
+		alert("恭喜您，您有完美的身材");	
+	}
+	
+	/*第五部分*/
+	var num3=Number(prompt("亲，请输入您的分数"));
+	if(num3>=90&&num3<=100){
+		alert("您的等级为：A");	
+	}else if(num3>=80&&num3<90){
+		alert("您的等级为：B");
+	}else if(num3>=70&&num3<80){
+		alert("您的等级为：C");
+	}else if(num3>=60&&num3<70){
+		alert("您的等级为：D");
+	}else if(num3<60){
+		alert("很遗憾，您的基础需要巩固");
+	}else{
+		alert("对不起，您输入的分数不合法");
+	}
+	
+	/*第六部分*/
+	var mon=Number(prompt("请输入您想查询的月份"));
+	switch(mon){
+		case 1:
+		case 3:
+		case 5:
+		case 7:
+		case 8:
+		case 10:
+		case 12:alert("本月有31天");break;
+		case 4:
+		case 6:
+		case 9:
+		case 11:alert("本月有30天");break;
+		case 2:alert("本月有29天");break;
+		default:alert("请确保您输入的月份正确");
+	}
+	
+	/*第七部分*/
+	var num4=Number(prompt("请输入一个五位数"));
+	var num5;
+	num5=num4%10;
+	num4=(num4-num5)/10;
+	alert("该数的个位是"+num5)
+	num5=num4%10;
+	num4=(num4-num5)/10;
+	alert("该数的十位是"+num5)
+	num5=num4%10;
+	num4=(num4-num5)/10;
+	alert("该数的百位是"+num5)
+	num5=num4%10;
+	num4=(num4-num5)/10;
+	alert("该数的千位是"+num5)
+	num5=num4%10;
+	num4=(num4-num5)/10;
+	alert("该数的万位是"+num5)
+	
+	
+	/*第八部分*/
+	var fr=Number(prompt("请输入一个数"));
+	var se=Number(prompt("请输入一个数"));
+	var th=Number(prompt("请输入一个数"));
+	var fo;
+	if(fr<se){
+		fo=se;
+		se=fr;
+		fr=fo;
+		if(fr<th){
+			fo=th;
+			th=fr;
+			fr=fo;
+		}
+	}else{
+		if(fr<th){
+			fo=th;
+			th=fr;
+			fr=fo;
+		}
+	}
+	alert("其中最大的数是"+fr);
+	
+	
+	/*第九部分*/
+	var numb=0;
+	for(var year=1000;year<=2000;year++){
+		if(year%400==0){
+			numb+=1;
+			document.write(year+"年   ");
+		}else if(year%100!=0&&year%4==0){
+			numb+=1;
+			document.write(year+"年   ");
+		}else{
+		}	
+		if(numb%4==0){
+			document.write("<br>");
+		}
+	}
+	
+	
+	
+</script>
+
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+
+</head>
+
+<body>
+<script>
+	//求1到100之间的和
+	/*var i=1;
+	var sum=0;
+	while (i<=100){
+		sum+=i;
+		i++;
+	};
+	alert(sum);*/
+	//偶数和
+	/*var i=0;
+	var sum=0;
+	while (i<=100){
+		sum+=i;
+		i=i+2;
+	};
+	alert(sum);*/
+	/*var a=Number(prompt("请输入一个数"));
+	var b=Number(prompt("请输入一个数"));
+	var c=Number(prompt("请输入一个数"));
+	var max=a;//保存最大值
+	if (b>max){
+		max=b;
+	};
+	if(c>max){
+		max=c;
+	};
+	alert("最大值是"+max);*/
+	
+	/*var year=1000;//声明变量，保存初始值
+	var count=0;//保存闰年的个数
+	while (year<=2016){//循环的条件
+		if((year%4==0&&year%100!=0)||year%400==0){//判断闰年成立的条件
+			document.write(year+" ");//输出符合条件闰年的年份
+			count++;//找到符合条件的就在原来的基础上加1
+			if(count%4==0){//4个数字在一行显示
+				document.write("<br>");//换行
+			}
+		}
+		year++;//变量自增
+	};*/
+	/*var i=1;
+	while (i<=4){
+		var j=1;
+		while(j<=10){
+			document.write("*");
+			j++;
+		}
+		document.write("<br>");
+		i++;
+	};*/
+	
+	/*var i=1;
+	while (i<=4){//外层控制行数
+		var j=1;
+		while(j<=i){//内层控制每行的个数
+			document.write("*");
+			j++;
+		}
+		document.write("<br>");
+		i++;
+	};*/
+	
+	/*var i=4;
+	while (i>=0){
+		var j=1;
+		while(j<=i){
+			document.write("*");
+			j++;
+		}
+		document.write("<br>");
+		i--;
+	};*/
+	
+	/*var i=4;
+	while (i>=0){
+		var j=1;
+		while(j<=5){
+			document.write("*");
+			j++;
+		}
+		document.write("<br>");
+		i--;
+	};*/
+	
+	//for 循环
+	/*for(var i=1;i<=4;i++){
+		document.write(i+"好");
+	}*/
+	/*for(var i=1;i<=4;i++){
+		for(j=1;j<=10;j++){
+			document.write("*");
+		}
+		document.write("<br>");
+	}*/
+	
+	//鸡兔同笼
+	/*for(var i=1;i<35;i++){
+		for (var j=1;j<35;j++){//当i=1时，j从1到35一直循环；直到j=36时返回i++，此时i
+			if(i+j==35&&(2*i)+(4*j)==94){
+				document.write(i+"鸡"+j+"兔");
+			}	
+		}
+			
+	};*/
+	
+	//九九乘法表
+	/*for(var i=1;i<=9;i++){
+		for(var j=1;j<=i;j++){
+			
+			document.write(j+"&times;"+i+"="+i*j+" ");
+		}
+		document.write("<br>");
+	}*/
+	
+	/*var i=1;
+	var sum=0;
+	while (i<=100){
+		sum+=i;
+		i++;
+	};
+	alert(sum);*/
+	
+	/*var i=0;
+	var sum=0;
+	while (i<=100){
+		sum+=i;
+		i=i+2;
+	};
+	alert(sum);*/
+	/*var a=Number(prompt("请输入一个数"));
+	var b=Number(prompt("请输入一个数"));
+	var c=Number(prompt("请输入一个数"));
+	var max=a;
+	if (b>max){
+		max=b;
+	};
+	if(c>max){
+		max=c;
+	};
+	alert("最大值是"+max);*/
+	
+	/*var year=1000;
+	var count=0;
+	while (year<=2016){
+		if((year%4==0&&year%100!=0)||year%400==0){
+			document.write(year+" ");
+			count++;
+			if(count%4==0){
+				document.write("<br>");
+			}
+		}
+		year++;
+	};*/
+	/*var i=1;
+	while (i<=4){
+		var j=1;
+		while(j<=10){
+			document.write("*");
+			j++;
+		}
+		document.write("<br>");
+		i++;
+	};*/
+	
+	/*var i=1;
+	while (i<=4){
+		var j=1;
+		while(j<=i){
+			document.write("*");
+			j++;
+		}
+		document.write("<br>");
+		i++;
+	};*/
+	
+	/*var i=4;
+	while (i>=0){
+		var j=1;
+		while(j<=i){
+			document.write("*");
+			j++;
+		}
+		document.write("<br>");
+		i--;
+	};*/
+	
+	/*var i=4;
+	while (i>=0){
+		var j=1;
+		while(j<=5){
+			document.write("*");
+			j++;
+		}
+		document.write("<br>");
+		i--;
+	};*/
+	
+	
+	/*for(var i=1;i<=4;i++){
+		document.write(i+"好");
+	}*/
+	/*for(var i=1;i<=4;i++){
+		for(j=1;j<=10;j++){
+			document.write("*");
+		}
+		document.write("<br>");
+	}*/
+	
+	/*for(var i=1;i<35;i++){
+		for (var j=1;j<35;j++){//当i=1时，j从1到35一直循环；直到j=36时返回i++，此时i
+			if(i+j==35&&(2*i)+(4*j)==94){
+				document.write(i+"鸡"+j+"兔");
+			}	
+		}
+			
+	};*/
+	
+	for(var i=1;i<=9;i++){
+		for(var j=1;j<=i;j++){
+			
+			document.write(j+"&times;"+i+"="+i*j+" ");
+		}
+		document.write("<br>");
+	}
+</script>
+
+</body>
+</html>

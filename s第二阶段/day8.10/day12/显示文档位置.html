@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>显示鼠标位置</title>
+</head>
+<body style="height:2000px">
+	<div id="d1" style="width:200px; height:200px; background: green; position: absolute; left: 300px;"></div>
+	<a href="javascript:;" style="position:fixed;bottom:20px;">我是超链接</a>
+	<!-- <a href="#" style="position:fixed;bottom:20px;">我是超链接</a> -->
+	<script>
+		var box=document.getElementsByTagName('div')[0];
+		box.onmousemove=function(e){
+			var e=window.event||e;
+			box.innerHTML="鼠标坐标："+e.clientX+"===="+e.clientY+"<br>屏幕坐标："+e.screenX+"====="+e.screenY+"<br>偏移事件源"+e.offsetX+"===="+e.offsetY;
+
+
+			//偏离事件源的偏移量 offsetX  offsetY
+		}
+
+		// var oa=document.getElementsByTagName('a')[0];
+		// oa.onclick=function(e){
+		// 	var e=window.event||e;
+		// 	//e.preventDefault();  //非IE
+		// 	//e.returnValue = false;  //ie
+		// 	window.event?e.returnValue = false:e.preventDefault();
+		// 	alert(1);
+		// }
+		//阻止浏览器的默认行为  比如超链接
+		//evt.preventDefault(); //非IE
+		//evt.returnValue = false;   //IE
+	</script>
+</body>
+</html>

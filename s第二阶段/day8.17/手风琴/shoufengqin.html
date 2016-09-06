@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>手风情</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        ul{
+            list-style:none;
+        }
+        a{
+            text-decoration:none;
+        }
+        #box img{
+            vertical-align:bottom;
+            width:600px;
+        }
+        #box{
+            position: relative;
+            margin:0 auto;
+            width:1100px;
+            height:300px;
+            border:5px solid red;
+            overflow:hidden;
+        }
+        #box li{
+            position: absolute;
+            left:0;
+        }
+
+    </style>
+    <script src="buffer_move.js"></script>
+
+</head>
+<body>
+<div id="box">
+    <ul>
+        <li><a href="#"><img src="images/move_1.jpg"></a></li>
+        <li><a href="#"><img src="images/move_2.jpg"></a></li>
+        <li><a href="#"><img src="images/move_3.jpg"></a></li>
+        <li><a href="#"><img src="images/move_4.jpg"></a></li>
+        <li><a href="#"><img src="images/move_5.jpg"></a></li>
+        <li><a href="#"><img src="images/move_6.jpg"></a></li>
+    </ul>
+</div>
+<script>
+window.onload=function() {
+    var oLi = document.getElementsByTagName("li");
+    for (var i=0;i<oLi.length;i++) {
+        if(i===0){
+            oLi[i].style.left=0;
+        }else{
+            oLi[i].style.left=500+i*100+"px";
+        }
+        oLi[i].index=i;
+        oLi[i].onmouseover=function(){
+            for(var j=0;j<oLi.length;j++){
+                if(j<=this.index){
+                    bufferMove(oLi[j],{left:j*100})
+                }else{
+                    bufferMove(oLi[j],{left:500+j*100})
+                }
+            }
+
+
+
+        }
+
+
+
+    }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>45632198</title>
+<script>
+
+function years(){
+	var year=Number(prompt("请输入年份","2000"));
+	if(year>0){
+		if(year%4==0&&year%100!=0||year%400==0&&year%100==0)
+		{
+			alert(year+"年是闰年");
+		}else{
+			alert(year+"年不是闰年");
+		}	
+	}else{
+		alert("输入不合法");	
+	}	
+}
+document.write('点击输入年份<form name="form1" method="post" action=""><input type="button" value="确认" onclick="years()" /></form>')
+document.write('<hr />')
+
+function jisuan(){
+	var num1=Number(prompt("请输入整数","2000"));
+	if(num1>0){
+		alert('此数大于0');
+	}else if(num1<0){
+		alert('此数小于0');	
+	}else{
+		alert('此数等于0');
+	}
+}
+document.write('点击输入整数判断范围<form name="form2" method="post" action=""><input type="button" value="确认" onclick="jisuan()" /></form>')
+document.write('<hr />')
+
+function jisuan2(){
+	var num2=Number(prompt("请输入整数","2000"));
+	if(num2%3==0){
+		alert(num2+"是3的倍数");
+	}else{
+		alert(num2+"不是3的倍数");
+	}
+}
+document.write('点击输入整数判断是否是3的倍数<form name="form3" method="post" action=""><input type="button" value="确认" onclick="jisuan2()" /></form>')
+document.write('<hr />')
+
+function weight(){
+	var height=Number(prompt("请输入升身高(cm)","2000"));
+	var weight=Number(prompt("请输入升体重(斤)","2000"));
+	var sweight=(height-108)*2
+	if(weight>sweight){
+		if(weight-sweight>10){
+			alert("你太胖！");	
+		}else{
+			alert('合格');	
+		}
+	}else if(weight<sweight){
+		if(sweight-weight>10){
+			alert("你太瘦！");	
+		}else{
+			alert('合格');	
+		}
+	}else{
+		alert('完美');	
+	}
+}
+document.write('点击输入身高和体重<form name="form4" method="post" action=""><input type="button" value="确认" onclick="weight()" /></form>')
+document.write('<hr />')
+
+function grade(){
+	var grade=Number(prompt("请输入成绩","2000"));
+	if(grade>=90&&grade<=100){
+		alert('A');
+	}else if(grade>=80&&grade<90){
+		alert('B');
+	}else if(grade>=70&&grade<80){
+		alert('C');	
+	}else if(grade>=60&&grade<70){
+		alert('D');
+	}else if(grade<60&&grade>=0){
+		alert('留级');	
+	}else{
+		alert('别搞笑');	
+	}
+	
+}
+document.write('点击输入成绩<form name="form5" method="post" action=""><input type="button" value="确认" onclick="grade()" /></form>')
+document.write('<hr />')
+
+function month(){
+	var month=Number(prompt("请输入月份","2000"));
+	switch(month){
+		case 1:alert(month+'月有31天');break;
+		case 2:alert(month+'月有29天');break;
+		case 3:alert(month+'月有31天');break;
+		case 4:alert(month+'月有30天');break;
+		case 5:alert(month+'月有31天');break;
+		case 6:alert(month+'月有30天');break;
+		case 7:alert(month+'月有31天');break;
+		case 8:alert(month+'月有31天');break;
+		case 9:alert(month+'月有30天');break;
+		case 10:alert(month+'月有31天');break;
+		case 11:alert(month+'月有30天');break;
+		case 12:alert(month+'月有31天');break;
+		default:alert('搞笑？');
+		
+	}
+	
+}
+document.write('点击输入月份<form name="form6" method="post" action=""><input type="button" value="确认" onclick="month()" /></form>')
+document.write('<hr />')
+
+function number(){
+	var number=Number(prompt("请输入五位数","2000"));
+	var a=parseInt(number/10000);
+	var b=parseInt((number-a*10000)/1000);
+	var c=parseInt((number-a*10000-b*1000)/100);
+	var d=parseInt((number-a*10000-b*1000-c*100)/10);
+	var e=number-a*10000-b*1000-c*100-d*10;
+	alert('万位数是'+a+';'+'千位数是'+b+';'+'百位数是'+c+';'+'十位数是'+d+';'+'个位数是'+e);
+	
+}
+document.write('点击输入一个五位数<form name="form7" method="post" action=""><input type="button" value="确认" onclick="number()" /></form>')
+document.write('<hr />')
+
+function jisuan3(){
+	var a=Number(prompt("请输入a","2000"));
+	var b=Number(prompt("请输入b","2000"));
+	var c=Number(prompt("请输入c","2000"));
+	if(a>b){
+		if(a>c){
+			alert('最大是'+a);	
+		}else{
+			alert('最大是'+c);	
+		}	
+	}else{
+		if(b>c){
+			alert('最大是'+b);	
+		}else{
+			alert('最大是'+c);	
+		}
+	}
+	
+
+	
+}
+document.write('点击输入三个不同的数比较大小<form name="form7" method="post" action=""><input type="button" value="确认" onclick="jisuan3()" /></form>')
+document.write('<hr />')
+
+
+function jisuan4(){
+	var year;
+	var i=0;
+	for(year=1000;year<=2000;year++)
+	{
+		
+		if(year%4==0&&year%100!=0||year%400==0&&year%100==0)
+		{
+			document.write(year+'&nbsp;&nbsp;&nbsp;');
+			i++;
+		}
+		if(i%4==0){
+			document.write('<br />');	
+		}	
+		
+	}
+
+	
+}
+document.write('点击给你结果<form name="form7" method="post" action=""><input type="button" value="确认" onclick="jisuan4()" /></form>')
+document.write('<hr />')
+
+
+</script>
+</head>
+
+<body>
+<div style="white-space:pre;margin-top:100px;">
+/*var a=89;
+var b=parseInt(89/24);
+var c=89%24 
+//alert(b+'天'+c+'小时');
+
+if(a>0)
+{
+	//alert("a>0");
+}else{
+	//alert("a<0");
+}*/
+//var num1=prompt("请输入一个数",'好');
+
+
+/*if(num1>0){
+	alert("大于0");
+}else if(num1==0){
+	alert("等于0");	
+}else if(num1<0){
+	alert("小于0");	
+}else{
+	alert("不识数");	
+}*/
+
+/*var num1=Number(prompt("请输入第一个数"));
+var num2=Number(prompt("请输入第二个数"));
+var ysf=prompt("请输入运算符");
+if(ysf=='+'){
+	alert(num1+num2);	
+}else if(ysf=='-'){
+	alert(num1-num2);
+}else if(ysf=='*'){
+	alert(num1*num2);
+}else if(ysf=='/'){
+	alert(num1/num2);
+}else if(ysf=="%"){
+	alert(num1%num2);	
+}*/
+
+/*var year=Number(prompt("请输入年份","2000"));
+if(year%100==0){
+	if(year%400==0){
+		alert(year+"是闰年");
+	}else{
+		alert(year+"不是闰年");
+	}	
+}else{
+	if(year%4==0){
+		alert(year+"是闰年");	
+	}else{
+		alert(year+"不是闰年");
+	}	
+}*/
+
+/*var num2=Number(prompt("请输入一个大于0的数","3"));
+if(num2%2==0){
+	alert("偶数");	
+}else if(num2%2==1){
+	alert("奇数")	
+}*/
+
+/*var num3=Number(prompt("请输入一个大于0的数","3"));
+var a=2;
+while(a<num3){
+	document.write("123")
+	if((num3%a)!=0){
+		a++;	
+	}else{
+		alert("合数");
+		
+	}
+		
+}
+
+alert("质数");*/
+
+</div>
+</body>
+</html>

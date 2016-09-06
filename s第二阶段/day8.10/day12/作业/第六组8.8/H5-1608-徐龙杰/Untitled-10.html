@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+td{height:30px;border:1px solid #999;}
+table{border-collapse:collapse}
+</style>
+</head>
+
+<body>
+姓名：<input type="text" value="" id="xingming"/>
+
+<br><br>
+收入：<input type="text" value="" id="shouru"/><br><br>
+自我介绍：<input type="text" value="" id="jieshao"/><br><br>
+<input type="button" id="btn" value="生成表单框"/><br><br>
+<table>
+	<tr>
+    <td>姓名</td>
+    <td>收入</td>
+    <td>自我介绍</td>
+    <td>操作</td>
+    </tr>
+
+</table>
+<script>
+var xm=document.getElementById("xingming")
+var sr=document.getElementById("shouru")
+var js=document.getElementById("jieshao")
+var btn=document.getElementById("btn")
+table=document.getElementsByTagName("table")[0]
+btn.onclick=function(){
+	var xms=xm.value
+	var srs=sr.value
+	var jss=js.value
+	
+	var tr=document.createElement("tr")
+	var td1=document.createElement("td")
+	var td2=document.createElement("td")
+	var td3=document.createElement("td")
+	var td4=document.createElement("td")
+	tr.appendChild(td1)
+	tr.appendChild(td2)
+	tr.appendChild(td3)
+	tr.appendChild(td4)
+	table.appendChild(tr)
+	
+	
+	var txt1=document.createTextNode(xms)
+	td1.appendChild(txt1)
+	var txt2=document.createTextNode(srs)
+	td2.appendChild(txt2)
+	var txt3=document.createTextNode(jss)
+	td3.appendChild(txt3)
+	
+	
+	
+	var button=document.createElement("button")
+	var txt=document.createTextNode("删除")
+	button.appendChild(txt)
+	td4.appendChild(button)
+	button.onclick=function(){
+	var aa=this.parentNode.parentNode;
+	table.removeChild(aa)
+	}
+
+
+
+
+
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style type="text/css">
+	table{border-collapse:collapse;margin-top:50px}
+	th{height:30px;width:200px;text-align:center;border:1px solid red;}
+	td{border:1px solid red;text-indent:15px;}
+</style>
+</head>
+
+<body>
+<input type="text" value=""/>
+<input type="text" value=""/>
+<input type="text" value=""/>
+<input type="text" value=""/>
+<input type="button" value="提交"/>
+<table id="tab"></table>
+<script>
+	var inputs=document.getElementsByTagName("input");
+	var tab=document.getElementById("tab");
+	var arr=['班级','姓名','学号','性别']
+	var tr=document.createElement("tr");
+	for(var j=0;j<4;j++){
+		var th=document.createElement("th");
+		var txt=document.createTextNode(arr[j]);
+		th.appendChild(txt);
+		tr.appendChild(th);
+	}
+	tab.appendChild(tr);
+	inputs[4].onclick=function(){
+			var tr=document.createElement("tr");
+			for(var j=0;j<4;j++){
+				var td=document.createElement("td");
+				var txt=document.createTextNode(inputs[j].value);
+				td.appendChild(txt);
+				tr.appendChild(td);
+			}
+			tab.appendChild(tr);
+		
+	}
+</script>
+</body>
+</html>

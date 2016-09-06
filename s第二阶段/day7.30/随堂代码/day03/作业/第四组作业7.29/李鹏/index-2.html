@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style type="text/css">
+	span{
+			display:inline-block;
+			padding:4px;
+			margin:4px;
+			background:#39F;
+			text-align:center;
+		}
+</style>
+</head>
+
+<body>
+<div id="box"></div>
+	<!--<script>
+    	var oBox=document.getElementById("box");
+		//通过id获取要操作的对象		
+		//console.log(oBox);
+		
+		//alert(oBox.innerHTML);
+		
+		//oBox.innerHTML="九九乘法表";
+		//oBox.innerHTML+="<br>";
+		for(var i=1;i<=9;i++){
+			for(var j=1;j<=i;j++){				
+			oBox.innerHTML+="<span>"+(i+"*"+j+"="+i*j)+"<span>";
+			}
+			oBox.innerHTML+="<br>";
+		}
+
+    </script>-->
+
+
+
+	<script>
+    	var oBox=document.getElementById("box");
+		for(var i=1;i<=9;i++){
+			for(var j=1;j<=i;j++){				
+			oBox.innerHTML+="<span>"+(i+"*"+j+"="+i*j)+"<span>";
+			}
+			oBox.innerHTML+="<br>";
+		}
+    </script>
+
+</body>
+</html>

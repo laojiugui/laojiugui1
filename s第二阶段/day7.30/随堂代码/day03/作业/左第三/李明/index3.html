@@ -1,0 +1,180 @@
+
+<div id="box"></div>
+
+
+<script>
+
+	
+	
+	/*console.log(oBox);*/
+	
+	/*alert(oBox.innerHTML);
+	
+	oBox.innerHTML="我真是帅的掉渣！！";*/
+	
+
+	/*var i=1;
+	while(i<=10000){
+		document.write(i+".我喜欢你<br>");
+		i++;
+	}*/
+	
+	/*var i=1;
+	while(i<=100){
+		document.write(i+"<br>");
+		i++;
+	}*/
+	
+	/*var i=1;
+	var sum=0;
+	while(i<=100){
+		sum+=i;
+		i++;
+	}
+	alert(sum);*/
+	
+	/*var i=2;
+	var sum=0;
+	while(i<=100){
+		sum+=i;
+		i=i+2;
+	}
+	alert(sum);*/
+	
+	/*var i=1000;a=0;
+	while(i<=2000){
+		if((i%4==0&&i%100!=0)||i%400==0){
+			document.write(i+" ");
+			
+			a++;
+			if(a%4==0){
+				document.write("<br>");
+			}
+		
+		}
+		
+		i++;
+		
+	}
+	
+	var num1=Number(prompt("请输入第一个数"));
+	var num2=Number(prompt("请输入第二个数"));
+	var num3=Number(prompt("请输入第三个数"));
+	var max=num1;
+	if(num2>max){
+		max=num2;
+	}
+	if(num3>max){
+		max=num3;
+	}
+	alert("三个数中的最大值为"+max);*/
+	
+	/*var year=1000;
+	var count=0;
+	while(year<=2000){
+		if((year%4==0&&year%100!=0)||year%400==0){
+			document.write(year+" ");
+			count++;
+			
+			if(count%4==0){
+				document.write("<br>");
+			}
+		}
+		year++;
+		
+	}*/
+	
+	/*var num1=Number(prompt("请输入第一个数"));
+	var num2=Number(prompt("请输入第二个数"));
+	var num3=Number(prompt("请输入第三个数"));
+	var max=num1;
+	if(num2>max){
+		max=num2;
+	}
+	if(num3>max){
+		max=num3;
+	}
+	alert("三个数中最大的数为："+max);*/
+	
+	/*var i=1;
+	
+	while(i<=4){
+		document.write("***********<br>");
+		i++;
+	
+	}*/
+	
+	/*var i=1;
+	
+	while(i<=4){    //i决定了行数；
+		var j=1;	//决定列数；
+		while(j<=i){
+			document.write("*");
+			j++;
+		}
+		document.write("<br>");
+		i++;
+	}*/
+	
+	
+	/*var i=1;
+	while(i<=5){
+		var j=1;
+		while(j<=i){
+			document.write("*");
+			j++;
+		}
+		document.write("<br>");
+		i++;
+	}*/
+	
+	/*for(var i=1;i<=5;i++){
+		for(var j=1;j<=10;j++){
+			document.write("*");
+		}
+		document.write("<br>");
+	
+	}*/
+	
+	/*for(var t=1;t<=35;t++){
+		for(var j=1;j<=35;j++){
+		if((4*t+2*j==94)&&(t+j==35)){
+			document.write("共有兔"+t+"只<br>");
+			document.write("共有鸡"+j+"只");
+		}	
+		}
+	
+	}*/
+	var oBox=document.getElementById("box");
+	for(var i=1;i<=9;i++){
+		for(var j=1;j<=i;j++){
+			oBox.innerHTML+="<span>"+i+"&times;"+j+"="+i*j+"</span>";
+			
+			
+		}
+		oBox.innerHTML+="<br>";
+	}
+	
+	
+	
+	
+	/*for(var i=1;i<=5;i++){
+		for(var j=1;j<=i;j++){
+			document.write("*");
+		}
+		document.write("<br>");
+	}*/
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+</script>
+</body>
+</html>

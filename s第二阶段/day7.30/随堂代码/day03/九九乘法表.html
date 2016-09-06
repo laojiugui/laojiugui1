@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8"/>
+	<title>99</title>
+	<style>
+		span{
+			display:inline-block;padding:6px;margin:10px;text-align:center;background:#ff8800;
+		}
+	</style>
+	</head>
+	<body>
+		<div id="cal"></div>
+		<script>
+			var oCal=document.getElementById("cal");
+			/*for(var i=1;i<=4;i++){
+				oCal.innerHTML+="<span>"+i+"</span>"
+			}*/
+			//console.log(oCal);
+			//alert(oCal.innerHTML);
+			//oCal.innerHTML="<span>1</span><span>2</span><span>3</span><span>4</span>";
+			//九九乘法表
+			/*for(var i=1;i<=9;i++){
+				for(var j=1;j<=i;j++){
+					oCal.innerHTML+="<span>"+i+"&times;"+j+"="+i*j+"</span>";
+				}
+				oCal.innerHTML+="<br>";
+			}*/
+			
+			
+			
+			//循环   while循环  for循环     
+			
+			/*do{
+				//执行语句
+			}while(条件)*/
+			/*var i=1;
+			do{
+				document.write("终于下课了！！！");
+				i++;
+			}while(i<=4)*/
+			//先执行一次  再进行判断
+			
+			//三大程序结构   1.顺序结构   2.选择结构（条件结构）（分支结构）3.循环结构
+			//变量  关键字  数据类型  数据类型的转换    NaN   运算符
+		
+			//如何获取对象    属性 innerHTML  
+			
+			/*var _str="",_odd="",_even="";
+			for(var i=1;i<=100;i++){
+				if(i%2>0){
+					_odd+=i+",";
+				}else{
+					_even+=i+",";
+				}
+				if(i%50==0){
+					_str+=_odd+_even;
+					_odd="";
+					_even="";
+				}
+			}
+			document.write(_str);*/
+			
+			
+			
+		/*var _flag=0;
+		for(var i=1;i<=100;){
+			document.write(i+",");
+			if(i==100){
+				_flag=1;
+			}
+			if(_flag==0){
+				i++;
+			}else{
+				i--;
+			}
+			if(i==0){
+				break;
+			}
+		}*/
+			
+		/*function taoxin(){
+			for(i=2;i>-6;i--){
+				for(n=-7;n<=7;n++){
+					if(i>0&&(Math.abs(i-2)+Math.abs(n)<=1)){
+						document.write("-");
+					}else if(Math.abs(i)+Math.abs(n)<8){
+						document.write("*");
+					}else{
+						document.write("-");
+					}
+				}
+				document.write("<br />");
+			}
+		}
+		taoxin();
+		document.write("<br />");*/
+		
+		
+		
+		/*var _h=0,_v=0;
+		function loopFn(){
+			if(_h<10){
+				document.write("*");
+				_h++;
+			}else{
+				_v++;
+				_h=0;
+				document.write("<br/>");
+			}
+			if(_v>=10){
+				return;
+			}
+			loopFn();
+		}
+		loopFn();*/
+		</script>
+	</body>
+</html>

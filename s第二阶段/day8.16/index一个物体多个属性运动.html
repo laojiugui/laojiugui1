@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>一个物体多个属性</title>
+    <script src="index.js"></script>
+    <style>
+        *{
+            margin:0;
+            padding:0
+
+        }
+        #box{
+            position: absolute;
+            left:0;
+            top:0;
+            width:50px;
+            height:50px;
+            background:red;
+        }
+
+    </style>
+</head>
+<body>
+<div id="box"></div>
+<script>
+var oBox=document.getElementById("box");
+
+    bufferMove(oBox,{left:900},function(){
+        bufferMove(oBox,{top:900},function(){
+            bufferMove(oBox,{left:0},function(){
+                bufferMove(oBox,{top:0},function(){
+                    bufferMove(oBox,{opacity:0})
+                })
+            })
+        })
+    })
+
+</script>
+</body>
+</html>

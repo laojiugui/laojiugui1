@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片广告牌</title>
+    <style>
+        *{
+            margin:0;
+            padding:0
+        }
+        ul li{
+            list-style:none;
+        }
+        #box{
+            width:100%;
+            height:280px;
+            margin:30px 5%;
+        }
+        #box ul li{
+            width:150px;
+            height:280px;
+            float:left;
+            position:relative;
+        }
+        #box ul li div{
+            width:100%;
+            height:280px;
+        }
+        .box{
+            position:absolute;
+            left:0;
+            top:0;
+            background:rgba(0,0,0,.3);
+        }
+        .box h2{
+            color:#fff;
+            font-size:20px;
+            padding:20px;
+            margin:0 auto;
+            width:30px;
+        }
+    </style>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            $("#box ul li").hover(function(){
+
+                //自定义运动动画的宽度为225.其他动画的结果宽度为150,整体宽度不变
+                $(this).stop(true).animate({"width":225}).siblings().stop(true).animate({"width":135});
+                $(this).find(".box").css("display","none");
+            },function(){
+                $("#box ul li").stop(true).animate({"width":150});
+                $(this).find(".box").css("display","block");
+            });
+
+        });
+
+    </script>
+</head>
+<body>
+<div id="box">
+    <ul>
+        <li>
+            <div class="box"><h2>哈哈哈</h2></div>
+            <div style="background:url(img2/1.jpg) center"></div>
+        </li>
+        <li>
+            <div class="box"><h2>呵呵呵</h2></div>
+            <div style="background:url(img2/2.jpg) center"></div>
+        </li>
+        <li>
+            <div class="box"><h2>嘿嘿嘿</h2></div>
+            <div style="background:url(img2/3.jpg) center"></div>
+        </li>
+        <li>
+            <div class="box"><h2>嘎嘎嘎</h2></div>
+            <div style="background:url(img2/4.jpg) center"></div>
+        </li>
+        <li>
+            <div class="box"><h2>嘻嘻嘻</h2></div>
+            <div style="background:url(img2/5.jpg) center"></div>
+        </li>
+        <li>
+            <div class="box"><h2>呜呜呜</h2></div>
+            <div style="background:url(img2/6.jpg) center"></div>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

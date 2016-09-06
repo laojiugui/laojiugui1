@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+#wrap{width:400px;height:700px;margin:0 auto;}
+#box{width:400px;height:500px;border:1px solid #999;margin-bottom:10px;overflow-y:auto;}
+.zi{text-align:right;}
+.zi2{text-align:left;}
+span{background:#63F;height:30px;display:inline-block;border-radius:10px;line-height:30px;padding:0 15px;}
+</style>
+</head>
+
+<body>
+<div id="wrap">
+<div id="box"></div>
+<input type="text" value="" id="txt">
+<input type="button" value="发送" id="btn">
+</div>
+<script>
+var oBox=document.getElementById("box")
+var oTxt=document.getElementById("txt")
+var oBtn=document.getElementById("btn")
+oBtn.onclick=function(){
+	txts=oTxt.value
+	var p=document.createElement("p")
+	oBox.appendChild(p)	
+	var span=document.createElement("span")
+	p.appendChild(span)
+	var txt=document.createTextNode(txts)
+	span.appendChild(txt)
+	var attr=document.createAttribute("class")
+	attr.nodeValue="zi"
+	p.setAttributeNode(attr)
+	
+	function jiji(){
+	var p=document.createElement("p")
+	oBox.appendChild(p)	
+	var span=document.createElement("span")
+	p.appendChild(span)
+	var txt=document.createTextNode("死鬼！讨厌！真是个磨人的小妖精呢0.0")
+	span.appendChild(txt)
+	var attr=document.createAttribute("class")
+	attr.nodeValue="zi2"
+	p.setAttributeNode(attr)
+	}
+	setTimeout(jiji,2000)
+	
+}
+
+
+
+
+
+</script>
+</body>
+</html>

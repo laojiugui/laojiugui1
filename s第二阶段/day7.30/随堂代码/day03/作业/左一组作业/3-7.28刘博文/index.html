@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+span{
+	margin:10px;
+	padding:10px;
+	display:inline-block;
+	background:#9CC;
+	}
+
+</style>
+</head>
+
+<body>
+<div id="box"></div>
+<script>
+//2000-2016年所有的闰年
+/*	for(var year=2000;year<=2016;year++)
+	{
+		if(year%4==0&&year%100!=0||year%400==0)
+		{
+			document.write(year+"<br>");
+		}		
+	}*/
+	
+	
+	
+//1-100内所有奇数的和
+/*	var i=1;
+	var sum=0;
+	while(i<=100)
+	{	
+		
+		sum+=i;
+		i+=2;
+	}
+	document.write(sum);*/
+	
+	
+	
+//100以内除了10、20、30、40、80、90以外的数的和
+
+/*	var i=0;
+	var sum=0;
+	while(i<=100)
+	{	
+		if(i%10!=0||i==50||i==60||i==70)
+		{
+			sum+=i;			
+		}
+		i++;	
+	}
+	document.write(sum);
+*/
+
+
+//打印100以内7的倍数
+
+/*	for(i=1;i<=100;i++)
+	{
+		if(i%7==0)
+		{		
+			document.write(i+"<br>");				
+		}		
+	}
+*/
+
+
+//10的阶乘
+/*	var ji=10,i=10;
+	while(i>=1)
+	{
+		ji*=i;
+		i--;		
+	}
+	document.write(ji);
+
+*/	
+
+//20-80之间能被3整除的整数，5个一行
+/*	var num=20;
+	var con=0;
+	while(num<=80)
+	{
+		if(num%3==0)
+		{
+			document.write(num+"&nbsp;");
+			con++;
+			if(con%5==0)
+			{
+				document.write("<br>");		
+			}	
+		}	
+		num++;	
+	}
+*/
+
+
+//100-200人，3个一排剩1个，4个一排剩2个，5个一排剩3个
+/*	for(num=100;num<=200;num++)
+	{
+		if(num%3==1&&num%4==2&&num%5==3)
+		{	
+			document.write(num+" ");
+		}		
+	}
+*/
+
+
+//1-1/2+1/3-1/4...1/100的和
+//i=奇数 sum1+=1/i  i=偶数 sum2+=1/i sum=sum1-sum2
+var i=1;
+var sum1=0,sum2=0;
+
+while(i<=100)
+{
+	if(i%2!=0)
+	{			
+		
+	document.write(sum1+=1/i);	
+	}
+		
+	else if(i%2==0)
+	{			
+	
+		document.write(sum2+=1/i);
+	}
+	
+	
+	i++;		
+}
+document.write(sum1-sum2);
+
+
+
+
+
+//九九乘法表
+/*	var oBox=document.getElementById("box");
+	console.log(oBox);
+	oBox.innerHTML="九九乘法表<br>";
+	for(var i=1;i<=9;i++)
+	{			
+		for(var j=1;j<=i;j++)
+		{
+			oBox.innerHTML+="<span>"+i+"&times"+j+"="+i*j+"&nbsp;&nbsp;"+"</span>";
+		}	
+		oBox.innerHTML+="<br>";		
+	}
+*/
+
+
+//100-200之间所有能被3或7整除的数
+/*	for(i=100;i<=200;i++)
+	{
+		if(i%3==0||i%7==0)
+		{
+			document.write(i+" ");
+		}
+	}
+*/
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,375 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+<script>
+	/*var i=1;
+	while(i<=10){
+		document.write(i+".我喜欢你<br>");
+		i++;	
+	}*/
+	
+	/*var a=1;
+	while(a<=100){
+		document.write(a+"<br>");
+		a++;
+	}*/
+		
+	//100以内整数和
+	/*var a=1;
+	var sum=0;
+	while(a<=100){		
+		sum+=a;
+		a++;
+	}
+	alert(sum);*/
+		
+	//100以内偶数和
+	/*var i=0;
+	var sum=0;
+	while(i<=100){
+		sum+=i;
+		i+=2;
+	}
+	alert(sum);*/
+		
+	//100以内奇数和
+	/*var i=1;
+	var sum=0;
+	while(i<=100){
+		sum+=i;
+		i+=2;
+	}
+	alert(sum);*/
+		
+	/*var i=0;
+	for(var year=1000;year<=2000;year++){
+		if(year%400==0){
+			i+=1;
+			document.write(year+"年   ");
+		}else if(year%100!=0&&year%4==0){
+			i+=1;
+			document.write(year+"年   ");
+		}else{
+		}	
+		if(i%4==0){
+			document.write("<br>");
+		}
+	}*/
+		
+	//打印出1000-2000年中所有的闰年，并以每行四个数的形式输出
+	/*var year=1000;   //声明变量，初始化年份
+	var count=0;   //用来保存闰年的个数
+	while(year<=2000)
+	{
+		if((year%4==0&&year%100!=0)||year%400==0)
+		{  			
+			document.write(year+"年 ");
+			count++;
+			if(count%4==0)
+			{   //每行四个数，第五个数换到下一行
+				document.write("<br>");
+			}
+		}
+		year++;
+	}*/
+	
+	/*var a=Number(prompt("请输入a的值"));
+	var b=Number(prompt("请输入b的值"));
+	var c=Number(prompt("请输入c的值"));
+	var max=a;
+	if(b>max){
+		max=b;
+	}
+	if(c>max){
+		max=c;
+	}
+	alert("最大值是"+max);*/
+	
+	
+	
+	
+	/*var x=1;
+	while(x<=4){
+		document.write("**********<br>");
+		x++;
+	}*/
+	
+	
+	/*var x=1;
+	while(x<=4){
+		var y=1;
+		while(y<=10){
+			document.write("*");
+			y++;
+		}
+		document.write("<br>");
+		x++;	
+	}*/
+	
+	
+	/*for(var x=1;x<=4;x++){
+		for(var y=1;y<=10;y++){
+			document.write("*");
+		}
+		document.write("<br>");
+	}*/
+	
+	
+	
+	/*var x=1;
+	while(x<=5){
+		var y=1;
+		while(y<=x){
+		document.write("*");
+		y++;
+		}
+		document.write("<br>");
+		x++;
+	}*/
+	
+	
+	/*for(var x=1;x<=5;x++){
+		for(var y=1;y<=x;y++){
+			document.write("*");	
+		}
+		document.write("<br>");
+	}*/
+	
+	
+	/*var x=1;   //声明变量x，是第一行
+	while(x<=5){    //一共五行
+		var y=5;   //声明变量y，一共有五列
+		while(y>=x){	//外行控制每行个数
+			document.write("*");
+			y--;    //每行依次减少一个*
+		}
+			document.write("<br>");
+			x++;    //依次增加行数
+	}*/
+	
+	
+	
+	//鸡兔同笼  i是鸡23，j是兔12
+	/*for(var i=1;i<35;i++){
+		for(var j=1;j<35;j++){
+			if(i+j==35&&(i*4+j*2==94)){
+				document.write("兔："+i+"------鸡："+j);	
+			}	
+		}	
+	}*/
+	
+	
+	
+	
+	//九九乘法表    &times;
+	/*for(var i=1;i<=9;i++){
+		for(var j=1;j<=i;j++){
+			var s=i*j;			
+			document.write(i+"*"+j+"="+s+"&nbsp;&nbsp;&nbsp;");	
+		}
+		document.write("<br>");
+	}*/
+
+	
+</script>
+
+
+
+
+
+
+
+<script>
+	var i=1;
+	while(i<=10){
+		document.write(i+".我喜欢你<br>");
+		i++;	
+	}
+	
+	var a=1;
+	while(a<=100){
+		document.write(a+"<br>");
+		a++;
+	}
+		
+	//100以内整数和
+	var a=1;
+	var sum=0;
+	while(a<=100){		
+		sum+=a;
+		a++;
+	}
+	alert(sum);
+		
+	//100以内偶数和
+	var i=0;
+	var sum=0;
+	while(i<=100){
+		sum+=i;
+		i+=2;
+	}
+	alert(sum);
+		
+	//100以内奇数和
+	var i=1;
+	var sum=0;
+	while(i<=100){
+		sum+=i;
+		i+=2;
+	}
+	alert(sum);
+	
+	
+		
+	var i=0;
+	for(var year=1000;year<=2000;year++){
+		if(year%400==0){
+			i+=1;
+			document.write(year+"年   ");
+		}else if(year%100!=0&&year%4==0){
+			i+=1;
+			document.write(year+"年   ");
+		}else{
+		}	
+		if(i%4==0){
+			document.write("<br>");
+		}
+	}
+		
+	//打印出1000-2000年中所有的闰年，并以每行四个数的形式输出
+	var year=1000;   //声明变量，初始化年份
+	var count=0;   //用来保存闰年的个数
+	while(year<=2000)
+	{
+		if((year%4==0&&year%100!=0)||year%400==0)
+		{  			
+			document.write(year+"年 ");
+			count++;
+			if(count%4==0)
+			{   //每行四个数，第五个数换到下一行
+				document.write("<br>");
+			}
+		}
+		year++;
+	}
+	
+	var a=Number(prompt("请输入a的值"));
+	var b=Number(prompt("请输入b的值"));
+	var c=Number(prompt("请输入c的值"));
+	var max=a;
+	if(b>max){
+		max=b;
+	}
+	if(c>max){
+		max=c;
+	}
+	alert("最大值是"+max);
+	
+	
+	
+	
+	var x=1;
+	while(x<=4){
+		document.write("**********<br>");
+		x++;
+	}
+	
+	
+	var x=1;
+	while(x<=4){
+		var y=1;
+		while(y<=10){
+			document.write("*");
+			y++;
+		}
+		document.write("<br>");
+		x++;	
+	}
+	
+	
+	for(var x=1;x<=4;x++){
+		for(var y=1;y<=10;y++){
+			document.write("*");
+		}
+		document.write("<br>");
+	}
+	
+	
+	
+	var x=1;
+	while(x<=5){
+		var y=1;
+		while(y<=x){
+		document.write("*");
+		y++;
+		}
+		document.write("<br>");
+		x++;
+	}
+	
+	
+	for(var x=1;x<=5;x++){
+		for(var y=1;y<=x;y++){
+			document.write("*");	
+		}
+		document.write("<br>");
+	}
+	
+	
+	var x=1;   //声明变量x，是第一行
+	while(x<=5){    //一共五行
+		var y=5;   //声明变量y，一共有五列
+		while(y>=x){	//外行控制每行个数
+			document.write("*");
+			y--;    //每行依次减少一个*
+		}
+			document.write("<br>");
+			x++;    //依次增加行数
+	}
+	
+	
+	
+	//鸡兔同笼  i是鸡23，j是兔12
+	for(var i=1;i<35;i++){
+		for(var j=1;j<35;j++){
+			if(i+j==35&&(i*4+j*2==94)){
+				document.write("兔："+i+"------鸡："+j);	
+			}	
+		}	
+	}
+	
+	
+	
+	
+	//九九乘法表    &times;
+	for(var i=1;i<=9;i++){
+		for(var j=1;j<=i;j++){
+			var s=i*j;			
+			document.write(i+"*"+j+"="+s+"&nbsp;&nbsp;&nbsp;");	
+		}
+		document.write("<br>");
+	}
+	
+	
+
+	
+	
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单事件</title>
+	<style>
+	ul{padding:10px;margin:0;list-style: none;}
+	#dataList{display:none;width:200px;border:1px solid #ddd;}
+	#dataList li{padding-left:10;border-bottom:1px dashed #ddd;line-height:1.5;}
+	#dataList li:last-child{border:none;}
+	</style>
+</head>
+<body>
+
+<h1>快来点名器</h1>
+	<input type="text" value="" id="txt">
+	<ul id="dataList">
+		<li>哈哈哈快来</li>
+		<li>范德萨范德萨发</li>
+		<li>范德萨发大水</li>
+		<li>范德萨发大水</li>
+		<li>放大法萨芬</li>
+		<li>范德萨范德萨发</li>
+	</ul>
+	
+	<script>
+	var data=document.getElementsByTagName('input')[0];
+	var datalist=document.getElementsByTagName('ul')[0];
+	data.onfocus=function(){
+		//alert(1);
+		datalist.style.display="block";
+	}
+	data.onblur=function(){
+		//alert(1);
+		datalist.style.display="none";
+	}
+
+	//阻止右键的默认行为   1.return false   2.事件对象.preventDefault()
+	/*document.oncontextmenu = function(e){
+		//alert("右键被按下");
+		//return false;
+		e.preventDefault();
+	}*/
+
+	</script>
+</body>
+</html>

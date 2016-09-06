@@ -1,0 +1,221 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+
+<input type="button" id="btn" value="点击" />
+<input type="text" id="txt" value="" />
+<input type="button" id="btn1" value="大大" />
+
+
+
+<input id="txt1" type="text" value="" />
+<input id="btn2" type="button" value="单机" />
+<input id=tui type="button" value="生成" />
+
+
+<input id="txt2" type="text" placeholder="请输入用户名" />
+<input id="btn3" type="button" value="确定" /><br><br>
+
+
+&nbsp;用户名:<input type="text" id="txt3" placeholder="请输入用户名"><br>
+&nbsp;&nbsp;密码:<input type="password" id="mima" placeholder="请输入密码"><br>
+确认密码:<input type="password" id="mima1" placeholder="请输入密码"><br>
+输入昵称:<input type="text" id="txt4" placeholder="请输入昵称">
+
+
+<div id="box"></div>
+<script>
+/*var obtn=document.getElementById("btn")
+var otxt=document.getElementById("txt")
+var obox=document.getElementById("box")
+var arr=['范德萨发范德萨','范德萨发','范德萨发的发']
+var arr1=""
+for(var i=0;i<arr.length;i++){
+
+	arr1+='<li><a href="#">'+arr[i]+'</a></li>'
+	obox.innerHTML=arr1
+}*/
+
+
+//var str="千锋教育"
+
+//alert(str.charAt(2))  //获取字符串里的元素
+//alert(str.charCodeAt())   //千的ascii码为21315
+//alert(String.fromCharCode(21315))        //把ascii码转成千字,对象固定
+/*var str1="";
+for(var i=1;i<=500;i++){
+
+str1+=String.fromCharCode(i)+" ";
+
+
+}
+document.body.innerHTML=str1
+//str="千峰教育范德萨发范德萨千峰教育范德萨到反感千锋教育"
+//s="千峰教育"
+//alert(str.indexOf(s,12))
+//alert(str.lastIndexOf(s))
+//alert(str.slice(1,7))
+//alert(str.substring(5))
+//alert(str.substr(1,7))
+
+
+//点击小游戏
+var arr=[];
+for(var i=1;i<=100;i++){
+	if(i%3==0&&i%5==0){
+		arr.push("FlishFloat")
+	
+	}else if(i%3==0){
+		arr.push("Flish")
+	}else if(i%5==0){
+		arr.push("Float")
+	}else{
+		arr.push(i)
+	}
+}
+var j=0
+var obtn=document.getElementById("btn")
+obtn.onclick=function(){
+	j++;
+	if(j>100){
+		j==0
+	}
+	obtn.value=arr[j]
+	
+}*/
+  
+  
+  
+  //插入一个新数然后排列
+/*var arr=[5,7,9,10,21,25,78,]
+
+var btn=document.getElementById("txt")
+var box=document.getElementById("box")
+box.innerHTML=arr
+btn1.onclick=function(){
+	var Btn=btn.value
+	arr.push(Btn)
+
+	arr.sort(function(a,b){return b-a}).reverse();
+
+	box.innerHTML=arr
+
+	btn.value="";
+
+
+
+	}*/
+	
+	//var i=3.5
+//alert(Math.round(i))  //四舍五入取整数
+//alert(Math.floor(i))  //向下取整
+//alert(Math.ceil(i))  //向上取整
+//alert(Math.abs(i))  //取绝对值
+//alert(Math.sqrt(i))  //求跟方
+//Math.random()    //生成随机数
+//alert(Math.pow(10,6))
+
+
+
+//生成随机数
+/*var n1,n2,n3,n4,n5
+var n1=Math.floor(Math.random()*10)
+var n2=Math.floor(Math.random()*10)
+var n3=Math.floor(Math.random()*10)
+var n4=Math.floor(Math.random()*10)
+var n5=Math.floor(Math.random()*10)
+
+var sum=n1*10000+n2*1000+n3*100+n4*10+n5
+
+alert(sum)
+
+var ar=sum+" "   //把数字转变成成字符串
+document.write(ar)
+
+
+//求12位验证码
+var txt1=document.getElementById("txt1")
+var btn2=document.getElementById("btn2")
+var arr=[];
+btn2.onclick=function(){
+	var txt2=txt1.value
+	arr=txt2.split("");
+	
+	if(txt2.length!=12){
+	    alert("请输入12位数")
+		
+	}else{
+			var reslut=0;
+			var reslut1=0;
+			for(var i=0;i<arr.length;i++){
+		
+			if(i%2==0){
+				reslut+=arr[i]
+			}else{
+				reslut1+=arr[i]
+			}
+			
+			var inum=(reslut+reslut1*3)%10
+			if(inum==0){
+				inum=0
+			}else{
+				inum=10-inum
+			}
+			
+		}
+		arr.push(inum)
+	}
+txt1.value=arr.join("")
+}
+
+
+//求一个字符串里大小写字母各出现多少
+var str="ADFSDFgfdsgfdgadfSDADEWfds"
+var small=0         //储存小写次数
+var big=0         //储存大写次数
+for(var i=0;i<str.length;i++){
+	var scholl=str.charCodeAt(i)
+	if(scholl>=65&&scholl<=90){        //大写的要求
+		big++
+	}if(scholl>=97&&scholl<=122){  //小写的要求
+		small++
+	}
+}
+document.write("小写"+small+"大写"+big) */  //检测结果!
+
+
+
+
+
+//随机生成验证码
+var tui=document.getElementById("tui")   
+var box=document.getElementById("box")
+
+tui.onclick=function(){    
+	var arr=[]    //建立空数组
+	while(arr.length<4){           //限制数组长度
+		var n=parseInt(Math.random()*75+48);        //设置ascii码变量
+		if((n>=48&&n<=57)||(n>=65&&n<=90)||(n>=97&&n<=122)){     //设置变量条件
+			arr.push(String.fromCharCode(n));            //把ascii码转成数组
+		}	
+	}
+	box.innerHTML=arr.join("");  // arr.join是去除数组里面逗号
+
+}
+
+
+//var txt2=document.getElementById("txt2")
+//var btn2=document.getElementById("btn2")
+ var str=[2,4,5,8]
+//str.splice(2)
+//document.write(str)
+alert(str.length)
+
+</script>
+</body>
+</html>

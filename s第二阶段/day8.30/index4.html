@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选项卡</title>
+    <style>
+        ul{width:300px;height:40px;border:#888 solid 1px;
+            border-radius: 5px;padding:0px;margin-top:0px;}
+        ul > li{list-style: none; float:left;width:90px;height:40px;
+            text-align: center;font-size:18px;line-height: 40px;margin-left:5px;
+            border-left:dashed;}
+        ul > li.active{border:none;margin-left:0px;}
+        .container{position:relative;border:#888 solid 1px;
+            width:302px;height:200px;padding:0px;border-top:none;}
+        .container > div{width:300px;height:200px;
+            position:absolute;margin-top:0px;top:40px;display: none;}
+        .container > div.active{display: block;}
+
+    </style>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+           $("li").mouseenter(function(){
+              var iIndex=$(this).index();
+               $(".container>div").css("display","none");
+               $(".container>div").eq(iIndex).css("display","block");
+
+           });
+
+        });
+
+    </script>
+</head>
+<body>
+<div class="container">
+    <ul>
+        <li class="first">新闻</li>
+        <li>娱乐</li>
+        <li>电影</li>
+    </ul>
+    <div class="first">
+        新闻新闻新闻新闻新闻新闻新闻新闻
+        新闻新闻新闻新闻新闻新闻新闻新闻
+        新闻新闻新闻新闻新闻新闻新闻新闻
+        新闻新闻新闻新闻新闻新闻新闻新闻
+    </div>
+    <div>
+        娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐
+        娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐
+        娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐
+        娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐
+    </div>
+    <div>
+        电影电影电影电影电影电影电影电影
+        电影电影电影电影电影电影电影电影
+        电影电影电影电影电影电影电影电影
+        电影电影电影电影电影电影电影电影
+    </div>
+</div>
+</body>
+</html>

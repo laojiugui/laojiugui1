@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>代码JQ练习</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .list{
+            line-height:30px;
+        }
+    </style>
+
+    <script src="js/jquery-1.12.4.js"></script>
+    <script>
+        $(function(){   //类似于js中的window.onload;
+            $("#btn").click(function(){               //$("#box")相当于  document.getElementById(id);
+
+                $("#box").toggle(1000);
+            });
+        });
+
+        $(function(){
+            var oBox1=$("#box1");
+            var oBox=$(".box");
+            var oP=$("p");
+
+
+            oBox.click(function(){
+                $(this).hide(1000);
+
+            });
+        });
+
+
+
+        $(function(){
+
+            $("#list").toggle(1000);
+
+            $("#btn1").click(function(){
+               $("#list").toggle(1000);
+
+
+            });
+            var iList=$(".list");
+            iList.click(function(){
+
+                $(this).hide(1000);
+            })
+
+        });
+
+
+
+
+    </script>
+</head>
+<body>
+<input id="btn" value="点击我" type="button">
+<div id="box" style="width:300px;height:200px;background:#000000"></div>
+
+<div id="box1">
+    <p class="box">天地不仁,以万物为刍狗</p>
+    <p class="box">天地不仁,以万物为刍狗</p>
+    <p class="box">天地不仁,以万物为刍狗</p>
+    <p class="box">天地不仁,以万物为刍狗</p>
+    <p>天地不仁,以万物为刍狗</p>
+    <p>天地不仁,以万物为刍狗</p>
+</div>
+
+
+<input id="btn1" value="下拉菜单" type="button" style="border:0;outline:none;font-size:20px;cursor:pointer;margin-top:30px">
+<ul id="list" style="list-style:none;">
+    <li class="list">疯狂的时间按付款的</li>
+    <li class="list">疯狂的时间按付款的</li>
+    <li class="list">疯狂的时间按付款的</li>
+    <li class="list">疯狂的时间按付款的</li>
+    <li class="list">疯狂的时间按付款的</li>
+    <li class="list">疯狂的时间按付款的</li>
+</ul>
+
+
+</body>
+</html>

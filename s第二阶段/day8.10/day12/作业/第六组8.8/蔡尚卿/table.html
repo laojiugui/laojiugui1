@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表格</title>
+	<style>
+		#table{min-height: 100px;border: 1px solid red;border-collapse: collapse;}
+		#table td,#table th{height: 40px;border:1px solid red;width: 80px;text-align: center;}
+		input{border:0;outline:none;}
+	</style>
+</head>
+<body>
+
+	<input type="text" placeholder="姓名" id="txt1" class="txt">
+	<input type="text" placeholder="年龄" id="txt2" class="txt">
+	<input type="text" placeholder="性别" id="txt3" class="txt">
+	<input type="button" value="生成" id="btn1">
+
+	<table id="table">
+		<tr>
+			<th>姓名</th>
+			<th>年龄</th>
+			<th>性别</th>
+		</tr>
+
+	</table>
+
+	<script>
+		var btn=document.getElementById("btn1");
+		var txt=document.getElementsByClassName("txt");
+		var name1=document.getElementById("txt1");
+		var age=document.getElementById("txt2");
+		var sex=document.getElementById("txt3");
+		var table=document.getElementById("table");
+		btn.onclick=function () {
+			var tr=document.createElement("tr");
+			for(var i=0;i<3;i++){
+				var td=document.createElement("td");
+				var inp=document.createElement("input");
+				inp.value=txt[i].value;
+				td.appendChild(inp);
+				tr.appendChild(td);
+			}
+			table.appendChild(tr);
+			name1.value="";
+			age.value="";
+			sex.value="";
+		}
+document.onclick=function (e) {
+	console.log(e.button);
+}
+
+
+
+	</script>
+</body>
+</html>

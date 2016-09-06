@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>位置关系</title>
+    <style>
+        /*#box{
+            position:relative;
+            width:500px;
+            height:500px;
+            background:tan;
+            border:2px solid red;
+        }
+        #box1{
+            position:absolute;
+            margin-left:20px;
+            width:300px;
+            height:300px;
+            background:#fff;
+        }
+        #box2{
+            width:100px;
+            height:100px;
+            border:2px solid #33FF00;
+        }*/
+        #box3{
+            width:200px;
+            height:200px;
+            background:#00ff00;
+        }
+    </style>
+    <script src="../练习8.31/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            /*console.log($("#box").offset().left);
+            console.log($("#box").offset().top);
+            console.log($("#box").position().left);
+            console.log($("#box").position().top);
+            console.log($("#box1").offset().left);
+            console.log($("#box1").offset().top);
+            console.log($("#box1").position().left);
+            console.log($("#box1").position().top);
+            console.log($("#box2").width());
+            console.log($("#box2").innerWidth());
+            console.log($("#box2").outerWidth());*/
+
+
+            /*$("button").on("click",function(){
+                $("#box3").toggle(1000);             //  on绑定事件
+            });
+            $("#wrap").on("click","button",function(){
+                $("#box3").toggle(1000);
+            });
+
+
+
+
+            $("#wrap").delegate("button","click",function(){
+                $("#box3").toggle(1000);         //绑定事件
+
+            });*/
+
+
+
+            var btn=$("<button>");
+                btn.text("未来元素");          //创建新元素
+                $("#wrap").prepend(btn);
+
+            /*$("button").bind("click",function(){      //bind绑定事件方法
+               $("#box3").toggle(1000);
+            });*/
+            $("button").unbind("click",function(){      //bind绑定事件方法
+                $("#box3").toggle(1000);
+            });
+
+
+        });
+    </script>
+</head>
+<body>
+<div id="wrap">
+    <button>已有元素</button>
+    <div id="box3">
+
+    </div>
+    <!--<div id="box">
+        <div id="box1"></div>
+    </div>
+    <div id="box2"></div>-->
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+<script>
+	/*1.
+	//征兵条件
+	var sex = "男";
+	var height = 170;
+	var aimao = "五官端正";
+	var shenti = "身体健康";
+	var  shili = 5.0;
+	alert(sex=="男" && heigth==170 && waimao=="五官端正" && shenti=="身体健康" && shili==5.0);
+	
+	var num1 = 23333;
+	var nu = null;
+	var bool = true;
+	var num2 = num1+" ";
+	//alert(num2);
+	//alert(typeof num2); //string
+	
+	//String() 把字符串以外的数据类型转换成字符串
+	var c;
+	var num1 = 1;
+	//alert(String(c)); //undefind
+	alert(String(num1));
+	//alert(typeof String(num1)); //string
+	
+	//Boolean()
+	//把布尔型以外的数据类型转换为布尔型
+	var num1 = 233;
+	alert(Boolean(num1));
+	alert(typeof Boolean(num1));
+	//非0数字都是true 0 是false
+	var str1 =" ";
+	alert(Boolean(str1));
+	alert(typeof Boolean(str1));
+	//除了空字符（不是空格）是false 剩下的字符串都是true
+	//undefind  //false
+	//null  //false
+	
+	var a =89;
+	alert("奋战"+parseInt(a/24)+"天"+%24+"小时");
+	
+	var a = 2;
+	if(a<0){
+		alert("a大于0");
+	}else{
+		alert("a小于0");
+	}
+	
+	var b = prompt("请输入密码");
+	if(b == 111111){
+		alert("密码正确");
+	}else{
+		alert("密码错误");
+	}
+	
+	var num = prompt("请输入一个整数");
+	alert(typeof num);
+	if(num == 0){
+		alert("您输入的是一个0");
+	}else if(num>0){
+		alert("您输入的是一个大于0的数");
+	}else if(num<0){
+		alert("您输入的是一个小于0的数");
+	}else{
+		alert("您输入的不是一个数");
+	}
+	
+	var num1 = prompt("请输入第一个整数");
+	var num2 = prompt("请输入第二个整数");
+	var ysf = prompt("请输入一个运算符");
+	if(ysf == "+"){
+		alert(parseInt(num1)+parseInt(num2));
+	}else if(ysf == "-"){
+		alert(num1-num2);
+	}else if(ysf == "*"){
+		alert(num1*num2);
+	}else if(ysf == "/"){
+		alert(num1/num2);
+	}
+	
+	//嵌套分支
+	var num = Number(prompt("请输入一个整数"));
+	if(num >0){
+		if(num<=10){
+			alert("您输入的是一个大于0小于等于10的数字");
+		}else if(num>10 && num<=50){
+			alert("您输入的是一个大于10小于等于50的数字");
+		}else if(num>50 && num<=100){
+			alert("您输入的是一个大于50小于等于100的数字")
+		}else{
+			alert("您输入的是一个大于等于100的数字");
+		}
+	}else if(num <0){
+		alert("您输入的是一个小于0的数");
+	}else if(num == 0){
+		alert("您输入的是一个0");
+	}else{
+		alert("您输入的不是一个数字");
+	}
+	
+	var num = Number(prompt("请输入一个整数"));
+	if(num>=0){
+		if(num%2 == 0){
+			alert("您输入的是一个偶数");
+		}else{
+			alert("您输入的是一个奇数");
+		}
+	}else{
+		alert("您输入的数字不合法");
+	}
+	
+	var day = Number(prompt("请输入一个整数"));
+	switch(day){
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+		case 5:alert("上课");break;
+		case 6:alert("自习");break;
+		case 7:alert("休息");break;
+		default:alert("输入错误");break;
+	}
+
+	var num1 = Number(prompt("请输入第一个整数"));
+	var num2 = Number(prompt("请输入第二个整数"));
+	var ysf = prompt("请输入一个运算符");
+	switch(ysf){
+		case "+":alert(num1+num2);break;
+		case "-":alert(num1-num2);break;
+		case "*":alert(num1*num2);break;
+		case "/":alert(num1/num2);break;
+		case "%":alert(num1%num2);break;
+		default:alert("输入错误");
+	}
+	*/
+	/*2.
+	var num1 = Number(prompt("请输入一个年份"));
+		if(num1%400==0 ||(num1%4==0 && num1%100 != 0)){
+			alert("您输入的是一个闰年");
+		}else{
+			alert("您输入的不是闰年");
+		}
+	*/	
+	/*3.
+	var num2 = Number(prompt("请输入一个整数"));
+		if(num2>0){
+			alert("您输入的数大于0");
+		}else if(num2<0){
+			alert("您输入的数小于0");
+		}else{
+			alert("您输入的是0");
+		}
+	*/
+	/*4.
+	var num3 = Number(prompt("请输入一个整数"));
+		if(num3%3==0){
+			alert("您输入的是3的倍数");
+		}
+		else{
+			alert("您输入的不是3的倍数");
+		}
+	*/
+	/*5.
+	var height = Number(prompt("请输入身高"));
+	var weight = Number(prompt("请输入体重(斤)"));
+	var sweight = (height-108)*2;
+		if(weight-sweight >10){
+			alert("您有点超重")
+		}else if(weight-sweight< -10){
+			alert("您有点偏瘦");
+		}else{
+			alert("身材很好");
+		}
+	*/
+	/*6.
+	var grade = Number(prompt("请输入成绩"));
+		if(grade>=90 && grade<=100){
+			alert("您的成绩为A");
+		}
+		else if(grade>=80 && grade<90){
+			alert("您的成绩为B");
+		}
+		else if(grade>=70 && grade<80){
+			alert("您的成绩为C");
+		}
+		else if(grade>=60 && grade<70){
+			alert("您的成绩为D");
+		}
+		else{
+			alert("不合格");
+		}
+	*/
+	/*7.
+	var mon = Number(prompt("请输入2016年的一个月份"));
+		switch(mon){
+			case 1: alert("天数是31天");break;
+			case 2: alert("天数是29天");break;
+			case 3: alert("天数是31天");break;
+			case 4: alert("天数是30天");break;
+			case 5: alert("天数是31天");break;
+			case 6: alert("天数是30天");break;
+			case 7:
+			case 8: alert("天数是31天");break;
+			case 9: alert("天数是30天");break;
+			case 10: alert("天数是31天");break;
+			case 11: alert("天数是30天");break;
+			case 12: alert("天数是31天");break;
+			default:alert("输入错误");
+		}
+	*/
+	/*8.
+	var num4 = Number(prompt("请输入一个5位数"));
+	var num5 = parseInt(num4%10);
+	var num6 = parseInt((num4%100-num5)/10);
+	var num7 = parseInt((num4%1000-num6)/100);
+	var num8 = parseInt((num4%10000-num7)/1000);
+	var num9 = parseInt((num4-(num4%10000))/10000);
+		alert(num5);
+		alert(num6);
+		alert(num7);
+		alert(num8);
+		alert(num9);
+	*/
+	/*9.
+	var a = Number(prompt("请输入一个整数a"));
+	var b = Number(prompt("请输入一个整数b"));
+	var c = Number(prompt("请输入一个整数c"));
+		if(a>b && a>c){
+			alert("最大值a的值是"+a);
+		}
+		else if(b>a && b>c){
+			alert("最大值b的值是"+b);
+		}
+		else if(c>a && c>b){
+			alert("最大值c的值是"+c);
+		}
+		else{
+			alert("a,b,c的值相等");
+		}
+	*/
+	/*10.
+	var count = 0;
+	for(var year=1000; year<=2000; year++){
+		if(year%400==0 ||(year%4==0 && year%100 !=0)){	
+			document.write(year+"&nbsp;");
+			count++;
+			if(count%4==0){
+				document.write("<br />");
+			}
+		}
+	}
+	*/
+</script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script>
+		var years=Number(prompt ("请输入年份"))
+		if(years%4==0&&years%100!=0||years%400==0){
+			alert(years+ "为闰年")
+			}else {
+				alert(years+ "为平年")
+				} 
+	
+	</script>
+    <script>
+		var f=Number(prompt("请输入一个数"));
+		if(f>0){
+			alert(f+"是个大于0的数")
+			}else if(f==0){
+				alert(f + "等于0");
+				}else if(f<0){
+				alert(f + "是个小于0的数")	
+					}else{
+						alert("不合法")
+						}
+	
+				var b=Number(prompt ("请输入一个数"));
+				if(b%3==0){
+					alert(b + "是3的倍数")
+					}else{
+					alert(b + "不是3的倍数")	
+						}
+		var weight=Number(prompt ("请输入您的体重"))			
+			var toll=Number(prompt ("请输入您的身高"));
+			var sweight=(toll-108)*2;			
+				if(weight==sweight){
+					alert("您的身材相当完美！")
+					}else if(weight-sweight>0&&weight-sweight<=10){
+					alert("您的身体健硕")	
+						}else if(weight-sweight<0&&weight-sweight>=-10){
+					alert("您苗条的身材秒杀千万少女！")		
+							}else{
+					alert("您的身材走形严重，记得加强锻炼哦！")			
+								}		
+				var score=Number(prompt ("请输入分数"));
+				if(score>90){
+					alert("A");
+				}else if(score>=80&&score<=90){
+					alert("B");
+					}else if(score>=70&&score<80){
+					alert("C");	
+						}else if(score>=60&&score<70){
+					alert("D")		
+							}else{
+						alert("留级")		
+								} 
+				
+				var mouth=Number(prompt("请输入2016年的月份"))
+				switch(mouth){
+					case 1:
+					case 3:
+					case 5:
+					case 7:
+					case 8:
+					case 10:
+					case 12:alert("这个月31天");break;
+					case 2:alert("这个月29天");break;
+					case 4:
+					case 6:
+					case 9:
+					case 11:alert("这个月30天");break;
+					default:alert("不合法");break;
+					}
+			var number=Number(prompt ("请输入一个5位数"));
+			var a,b,c,d,e;
+			a=number/10000;
+			
+			alert("万位为:" + parseInt (a));
+			b=(number-parseInt (a)*10000)/1000;
+			alert("千位为:" + parseInt (b));	
+			c=(number-parseInt (a)*10000-parseInt(b)*1000)/100;
+			alert("百位为:" + parseInt (c));
+			d=(number-parseInt (a)*10000-parseInt(b)*1000-parseInt (c)*100)/10;
+			alert("十位为:" + parseInt (d));	
+			e=(number-parseInt (a)*10000-parseInt(b)*1000-parseInt (c)*100-parseInt (d)*10);
+			alert("个位为:" + e);
+			
+		var  num1,num2,num3;
+			num1=Number(prompt ("请输入一个数"));
+			num2=Number(prompt ("请输入一个数"));
+			num3=Number(prompt ("请输入一个数"));
+			if(num1-num2>=0){
+				if(num1-num3>0){
+					alert("最大值为" + num1)
+					}else if(num1-num3==0){
+						alert("最大值为两个" + num1 +"和" + num3)
+						}else{
+						alert("最大值为" + num3)
+						}
+				}else if(num1-num2<0){
+						if(num2-num3>0){
+						alert("最大值为" + num2)	
+							}else if(num2-num3==0){
+								alert("最大值为两个" + num2 +"和" + num3)
+								}else{
+							alert("最大值为" + num3)	
+								}
+					
+					}else{
+						alert("相等");
+						}  
+						
+			var	i=0;
+      for(a=1000;a<=2000;a++)
+     if(a%4==0&&a%100!=0||a%400==0)
+       {
+         document.write(a+ " ");
+             i++;
+             if(i%4==0){
+                  document.write("<br>");
+                 }
+				 }
+						
+	</script>
+    
+
+</body>
+</html>

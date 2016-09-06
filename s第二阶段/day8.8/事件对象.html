@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件对象</title>
+</head>
+<body style="height:2000px">
+	<input type="button" value="事件对象" id="btn">
+	<script>
+	// var a="我有一头小毛驴";
+	// function aa(){
+	// 	alert(a);  //undefined
+	// 	var a="从来都不骑";
+	// 	var b="小毛驴";
+	// }
+	// aa();
+	// alert(a);  //我有一头小毛驴
+	// alert(b);   //函数内部   报错  b is not define
+	//垃圾回收机制  当函数执行完成  函数内的变量全部被销毁  
+	//事件对象
+	//用来记录一些事件发生时的相关的信息的对象
+	var btn=document.getElementById('btn');
+	// btn.onclick=function(ev){
+	// 	alert(ev);
+	// }
+
+	document.onclick=function(ev){
+		//事件对象的兼容    IE window.event    普通浏览器 传参数 参数就是那个事件对象
+
+		//事件对象  属性  clientX clientY   获取鼠标坐标
+		var evn=window.event||ev;
+		alert(evn.clientX+"======="+evn.clientY);
+	}
+
+	</script>
+</body>
+</html>

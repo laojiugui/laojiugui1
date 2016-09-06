@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+<script>
+	var a=34234;
+	alert(Number(a));
+	//2
+	/*
+	var year=Number(prompt()); 
+	if((year%4==0&&year%100!=0)||(year%400==0)){
+		alert(year+"是闰年");
+	}else{
+		alert(year+"是平年");
+	}
+	*/
+	//3
+	/*
+	var num31=Number(prompt());
+	if(num31>0){
+		alert(num31+"大于0");
+	}else if(num31<0){
+		alert(num31+"小于0");
+	}else if(num31==0){
+		alert(num31+"等于0");
+	}else{
+		alert("请重新输入");
+	}
+	*/
+	//4
+	/*
+	var num41=Number(prompt());
+	if(num41%3==0){
+		alert(num41+"是3的倍数");
+	}
+	*/
+	//5
+	/*
+	var height=Number(prompt());
+	var sWeight=(height-108)*2;
+	var weight=Number(prompt());
+	if(weight==sWeight||(weight<sWeight&&weight>sWeight-10)||(weight>sWeight&&weight<sWeight+10)){
+		alert("身材完美");
+	}else if(weight>sWeight+10){
+		alert("吃饱啦才有力气减肥");
+	}else if(weight<sWeight+10){
+		alert("要多吃啊，少运动");
+	}else{
+		alert("重新输入");
+	}
+	*/
+	//6
+	/*
+	var num6=Number(prompt());
+	if(num6>=90&&num6<=100){
+		alert("A");
+	}else if(num6<90&&num6>=80){
+		alert("B");
+	}else if(num6<80&&num6>=70){
+		alert("C");
+	}else if(num6<70&&num6>=60){
+		alert("D");
+	}else if(num6<60){
+		alert("留留更牛逼");
+	}else{
+		alert("超标了");
+	}
+	*/
+	//7
+	/*
+	var num7=Number(prompt("请重新输入2016年的1月~12月"));
+	
+	switch(num7){
+		case 1: ;
+		case 3: ;
+		case 5: ;
+		case 7: ;
+		case 8: ;
+		case 10: ;
+		case 12:alert(num7+"有31天") ;break;
+		case 4: ;
+		case 6: ;
+		case 9: ;
+		case 11:alert(num7+"有30天") ;break;
+		case 2:alert(num7+"有29天") ;break;
+		default:alert("按要求输入");
+	}
+	*/
+	//8
+	/*
+	var num8=Number(prompt("请输入5个数字"));
+	if(num8>=99999&&num8<=-99999){
+		alert("重新输入");
+	}else if(num8<=99999&&num8>=-99999){
+		document.write("万位数为"+parseInt(num8/10000)+"<br>");
+		document.write("千位数为"+parseInt(num8%10000/1000)+"<br>");
+		document.write("百位数为"+parseInt(num8%1000/100)+"<br>");
+		document.write("十位数为"+parseInt(num8%100/10)+"<br>");
+		document.write("个位数为"+parseInt(num8%10)+"<br>");	
+	}else{
+		alert("输入错误");
+	}
+	*/
+	//9
+	/*
+	var a=Number(prompt());
+	var b=Number(prompt());
+	var c=Number(prompt());
+	if(a>b&&a>c){
+		alert(a);
+	}else if(a<c&&c>b){
+		alert(c);
+	}else if(a<b&&b>b){
+		alert(b);
+	}else if(a==b&&b==c){
+		alert(c);
+	}else{
+		alert("输入错误");
+	}
+	*/
+	//10
+	/*
+	var a;
+	if(a<=1000&&a>=2000){
+		alert("输入错误");
+	}else{
+		
+			for(var a=1000;a<=2000;a++){
+				if((a%4==0&&a%100!=0)||(a%400==0)){
+						document.write(a+"&nbsp");
+					
+				for(var b=1;b<=4 ;b++){
+					
+					if(b%4==0){
+					document.write("<br>");
+					}
+				}
+			}
+			
+		}
+	}
+	*/
+</script>
+
+
+<script>
+
+	//var sex="男";
+	//var height="170以上";
+	//var eyes="5.0";
+	//alert(sex=="男"&&height=="170以上"&&eyes=="5.0");
+	//prompt("你的身高","符合要求");
+	//alert(sex=="女"&&height=="170以上"&&eyes=="5.0");
+	//prompt("你的身高","不符合要求");
+	//alert(sex=="男"||height=="170以下"||eyes=="5.0");
+	//prompt("你的身高","符合要求");
+	//alert(!sex=="男");
+	//prompt("你的身高","不符合要求");
+	
+	//var num1=1;
+	//var str="abc";
+	//var bool=true;
+	//var c;
+	//var nu=null;
+	//var num2=num1+"";
+	//var d="";
+	//var e=" ";
+	//将字符串以外的数据类型转换为字符串；
+	//alert(num2);
+	//alert(typeof num2);
+	//alert(String(bool));
+	//alert(typeof String(bool));
+	//alert(String(c));
+	//alert(Number(nu));
+	//alert(String(nu));
+	//alert(typeof String(nu));
+	
+	//将boolean以外的数据类型转换为布尔型
+	//alert(typeof Boolean(str));
+	//alert(Boolean(num1));
+	//alert(Boolean(str));
+	//alert(typeof Boolean(str));
+	
+	//alert(Boolean(c));
+	//alert(typeof Boolean(c));
+	
+	//alert(Boolean(nu));
+	//alert(typeof Boolean(nu));
+	
+	//alert(Boolean(d));
+	//alert(typeof Boolean(d));
+	
+	//alert(NaN==NaN);
+	
+	//alert(Boolean(e));
+	//alert(typeof Boolean(e));
+	
+	//alert(Number(str));
+	
+	/*var a=89;
+	var b=a/24;
+	var c=a%24;
+	document.write("消防队员一共用了:"+parseInt(b)+"天,"+c+"小时");*/
+	
+	
+	//var k=-2;
+	//alert(++k + k++ + ++k + k);
+	
+	
+	/*var a=1;
+	if(a>0){
+		//alert(a+"是大于0的数");
+	}else{
+		alert(a+"是小鱼0的数");
+	
+	}*/
+	
+	
+	
+	
+	/*var num=prompt("请输入一个整数");
+	if(num>0){
+		//alert("您输入了一个大鱼0的数字");
+		
+	}else if(num<0){
+		//alert("您输入了一个小鱼0的数字");
+	}else if(num==0){
+		alert("您输入了一个等于0的数字");
+	}else{
+		alert("您输入的不是数字");
+	
+	}*/
+	
+	
+	
+	
+	/*var password=prompt("请输入您的银行卡密码",22222);
+	if(password=='111111'){
+		//alert("恭喜你，输入的密码正确");
+	}else{
+		//alert("您输入的木马有误，请重新输入");
+	}*/
+	
+	
+	
+	
+	
+	/*var num1=Number(prompt("请输入第一个数"));
+	var num2=Number(prompt("请输入第二个数"));
+	var ysf=prompt("请输入运算符");
+	if(ysf=="+"){
+		//alert(num1+num2);
+	}else if(ysf=="-"){
+		//alert(num1-num2);
+	}else if(ysf=="*"){
+		//alert(num1*num2);
+	}else if(ysf=="/"){
+		//alert(num1/num2);
+	}else if(ysf=="%"){
+		//alert(num1%num2);
+	}else{
+		//alert("您的输入不合法");
+	}*/
+	
+	/*
+	var num1=Number(prompt("请输入年份"));
+
+	
+	if((num1%4==0)&&(num1%100!=0)){
+		alert(num1+"年"+"是闰年");
+	}else if(num1%400==0){
+		alert(num1+"年"+"是瑞年");
+	}else{
+		alert(num1+"年"+"是平年");
+	}
+	*/
+	
+	/*var num1=Number(prompt("请输入一个数字"));
+	if(num1>0){
+		if(num1<=10){
+			alert("您输入的数字在0到10之间");
+		}else if(num1>10&&num1<=50){
+			alert("您输入的数字在10到50之间");
+		}
+	}else if(num1<0){
+		alert("您输入的数字小于0");
+	}else if(num1==0){
+		alert("您输入的数字等于0");
+	}else{
+		alert("您输入的数字有误");
+	}*/
+	
+	
+	/*var num1=Number(prompt("请输入一个数字"));
+	if(num1%2==0&&num1>=0){
+		alert("您输入的数字是偶数");
+	}else if(num1%2!=0&&num1>=0){
+		alert("您输入的数字是奇数");
+	}else{
+		alert("您的输入有误");
+	}*/
+	
+	
+	/*var age=Number(prompt("请输入您的年龄"));
+	if(age>15){
+		if(age<=20){
+			alert("您的年龄是"+age+"你还是一名青少年，请好好学习天天向上");
+		}else if(age>20&&age<=30){
+			alert("您的年龄是"+age+"你还是一名青年，请好好工作赚钱");
+		}else if(age>30&&age<=50){
+			alert("您的年龄是"+age+"你还是一个中年人，请照顾好自己的家人");
+		}else if(age>50){
+			alert("您的年龄是"+age+"你还是一名老年人，请保护好自己的身体");
+		}
+	}else{
+		alert("你还是一个小毛孩子");
+	}*/
+	
+	
+	/*var day=Number(prompt("请输入一个数"));
+	switch(day){
+		case 1:alert("正常上课");break;
+		case 2:alert("正常上课");break;
+		case 3:alert("正常上课");break;
+		case 4:alert("正常上课");break;
+		case 5:alert("正常上课");break;
+		case 6:alert("强制上自习");break;
+		case 7:alert("休息一天LOL:)");break;
+		default:alert("您输入的数字有误");break;
+		
+	}*/
+	
+	
+	/*var num1=Number(prompt("请输入第一个数"));
+	var num2=Number(prompt("请输入第二个数"));
+	var ysf=prompt("请输入运算符");
+	switch(ysf){
+		case "+":alert("两者的和为："+num1+num2);break;
+		case "-":alert("两者的差为："+num1-num2);break;
+		case "*":alert("两者的积为："+num1*num2);break;
+		case "/":alert("两者的商为："+num1/num2);break;
+		case "%":alert("两者取余为："+num1%num2);break;
+		default:alert("您的输入不合法");	
+    }*/
+	/*
+	var num=Number(prompt("输入一个数字"));
+	if(num>0){
+		if(num<10&&num>0){
+			alert("输入的是0~10之间的数");
+		}else if(num>=10&&num<=50){
+			alert("输入的是10~50之间的数");
+		}else if(num>=50&&num<=100){
+			alert("输入的是50~100之间的数");
+		}else{
+			alert("输入是大于100的数");
+		}
+	}else if(num==0){
+		alert("0");	
+	}else if(num<0){
+		alert("输入的是个负数");
+	}else{
+		alert("不是个数字");
+	}
+	
+	if(num1%2==0){
+		alert(num1+"是偶数");
+	}else if(num1%2!=0){
+		alert(num1+"是奇数");
+	}else{
+		alert(num1+"不是数");
+	}*/
+
+</script>
+
+
+
+
+
+<script>
+
+
+	//var sex="男";
+	//var height="170以上";
+	//var eyes="5.0";
+	//alert(sex=="男"&&height=="170以上"&&eyes=="5.0");
+	//prompt("你的身高","符合要求");
+	//alert(sex=="女"&&height=="170以上"&&eyes=="5.0");
+	//prompt("你的身高","不符合要求");
+	//alert(sex=="男"||height=="170以下"||eyes=="5.0");
+	//prompt("你的身高","符合要求");
+	//alert(!sex=="男");
+	//prompt("你的身高","不符合要求");
+	
+	//var num1=1;
+	//var str="abc";
+	//var bool=true;
+	//var c;
+	//var nu=null;
+	//var num2=num1+"";
+	//var d="";
+	//var e=" ";
+	//将字符串以外的数据类型转换为字符串；
+	//alert(num2);
+	//alert(typeof num2);
+	//alert(String(bool));
+	//alert(typeof String(bool));
+	//alert(String(c));
+	//alert(Number(nu));
+	//alert(String(nu));
+	//alert(typeof String(nu));
+	
+	//将boolean以外的数据类型转换为布尔型
+	//alert(typeof Boolean(str));
+	//alert(Boolean(num1));
+	//alert(Boolean(str));
+	//alert(typeof Boolean(str));
+	
+	//alert(Boolean(c));
+	//alert(typeof Boolean(c));
+	
+	//alert(Boolean(nu));
+	//alert(typeof Boolean(nu));
+	
+	//alert(Boolean(d));
+	//alert(typeof Boolean(d));
+	
+	//alert(NaN==NaN);
+	
+	//alert(Boolean(e));
+	//alert(typeof Boolean(e));
+	
+	//alert(Number(str));
+	
+	/*var a=89;
+	var b=a/24;
+	var c=a%24;
+	document.write("消防队员一共用了:"+parseInt(b)+"天,"+c+"小时");*/
+	
+	
+	//var k=-2;
+	//alert(++k + k++ + ++k + k);
+	
+	
+	/*var a=1;
+	if(a>0){
+		//alert(a+"是大于0的数");
+	}else{
+		alert(a+"是小鱼0的数");
+	
+	}*/
+	
+	
+	
+	
+	/*var num=prompt("请输入一个整数");
+	if(num>0){
+		//alert("您输入了一个大鱼0的数字");
+		
+	}else if(num<0){
+		//alert("您输入了一个小鱼0的数字");
+	}else if(num==0){
+		alert("您输入了一个等于0的数字");
+	}else{
+		alert("您输入的不是数字");
+	
+	}*/
+	
+	
+	
+	
+	/*var password=prompt("请输入您的银行卡密码",22222);
+	if(password=='111111'){
+		//alert("恭喜你，输入的密码正确");
+	}else{
+		//alert("您输入的木马有误，请重新输入");
+	}*/
+	
+	
+	
+	
+	
+	/*var num1=Number(prompt("请输入第一个数"));
+	var num2=Number(prompt("请输入第二个数"));
+	var ysf=prompt("请输入运算符");
+	if(ysf=="+"){
+		//alert(num1+num2);
+	}else if(ysf=="-"){
+		//alert(num1-num2);
+	}else if(ysf=="*"){
+		//alert(num1*num2);
+	}else if(ysf=="/"){
+		//alert(num1/num2);
+	}else if(ysf=="%"){
+		//alert(num1%num2);
+	}else{
+		//alert("您的输入不合法");
+	}*/
+	
+	/*
+	var num1=Number(prompt("请输入年份"));
+
+	
+	if((num1%4==0)&&(num1%100!=0)){
+		alert(num1+"年"+"是闰年");
+	}else if(num1%400==0){
+		alert(num1+"年"+"是瑞年");
+	}else{
+		alert(num1+"年"+"是平年");
+	}
+	*/
+	
+	/*var num1=Number(prompt("请输入一个数字"));
+	if(num1>0){
+		if(num1<=10){
+			alert("您输入的数字在0到10之间");
+		}else if(num1>10&&num1<=50){
+			alert("您输入的数字在10到50之间");
+		}
+	}else if(num1<0){
+		alert("您输入的数字小于0");
+	}else if(num1==0){
+		alert("您输入的数字等于0");
+	}else{
+		alert("您输入的数字有误");
+	}*/
+	
+	
+	/*var num1=Number(prompt("请输入一个数字"));
+	if(num1%2==0&&num1>=0){
+		alert("您输入的数字是偶数");
+	}else if(num1%2!=0&&num1>=0){
+		alert("您输入的数字是奇数");
+	}else{
+		alert("您的输入有误");
+	}*/
+	
+	
+	/*var age=Number(prompt("请输入您的年龄"));
+	if(age>15){
+		if(age<=20){
+			alert("您的年龄是"+age+"你还是一名青少年，请好好学习天天向上");
+		}else if(age>20&&age<=30){
+			alert("您的年龄是"+age+"你还是一名青年，请好好工作赚钱");
+		}else if(age>30&&age<=50){
+			alert("您的年龄是"+age+"你还是一个中年人，请照顾好自己的家人");
+		}else if(age>50){
+			alert("您的年龄是"+age+"你还是一名老年人，请保护好自己的身体");
+		}
+	}else{
+		alert("你还是一个小毛孩子");
+	}*/
+	
+	
+	/*var day=Number(prompt("请输入一个数"));
+	switch(day){
+		case 1:alert("正常上课");break;
+		case 2:alert("正常上课");break;
+		case 3:alert("正常上课");break;
+		case 4:alert("正常上课");break;
+		case 5:alert("正常上课");break;
+		case 6:alert("强制上自习");break;
+		case 7:alert("休息一天LOL:)");break;
+		default:alert("您输入的数字有误");break;
+		
+	}*/
+	
+	
+	/*var num1=Number(prompt("请输入第一个数"));
+	var num2=Number(prompt("请输入第二个数"));
+	var ysf=prompt("请输入运算符");
+	switch(ysf){
+		case "+":alert("两者的和为："+num1+num2);break;
+		case "-":alert("两者的差为："+num1-num2);break;
+		case "*":alert("两者的积为："+num1*num2);break;
+		case "/":alert("两者的商为："+num1/num2);break;
+		case "%":alert("两者取余为："+num1%num2);break;
+		default:alert("您的输入不合法");	
+    }*/
+	/*
+	var num=Number(prompt("输入一个数字"));
+	if(num>0){
+		if(num<10&&num>0){
+			alert("输入的是0~10之间的数");
+		}else if(num>=10&&num<=50){
+			alert("输入的是10~50之间的数");
+		}else if(num>=50&&num<=100){
+			alert("输入的是50~100之间的数");
+		}else{
+			alert("输入是大于100的数");
+		}
+	}else if(num==0){
+		alert("0");	
+	}else if(num<0){
+		alert("输入的是个负数");
+	}else{
+		alert("不是个数字");
+	}
+	
+	if(num1%2==0){
+		alert(num1+"是偶数");
+	}else if(num1%2!=0){
+		alert(num1+"是奇数");
+	}else{
+		alert(num1+"不是数");
+	}*/
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

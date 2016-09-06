@@ -1,0 +1,199 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+<script>
+
+	/*征兵条件*/
+	var sex='男';
+	var style='五官端正';
+	var height=175;
+	var eye=5.0;
+	var health='健康';
+	alert(sex=='男'&&style=='五官端正'&&height==175&&eye==5.0&&health=='健康');
+	alert(NaN==NaN);
+	
+	
+	/*类型转换*/
+	var num1=123;
+	var str='123';
+	var bool=true;
+	var num2;
+	var nu=null;
+	alert(Boolean(num1))
+	alert(typeof (Boolean(num1)));
+	alert(Boolean(str))
+	alert(typeof (Boolean(str)));
+	alert(Boolean(num2))
+	alert(typeof (Boolean(num2)));
+	alert(Boolean(nu))
+	alert(typeof (Boolean(nu)));
+	
+	
+	alert(String(num1))
+	alert(typeof (String(num1)));
+	alert(String(bool))
+	alert(typeof (String(bool)));
+	alert(String(num2))
+	alert(typeof (String(num2)));
+	alert(String(nu))
+	alert(typeof (String(nu)));
+	
+
+	/*时间换算*/
+	var num3='89';
+	var day=num3/24;
+	var hour=num3%24;
+	day=parseInt(day);
+	document.write("共"+day+'天'+hour+'小时');
+	
+	
+	/*自加自减*/
+	var k=-2;
+	document.write(++k + k++ + ++k + k);
+	
+	
+	
+	/*switch计算器*/
+	var num4=Number(prompt("请输入第一个数"));
+	var ysf=prompt("请输入一个运算符");
+	var num5=Number(prompt("请输入第二个数"));
+	switch(ysf){
+		case '+':alert(num4+num5);break;
+		case '-':alert(num4-num5);break;
+		case '*':alert(num4*num5);break;
+		case '/':alert(num4/num5);break;
+		case '%':alert(num4%num5);break;
+		default:alert("您输入的运算符不合法");
+	}
+	
+	
+	
+	/*查询休息*/
+	var num6=Number(prompt("请输入想查询的时间"));
+	switch(num6){
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+		case 5:alert("正常上课");break;
+		case 6:alert("今天自习");break;
+		case 7:alert("自由安排");break;
+		default:alert("您输入的日期不合法");
+	}
+	
+	
+	/*查询休息2*/
+	var num7=Number(prompt("请输入想查询的时间"));
+	switch(num7){
+		case 1:alert("正常上课");break;
+		case 2:alert("正常上课");break;
+		case 3:alert("正常上课");break;
+		case 4:alert("正常上课");break;
+		case 5:alert("正常上课");break;
+		case 6:alert("今天自习");break;
+		case 7:alert("自由安排");break;
+		default:alert("您输入的日期不合法");
+	}
+	
+	
+	/*判断奇偶*/
+	var num8=Number(prompt("请输入要判断的数"));
+	if(num8>0){
+		if(num8%2==0){
+			alert(num8+"是偶数");
+		}else{
+			alert(num8+"是奇数");	
+		}
+	}else{
+		if(num8%2==0){
+			alert(num8+"是负偶数");
+		}else{
+			alert(num8+"是负奇数");	
+		}
+	}
+	
+	
+	
+	/*判断数据范围*/
+	var num9=prompt("请输入一个数字：");
+	if(num9==0){
+		alert("您输入的数是0");
+	}else if(num9>0){
+		if(num9<=100){
+			alert("您输入的数在0到100之间");
+		}else if(num9>100&&num9<=200){
+			alert("您输入的数在100到200之间");
+		}
+		else{
+			alert("您输入的数大于200");
+		}
+	}else if(num9<0){
+		alert("您输入的数是负数");	
+	}else{
+		alert("您输入的不是一个数");	
+	}
+	
+	
+	/*单支判断*/
+	var a=1;
+	if(a>=1){
+		alert("该数不小于1");
+	}
+	
+	
+	/*双支判断*/
+	var a=2;
+	if(a>=1){
+		alert("该数不小于1");
+	}else{
+		alert("该数小于1");
+	}
+	
+	
+	var passward=prompt("请输入密码");
+	if(password==123456){
+		alert("输入正确");	
+	}else{
+		alert("请检查您输入的密码");
+	}
+	
+	/*多支判断*/
+	
+	var num10=prompt("请输入一个数字：");
+	if(num10==0){
+		alert("您输入的数是0");
+	}else if(num10>0){
+			alert("您输入的数大于0");
+	}else if(num10<0){
+		alert("您输入的数小于0");	
+	}else{
+		alert("您输入的不是一个数");	
+	}
+	
+	
+	
+	
+	/*简单计算器*/
+	var c=Number(prompt("请输入数字"));	    var y=Number(prompt("请输入运算符"));
+    var d=Number(prompt("请输入数字"));    if(y=='+'){
+		alert(c+d);
+	}else if(y=='-'){
+		alert(c-d);
+	}else if(y=='*'){
+		alert(c*d);
+	}else if(y=='/'){
+		alert(c/d);
+	}else if(y=='%'){
+		alert(c%d);
+	}else{
+		alert("您输入的运算符不合法");
+	}                                                                                    
+	
+</script>
+</body>
+</html>

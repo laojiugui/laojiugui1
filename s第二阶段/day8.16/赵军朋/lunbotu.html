@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        ul{
+            list-style:none;
+            width:3600px;
+            position: absolute;
+            left:0;
+            top:0;
+        }
+        ul li{
+            float:left
+        }
+
+        #box{
+            position:relative;
+            width:600px;
+            height:400px;
+            margin:0 auto;
+            overflow:hidden;
+
+        }
+        img{
+            width:600px;
+            height:400px;
+            vertical-align:bottom;
+        }
+        #left{
+            text-decoration: none;
+
+            position:absolute;
+            left:0;
+            top:150px;
+            width:50px;
+            height:100px;
+            background:#333333;
+            font-size:20px;
+            text-align:center;
+            line-height:100px;
+            color:#A9A9A9;
+            opacity:0.7;
+            filter: alpha(opacity=70);
+            display:none;
+
+        }
+        #right{
+            color:#A9A9A9;
+            display:none;
+            text-decoration: none;
+
+            position:absolute;
+            right:0;
+            top:150px;
+            width:50px;
+            height:100px;
+            background:#333;
+            font-size:20px;
+            text-align:center;
+            line-height:100px;
+            opacity:0.7;
+            filter: alpha(opacity=70);
+        }
+        #cir{
+            cursor: pointer;
+            text-align:center;
+            line-height:20px;
+            color:#fff;
+            font-size:10px;
+            position: absolute;
+            left:235px;
+            top:370px;
+            width:20px;
+            height:20px;
+            background:#333;
+            border-radius:50%;
+            opacity:0.7;
+            filter: alpha(opacity=70);
+
+
+
+        }
+        #cir1{
+            cursor: pointer;
+            text-align:center;
+            line-height:20px;
+            color:#fff;
+            font-size:10px;
+            position: absolute;
+            left:265px;
+            top:370px;
+            width:20px;
+            height:20px;
+            background:#333;
+            border-radius:50%;
+            opacity:0.7;
+            filter: alpha(opacity=70);
+
+        }
+
+        #cir3{
+            cursor: pointer;
+            text-align:center;
+            line-height:20px;
+            color:#fff;
+            font-size:10px;
+            position: absolute;
+            left:325px;
+            top:370px;
+            width:20px;
+            height:20px;
+            background:#333;
+            border-radius:50%;
+            opacity:0.7;
+            filter: alpha(opacity=70);
+
+        }
+        #cir4{
+            cursor: pointer;
+            text-align:center;
+            line-height:20px;
+            color:#fff;
+            font-size:10px;
+            position: absolute;
+            left:355px;
+            top:370px;
+            width:20px;
+            height:20px;
+            background:#333;
+            border-radius:50%;
+            opacity:0.7;
+            filter: alpha(opacity=70);
+
+        }
+        #cir5{
+            cursor: pointer;
+            text-align:center;
+            line-height:20px;
+            color:#fff;
+            font-size:10px;
+            position: absolute;
+            left:385px;
+            top:370px;
+            width:20px;
+            height:20px;
+            background:#333;
+            border-radius:50%;
+            opacity:0.7;
+            filter: alpha(opacity=70);
+
+        }
+        #cir2{
+            cursor: pointer;
+            text-align:center;
+            line-height:20px;
+            color:#fff;
+            font-size:10px;
+            position: absolute;
+            left:295px;
+            top:370px;
+            width:20px;
+            height:20px;
+            background:#333;
+            border-radius:50%;
+            opacity:0.7;
+            filter: alpha(opacity=70);
+
+        }
+
+    </style>
+</head>
+<body>
+<div id="box">
+    <ul id="list">
+        <li><a href="#"><img src="images/move_1.jpg"/></a></li>
+        <li><a href="#"><img src="images/move_2.jpg"/></a></li>
+        <li><a href="#"><img src="images/move_3.jpg"/></a></li>
+        <li><a href="#"><img src="images/move_4.jpg"/></a></li>
+        <li><a href="#"><img src="images/move_5.jpg"/></a></li>
+        <li><a href="#"><img src="images/move_6.jpg"/></a></li>
+    </ul>
+    <a id="left" href="#"><</a>
+    <a id="right" href="#">></a>
+    <div id="cir">1</div>
+    <div id="cir1">2</div>
+    <div id="cir2">3</div>
+    <div id="cir3">4</div>
+    <div id="cir4">5</div>
+    <div id="cir5">6</div>
+</div>
+<script>
+var oDiv=document.getElementsByTagName("div"),
+    oImg=document.getElementsByTagName("img"),
+    oLeft=document.getElementById("left"),
+    oRight=document.getElementById("right"),
+    oUl=document.getElementById("list");
+
+    oUl.innerHTML=oUl.innerHTML+oUl.innerHTML;
+    oUl.style.width=oUl.offsetWidth*2+"px";
+var isSpeed=-600,
+     timer=null;
+timer=setInterval(move,1000);
+
+oDiv[0].onmouseenter=function(){
+    clearInterval(timer);
+
+    oLeft.style.display="block";
+    oRight.style.display="block";
+};
+oDiv[0].onmouseleave=function(){
+    timer=setInterval(move,1000);
+
+    oLeft.style.display="none";
+    oRight.style.display="none";
+};
+function move(){
+    if(oUl.offsetLeft+isSpeed<-oUl.offsetWidth/2){
+        oUl.style.left=0;
+    }else if(oUl.offsetLeft+isSpeed>0){
+        oUl.style.left=-oUl.offsetWidth/2;
+    }
+    oUl.style.left=oUl.offsetLeft+isSpeed+"px";
+}
+
+
+
+oLeft.onclick=function(){
+
+    move();
+
+};
+oRight.onclick=function(){
+
+};
+
+
+
+oDiv[1].onmouseenter=function(){
+    oDiv[1].style.background="red"
+    oUl.style.left=0;
+};
+oDiv[2].onmouseenter=function(){
+
+    oDiv[2].style.background="red";
+    oUl.style.left=-600+"px";
+};
+oDiv[3].onmouseenter=function(){
+
+    oDiv[3].style.background="red"
+    oUl.style.left=-1200+"px";
+};
+oDiv[4].onmouseenter=function(){
+
+    oDiv[4].style.background="red"
+    oUl.style.left=-1800+"px";
+};
+oDiv[5].onmouseenter=function(){
+
+    oDiv[5].style.background="red"
+    oUl.style.left=-2400+"px";
+};
+oDiv[6].onmouseenter=function(){
+
+    oDiv[6].style.background="red"
+    oUl.style.left=-3000+"px";
+};
+oDiv[1].onmouseleave=function(){
+    oDiv[1].style.background="";
+};
+oDiv[2].onmouseleave=function(){
+    oDiv[2].style.background="";
+};
+oDiv[3].onmouseleave=function(){
+    oDiv[3].style.background="";
+};
+oDiv[4].onmouseleave=function(){
+    oDiv[4].style.background="";
+};
+oDiv[5].onmouseleave=function(){
+    oDiv[5].style.background="";
+};
+oDiv[6].onmouseleave=function(){
+    oDiv[6].style.background="";
+};
+
+
+
+
+
+</script>
+</body>
+
+
+</html>

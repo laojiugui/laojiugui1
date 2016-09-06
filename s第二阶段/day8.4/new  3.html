@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+<a href="new  4.html">我是第二页</a>
+<input id="btn" type="button" value="返回首页">
+<input id="btn1" type="button" value="前进">
+
+<script>
+
+var btn=document.getElementById("btn")
+btn.onclick=function(){
+	history.go(-1)
+
+}
+btn1.onclick=function(){
+	history.go(1)
+
+}
+</script>
+</body>
+</html>

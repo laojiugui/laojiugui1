@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>进度条</title>  
+<style>
+	#box{
+		width:300px;height:32px;border:1px solid red;border-radius:12px;margin:60px auto;	
+	}
+	#load{
+		width:0%;height:32px;background:green;border-radius:12px;
+	}
+	#jindu{
+		display:block;text-align:center;padding-top:6px;
+	}
+</style>
+</head>
+<body>
+	<div id="box">
+		<div id="load"></div>
+		<span id="jindu">0%</span>
+	</div>
+
+	
+	
+<script>
+	window.onload=function(){
+		var load=document.getElementById("load");
+		var jindu=document.getElementById("jindu");
+		var w=1;
+		var timer=setInterval(function(){
+			w++;
+			load.style.width=w+"%";
+			jindu.innerHTML=w+"%";
+			if(w==100){
+				clearInterval(timer);
+			}	
+		},10)
+		
+			
+	}
+
+	
+	
+</script>
+</body>
+</html>

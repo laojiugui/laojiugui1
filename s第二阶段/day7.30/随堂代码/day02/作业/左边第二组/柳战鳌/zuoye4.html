@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title></title>
+</head>
+<body>
+	
+	<script>
+	var month=Number(prompt("输入月份"));
+	switch(month){
+		case 1:
+		case 3:
+		case 5:
+		case 7:
+		case 8:
+		case 10:
+		case 12:alert("此月31天");break;
+		case 4:
+		case 6:
+		case 9:
+		case 11:alert("此月30天");break;
+		case 2:alert("此月29天");break;
+		default:alert("输入有误");
+	}
+			 
+	</script>
+
+</body>
+</html>

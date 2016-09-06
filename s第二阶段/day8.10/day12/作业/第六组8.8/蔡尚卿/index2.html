@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+	*{margin: 0;padding:0;}
+#box1{list-style: none;width: 100%;height: 300px;}
+#box1 li{height: 30px;width: 100%;}
+.active{background-color: yellow;}
+.green{background-color: green;}
+.red{background-color: red;}
+
+
+
+	</style>
+</head>
+<body>
+	
+<ul id="box1">
+		<li class="list"></li>
+		<li class="list"></li>
+		<li class="list"></li>
+		<li class="list"></li>
+		<li class="list"></li>
+		<li class="list"></li>
+		<li class="list"></li>
+		<li class="list"></li>
+		<li class="list"></li>
+		<li class="list"></li>
+	</ul>	
+
+
+
+
+
+
+
+
+
+
+
+	<script>
+	//隔行变色
+	var list=document.getElementsByClassName("list");
+	for(var i=0;i<list.length;i++){
+		if(i%2==0){
+			list[i].className+=" red";
+		}else{
+			list[i].className+=" green";
+		}
+		list[i].onmouseover=function () {
+			this.style.backgroundColor="yellow";
+		}
+		list[i].onmouseout=function () {
+			this.style.backgroundColor="";
+		}
+	}
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jq轮播图</title>
+    <style>
+        #container{
+            width:600px;
+            height:400px;
+            position:relative;
+            border:1px solid tan;
+            margin:20px auto 0;
+            overflow:hidden;
+            box-shadow:5px 5px 5px 5px #ccc;
+            border-radius:5px;
+        }
+        #container img{
+            position:absolute;
+            left:600px;
+            width:600px;
+            height:400px;
+        }
+        #container .active{
+            left:0;
+        }
+    </style>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            var $iIndex=0;
+            var $nextIndex=1;
+            var $auto;
+            var $oImg=$("img");
+            //图片向左移动
+
+                $auto=setInterval(function(){
+
+                    if($iIndex>=$oImg.size()){$iIndex=0}
+                    if($nextIndex>=$oImg.size()){$nextIndex=0}
+                    $oImg.eq($iIndex).animate({left:-600},500);
+                    $oImg.eq($nextIndex).css("left",600).animate({left:0},500);
+                    $iIndex++;
+                    $nextIndex++;
+                },2000);
+
+
+
+
+        });
+    </script>
+</head>
+<body>
+<div id="container">
+    <img src="img/1.jpg" class="active">
+    <img src="img/2.jpg">
+    <img src="img/3.jpg">
+    <img src="img/4.jpg">
+    <img src="img/5.jpg">
+    <img src="img/6.jpg">
+    <p><</p>
+    <p>>/p>
+</div>
+</body>
+</html>

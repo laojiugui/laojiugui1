@@ -1,0 +1,257 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+<input type="button" value="单机" id="btn">
+<input type="text" value="" id="txt">
+<input type="button" value="插入" id="btn1">
+<input type="button" value="大小写字母的个数" id="btn2">
+<input type="button" value="冒泡顺序" id="btn3">
+<div id="box"></div><br>
+
+&nbsp;用户名:<input type="text" id="txt3" value="" placeholder="请输入用户名"><br>
+&nbsp;&nbsp;密码:<input type="password" id="mima" placeholder="请输入密码"><br>
+确认密码:<input type="password" id="mima1" placeholder="请输入密码"><br>
+输入昵称:<input type="text" id="txt4" value="" placeholder="请输入昵称"><br><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" value="提交" id="btn4">
+
+
+<script>
+
+//获取字符串里的元素
+var qian="千峰教千峰范德萨发育千"
+//alert(qian.charAt(2))
+//alert(qian.charAt(2)) //取出字符串里面下标是2的元素
+
+//alert(qian.charCodeAt(0))
+//alert(qian.charCodeAt(0)) //把下标为0的元素的ascii码弹出来
+
+//alert(String.fromCharCode(21315))
+//alert(String.fromCharCode(21315))//把ascii码转换成字符,,且对象只能为String;
+
+//查找字符串里的元素
+var qia="千"
+//alert(qian.indexOf(qia))
+//alert(qian.indexOf(qia))  //查找字符串里首次出现元素的位置
+
+//alert(qian.indexOf(qia,8))
+//alert(qain.indexOf(qia,8))  //当里面有两个参数时.第一个参数时要找的字符串,第二个是指定的下标        当里面不传参数时,则返回值为-1
+  
+//alert(qian.lastIndexOf(qia))
+//alert(qian.lastIndexOf(qia))   //从后往前数,第一次出现的位置,    当不传参数时,则返回值为-1;
+  
+//alert(qian.lastIndexOf(qia,8)) 
+//alert(qian.lastIndexOf(qia,8))   // 当有两个参数时.第一个参数代表的是要找的元素,第二个则是下标,从后往前数   ;          当没有参数时,则返回值为-1
+
+
+// 单机小游戏
+/*var arr=[]
+for(var i=1;i<=100;i++){
+	if(i%3==0&&i%5==0){
+		arr.push("FlishFloat")
+	}else if(i%3==0){
+		arr.push("Flish")
+	}else if(i%5==0){
+		arr.push("Float")
+	}else{
+		arr.push(i)
+	}
+}
+var j=0
+var btn=document.getElementById("btn")
+btn.onclick=function(){
+	j++
+	if(j>100){
+		j=0
+	}
+	btn.value=arr[j]
+}
+
+var arr=[];            //建立一个空数组
+for(var i=1;i<=100;i++){       //设置变量范围
+	if(i%3==0&&i%5==0){            //设置3和5的倍数
+		arr.push("FlishFloat")      //把元素推进数组
+	}else if(i%3==0){               //找出3 的 倍数
+		arr.push("Flish")         //把元素推进数组
+	}else if(i%5==0){            //找出5的倍数
+		arr.push("Float")       //把元素推进数组
+	}else{
+		arr.push(i)             //把其余的变量推进数组
+	}
+}
+var j=0                                 //设置数组元素的下标
+var btn=document.getElementById("btn")     //链接上面的按钮
+btn.onclick=function(){               //创建点击事件匿名函数
+	j++                             //每单机一下,下标向右进行一位
+	if(j>100){                          //设置变量范围
+		j=0                            //重新定义变量赋值
+	} 
+	btn.value=arr[j]                //显示对应的数组元素
+}*/
+
+
+//插入一个新数,然后按原先数组的排列进行排列
+var arr=[2,5,8,9,10,24,30]                  //建立数组
+var txt=document.getElementById("txt")         //与文本框链接
+var btn1=document.getElementById("btn1")     //与按钮链接
+var box=document.getElementById("box")      //与div链接
+box.innerHTML=arr;                           //把数组推进div中
+/*btn1.onclick=function(){              //建立单击事件匿名函数
+	var tXt=txt.value                       //与文本框的实际值相连接
+	arr.push(tXt)                           //把文本框的值推进数组
+	arr.sort(function(a,b){return b-a}).reverse();    //进行从小到大排列,,并交换位置
+	box.innerHTML=arr                              //把新数组推进div
+	txt.value="";                               //清空文本框
+}
+btn1.onclick=function(){
+	var tXt=txt.value
+	arr.push(tXt)
+	arr.sort(function(a,b){return b-a}).reverse();
+	box.innerHTML=arr
+	txt.value=""
+}*/
+
+
+
+//数学里的方法和取值!!
+var i=5.5
+//alert(Math.round(i))
+//alert(Math.round(i))  //数学里面的四舍五入法,只针对整数有效
+
+//alert(Math.floor(i))
+//alert(Math.floot(i))    //向下取整数
+
+//alert(Math.ceil(i))
+//alert(Math.ceil(i))     //向上取整数
+
+//alert(Math.abs(i))
+//alert(Math.abs(i))     //取绝对值
+
+//Math.random()
+//Math.random();        //取随机数
+
+//Math.sqrt();
+//Math.sqrt();            //取根方值
+
+//Math.max(x,y);
+//Math.max(x,y);     //两个数相比较,取较大的一个
+
+//Math.min(x,y)
+//Math.min(x,y);       //两个数相比较,取较小的一个
+
+//Math.pow(x,y);
+//Math.pow(x,y);   //求一个数的次幂, x代表底数,y最为幂
+
+
+//生成随机数
+/*var arr=[]
+var n1,n2,n3,n4,n5,          //设置一个新的变量
+n1=Math.floor(Math.random()*10)    
+n2=Math.floor(Math.random()*10)
+n3=Math.floor(Math.random()*10)
+n4=Math.floor(Math.random()*10)
+n5=Math.floor(Math.random()*10)    //每个变量都去0-9的随机数
+var sum=n1*10000+n2*1000+n3*100+n4*10+n5          //求数字的和
+
+//alert(sum)
+
+var sum1=sum+""           //把数字变成字符串!!!
+arr.push(sum1)                 //把字符串推进数组
+alert(sum1.length)      //检测字符串长度
+console.log(arr)  */           //检测数组
+
+
+
+
+
+//给任意一串字母,判断其大小写各出来多少次
+var str="dfdsfdfGFGFJKkjhjGfghjgjhGHFGJHh"   //建立数组
+var btn2=document.getElementById("btn2")       //与按钮链接
+var box=document.getElementById("box")         //与div链接
+var big=0;                                   //用来储存大写字母
+var small=0;                                  //用来储存小写字母
+btn2.onclick=function(){                    //创建点击事件匿名函数
+for(var i=0;i<str.length;i++){              //取出该数组元素下的光标
+	var arr1=str.charCodeAt(i)                 //把下标对应的元素转换成ascii码值
+	if(arr1>=65&&arr1<=90){                  //在ascii码之间筛选大小写
+		big++                                 //储存大写的变量
+	}else if(arr1>=97&&arr1<=122){            // 在ascii码之间筛选大小写
+		small++                                      //储存小写字母
+	}
+}box.innerHTML="小写"+small+"       大写"+big               //把得到的结果推到div中
+
+}
+
+
+//冒泡函数封装
+var arr5=[5,4,9,8,7,3]                        //建立新数组
+var btn3=document.getElementById("btn3")          //链接上面的按钮
+btn3.onclick=function(){               //创建点击事件匿名函数
+	function sum(){                           //创建sum函数
+		for(var y=1;y<arr5.length;y++){        //取下标是1之后的元素
+			for(x=0;x<arr5.length-y;x++){         //取整个数组的元素
+				if(arr5[x]>arr5[x+1]){              //后一个元素跟前一个元素相比较
+					var sun=arr5[x]               //替换大小位置
+					arr5[x]=arr5[x+1]            //开始进行替换
+					arr5[x+1]=sun		            //替换完成
+				}	
+			}
+
+		}box.innerHTML=arr5             //把结果推进div中
+	}sum();                           //调用函数
+}
+
+
+//页面注册
+var txt3=document.getElementById("txt3")         //与文本框建立链接
+var btn4=document.getElementById("btn4")          //与按钮建立链接
+var mima=document.getElementById("mima") 
+var mima1=document.getElementById("mima1") 
+var txt4=document.getElementById("txt4") 
+//console.log(txt4)
+var mingan="你妹,你大妈,你大爷"
+	mingan=mingan.split(",")
+btn4.onclick=function(){                   //建立单机事件匿名函数
+	var Txt3=txt3.value                        //取文本框的值
+	if(Txt3.length<6||Txt3.length>20){             //输入字符的长度限制
+		alert("请输入长度为6-20之间")                //弹窗显示
+	}
+	var T3=Txt3[0].charCodeAt()                                //把首位转换成ascii码
+	if((T3>=65&&T3<=90)||(T3>=97&&T3<=122)||(T3==95)){             //限制首位ascii范围
+		
+	}else{ 
+		alert("输入的首位不合法")                //弹窗显示
+	}
+	for(var k=0;k<Txt3.length;k++){              //创建新变量
+		var t3=Txt3[k].charCodeAt()
+		if((t3>=65&&t3<=90)||(t3>=97&&t3<=122)||(t3==95)||(t3>=48&&t3<=57)){          //限制ascii码取值范围
+		
+		}else{
+			alert("输入的不合法")             //得出弹窗结果
+		}
+	}
+	
+	var Mima=mima.value                   //与秘密框链接
+	var Mima1=mima1.value                 //同上
+	if(Mima!=Mima1){                      //限制条件
+		alert("输入的密码不一致")           //弹出结果
+	}
+	
+		Txt4=txt4.value;
+	for(var u=0;u<mingan.length;u++){	
+		var reg=new RegExp(mingan[u],"gi")
+		Txt4=Txt4.replace(reg,"***")
+		alert("输入的字符里有敏感字符")
+		break;
+	}
+	txt4.value=Txt4
+}
+
+</script>
+</body>
+</html>

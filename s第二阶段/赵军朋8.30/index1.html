@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>横向轮播图</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        ul{
+            list-style:none
+        }
+        a{
+            text-decoration:none;
+        }
+        #box{
+            position:relative;
+            width:730px;
+            height:454px;
+            margin:20px auto 0;
+            overflow: hidden;
+        }
+        #list{
+            position:absolute;
+            width:4380px;
+            left:-730px;
+        }
+        #list li{
+
+            float:left;
+        }
+        #list img{
+            width:730px;
+            height:454px;
+        }
+        #direction-btn a{
+            position:absolute;
+            top:50%;
+            margin-top:-40px;
+            width:50px;
+            height:80px;
+            font-size:30px;
+            background:rgba(0,0,0,.2);
+            text-align:center;
+            line-height:80px;
+            color:#fff;
+        }
+        #right-btn{
+            right:0;
+        }
+
+    </style>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            var iIndex=$("li:visible").index();
+            var timer=null;
+
+            timer=setInterval(function(){
+                    move();
+            },2000);
+
+            $("#box").mouseenter(function(){
+               clearInterval(timer);
+
+            });
+            $("#box").mouseleave(function(){
+                timer=setInterval(function(){
+                    move();
+                },2000);
+
+            });
+
+
+            $("#left-btn").click(function(){
+
+            });
+
+
+            function move(){
+                iIndex++;
+                if(iIndex>=$("li").size()){
+                    iIndex=2;
+                    $("#list").css({left:-730},2000);
+                }
+                $("#list").stop().animate({left:-iIndex*730},500);
+
+            }
+
+        });
+
+    </script>
+</head>
+<body>
+<div id="box">
+        <ul id="list">
+            <li><a href="#"><img src="img/4.jpg"></a></li>
+            <li><a href="#"><img src="img/1.jpg"></a></li>
+            <li><a href="#"><img src="img/2.jpg"></a></li>
+            <li><a href="#"><img src="img/3.jpg"></a></li>
+            <li><a href="#"><img src="img/4.jpg"></a></li>
+            <li><a href="#"><img src="img/1.jpg"></a></li>
+        </ul>
+    <div id="direction-btn">
+        <a href="#" id="left-btn"><</a><a href="#" id="right-btn">></a>
+    </div>
+</div>
+</body>
+</html>

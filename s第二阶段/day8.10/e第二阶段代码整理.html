@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+table{border-collapse:collapse}
+td{border:1px solid red}
+</style>
+</head>
+
+<body>
+<input type="text" value="">行
+<input type="text" value="">列
+<input value="生成" type="button">
+<div id="box"></div>
+</body>
+<script>
+var input=document.getElementsByTagName("input")
+var box=document.getElementById("box")
+input[2].onclick=function(){
+	var hang=Number(input[0].value)
+	var lie=Number(input[1].value)
+	 var str="<table>"
+	for(var i=1;i<=hang;i++){
+	str+="<tr>"
+		for(var y=1;y<=lie;y++){
+		
+			str+="<td>"+"哈哈"+"</td>"
+		}
+		
+		str+="</tr>"
+	}
+	str+="</table>"
+	box.innerHTML=str
+}
+
+</script>
+</html>

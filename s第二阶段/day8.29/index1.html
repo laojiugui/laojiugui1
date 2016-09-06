@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input{
+            width:80px;
+            height:40px;
+            background:#ccc;
+            border:0;
+            border-radius:5px;
+            cursor:pointer;
+        }
+    </style>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            var oP=$("p");
+            var oDiv=$("div");
+            var oBox=$("#box");
+            var oItem=$(".item");
+            var oBaoHan=$(".item .item1");
+            var oZi=$(".item > .item1");
+            var oFuHe=$(".item,.item1");
+            var oXiangLin=$(".item+.item1");
+            console.log(oP);
+            console.log(oDiv);
+            console.log(oItem);
+            console.log(oZi);
+            console.log(oBaoHan);
+            console.log(oFuHe);
+            console.log(oXiangLin);
+
+
+        });
+    </script>
+</head>
+<body>
+<input value="id选择器" id="btn1" type="button" >
+<input value="class选择器" id="btn2" type="button" >
+<input value="tag选择器" id="btn3" type="button" >
+<input value="包含选择器" id="btn4" type="button" >
+<input value="子类选择器" id="btn5" type="button" >
+<input value="复合选择器" id="btn6" type="button" >
+<input value="相邻选择器" id="btn7" type="button" >
+<input value="兄弟选择器" id="btn8" type="button" >
+<div id="box">
+    <p class="item">是的是的是的p</p>
+    <p class="item">是的是的是的p</p>
+    <p class="item">是的是的是的p</p>
+    <p class="item">是的是的是的p</p>
+    <div class="item">
+        是的是的是的div
+        <p class="item1">是的是的是的p</p>
+        <p class="item1">是的是的是的p</p>
+        <p class="item1">是的是的是的p</p>
+        <p class="item1">是的是的是的p</p>
+    </div>
+</div>
+</body>
+</html>

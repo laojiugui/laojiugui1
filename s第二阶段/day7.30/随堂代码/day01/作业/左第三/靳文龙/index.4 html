@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+<script>
+	var a=30;
+	var b=40;
+	var c=2;
+	var d=2;
+	a+=b;
+	//alert(a);
+	a*=c;
+	//alert(a);
+	
+	a/=d;
+	//alert(a);
+	a-=d;
+	//alert(a);
+	
+	var name="孙悟空";
+	var age="who knows";
+	//document.write("七龙珠"+name+age+"<br/>"+<br/>);
+	
+	var country="中国";
+	var number="十三亿";
+	//document.write(country+number+"五千年历史");
+	
+	var number1="123a";
+	var number2="2";
+	//alert(number1-number2);	NaN
+	var num3="12";
+	var num4="24";
+	var result=num4/num3;
+	//alert(result);	把非数字的数据类型转化为数字
+	var str="12";
+	//alert(Number(str));	把字符串转化为数字
+	//在字符串里面空格 和空字符串调用Number（）以后结果为0；
+	var bool1=true;
+	//alert(Number(bool1));	在布尔型中true是1；false是0；
+	//把undefined转化为数字	NaN
+	var c；
+	//alert(Number(c));	NaN
+	var nu=null;
+	//alert(Number(nu));	空占位符为0
+	
+	var aa="123.2q34";
+	//alert(parseInt(aa));
+	//parseInt()	将字符串并且字符串中包含数字的字符串转换为数字
+	//parseFloat()	将字符串并且字符串中包含小数的数字的字符串转换为数字
+	//alert(parseFloat(aa));
+	
+	var numb1=12;
+	var numb2=13;
+	//alert(numb1-numb2);
+	var e="12";
+	var f="13";
+	//alert(e+f);
+	//加法的两个作用：1.求和 2.字符串连接
+	var numb5=12;
+	var numb6=2;
+	//alert(numb5/numb6);
+	//alert(numb5*numb6);
+	//alert(numb5%numb6);
+	//同时声明多个变量，并且赋值
+	var aa =12,bb=12;cc=22;dd=22;
+	//同时声明多个变量 分别赋值
+	var m,n,x,y;
+	m=1;
+	n=2;
+	x=3;
+	y=4;
+	
+	//关系运算符（比较运算符）
+	var num1=1;
+	var num2=2;
+	//alert(num1<=num2);
+	var num3="2";
+	//alert(num3!=num2);
+	//alert(num21==num3);
+	
+	//！=不等于   ==
+	// !==   ===
+	//赋值运算符 =  += -= *= /=
+	
+	var a=2;
+	a+=4;
+	a=a+4;
+	alert(a);
+	
+</script>
+
+
+<script>
+	var a=30;
+	var b=40;
+	var c=2;
+	var d=2;
+	a+=b;
+	//alert(a);
+	a*=c;
+	//alert(a);
+	
+	a/=d;
+	//alert(a);
+	a-=d;
+	//alert(a);
+	
+	var name="孙悟空";
+	var age="who knows";
+	//document.write("七龙珠"+name+age+"<br/>"+<br/>);
+	
+	var country="中国";
+	var number="十三亿";
+	//document.write(country+number+"五千年历史");
+	
+	var number1="123a";
+	var number2="2";
+	//alert(number1-number2);	NaN
+	var num3="12";
+	var num4="24";
+	var result=num4/num3;
+	//alert(result);	把非数字的数据类型转化为数字
+	var str="12";
+	//alert(Number(str));	把字符串转化为数字
+	//在字符串里面空格 和空字符串调用Number（）以后结果为0；
+	var bool1=true;
+	//alert(Number(bool1));	在布尔型中true是1；false是0；
+	//把undefined转化为数字	NaN
+	var c；
+	//alert(Number(c));	NaN
+	var nu=null;
+	//alert(Number(nu));	空占位符为0
+	
+	var aa="123.2q34";
+	//alert(parseInt(aa));
+	//parseInt()	将字符串并且字符串中包含数字的字符串转换为数字
+	//parseFloat()	将字符串并且字符串中包含小数的数字的字符串转换为数字
+	//alert(parseFloat(aa));
+	
+	var numb1=12;
+	var numb2=13;
+	//alert(numb1-numb2);
+	var e="12";
+	var f="13";
+	//alert(e+f);
+	//加法的两个作用：1.求和 2.字符串连接
+	var numb5=12;
+	var numb6=2;
+	//alert(numb5/numb6);
+	//alert(numb5*numb6);
+	//alert(numb5%numb6);
+	//同时声明多个变量，并且赋值
+	var aa =12,bb=12;cc=22;dd=22;
+	//同时声明多个变量 分别赋值
+	var m,n,x,y;
+	m=1;
+	n=2;
+	x=3;
+	y=4;
+	
+	//关系运算符（比较运算符）
+	var num1=1;
+	var num2=2;
+	//alert(num1<=num2);
+	var num3="2";
+	//alert(num3!=num2);
+	//alert(num21==num3);
+	
+	//！=不等于   ==
+	// !==   ===
+	//赋值运算符 =  += -= *= /=
+	
+	var a=2;
+	a+=4;
+	a=a+4;
+	alert(a);
+	
+</script>
+
+
+<script>
+	var a=30;
+	var b=40;
+	var c=2;
+	var d=2;
+	a+=b;
+	//alert(a);
+	a*=c;
+	//alert(a);
+	
+	a/=d;
+	//alert(a);
+	a-=d;
+	//alert(a);
+	
+	var name="孙悟空";
+	var age="who knows";
+	//document.write("七龙珠"+name+age+"<br/>"+<br/>);
+	
+	var country="中国";
+	var number="十三亿";
+	//document.write(country+number+"五千年历史");
+	
+	var number1="123a";
+	var number2="2";
+	//alert(number1-number2);	NaN
+	var num3="12";
+	var num4="24";
+	var result=num4/num3;
+	//alert(result);	把非数字的数据类型转化为数字
+	var str="12";
+	//alert(Number(str));	把字符串转化为数字
+	//在字符串里面空格 和空字符串调用Number（）以后结果为0；
+	var bool1=true;
+	//alert(Number(bool1));	在布尔型中true是1；false是0；
+	//把undefined转化为数字	NaN
+	var c；
+	//alert(Number(c));	NaN
+	var nu=null;
+	//alert(Number(nu));	空占位符为0
+	
+	var aa="123.2q34";
+	//alert(parseInt(aa));
+	//parseInt()	将字符串并且字符串中包含数字的字符串转换为数字
+	//parseFloat()	将字符串并且字符串中包含小数的数字的字符串转换为数字
+	//alert(parseFloat(aa));
+	
+	var numb1=12;
+	var numb2=13;
+	//alert(numb1-numb2);
+	var e="12";
+	var f="13";
+	//alert(e+f);
+	//加法的两个作用：1.求和 2.字符串连接
+	var numb5=12;
+	var numb6=2;
+	//alert(numb5/numb6);
+	//alert(numb5*numb6);
+	//alert(numb5%numb6);
+	//同时声明多个变量，并且赋值
+	var aa =12,bb=12;cc=22;dd=22;
+	//同时声明多个变量 分别赋值
+	var m,n,x,y;
+	m=1;
+	n=2;
+	x=3;
+	y=4;
+	
+	//关系运算符（比较运算符）
+	var num1=1;
+	var num2=2;
+	//alert(num1<=num2);
+	var num3="2";
+	//alert(num3!=num2);
+	//alert(num21==num3);
+	
+	//！=不等于   ==
+	// !==   ===
+	//赋值运算符 =  += -= *= /=
+	
+	var a=2;
+	a+=4;
+	a=a+4;
+	alert(a);
+	
+</script>
+
+
+<script>
+	var a=30;
+	var b=40;
+	var c=2;
+	var d=2;
+	a+=b;
+	//alert(a);
+	a*=c;
+	//alert(a);
+	
+	a/=d;
+	//alert(a);
+	a-=d;
+	//alert(a);
+	
+	var name="孙悟空";
+	var age="who knows";
+	//document.write("七龙珠"+name+age+"<br/>"+<br/>);
+	
+	var country="中国";
+	var number="十三亿";
+	//document.write(country+number+"五千年历史");
+	
+	var number1="123a";
+	var number2="2";
+	//alert(number1-number2);	NaN
+	var num3="12";
+	var num4="24";
+	var result=num4/num3;
+	//alert(result);	把非数字的数据类型转化为数字
+	var str="12";
+	//alert(Number(str));	把字符串转化为数字
+	//在字符串里面空格 和空字符串调用Number（）以后结果为0；
+	var bool1=true;
+	//alert(Number(bool1));	在布尔型中true是1；false是0；
+	//把undefined转化为数字	NaN
+	var c；
+	//alert(Number(c));	NaN
+	var nu=null;
+	//alert(Number(nu));	空占位符为0
+	
+	var aa="123.2q34";
+	//alert(parseInt(aa));
+	//parseInt()	将字符串并且字符串中包含数字的字符串转换为数字
+	//parseFloat()	将字符串并且字符串中包含小数的数字的字符串转换为数字
+	//alert(parseFloat(aa));
+	
+	var numb1=12;
+	var numb2=13;
+	//alert(numb1-numb2);
+	var e="12";
+	var f="13";
+	//alert(e+f);
+	//加法的两个作用：1.求和 2.字符串连接
+	var numb5=12;
+	var numb6=2;
+	//alert(numb5/numb6);
+	//alert(numb5*numb6);
+	//alert(numb5%numb6);
+	//同时声明多个变量，并且赋值
+	var aa =12,bb=12;cc=22;dd=22;
+	//同时声明多个变量 分别赋值
+	var m,n,x,y;
+	m=1;
+	n=2;
+	x=3;
+	y=4;
+	
+	//关系运算符（比较运算符）
+	var num1=1;
+	var num2=2;
+	//alert(num1<=num2);
+	var num3="2";
+	//alert(num3!=num2);
+	//alert(num21==num3);
+	
+	//！=不等于   ==
+	// !==   ===
+	//赋值运算符 =  += -= *= /=
+	
+	var a=2;
+	a+=4;
+	a=a+4;
+	alert(a);
+	
+</script>
+
+
+<script>
+	var a=30;
+	var b=40;
+	var c=2;
+	var d=2;
+	a+=b;
+	//alert(a);
+	a*=c;
+	//alert(a);
+	
+	a/=d;
+	//alert(a);
+	a-=d;
+	//alert(a);
+	
+	var name="孙悟空";
+	var age="who knows";
+	//document.write("七龙珠"+name+age+"<br/>"+<br/>);
+	
+	var country="中国";
+	var number="十三亿";
+	//document.write(country+number+"五千年历史");
+	
+	var number1="123a";
+	var number2="2";
+	//alert(number1-number2);	NaN
+	var num3="12";
+	var num4="24";
+	var result=num4/num3;
+	//alert(result);	把非数字的数据类型转化为数字
+	var str="12";
+	//alert(Number(str));	把字符串转化为数字
+	//在字符串里面空格 和空字符串调用Number（）以后结果为0；
+	var bool1=true;
+	//alert(Number(bool1));	在布尔型中true是1；false是0；
+	//把undefined转化为数字	NaN
+	var c；
+	//alert(Number(c));	NaN
+	var nu=null;
+	//alert(Number(nu));	空占位符为0
+	
+	var aa="123.2q34";
+	//alert(parseInt(aa));
+	//parseInt()	将字符串并且字符串中包含数字的字符串转换为数字
+	//parseFloat()	将字符串并且字符串中包含小数的数字的字符串转换为数字
+	//alert(parseFloat(aa));
+	
+	var numb1=12;
+	var numb2=13;
+	//alert(numb1-numb2);
+	var e="12";
+	var f="13";
+	//alert(e+f);
+	//加法的两个作用：1.求和 2.字符串连接
+	var numb5=12;
+	var numb6=2;
+	//alert(numb5/numb6);
+	//alert(numb5*numb6);
+	//alert(numb5%numb6);
+	//同时声明多个变量，并且赋值
+	var aa =12,bb=12;cc=22;dd=22;
+	//同时声明多个变量 分别赋值
+	var m,n,x,y;
+	m=1;
+	n=2;
+	x=3;
+	y=4;
+	
+	//关系运算符（比较运算符）
+	var num1=1;
+	var num2=2;
+	//alert(num1<=num2);
+	var num3="2";
+	//alert(num3!=num2);
+	//alert(num21==num3);
+	
+	//！=不等于   ==
+	// !==   ===
+	//赋值运算符 =  += -= *= /=
+	
+	var a=2;
+	a+=4;
+	a=a+4;
+	alert(a);
+	
+</script>
+
+</body>
+</html>

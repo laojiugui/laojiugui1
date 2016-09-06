@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>作业day01</title>
+</head>
+<body>
+	<script>
+	/*1.
+		document.write('<div style=" width:300px; height:300px; background:#f00;"></div>');
+		document.write("<div style='width:300px; height:300px; backgroud:red;'><div style='width:100px; height:100px; backgroud:blue;'></div></div>");
+		//typeof 操作符 返回的结果始终是字符串
+		//var a = 16;
+		//alert(typeof a);
+		
+		//var boll = 123;
+		//alert(typeof boll); //number类型
+		var b = "a123";
+		alert(typeof b); //字符串类型
+		var bollean = true;
+		alert(typeof bollean); //bollean类型
+		var aa;
+		alert(typeof aa); //undefined 类型
+		var bb = null;
+		alert(typeof bb);// object 类型
+		var bbb = typeof bb;
+		alert(typeof bbb);
+		
+		//运算符
+		var num1 = 12;
+		var num2 = 13;
+		alert(num1+num2);
+		var num3 = "12";
+		var num4 = "13";
+		alert(num3%num4); //只有+是连接作用
+		// var result = num3+num4;
+		alert(Number(num3)+Number(num4));
+		var aa = "";
+		alert(Number(aa));
+		var boll1 = true;
+		// alert(Number(boll1));
+		var aaa;
+		//alert(Number(aaa));
+		var a = null;
+		//alert(Number(a));
+		var c = "12.2324sds342";
+		//alert(parseInt(c));
+		alert(parseFloat(c));
+		//关系运算符
+		var num5 = "2";
+		var num6 = 4;
+		alert(num5!==num6);
+		var a = 4;
+			a %= 1;
+		alert(a);
+		var mz = "weiwei";
+		var age = "12";
+		document.write(mz+"年龄"+age);
+		
+		
+		var a=30;
+		var b=40;
+		var c=2;
+		var d=2;
+		a+=b; // a=a+b; //70
+		a*=c; //a=a*c; //140
+		a/=d; //a=a/d  //70
+		a-=b; //a=a-b; //30
+		//alert(a);
+		var mz = "习大大";
+		var age = 45;
+		document.write("国家主席"+mz+",年龄"+age+"fsdfdfdsffds");
+		var guojia="中国";
+		var mianji="996万平方";
+		document.write(guojia+mianji+"dasdasdsad<br />");
+		var bumber1="123a";
+		var number2=2;
+		//alert(number1-number2); //NaN  Not a Number
+		var num12="12";		//12
+		var num13="24"		//24
+		var result=num13/num12;
+		//alert(result);
+		//Number() //把非数字的数据类型转换为数字
+		//把字符串转成数字
+		var str="12"; //在字符串里边 空格和空字符串通用Number() 以后结果为0
+		//alert(Number(str));
+		//把布尔型转换为数字
+		var bool1 =flase;
+		//alert(Number(bool1)); //在布尔型中 true 是1 false s是0；
+		//把undefined 转换为数字 NaN
+		var c;
+		//alert(Number(c)); //NaN
+		var nu = null;
+		//alert(Number(nu)); //0
+		var aa="123.33232fas2313";
+		//alert(parseInt(aa));
+		//parseInt() 将字符串并且字符串中包含数字的字符串转化为数字
+		//parseFloat() 将字符串并且字符串中包含小数的数字的字符串转换为数字
+		//alert(parseFloat(aa));
+		//关系运算符（比较运算符） >< >= <= == === != !===
+		var num1=1;
+		var num2=2;
+		//alert(num1<=num2);
+		var num3="2";
+		//alert(num3!===num2);//===绝对等于 在比较，先比较数据类型，如果不一致，直接false
+		//== 代表比较或者判断，忽略数据类型  只比较结果
+		//= 赋值
+		//!= 不等于  
+		//赋值运算 = += -= *= /= %=
+		var a =2;
+		a +=6;
+		a=a+6;
+		alert(a);
+		//alert(num2!=num3);
+	*/	
+	/*2.
+		var a = 24;
+		var b = "6";
+		// "+" 运算
+		alert(a+Number(b));
+		document.write(a+parseInt(b)+"<br />");
+		// "-" 运算
+		alert(a-b);
+		document.write(a-b+"<br />");
+		// "*" 运算
+		alert(a*b);
+		document.write(a*b+"<br />");
+		// "/" 运算
+		alert(a/b);
+		document.write(a/b+"<br />");
+		// "%" 取模运算
+		alert(a%b);
+		document.write(a%b+"<br />");
+	*/
+	/*3.
+		document.write("&nbsp;"+"&nbsp;"+"&nbsp;"+"*"+"<br />"+"<br />");
+		document.write("&nbsp;"+"&nbsp;"+"*"+"&nbsp;"+"*"+"<br />"+"<br />");
+		document.write("&nbsp;"+"*"+"&nbsp;"+"*"+"&nbsp;"+"*"+"<br />"+"<br />");
+		document.write("*"+"&nbsp;"+"*"+"&nbsp;"+"*"+"&nbsp;"+"*"+"<br />"+"<br />");
+		document.write("&nbsp;"+"*"+"&nbsp;"+"*"+"&nbsp;"+"*"+"<br />"+"<br />");
+		document.write("&nbsp;"+"&nbsp;"+"*"+"&nbsp;"+"*"+"<br />"+"<br />");
+		document.write("&nbsp;"+"&nbsp;"+"&nbsp;"+"*"+"<br />"+"<br />");
+	*/	
+	/*4.
+		var c; //摄氏度
+		var f; //华氏度
+		f = 80;
+		c = 5/9.0*(f-32);
+		document.write("华氏度是："+f+"<br />"+"摄氏度是："+c);
+	*/
+	/*5.
+		var a=12;
+		var b=8;
+		//document.write(a+b);
+		//console.log(a+b);
+		document.write("<div style='font-size:14px; color:green;'>a+b=<span style='font-size:18px; color:red;'>"+(12+8)+"</span></div>"+"<div style='font-size:14px; color:green;'>a-b=<span style='font-size:18px; color:red;'>"+(12-8)+"</span></div>"+"<div style='font-size:14px; color:green;'>a*b=<p style='font-size:18px; margin:0; display:inline-block; color:red;'>"+12*8+"</p></div>"+"<div style='font-size:14px; color:green;'>a/b=<p style='font-size:18px; display:inline-block; margin:0; color:red;'>"+12/8+"</p></div>"+"<div style='font-size:14px; color:green;'>a%b=<p style='font-size:18px; display:inline-block; margin:0; color:red;'>"+12%8+"</p></div>");//把成对的div先断开
+	*/
+	</script>
+</body>
+</html>

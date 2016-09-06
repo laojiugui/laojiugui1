@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>聊天泡</title>
+</head>
+<link type="text/css" rel="stylesheet" href="index.css"/>
+<script src="index.js"></script>
+
+
+<body>
+	<div id="wrap">
+		<div class="content"></div>
+        <input class="sent" type="text" />
+        <input class="dianji"type="button" value="发送" />
+    </div>
+<script>
+	var  wrap=document.getElementById("wrap");
+	var content=document.getElementsByClassName("content")[0];
+	var sent=document.getElementsByClassName("sent")[0];
+	var dianji=document.getElementsByClassName("dianji")[0];
+	dianji.onclick=function(){
+		var str=sent.value;	
+		if(str!=''){
+			var li=document.createElement("li");
+			var span=document.createElement("span");
+			var str1=document.createTextNode(str);
+			span.appendChild(str1);
+			li.appendChild(span);
+		}
+		content.appendChild(li);
+		content.innerHTML+="<br>";
+			if(str=='么么哒'||str=='hello'){
+			var li=document.createElement("li");
+			var m=document.createTextNode("你好");
+			li.appendChild(m);
+			}else{
+				var li=document.createElement("li");
+				var m=document.createTextNode("亲，请升级系统");
+				li.appendChild(m);
+			}
+		content.appendChild(li);
+		content.innerHTML+="<br>";
+		content.scrollTop=content.scrollHeight-content.offsetHeight;
+  }
+		
+
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,354 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>7-27作业</title>
+	</head>
+	<body>
+		<script>
+		//作业1
+			/*var sex="男";
+			var height="170cm";
+			var look="端正";
+			var sight="5.0";
+			alert(sex=="男"&&height>="170cm"&&look=="端正"&&sight>=5.0);
+			var sex="男";
+			var height="170cm";
+			var look="端正";
+			var sight="5.0";
+			alert(sex=="男"&&height>="170cm"&&look=="端正"&&sight>=5.0);
+			*/
+		/*	var a="2323kff";
+			var b=Number(a);
+			//alert(b);
+			//alert(typeof b);//NaN的数据类型是number
+			alert(NaN==NaN);//NaN不是一个数，没有办法比较；字符串做比较时，会比较自己的Ascall码值，当一个数据与一个字符串做比较时会优先把字符串转为Number类型比较，如果字符串转不成数据，则比较结果会是NaN；
+			var a="2323kff";
+			var b=Number(a);
+			//alert(b);
+			//alert(typeof b);//NaN的数据类型是number
+			alert(NaN==NaN);
+		*/
+		
+		/*var a=1234;
+		var b="123zifuchuan";
+		var c;
+		var d=null;
+		var e=true;
+		var f=Number(b);
+		var g="";
+		var h=" ";
+		
+		//alert(String(d));
+		//alert(String(f));
+		//alert(typeof String(f));
+		//alert(Boolean(f));	
+		//alert(Boolean(d));	
+		//alert(Boolean(e));	
+		//alert(Boolean(c));	
+		//alert(String(c));
+		//alert(Boolean(g));	
+		//alert(Boolean(h));	
+		//alert(String(g));	
+		//alert(String(h));	
+		var a=1234;
+		var b="123zifuchuan";
+		var c;
+		var d=null;
+		var e=true;
+		var f=Number(b);
+		var g="";
+		var h=" ";
+		
+		//alert(String(d));
+		//alert(String(f));
+		//alert(typeof String(f));
+		//alert(Boolean(f));	
+		//alert(Boolean(d));	
+		//alert(Boolean(e));	
+		//alert(Boolean(c));	
+		//alert(String(c));
+		//alert(Boolean(g));	
+		//alert(Boolean(h));	
+		//alert(String(g));	
+		//alert(String(h));		把布尔型以外的数据类型转换为布尔型：非零数字都是true；0就是false；空字符是false；空格字符串是true；即除了空字符串都是true；undefined是false；nan是false；null是false； String是把字符串以外的数据类型转换为字符串；*/
+		
+		/*a++和++a的区别：
+			a++：先赋值，再加一；
+			++a：先加一，再赋值；
+		*/
+		
+		/*var num1=89;
+		var num2=parseInt(num1/24);
+		var num3=num1%24;
+		alert("解放军抗战了"+num2+"天"+num3+"小时");
+		var num1=89;
+		var num2=parseInt(num1/24);
+		var num3=num1%24;
+		alert("解放军抗战了"+num2+"天"+num3+"小时")*/
+		
+		
+		// 单分支，双分支，条件返回的是一个布尔值
+			/*
+			var a=3;
+			if(a>0){
+				alert(a+"是一个大于零的数");
+			}else{
+				alert(a+"是一个小于零的数");
+			}
+			var a=3;
+			if(a>0){
+				alert(a+"是一个大于零的数");
+			}else{
+				alert(a+"是一个小于零的数");
+			}*/	
+			/*var password=prompt("请输入您的密码")
+			if (password==123456){
+				alert("您的密码输入正确");
+			}else{
+				alert("您的密码输入错误，请重新输入");
+			}
+			var password=prompt("请输入您的密码")
+			if (password==123456){
+				alert("您的密码输入正确");
+			}else{
+				alert("您的密码输入错误，请重新输入");
+			}*/
+			/*var num1=Number(prompt("请输入第一个数字"));
+			var num2=Number(prompt("请输入第二个数字"));
+			var ysf=prompt("请输入一个运算符");
+			if(ysf=="+"){
+				alert(num1+num2);
+			}else if(ysf=="-"){
+				alert(num1-num2);
+			}else if(ysf=="*"){
+				alert(num1*num2);
+			}else if(ysf=="/"){
+				alert(num1/num2);
+			}else if(ysf=="%"){
+				alert(num1%num2);
+			}else{
+				alert("请输入正确的数据");
+			}
+			var num1=Number(prompt("请输入第一个数字"));
+			var num2=Number(prompt("请输入第二个数字"));
+			var ysf=prompt("请输入一个运算符");
+			if(ysf=="+"){
+				alert(num1+num2);
+			}else if(ysf=="-"){
+				alert(num1-num2);
+			}else if(ysf=="*"){
+				alert(num1*num2);
+			}else if(ysf=="/"){
+				alert(num1/num2);
+			}else if(ysf=="%"){
+				alert(num1%num2);
+			}else{
+				alert("请输入正确的数据");
+			}*/
+			
+			/*var num1=Number(prompt("请输入星期数"));
+			switch(num1){
+				case 1:case 2:alert("正常上课");break;
+				//case 2:alert("正常上课");break;
+				//case 3:alert("正常上课");break;
+				case 4:alert("正常上课");break;
+				case 5:alert("正常上课");break;
+				case 6:alert("自习时间");break;
+				case 7:alert("休息时间");break;
+				default:alert("输入不合法");
+			}
+			var num1=Number(prompt("请输入星期数"));
+			switch(num1){
+				case 1:case 2:alert("正常上课");break;
+				//case 2:alert("正常上课");break;
+				//case 3:alert("正常上课");break;
+				case 4:alert("正常上课");break;
+				case 5:alert("正常上课");break;
+				case 6:alert("自习时间");break;
+				case 7:alert("休息时间");break;
+				default:alert("输入不合法");
+			}
+			*/
+			/*var num1=Number(prompt("请输入第一个数"));
+			var num2=Number(prompt("请输入第二个数"));
+			var syf=prompt("请输入运算符");
+			switch(syf){
+				case "+":alert(num1+num2);break;
+				case "-":alert(num1-num2);break;
+				case "*":alert(num1*num2);break;
+				case "/":alert(num1/num2);break;
+				case "%":alert(num1%num2);break;
+				default:alert("输入不合法");
+			}
+			var num1=Number(prompt("请输入第一个数"));
+			var num2=Number(prompt("请输入第二个数"));
+			var syf=prompt("请输入运算符");
+			switch(syf){
+				case "+":alert(num1+num2);break;
+				case "-":alert(num1-num2);break;
+				case "*":alert(num1*num2);break;
+				case "/":alert(num1/num2);break;
+				case "%":alert(num1%num2);break;
+				default:alert("输入不合法");
+			}*/
+			
+			
+			
+			// 作业2
+			//***********   判断是不是闰年   **************//
+			/*var num=prompt("请输入年份");
+			if(num%4==0){
+				if(num%100==0){
+					if(num%400==0){
+						alert(num+"是闰年");
+					}else{
+						alert(num+"不是闰年");
+					}
+				}else{
+					alert(num+"是闰年");
+				}
+			}else{
+				alert(num+"不是闰年");
+			}*/
+			
+			//作业3
+			//判断一个整数的范围
+			/*var a=Number(prompt("请输入一个整数"));
+			if(a-parseInt(a)){
+				alert("请输入合法数据");
+			}else{
+				if(a>0){
+					alert(a+"是一个大于0的整数");
+				}else if(a==0){
+					alert(a+"是一个等于0的整数");
+				}else if(a<0){
+					alert(a+"小于0");
+				}else{
+					alert("请输入合法数据");
+				}
+			}*/
+			
+		// 作业4 ********** 判断一个整数是否是3的倍数*******
+			/*var a=Number(prompt("请输入一个整数"));
+			if(a-parseInt(a)){
+				alert("请输入整数");
+			}else{
+				if(a%3==0){
+					alert(a+"是3的倍数");
+				}else if(a%3<0||a%3>0){
+					alert(a+"不是3的倍数");
+				}else{
+					alert("请输入合法数据");
+				}
+			}*/
+			
+	// 作业 5 *********测试体重公式*********		
+		/*	var num1=Number(prompt("请输入您的身高(cm)"));
+			var num2=Number(prompt("请输入您的体重(斤)"));
+			var a;
+			a=(num1-108)*2
+			if(num2<(a-10)){
+				alert("您的体重偏轻");
+			}else if(num2>(a+10)){
+				alert("您的体重偏重");
+			}else{
+				alert("您的体重正常");
+			}*/
+			
+			
+	// 作业 6  *********测试分数等级*********		
+		/*var score=Number(prompt("请输入您的分数"));
+		if(score>=90){
+			alert("恭喜！您的成绩等级为A");
+		}else if(score>=80&&score<90){
+			alert("您的成绩为B等级，下次再接再厉！")
+		}else if(score>=70&&score<80){
+			alert("您的成绩为C等级，下次争取考前冲！")
+		}else if(score>=60&&score<70){
+			alert("您的成绩为D等级，再少考几分你就惨了！")
+		}else {
+			alert("很不幸，您要被留级了，请君继续努力！")
+		}*/
+		
+		
+		
+	// 作业 7 *********测试月份天数*********		
+		
+		/*var mouth=Number(prompt("请输入月份"));
+		switch(mouth){
+			case 1:case 3:case 5:case 7:case 8:case 10:case 12:alert("本月有31天");break;
+			case 4:case 6:case 9:case 11:alert("本月有30天");
+			case 2:alert("本月有29天");break;
+			default:alert("请输入合法数据");	
+		}*/
+		
+		
+		
+	// 作业 8 *********输出一个五位数的个十百千万位********		
+			
+		/*var num=Number(prompt("请输入一个五位整数"));
+		var a,b,c,d,e;
+			if(num-parseInt(num)){
+				alert("请输入整数");
+			}else if((num/10000>10)||(num/1000<10)){
+				alert("请输入合法数据");
+			}else{
+				a=num%10;
+				b=((num-a)/10)%10;
+				c=(num-num%100)/100%10;
+				d=(num-num%1000)/1000%10;
+				e=(num-num%10000)/10000%10;
+				alert("这个五位数的个位为"+a+"，这个五位数的十位为"+b+"，这个五位数的百位为"+c+"，这个五位数的千位为"+d+"，这个五位数的万位为"+e);
+			}*/
+			
+			
+			
+	// 作业 9 *********比较三个数中的最大值********	
+		/*alert("请输入三个不同的数");
+		var num1=prompt("请输入第一个数");
+		var num2=prompt("请输入第二个数");
+		var num3=prompt("请输入第三个数");
+		if(num1<num2){
+			if(num2<num3){
+				alert(num1+"小于"+num2+"小于"+num3);
+			}else{
+				if(num1<num3){
+				alert(num1+"小于"+num3+"小于"+num2);
+				}else{
+				alert(num3+"小于"+num1+"小于"+num2);
+				}
+			}
+		}else{
+			if(num2<num3){
+				if(num3<num1){
+				alert(num2+"小于"+num3+"小于"+num1);	
+				}else{
+				alert(num2+"小于"+num1+"小于"+num3);
+				}
+			}else{
+				alert(num3+"小于"+num2+"小于"+num1);
+			}
+		}*/
+		
+		// 作业 10 *********打印1000至2000中所有的闰年********	
+			/*for(i=1000;i<2000;i++)
+			{
+				if(i%4==0){
+					if(i%100==0){
+						if(i%400==0) document.write(i+"<br>");
+					}
+					else{
+						document.write(i+"<br>");
+					}
+				}
+			
+			
+			}
+			*/
+			
+			
+			
+		</script>
+	</body>
+</html>

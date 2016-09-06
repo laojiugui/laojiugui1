@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8"/>
+	<title>99</title>
+	</head>
+	<body>
+		<script>
+			var year=1000;
+			e=0;
+			for(year=1000;year<=2000;year++){
+				if((year%4==0&&year%100!=0)||year%400==0){
+					e++;
+					document.write(year+" ");
+					if
+					
+					(e%4==0){
+						document.write("<br>");
+					}
+				}
+			}
+			
+			
+			
+			for(var i=1;i<=9;i++){
+				for(var j=1;j<=i;j++){
+					document.write(i+"&times;"+j+"="+i*j+"&nbsp;");
+				}
+				document.write("<br>");
+			}
+			
+			
+			
+			var sum=0;
+			for(var i=1;i<=100;i++){
+				if(i==10||i==20||i==30||i==40||i==80|i==90){
+					continue;
+				}
+				sum+=i;
+			}
+			//alert(sum);
+			//阶乘
+			var jiecheng=1;
+			for(var i=5;i>=1;i--){
+				jiecheng*=i;
+			}
+			//alert(jiecheng)
+			var sum1=0;
+			for(var i=1;i<=100;i++){
+				if(i%2==0){
+					sum1-=1/i;
+				}else{
+					sum1+=1/i;
+				}
+			}
+			//alert(sum1)
+			//水仙花数
+			for(var i=100;i<=999;i++){
+				var gw=i%10; //个位
+				var sw=(i%100-gw)/10; //十位数
+				var bw=(i-i%100)/100;  //百位数
+				if(i==gw*gw*gw+sw*sw*sw+bw*bw*bw){
+					document.write(i+"  ");
+				}
+			}
+			
+			var salary=10000;
+			var sums=salary*12;
+			for(var i=1;i<=10;i++){
+				salary+=salary*0.1;
+				sums+=salary*12;
+			}
+			alert(salary.toFixed(2))
+			alert(sums.toFixed(2))
+		</script>
+	</body>

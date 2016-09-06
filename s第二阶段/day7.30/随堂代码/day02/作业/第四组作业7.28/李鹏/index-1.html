@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+<script>
+
+	//二
+	/*var year=Number(prompt("请输入年份"));
+	if(year%4==0&&year%100!=0||year%400==0){
+		alert(year+"是闰年");
+	}else{
+		alert(year+"年不是闰年");	
+	}*/
+	
+	
+	//三
+	/*var num=Number(prompt("请输入一个整数"));
+	if(num>0){
+		alert(num+"大于0");
+	}else if(num<0){
+		alert(num+"小于0");	
+	}else if(num=0){
+		alert(num+"等于0");
+	}*/
+	
+	
+	
+	//四
+	/*var num=Number(prompt("请输入一个整数"));
+	if(num>0&&num%3==0){
+		alert(num+"是三的倍数");
+	}else{
+		alert(num+"不是三的倍数");
+	}*/
+	
+	
+	
+	//五
+	/*var height=Number(prompt("请输入身高"));
+	var weight=Number(prompt("请输入体重"));
+	var sWeight=(height-108)*2;
+	if(weight>sWeight+10){
+		alert("您该好好爱惜身体了");	
+	}else if(weight<sWeight-10){
+		alert("您需要大吃一顿了");
+	}else if((weight-sWeight>0)&&(weight-sWeight<=10)){
+		alert("您该锻炼身体了");
+	}else if((weight-sWeight<0)&&(weight-sWeight>-10)){
+		alert("您稍微有点瘦");
+	}else{
+		alert("恭喜您，您的身材很完美");	
+	}*/
+	
+	
+	
+	//六
+	/*var score=Number(prompt("请输入分数"));
+	if(score>90&&score<=100){
+		alert("该同学的成绩等级为A");	
+	}else if(score>80&&score<=90){
+		alert("该同学的成绩等级为B");
+	}else if(score>70&&score<=80){
+		alert("该同学的成绩等级为C");
+	}else if(score>=60&&score<=70){
+		alert("该同学的成绩等级为D");
+	}else if(score<60){
+		alert("该同学的成绩过低，需要留级");
+	}else{
+		alert("输入的数据有误");
+	}*/
+	
+	
+	
+	//七
+	/*var month=Number(prompt("请输入您想查询的月份"));
+	switch(month){
+		case 1:
+		case 3:
+		case 5:
+		case 7:
+		case 8:
+		case 10:
+		case 12:alert("本月有31天");break;
+		case 4:
+		case 6:
+		case 9:
+		case 11:alert("本月有30天");break;
+		case 2:alert("本月有29天");break;
+		default:alert("输入有误");
+	}*/
+	
+	
+	
+	//八
+	/*var num1=Number(prompt("请输入一个五位数"));
+	var num2;
+	num2=num1%10;
+	num1=(num1-num2)/10;
+	alert("个位是"+num2);
+	num2=num1%10;
+	num1=(num1-num2)/10;
+	alert("十位是"+num2);
+	num2=num1%10;
+	num1=(num1-num2)/10;
+	alert("百位是"+num2);
+	num2=num1%10;
+	num1=(num1-num2)/10;
+	alert("千位是"+num2);
+	num2=num1%10;
+	num1=(num1-num2)/10;
+	alert("万位是"+num2);*/
+	
+	
+	
+	
+	//九	
+	var a=Number(prompt("请输入a的值"));
+	var b=Number(prompt("请输入b的值"));
+	var c=Number(prompt("请输入c的值"));
+	var d;
+	if(a<b){
+		d=b;
+		b=a;
+		a=d;
+		if(a<c){
+			d=c;
+			c=a;
+			a=d;
+		}
+	}else{
+		if(a<c){
+			d=c;
+			c=a;
+			a=d;
+		}
+	}
+	alert("其中最大的数是"+a);
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+</script>
+</body>
+</html>

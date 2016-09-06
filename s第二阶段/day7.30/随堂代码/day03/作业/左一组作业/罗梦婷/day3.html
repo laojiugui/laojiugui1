@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style type="text/css">
+span{display:inline-block;margin:10px;background:#C90;text-inline:center;padding:6px;}
+</style>
+</head>
+
+<body>
+
+<div id="box"></div>
+
+ 
+<script>
+  /*  var oBox=document.getElementById("box");
+	console.log(oBox);*/
+/*	alert(oBox.innerHTML);
+	oBox.innerHTML="九九乘法表";*/
+
+
+/*	var i=1;
+	while(i<=100){
+		document.write(i+"<br>")	
+		i++;
+	}*/
+	
+/*	var i=1;
+	var sum=0;
+	while(i<=100){
+		sum+=i;
+		i++;
+		}
+	alert(sum);*/
+/*	var i=0;
+	var sum=0;
+	while(i<=100){
+		sum+=i;
+		i+++i++;
+		}
+		alert(sum);*/
+		
+/*	var i=1;
+	var sum=0;
+	while(i<=100){
+		sum+=i;
+		i=i+2;
+		}
+		alert(sum);*/
+		
+/*	var year=1000;
+	var count=0;
+	while(year<=2016){
+		if((year%4==0||year%100!=0&&year%400==0)){
+			
+			document.write(year+" ");
+			count++;
+			if(count%4==0){
+				document.write("<br>");
+				}
+			}
+		 year++
+		}*/
+		
+/*		var i=1;
+		while(i<=4){
+			
+			document.write("*********<br>")
+			i++;
+			}*/
+			
+/*		var x=1;
+		while(x<=6){
+			document.write("<br>")
+			
+			var y=1;
+			
+			while(y<=x){
+			document.write("*")
+			y++;
+			
+			}
+			x++;
+			
+			}*/
+//--------------------------------------------		
+/*		  for(var x=1;x<=6;x++){
+			  for(var y=1;y<=x;y++){
+				  document.write("*")
+				  }
+			  document.write("<br>")
+			  }*/
+			  
+/*		for(var i=1;i<=50;i++){
+			document.write(".我要上天!<br>")
+			}*/
+			
+/*		for(var x=1;x<35;x++){
+			              for(var y=1;y<35;y++){
+							  if(x+y==35&&(x*2+y*4==94)){
+								 document.write("鸡有"+x+"       兔有"+y);  }
+							  
+							  }
+							             }*/
+										 
+										 
+										 
+/*	 for(var x=1;x<=9;x++){
+	 for(var y=1;y<=x;y++){
+		 document.write(x+"&times;"+y+"="+x*y+"&nbsp;&nbsp;");
+		 }
+	  document.write("<br>");
+	 }*/
+	 var oBox=document.getElementById("box");
+	console.log(oBox);						 
+
+ for(var x=1;x<=9;x++){
+	 for(var y=1;y<=x;y++){									 
+		 oBox.innerHTML+="<span>"+x+"&times;"+y+"="+x*y+"</span>";
+		 }
+	   oBox.innerHTML+="<br>";
+	 }								 
+										 
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,443 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+</head>
+
+
+
+
+
+
+
+
+<body>
+
+第一遍。。。。。。。。。。。。。。。。。。。。。。
+<script>
+	var sex="男";
+	var height="170以上";
+	var eyesize="5.0";
+	//alert(sex=="男"&&height=="170以上"&&eyesize=="5.0");
+	//prompt("你的身体条件","符合要求");
+	//alert(sex=="女"&&height=="170以上"&&eyesize=="5.0");
+	//prompt("你的身体条件","不符合要求");
+	
+	//alert(sex=="男"||height=="170以下"||eyesize=="5.0");
+	//prompt("你的身体条件","符合要求");
+	
+	//alert(!sex=="男");
+	//prompt("你的身体条件","不符合要求");
+	
+	//var num1=1;
+	//var str="abc";
+	//var bool=true;
+	//var c;
+	//var nu=null;
+	//var num2=num1+"";
+	//var d="";
+	//var e=" ";
+	
+	
+	//将字符串以外的数据类型转为字符串；
+	//alert(num2);
+	//alert(typeof num2);
+	//alert(String(bool));
+	//alert(typeof String(bool));
+	//alert(String(c));
+	//alert(typeof String(c));
+	//alert(Number(nu));
+	//alert(String(nu));
+	//alert(typeof String(nu));
+	
+	
+	//将boolean以外的数据类型转为布尔型；
+	//alert(Boolean(num1));
+	//alert(typeof Boolean(num1));
+	
+	//alert(Boolean(str));
+	//alert(typeof Boolean(str));
+	
+	//alert(Boolean(c));
+	//alert(typeof Boolean(c));
+	
+	//alert(Boolean(nu));
+	//alert(typeof Boolean(nu));
+	
+	//alert(Boolean(d));
+	//alert(typeof Boolean(d));
+	
+	//alert(NaN==NaN);
+	
+	//alert(Boolean(e));
+	//alert(typeof Boolean(e));
+	
+	//alert(Number(str));
+	
+	/*var a=89;
+	var b=a/24;
+	var c=a%24;
+	document.write("消防队员一共用了:"+parseInt(b)+"天,"+c+"小时");*/
+	
+	
+	//var k=-2;
+	//alert(++k + k++ + ++k + k);
+	
+	
+	/*var a=1;
+	if(a>0){
+		//alert(a+"是大于0的数");
+	}else{
+		alert(a+"是小鱼0的数");
+	
+	}*/
+	
+	
+	
+	
+	/*var num=prompt("请输入一个整数");
+	if(num>0){
+		//alert("您输入了一个大鱼0的数字");
+		
+	}else if(num<0){
+		//alert("您输入了一个小鱼0的数字");
+	}else if(num==0){
+		alert("您输入了一个等于0的数字");
+	}else{
+		alert("您输入的不是数字");
+	
+	}*/
+	
+	
+	
+	
+	/*var password=prompt("请输入您的银行卡密码",22222);
+	if(password=='111111'){
+		//alert("恭喜你，输入的密码正确");
+	}else{
+		//alert("您输入的木马有误，请重新输入");
+	}*/
+	
+	
+	
+	
+	
+	/*var num1=Number(prompt("请输入第一个数"));
+	var num2=Number(prompt("请输入第二个数"));
+	var ysf=prompt("请输入运算符");
+	if(ysf=="+"){
+		//alert(num1+num2);
+	}else if(ysf=="-"){
+		//alert(num1-num2);
+	}else if(ysf=="*"){
+		//alert(num1*num2);
+	}else if(ysf=="/"){
+		//alert(num1/num2);
+	}else if(ysf=="%"){
+		//alert(num1%num2);
+	}else{
+		//alert("您的输入不合法");
+	}*/
+	
+	
+	var num1=Number(prompt("请输入年份"));
+
+	
+	if((num1%4==0)&&(num1%100!=0)){
+		alert(num1+"年"+"是闰年");
+	}else if(num1%400==0){
+		alert(num1+"年"+"是瑞年");
+	}else{
+		alert(num1+"年"+"是平年");
+	}
+	
+	
+	
+	/*var num1=Number(prompt("请输入一个数字"));
+	if(num1>0){
+		if(num1<=10){
+			alert("您输入的数字在0到10之间");
+		}else if(num1>10&&num1<=50){
+			alert("您输入的数字在10到50之间");
+		}
+	}else if(num1<0){
+		alert("您输入的数字小于0");
+	}else if(num1==0){
+		alert("您输入的数字等于0");
+	}else{
+		alert("您输入的数字有误");
+	}*/
+	
+	
+	/*var num1=Number(prompt("请输入一个数字"));
+	if(num1%2==0&&num1>=0){
+		alert("您输入的数字是偶数");
+	}else if(num1%2!=0&&num1>=0){
+		alert("您输入的数字是奇数");
+	}else{
+		alert("您的输入有误");
+	}*/
+	
+	
+	/*var age=Number(prompt("请输入您的年龄"));
+	if(age>15){
+		if(age<=20){
+			alert("您的年龄是"+age+"你还是一名青少年，请好好学习天天向上");
+		}else if(age>20&&age<=30){
+			alert("您的年龄是"+age+"你还是一名青年，请好好工作赚钱");
+		}else if(age>30&&age<=50){
+			alert("您的年龄是"+age+"你还是一个中年人，请照顾好自己的家人");
+		}else if(age>50){
+			alert("您的年龄是"+age+"你还是一名老年人，请保护好自己的身体");
+		}
+	}else{
+		alert("你还是一个小毛孩子");
+	}*/
+	
+	
+	/*var day=Number(prompt("请输入一个数"));
+	switch(day){
+		case 1:alert("正常上课");break;
+		case 2:alert("正常上课");break;
+		case 3:alert("正常上课");break;
+		case 4:alert("正常上课");break;
+		case 5:alert("正常上课");break;
+		case 6:alert("强制上自习");break;
+		case 7:alert("休息一天LOL:)");break;
+		default:alert("您输入的数字有误");break;
+		
+	}*/
+	
+	
+	/*var num1=Number(prompt("请输入第一个数"));
+	var num2=Number(prompt("请输入第二个数"));
+	var ysf=prompt("请输入运算符");
+	switch(ysf){
+		case "+":alert("两者的和为："+num1+num2);break;
+		case "-":alert("两者的差为："+num1-num2);break;
+		case "*":alert("两者的积为："+num1*num2);break;
+		case "/":alert("两者的商为："+num1/num2);break;
+		case "%":alert("两者取余为："+num1%num2);break;
+		default:alert("您的输入不合法");	
+    }*/
+			
+</script>
+
+第二遍。。。。。。。。。。。。。。。。。。。。。。
+<script>
+	var sex="男";
+	var height="170以上";
+	var eyesize="5.0";
+	//alert(sex=="男"&&height=="170以上"&&eyesize=="5.0");
+	//prompt("你的身体条件","符合要求");
+	//alert(sex=="女"&&height=="170以上"&&eyesize=="5.0");
+	//prompt("你的身体条件","不符合要求");
+	
+	//alert(sex=="男"||height=="170以下"||eyesize=="5.0");
+	//prompt("你的身体条件","符合要求");
+	
+	//alert(!sex=="男");
+	//prompt("你的身体条件","不符合要求");
+	
+	//var num1=1;
+	//var str="abc";
+	//var bool=true;
+	//var c;
+	//var nu=null;
+	//var num2=num1+"";
+	//var d="";
+	//var e=" ";
+	
+	
+	//将字符串以外的数据类型转为字符串；
+	//alert(num2);
+	//alert(typeof num2);
+	//alert(String(bool));
+	//alert(typeof String(bool));
+	//alert(String(c));
+	//alert(typeof String(c));
+	//alert(Number(nu));
+	//alert(String(nu));
+	//alert(typeof String(nu));
+	
+	
+	//将boolean以外的数据类型转为布尔型；
+	//alert(Boolean(num1));
+	//alert(typeof Boolean(num1));
+	
+	//alert(Boolean(str));
+	//alert(typeof Boolean(str));
+	
+	//alert(Boolean(c));
+	//alert(typeof Boolean(c));
+	
+	//alert(Boolean(nu));
+	//alert(typeof Boolean(nu));
+	
+	//alert(Boolean(d));
+	//alert(typeof Boolean(d));
+	
+	//alert(NaN==NaN);
+	
+	//alert(Boolean(e));
+	//alert(typeof Boolean(e));
+	
+	//alert(Number(str));
+	
+	/*var a=89;
+	var b=a/24;
+	var c=a%24;
+	document.write("消防队员一共用了:"+parseInt(b)+"天,"+c+"小时");*/
+	
+	
+	//var k=-2;
+	//alert(++k + k++ + ++k + k);
+	
+	
+	/*var a=1;
+	if(a>0){
+		//alert(a+"是大于0的数");
+	}else{
+		alert(a+"是小鱼0的数");
+	
+	}*/
+	
+	
+	
+	
+	/*var num=prompt("请输入一个整数");
+	if(num>0){
+		//alert("您输入了一个大鱼0的数字");
+		
+	}else if(num<0){
+		//alert("您输入了一个小鱼0的数字");
+	}else if(num==0){
+		alert("您输入了一个等于0的数字");
+	}else{
+		alert("您输入的不是数字");
+	
+	}*/
+	
+	
+	
+	
+	/*var password=prompt("请输入您的银行卡密码",22222);
+	if(password=='111111'){
+		//alert("恭喜你，输入的密码正确");
+	}else{
+		//alert("您输入的木马有误，请重新输入");
+	}*/
+	
+	
+	
+	
+	
+	/*var num1=Number(prompt("请输入第一个数"));
+	var num2=Number(prompt("请输入第二个数"));
+	var ysf=prompt("请输入运算符");
+	if(ysf=="+"){
+		//alert(num1+num2);
+	}else if(ysf=="-"){
+		//alert(num1-num2);
+	}else if(ysf=="*"){
+		//alert(num1*num2);
+	}else if(ysf=="/"){
+		//alert(num1/num2);
+	}else if(ysf=="%"){
+		//alert(num1%num2);
+	}else{
+		//alert("您的输入不合法");
+	}*/
+	
+	
+	/*var num1=Number(prompt("请输入年份"));
+
+	
+	if((num1%4==0)&&(num1%100!=0)){
+		alert(num1+"年"+"是闰年");
+	}else if(num1%400==0){
+		alert(num1+"年"+"是瑞年");
+	}else{
+		alert(num1+"年"+"是平年");
+	}*/ 
+	
+	
+	
+	/*var num1=Number(prompt("请输入一个数字"));
+	if(num1>0){
+		if(num1<=10){
+			alert("您输入的数字在0到10之间");
+		}else if(num1>10&&num1<=50){
+			alert("您输入的数字在10到50之间");
+		}
+	}else if(num1<0){
+		alert("您输入的数字小于0");
+	}else if(num1==0){
+		alert("您输入的数字等于0");
+	}else{
+		alert("您输入的数字有误");
+	}*/
+	
+	
+	/*var num1=Number(prompt("请输入一个数字"));
+	if(num1%2==0&&num1>=0){
+		alert("您输入的数字是偶数");
+	}else if(num1%2!=0&&num1>=0){
+		alert("您输入的数字是奇数");
+	}else{
+		alert("您的输入有误");
+	}*/
+	
+	
+	/*var age=Number(prompt("请输入您的年龄"));
+	if(age>15){
+		if(age<=20){
+			alert("您的年龄是"+age+"你还是一名青少年，请好好学习天天向上");
+		}else if(age>20&&age<=30){
+			alert("您的年龄是"+age+"你还是一名青年，请好好工作赚钱");
+		}else if(age>30&&age<=50){
+			alert("您的年龄是"+age+"你还是一个中年人，请照顾好自己的家人");
+		}else if(age>50){
+			alert("您的年龄是"+age+"你还是一名老年人，请保护好自己的身体");
+		}
+	}else{
+		alert("你还是一个小毛孩子");
+	}*/
+	
+	
+	/*var day=Number(prompt("请输入一个数"));
+	switch(day){
+		case 1:alert("正常上课");break;
+		case 2:alert("正常上课");break;
+		case 3:alert("正常上课");break;
+		case 4:alert("正常上课");break;
+		case 5:alert("正常上课");break;
+		case 6:alert("强制上自习");break;
+		case 7:alert("休息一天LOL:)");break;
+		default:alert("您输入的数字有误");break;
+		
+	}*/
+	
+	
+	/*var num1=Number(prompt("请输入第一个数"));
+	var num2=Number(prompt("请输入第二个数"));
+	var ysf=prompt("请输入运算符");
+	switch(ysf){
+		case "+":alert("两者的和为："+num1+num2);break;
+		case "-":alert("两者的差为："+num1-num2);break;
+		case "*":alert("两者的积为："+num1*num2);break;
+		case "/":alert("两者的商为："+num1/num2);break;
+		case "%":alert("两者取余为："+num1%num2);break;
+		default:alert("您的输入不合法");	
+    }*/
+	
+	alert(Boolean(" "));
+	
+</script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title></title>
+</head>
+<body>
+	
+	<script>
+		var a=1;
+		var b=0;
+		var c=0;
+		while(a<=9){
+		
+			while(b<=9){
+				while(c<=9){
+					if((a*a*a+b*b*b+c*c*c)==(100*a+10*b+c)){
+						document.write(100*a+10*b+c+"<br/>")
+						
+					}
+					c++;
+				}
+				b++;
+				c=0;
+			
+			}
+			a++;
+			b=0;
+		}
+	</script>
+
+</body>
+</html>

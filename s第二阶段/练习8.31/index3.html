@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>九宫游戏</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        html body{
+            width:100%;
+            height:100%;
+        }
+        #box{
+            margin:30px auto 0;
+            width:490px;
+            height:340px;
+            border:1px dashed #6600FF;
+            position:relative;
+        }
+        .box{
+            width:150px;
+            height:100px;
+            background:#6600FF;
+            border-radius: 5px;
+            font-size:50px;
+            font-weight:900;
+            color:#fff;
+            text-align:center;
+            line-height:100px;
+            float:left;
+            margin:4px;
+        }
+        .active{
+            border:1px dashed #000;
+            background:#fff;
+        }
+        .move{
+            width:150px;
+            height:100px;
+            background:#6600FF;
+            box-shadow: 0 0 5px 4px #ccc;
+            border-radius:5px;
+            position:absolute;
+        }
+
+
+    </style>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            $("#box div").mousedown(function(e){
+               var that=this;
+                var oX=e.clientX;
+                var oY=e.clientY;
+                var $oDiv=$("<div>");
+                $oDiv.addClass("move").css("left",$(this).position().left).css("top",$(this).position().top).html($(this).html())
+                $(this).addClass("active").html("");
+                $oDiv.appendTo($(this).parent());
+                $("#box").on("mousemove",function(){
+                   //悬浮层跟随鼠标移动
+                    $oDiv.css("left",e.clientX-$(this).offset().left-oX).css("top",e.clientY-$(this).offset().top-oY)
+
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="box">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+    <div class="box">9</div>
+</div>
+</body>
+</html>

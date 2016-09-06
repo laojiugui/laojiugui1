@@ -1,0 +1,475 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+<script>
+	//解析html的语法内容
+	document.write("hello world<br>")
+	//调出变量
+	var a="我是字符串"
+	alert(a)
+	//检测数据类型
+	var num=11
+	alert(typeof num)
+	var str="我也是字符串"
+	alert(typeof str)
+	var bool=true
+	alert(typeof bool)
+	var und;
+	alert(typeof und)
+	var nu=null
+	alert(typeof nu)	
+    //算术运算符          +   -   *  /   %
+	var num1=11;
+	var num2=5;
+	document.write(num1+num2+"<br>")
+	alert(num1+num2)
+	document.write(num1-num2+"<br>")
+	alert(num1-num2)
+	document.write(num1*num2+"<br>")
+	alert(num1*num2)
+	document.write(num1/num2+"<br>")
+	alert(num1/num2)
+	document.write(num1%num2+"<br>")
+	alert(num1%num2)
+	//Number()把非数字的数据类型转换为数字
+	var num3="123"
+	document.write(Number(num3)+"<br>")//字符串形式的数字会直接转换成数字
+	alert(Number(num3))
+	var num4="我还想上天呢"
+	document.write(Number(num4)+"<br>")//字符串形式的非数字的转换结果是NaN
+	alert(Number(num4))
+	var num5="123你想上天不呢"
+	document.write(Number(num5)+"<br>")//字符串形式的非数字和数字的组合的转换结果也是是NaN
+	alert(Number(num5))
+	var bool1=true
+	document.write(Number(bool1)+"<br>")//boolean型如果是true转换结果是1
+	alert(Number(bool1))
+	var bool2=false
+	document.write(Number(bool2)+"<br>")//boolean型如果是false转换结果是0
+	alert(Number(bool2))
+	var num6=null
+	document.write(Number(num6)+"<br>")//变量值如果为null，转换结果也是0
+	alert(Number(num6))
+	var num7=" "
+	document.write(Number(num7)+"<br>")//变量值如果是空格，转换结果还是0
+	alert(Number(num7))
+	var num8=""
+	document.write(Number(num8)+"<br>")//变量值如果是空字符串，你猜对了，转换结果还~~~~~是0
+	alert(Number(num8))
+	
+	
+	//关系运算符         >  <  >=  <=  ==  ===  !=  !==  也叫判断运算符
+	var num9=1;
+	var num10=2;
+	var num11="2";
+	document.write((num9<=num10)+"<br>")        //结果是真
+	alert(num9<=num10)
+	document.write((num10==num11)+"<br>")       //结果是真
+	alert(num10==num11)
+	document.write((num10===num11)+"<br>")      //结果是假
+	alert(num10===num11)
+	//赋值运算符  =  +=  -=  *=  /=  %=
+	var num12=8;
+		
+	      
+	alert(num12+=1)	 //结果是9
+     
+	alert(num12-=3)  //结果是6
+	     
+	alert(num12*=3)  //结果是18
+	    
+	alert(num12/=2)  //结果是9
+	
+	alert(num12%=2)  //结果是1
+	
+	
+    //取出数值型和字符串中的数字
+	//(1)取出整型
+	var aa="123.456ab789"
+	document.write(parseInt(aa)+"<br>")	//parseInt（）能提取数字，但只能提取整数，且遇到字母或汉字会停止解析
+	alert(parseInt(aa))                       //如这里，只能提取123，不能提取.456和后面的789
+	
+	//(2)取小数
+	var bb="123.456ab789"
+	document.write(parseFloat(aa)+"<br>")	//parseInt（）能提取数字，但只能提取整数，且遇到字母或汉字会停止解析
+	alert(parseFloat(aa)) 
+</script>
+<script>
+	//解析html的语法内容
+	document.write("hello world<br>")
+	//调出变量
+	var a="我是字符串"
+	alert(a)
+	//检测数据类型
+	var num=11
+	alert(typeof num)
+	var str="我也是字符串"
+	alert(typeof str)
+	var bool=true
+	alert(typeof bool)
+	var und;
+	alert(typeof und)
+	var nu=null
+	alert(typeof nu)	
+    //算术运算符          +   -   *  /   %
+	var num1=11;
+	var num2=5;
+	document.write(num1+num2+"<br>")
+	alert(num1+num2)
+	document.write(num1-num2+"<br>")
+	alert(num1-num2)
+	document.write(num1*num2+"<br>")
+	alert(num1*num2)
+	document.write(num1/num2+"<br>")
+	alert(num1/num2)
+	document.write(num1%num2+"<br>")
+	alert(num1%num2)
+	//Number()把非数字的数据类型转换为数字
+	var num3="123"
+	document.write(Number(num3)+"<br>")//字符串形式的数字会直接转换成数字
+	alert(Number(num3))
+	var num4="我还想上天呢"
+	document.write(Number(num4)+"<br>")//字符串形式的非数字的转换结果是NaN
+	alert(Number(num4))
+	var num5="123你想上天不呢"
+	document.write(Number(num5)+"<br>")//字符串形式的非数字和数字的组合的转换结果也是是NaN
+	alert(Number(num5))
+	var bool1=true
+	document.write(Number(bool1)+"<br>")//boolean型如果是true转换结果是1
+	alert(Number(bool1))
+	var bool2=false
+	document.write(Number(bool2)+"<br>")//boolean型如果是false转换结果是0
+	alert(Number(bool2))
+	var num6=null
+	document.write(Number(num6)+"<br>")//变量值如果为null，转换结果也是0
+	alert(Number(num6))
+	var num7=" "
+	document.write(Number(num7)+"<br>")//变量值如果是空格，转换结果还是0
+	alert(Number(num7))
+	var num8=""
+	document.write(Number(num8)+"<br>")//变量值如果是空字符串，你猜对了，转换结果还~~~~~是0
+	alert(Number(num8))
+	
+	
+	//关系运算符         >  <  >=  <=  ==  ===  !=  !==  也叫判断运算符
+	var num9=1;
+	var num10=2;
+	var num11="2";
+	document.write((num9<=num10)+"<br>")        //结果是真
+	alert(num9<=num10)
+	document.write((num10==num11)+"<br>")       //结果是真
+	alert(num10==num11)
+	document.write((num10===num11)+"<br>")      //结果是假
+	alert(num10===num11)
+	//赋值运算符  =  +=  -=  *=  /=  %=
+	var num12=8;
+		
+	      
+	alert(num12+=1)	 //结果是9
+     
+	alert(num12-=3)  //结果是6
+	     
+	alert(num12*=3)  //结果是18
+	    
+	alert(num12/=2)  //结果是9
+	
+	alert(num12%=2)  //结果是1
+	
+	
+    //取出数值型和字符串中的数字
+	//(1)取出整型
+	var aa="123.456ab789"
+	document.write(parseInt(aa)+"<br>")	//parseInt（）能提取数字，但只能提取整数，且遇到字母或汉字会停止解析
+	alert(parseInt(aa))                       //如这里，只能提取123，不能提取.456和后面的789
+	
+	//(2)取小数
+	var bb="123.456ab789"
+	document.write(parseFloat(aa)+"<br>")	//parseInt（）能提取数字，但只能提取整数，且遇到字母或汉字会停止解析
+	alert(parseFloat(aa)) 
+</script>
+<script>
+	//解析html的语法内容
+	document.write("hello world<br>")
+	//调出变量
+	var a="我是字符串"
+	alert(a)
+	//检测数据类型
+	var num=11
+	alert(typeof num)
+	var str="我也是字符串"
+	alert(typeof str)
+	var bool=true
+	alert(typeof bool)
+	var und;
+	alert(typeof und)
+	var nu=null
+	alert(typeof nu)	
+    //算术运算符          +   -   *  /   %
+	var num1=11;
+	var num2=5;
+	document.write(num1+num2+"<br>")
+	alert(num1+num2)
+	document.write(num1-num2+"<br>")
+	alert(num1-num2)
+	document.write(num1*num2+"<br>")
+	alert(num1*num2)
+	document.write(num1/num2+"<br>")
+	alert(num1/num2)
+	document.write(num1%num2+"<br>")
+	alert(num1%num2)
+	//Number()把非数字的数据类型转换为数字
+	var num3="123"
+	document.write(Number(num3)+"<br>")//字符串形式的数字会直接转换成数字
+	alert(Number(num3))
+	var num4="我还想上天呢"
+	document.write(Number(num4)+"<br>")//字符串形式的非数字的转换结果是NaN
+	alert(Number(num4))
+	var num5="123你想上天不呢"
+	document.write(Number(num5)+"<br>")//字符串形式的非数字和数字的组合的转换结果也是是NaN
+	alert(Number(num5))
+	var bool1=true
+	document.write(Number(bool1)+"<br>")//boolean型如果是true转换结果是1
+	alert(Number(bool1))
+	var bool2=false
+	document.write(Number(bool2)+"<br>")//boolean型如果是false转换结果是0
+	alert(Number(bool2))
+	var num6=null
+	document.write(Number(num6)+"<br>")//变量值如果为null，转换结果也是0
+	alert(Number(num6))
+	var num7=" "
+	document.write(Number(num7)+"<br>")//变量值如果是空格，转换结果还是0
+	alert(Number(num7))
+	var num8=""
+	document.write(Number(num8)+"<br>")//变量值如果是空字符串，你猜对了，转换结果还~~~~~是0
+	alert(Number(num8))
+	
+	
+	//关系运算符         >  <  >=  <=  ==  ===  !=  !==  也叫判断运算符
+	var num9=1;
+	var num10=2;
+	var num11="2";
+	document.write((num9<=num10)+"<br>")        //结果是真
+	alert(num9<=num10)
+	document.write((num10==num11)+"<br>")       //结果是真
+	alert(num10==num11)
+	document.write((num10===num11)+"<br>")      //结果是假
+	alert(num10===num11)
+	//赋值运算符  =  +=  -=  *=  /=  %=
+	var num12=8;
+		
+	      
+	alert(num12+=1)	 //结果是9
+     
+	alert(num12-=3)  //结果是6
+	     
+	alert(num12*=3)  //结果是18
+	    
+	alert(num12/=2)  //结果是9
+	
+	alert(num12%=2)  //结果是1
+	
+	
+    //取出数值型和字符串中的数字
+	//(1)取出整型
+	var aa="123.456ab789"
+	document.write(parseInt(aa)+"<br>")	//parseInt（）能提取数字，但只能提取整数，且遇到字母或汉字会停止解析
+	alert(parseInt(aa))                       //如这里，只能提取123，不能提取.456和后面的789
+	
+	//(2)取小数
+	var bb="123.456ab789"
+	document.write(parseFloat(aa)+"<br>")	//parseInt（）能提取数字，但只能提取整数，且遇到字母或汉字会停止解析
+	alert(parseFloat(aa)) 
+</script>
+<script>
+	//解析html的语法内容
+	document.write("hello world<br>")
+	//调出变量
+	var a="我是字符串"
+	alert(a)
+	//检测数据类型
+	var num=11
+	alert(typeof num)
+	var str="我也是字符串"
+	alert(typeof str)
+	var bool=true
+	alert(typeof bool)
+	var und;
+	alert(typeof und)
+	var nu=null
+	alert(typeof nu)	
+    //算术运算符          +   -   *  /   %
+	var num1=11;
+	var num2=5;
+	document.write(num1+num2+"<br>")
+	alert(num1+num2)
+	document.write(num1-num2+"<br>")
+	alert(num1-num2)
+	document.write(num1*num2+"<br>")
+	alert(num1*num2)
+	document.write(num1/num2+"<br>")
+	alert(num1/num2)
+	document.write(num1%num2+"<br>")
+	alert(num1%num2)
+	//Number()把非数字的数据类型转换为数字
+	var num3="123"
+	document.write(Number(num3)+"<br>")//字符串形式的数字会直接转换成数字
+	alert(Number(num3))
+	var num4="我还想上天呢"
+	document.write(Number(num4)+"<br>")//字符串形式的非数字的转换结果是NaN
+	alert(Number(num4))
+	var num5="123你想上天不呢"
+	document.write(Number(num5)+"<br>")//字符串形式的非数字和数字的组合的转换结果也是是NaN
+	alert(Number(num5))
+	var bool1=true
+	document.write(Number(bool1)+"<br>")//boolean型如果是true转换结果是1
+	alert(Number(bool1))
+	var bool2=false
+	document.write(Number(bool2)+"<br>")//boolean型如果是false转换结果是0
+	alert(Number(bool2))
+	var num6=null
+	document.write(Number(num6)+"<br>")//变量值如果为null，转换结果也是0
+	alert(Number(num6))
+	var num7=" "
+	document.write(Number(num7)+"<br>")//变量值如果是空格，转换结果还是0
+	alert(Number(num7))
+	var num8=""
+	document.write(Number(num8)+"<br>")//变量值如果是空字符串，你猜对了，转换结果还~~~~~是0
+	alert(Number(num8))
+	
+	
+	//关系运算符         >  <  >=  <=  ==  ===  !=  !==  也叫判断运算符
+	var num9=1;
+	var num10=2;
+	var num11="2";
+	document.write((num9<=num10)+"<br>")        //结果是真
+	alert(num9<=num10)
+	document.write((num10==num11)+"<br>")       //结果是真
+	alert(num10==num11)
+	document.write((num10===num11)+"<br>")      //结果是假
+	alert(num10===num11)
+	//赋值运算符  =  +=  -=  *=  /=  %=
+	var num12=8;
+		
+	      
+	alert(num12+=1)	 //结果是9
+     
+	alert(num12-=3)  //结果是6
+	     
+	alert(num12*=3)  //结果是18
+	    
+	alert(num12/=2)  //结果是9
+	
+	alert(num12%=2)  //结果是1
+	
+	
+    //取出数值型和字符串中的数字
+	//(1)取出整型
+	var aa="123.456ab789"
+	document.write(parseInt(aa)+"<br>")	//parseInt（）能提取数字，但只能提取整数，且遇到字母或汉字会停止解析
+	alert(parseInt(aa))                       //如这里，只能提取123，不能提取.456和后面的789
+	
+	//(2)取小数
+	var bb="123.456ab789"
+	document.write(parseFloat(aa)+"<br>")	//parseInt（）能提取数字，但只能提取整数，且遇到字母或汉字会停止解析
+	alert(parseFloat(aa)) 
+</script>
+<script>
+	//解析html的语法内容
+	document.write("hello world<br>")
+	//调出变量
+	var a="我是字符串"
+	alert(a)
+	//检测数据类型
+	var num=11
+	alert(typeof num)
+	var str="我也是字符串"
+	alert(typeof str)
+	var bool=true
+	alert(typeof bool)
+	var und;
+	alert(typeof und)
+	var nu=null
+	alert(typeof nu)	
+    //算术运算符          +   -   *  /   %
+	var num1=11;
+	var num2=5;
+	document.write(num1+num2+"<br>")
+	alert(num1+num2)
+	document.write(num1-num2+"<br>")
+	alert(num1-num2)
+	document.write(num1*num2+"<br>")
+	alert(num1*num2)
+	document.write(num1/num2+"<br>")
+	alert(num1/num2)
+	document.write(num1%num2+"<br>")
+	alert(num1%num2)
+	//Number()把非数字的数据类型转换为数字
+	var num3="123"
+	document.write(Number(num3)+"<br>")//字符串形式的数字会直接转换成数字
+	alert(Number(num3))
+	var num4="我还想上天呢"
+	document.write(Number(num4)+"<br>")//字符串形式的非数字的转换结果是NaN
+	alert(Number(num4))
+	var num5="123你想上天不呢"
+	document.write(Number(num5)+"<br>")//字符串形式的非数字和数字的组合的转换结果也是是NaN
+	alert(Number(num5))
+	var bool1=true
+	document.write(Number(bool1)+"<br>")//boolean型如果是true转换结果是1
+	alert(Number(bool1))
+	var bool2=false
+	document.write(Number(bool2)+"<br>")//boolean型如果是false转换结果是0
+	alert(Number(bool2))
+	var num6=null
+	document.write(Number(num6)+"<br>")//变量值如果为null，转换结果也是0
+	alert(Number(num6))
+	var num7=" "
+	document.write(Number(num7)+"<br>")//变量值如果是空格，转换结果还是0
+	alert(Number(num7))
+	var num8=""
+	document.write(Number(num8)+"<br>")//变量值如果是空字符串，你猜对了，转换结果还~~~~~是0
+	alert(Number(num8))
+	
+	
+	//关系运算符         >  <  >=  <=  ==  ===  !=  !==  也叫判断运算符
+	var num9=1;
+	var num10=2;
+	var num11="2";
+	document.write((num9<=num10)+"<br>")        //结果是真
+	alert(num9<=num10)
+	document.write((num10==num11)+"<br>")       //结果是真
+	alert(num10==num11)
+	document.write((num10===num11)+"<br>")      //结果是假
+	alert(num10===num11)
+	//赋值运算符  =  +=  -=  *=  /=  %=
+	var num12=8;
+		
+	      
+	alert(num12+=1)	 //结果是9
+     
+	alert(num12-=3)  //结果是6
+	     
+	alert(num12*=3)  //结果是18
+	    
+	alert(num12/=2)  //结果是9
+	
+	alert(num12%=2)  //结果是1
+	
+	
+    //取出数值型和字符串中的数字
+	//(1)取出整型
+	var aa="123.456ab789"
+	document.write(parseInt(aa)+"<br>")	//parseInt（）能提取数字，但只能提取整数，且遇到字母或汉字会停止解析
+	alert(parseInt(aa))                       //如这里，只能提取123，不能提取.456和后面的789
+	
+	//(2)取小数
+	var bb="123.456ab789"
+	document.write(parseFloat(aa)+"<br>")	//parseInt（）能提取数字，但只能提取整数，且遇到字母或汉字会停止解析
+	alert(parseFloat(aa)) 
+</script>
+</body>
+</html>

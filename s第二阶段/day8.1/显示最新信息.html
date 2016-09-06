@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>显示最新信息</title>  
+</head>
+<body>
+	<input type="text" id="news"><button id="btn">添加</button>
+	<ul id="newlists">
+		
+	</ul>
+<script>
+	window.onload=function(){
+		var oNews=document.getElementById("news"); //获取文本框
+		var oBtn=document.getElementById("btn");   //获取按钮
+		var oNewslists=document.getElementById("newlists"); //获取新闻列表的框
+		//把新闻的消息保存在数组中
+		var aLists=['里约奥运会即将开幕','今天是八一建军节','深圳这周预报有10到12级台风'];
+		news2();//把新闻的信息通过循环数组的方式放到ul中
+		//给按钮添加单击事件
+		oBtn.onclick=function(){
+			var news1=oNews.value; //获取文本框的值
+			aLists.unshift(news1);  //把文本框的值添加到数组中
+			news2(); //重新更新页面
+			oNews.value='';//添加完新闻信息后清空文本框
+		}
+		//因为这段代码被重复利用了两次，所以封装了函数
+		function news2(){
+			var lis='';
+			for(var i in aLists){
+				lis+='<li><a href="">'+aLists[i]+'</a></li>';
+			}
+			oNewslists.innerHTML=lis;
+		}
+	}
+</script>
+</body>
+</html>

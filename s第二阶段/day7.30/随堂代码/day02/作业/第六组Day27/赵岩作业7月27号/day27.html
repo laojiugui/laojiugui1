@@ -1,0 +1,339 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>赵岩day27号作业</title>
+</head>
+<script>
+
+var a=Number(prompt("输入一个年份"));//在一个文本框输入一个年份，判断这年是不是闰年 
+var b=a%4;
+var c=a%100;
+var d=a%400;
+if(b==0&&c!=0||d==0){
+	alert(a+"是闰年");
+}else{
+	alert(a+"不是个闰年");
+}
+
+var num1=Number(prompt("输入一个整数"));//判断一个整数，属于哪个范围：大于0；小于0；等于0
+if(num1>0){
+	alert(num1+"大于0");		
+}else if(num1==0){
+	alert(num1+"等于0");
+}else if(num1<0){
+	alert(num1+"小于0");
+
+}else{
+	alert("不符合要求");
+}
+
+var num2=Number(prompt("输入一个整数")); //判断一个整数是否是3的倍数，并输出判断结果
+if(num2%3==0){
+	alert(num2+"是3的倍数");
+}else{
+	alert(num2+"不是3的倍数");
+}
+
+var height=Number(prompt("输入你的身高"));//体重判断
+var weight=Number(prompt("输入你的体重"));
+var sweight=(height-108)*2
+if(weight>sweight){
+	if(weight<sweight+10){
+		alert("你身材正好，继续保持");
+	}else{
+		alert("你需要减肥了");
+	}	
+}else if(weight<sweight){
+	if(weight>sweight+10){
+		alert("你需要增肥了");
+	}else{
+		alert("你身材正好，继续保持");
+	}
+}else{
+	alert("你身材完美"); 	
+}
+
+var num3=Number(prompt("输入一个分数"));//6.给一个分数，判断它的等级，如果90以上为A  80-90为B 70-80为C 60-70为D 60以下  留级
+if(num3>90){
+	alert("A");
+}else if(num3<=90&&num3>80){
+	alert("B");
+}else if(num3<=80&&num3>70){
+	alert("C");
+}else if(num3<=70&&num3>=60){
+	alert("D");
+}else{
+	alert("留级");
+}
+
+var month=Number(prompt("这是一个月份"))//7.用switch case输出2016年一年中1月份，3月份，5月份，7月份，八月份，十月份，12月份是31天，四月份，六月份，九月份，11月份是30天，二月份是29天
+
+switch(month){
+	case 1:	
+	case 3:	
+	case 5:	
+	case 7:
+	case 8:
+	case 10:	
+	case 12:alert(month+"月份有31天");break;	
+	case 4:	
+	case 6:
+	case 9:
+	case 10:
+	case 11:alert(month+"月份有31天");break;
+	case 2:alert(month+"月份有29天");break;
+	default:alert("不符合规定");break;
+}
+
+var a=Number(prompt("输入一个数"));//输入3个数  a,b,c中, 输出最大数的值
+var b=Number(prompt("输入一个数"));
+var c=Number(prompt("输入一个数"));
+if(a>b&&a>c){
+	alert(a+"是最大的数");	
+}else if(b>a&&b>c){
+	alert(b+"是最大的数");
+}else{
+	alert(c+"是最大的数");
+}	
+
+
+
+
+
+
+/*
+//案例
+var k=-2;
+alert(++k + k++ + ++k + k);
+//-1+-1+1+1
+var k=-2;
+alert(++k + k++ + ++k + k);
+
+var height=150;
+var age=25;
+var weight=80;
+alert(height==150&&age==25)
+
+alert(height==149||weight==80);
+var num=null
+alert(Boolean(num))
+var num1="true"
+alert(Number(num1))
+
+var height=150;
+var age=25;
+var weight=80;
+alert(height==150&&agr==25)
+alert(height==149||weight==80);
+var num=null
+alert(Boolean(num))
+var num1="true"
+alert(Number(num1))
+
+var num="12a"
+alert(Number(num))
+alert(typeof Number(num))
+var num="12a"
+alert(Number(num))
+alert(typeof Number(num))
+
+var num=""
+alert(Boolean(num))
+alert(Number(num))
+var num=""
+alert(Boolean(num))
+alert(Number(num))
+var num1=NaN
+alert(String(num1))
+alert(Number(num1))
+alert(Boolean(num1))
+var num1=NaN
+alert(String(num1))
+alert(Number(num1))
+alert(Boolean(num1))
+var a=89
+var b=24
+document.write(parseInt(a/b)+"天"+a%b+"小时")
+var a=89
+var b=24
+document.write(parseInt(a/b)+"天"+a%b+"小时")
+
+
+var a=1;
+if(a>0){
+	alert(a+"是大于0的数");
+}else{
+	alert(a+"不是大于0的数")
+}
+
+var a=1;
+if(a>0){
+	alert(a+"是大于0的数");
+}else{
+	alert(a+"不是大于0的数")
+}
+
+var password=1111;
+if(password=1111){alert("密码对咯");	
+}else{alert("密码错了");
+}
+var password=1111;
+if(password=1111){alert("密码对咯");	
+}else{alert("密码错了");
+}
+
+var num=prompt("请输入一个整数");
+if(num>0){
+	alert("你的数大于0");
+}else if(num<0){
+	alert("你的数小于0");
+}else if(num==0){
+	alert("你的数等于0");	
+}else{
+	alert("你的数不是整数");	
+}
+var num=prompt("请输入一个整数");
+if(num>0){
+	alert("你的数大于0");
+}else if(num<0){
+	alert("你的数小于0");
+}else if(num==0){
+	alert("你的数等于0");	
+}else{
+	alert("你的数不是整数");	
+
+
+var a=Number(prompt("第一个数"));
+var b=Number(prompt("第二个数"));
+var c=prompt("运算符");
+if(c=="+"){
+	alert(a+b);
+}else if(c=="-"){
+	alert(a-b);
+}else if(c=="*"){
+	alert(a*b);	
+}else if(c=="/"){
+	alert(a/b);	
+}else{
+	alert("这不是数");
+}
+var a=Number(prompt("第一个数"));
+var b=Number(prompt("第二个数"));
+var c=prompt("运算符");
+if(c=="+"){
+	alert(a+b);
+}else if(c=="-"){
+	alert(a-b);
+}else if(c=="*"){
+	alert(a*b);	
+}else if(c=="/"){
+	alert(a/b);	
+}else{
+	alert("这不是数");
+}
+
+
+
+var a=Number(prompt("一个整数"));
+if(a>0){
+	if(a<=10){
+		alert("小于10的数");
+	}else if(10<a<=50){
+		alert("小于50的数");
+	}else if(50<a<=100){
+		alert("小于100的数");
+	}else{
+		alert("大于100的数");
+	}
+}else if(a=0){
+	alert("等于0的数");	
+}else if(a<0){
+	alert("小于0的数");
+}else{
+	alert("这不是整数");
+}
+
+var a=Number(prompt("这是一个数"));
+var b=a%2
+
+if(b==0){
+	alert("a是偶数");	
+}else{
+	alert("a是技术");}
+var a=Number(prompt("这是一个数"));
+var b=a%2
+
+if(b==0){
+	alert("a是偶数");	
+}else{
+	alert("a是技术");}
+
+var day=Number(prompt("这是一个数"));
+switch(day){
+	case 1:
+	case 2:
+	case 3:
+	case 4:
+	case 5:alert("上课了");break;
+	case 6:alert("自习");break;
+	default:alert("休息");break;
+}
+var day=Number(prompt("这是一个数"));
+switch(day){
+	case 1:
+	case 2:
+	case 3:
+	case 4:
+	case 5:alert("上课了");break;
+	case 6:alert("自习");break;
+	default:alert("休息");break;
+}
+
+var a=Number(prompt("这是一个数"));
+var b=Number(prompt("这是一个数"));
+var c=prompt("输入运算符");
+switch(c){
+	case "+":alert(a+b);break
+	case "-":alert(a-b);break
+	default:alert("不合法");
+}
+var a=Number(prompt("这是一个数"))；
+var b=Number(prompt("这是一个数"));
+var c=prompt("输入运算符");
+switch(c){
+	case "+":alert(a+b);break
+	case "-":alert(a-b);break
+	default:alert("不合法");
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+<body>
+</body>
+</html>

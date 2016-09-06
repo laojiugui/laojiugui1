@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+<script>
+	var	a=prompt("年份")
+	if(a%100!=0){
+		if(a%4==0){
+			alert(a+"是闰年")
+		}else{
+			alert(a+"不是闰年")
+		}
+		
+	}else{
+		if(a%400==0){
+			alert(a+"是闰年")
+		}else{
+			alert(a+"不是闰年")	
+		}	
+	}
+		
+	var b=Number(prompt("输入一个整数"))
+	if(b<0){
+		alert(b+"小于0")
+	}else if(b==0){
+		alert(b+"等于0")	
+	}else if(b>0){
+		alert(b+"大于0")	
+	}else{
+		alert("输入不合法")
+	}
+	
+	var c=prompt("请输入一个整数")
+	if(c%3==0){
+		alert(c+"是3的倍数")	
+	}else if(c%3==1||c%3==2){
+		alert(c+"不是3的倍数")	
+	}else{
+		alert("输入的是非法字符")
+	}
+	
+	var height=Number(prompt("请输入身高"))
+	var sWeight=(height-103)*2
+	var weight=Number(prompt("请输入体重"))
+	    if(weight==sWeight){
+			alert("身材完美")
+		}else if((weight-sWeight)>10){
+			alert("偏胖"+(weight-sWeight-10)+"斤")	
+		}else if((sWeight-weight)>10){
+			alert("偏瘦"+(sWeight-weight-10)+"斤")
+		}else if((weight-sWeight)<=10&&(sWeight-weight)<=10){
+			alert("正常体重")
+		}else{
+			alert("输入不合法")
+		}
+		
+	var d=Number(prompt("输入分数"))
+	if(d>90){
+		alert("A")	
+	}else if(d>80&&d<=90){
+		alert("B")	
+	}else if(d>70&&d<=80){
+		alert("C")	
+	}else if(d>=60&&d<=70){
+		alert("D")	
+	}else if(d<60){
+		alert("留级吧，孩子，这门课不适合你")	
+	}else{
+		alert("输入不合法")
+	}
+		
+	var mouth=Number(prompt("输入月份"))	
+	switch(mouth){
+		case 1:
+		case 3:
+		case 5:
+		case 7:
+		case 8:
+		case 10:
+		case 12:alert("2016年"+mouth+"月是31天");break;
+		case 4:
+		case 6:
+		case 9:
+		case 11:alert("2016年"+mouth+"月是30天");break;
+		case 2:alert("2016年"+mouth+"月是29天");
+		default:alert("输入不合法")				
+	}	
+				
+	var e=Number(prompt("输入一个五位数"))	
+	if(e>=10000&&e<=99999){
+	alert("此数个位是"+(e%10)+",十位是"+(parseInt((e%100)/10))+",百位是"+(parseInt((e%1000)/100))+",千位是"+(parseInt((e%10000)/1000))+",万位是"+(parseInt(e/10000)))
+	}else{
+		alert("输入不合法")
+	}
+	
+	
+	var x=Number(prompt("请输入x"))
+	var y=Number(prompt("请输入y"))
+	var z=Number(prompt("请输入z"))	
+	if(x>y){
+		if(x>z){
+			alert(x)
+		}else{
+			alert(z)
+		}
+	}else if(x<=y){
+		if(y>z){
+			alert(y)
+		}else{
+			alert(z)
+		}
+	}else{
+		alert("输入不合法")	
+	}
+	
+	
+	
+	
+	var year;
+	var m=0;
+	for(year=1000;year<=2000;year++)
+	{
+			if(year%100!=0){
+				if(year%4==0){
+					document.write(year+" ")
+					m++
+					if(m%4==0){document.write("<br>")}
+				}
+			}else{
+				if(year%400==0){
+					document.write(year+" ")
+					m++
+					if(m%4==0){document.write("<br>")}
+				}								
+			}						
+	}
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+</script>
+</body>
+</html>

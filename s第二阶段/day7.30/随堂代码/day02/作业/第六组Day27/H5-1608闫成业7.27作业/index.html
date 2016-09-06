@@ -1,0 +1,295 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>7.27作业</title>
+</head>
+
+<body>
+<script>
+	var year=Number(prompt('请输入年份：'));
+	if(year%4==0&&year%100!=0||year%400==0){
+		alert(year+'是闰年');
+	}else{
+		alert(year+'不是闰年');	
+	}
+	
+	var num=prompt('请输入一个整数');
+	if(num>0){
+		alert(num+'大于零');	
+	}else if(num==0){
+		alert(num+'等于零');
+	}else if(num<0){
+		alert(num+'小于零');
+	}else{
+		alert('不合法');
+	}
+	
+	var a=Number(prompt('请输入一个整数'));
+	if(a%3==0){
+		alert(a+'是3的倍数');	
+	}else{
+		alert(a+'不是3的倍数');	
+	}
+
+	var height=Number(prompt('请输入身高（单位cm）'));
+	var sweight=(height-108)*2;
+	var weight=Number(prompt('请输入体重（单位斤）'));
+	if(weight==sweight){
+			alert('您的身材完美');
+	}else if(weight>sweight){
+		if(weight>sweight+10){
+			alert('您超重，该减肥了');
+		}else{
+			alert('您的体重正常');
+		}	
+	}else{
+		if(weight<sweight){
+			if(weight<sweight+10){
+				alert('您营养不良，该补充营养了');
+			}else{
+				alert('您体重正常');
+			}	
+		}	
+	}
+	
+	var score=Number(prompt('请输入您的分数'));
+	if(score>=90){
+		alert('您的评级为A');	
+	}else if(score>=80&&score<90){
+		alert('您的评级为B');	
+	}else if(score>=70&&score<80){
+		alert('您的评级为C');	
+	}else if(score>=60&&score<70){
+		alert('您的评级为D');	
+	}else{
+		alert('您考试不及格，需要留级');	
+	}
+
+	var month=Number(prompt('请输入月份'));
+	switch(month){
+		case 1:alert('1月份有31天');break;
+		case 2:alert('2月份有29天');break;
+		case 3:alert('3月份有31天');break;
+		case 4:alert('4月份有30天');break;
+		case 5:alert('5月份有31天');break;
+		case 6:alert('6月份有30天');break;
+		case 7:alert('7月份有31天');break;
+		case 8:alert('8月份有31天');break;
+		case 9:alert('9月份有30天');break;
+		case 10:alert('10月份有31天');break;
+		case 11:alert('11月份有30天');break;
+		case 12:alert('12月份有31天')	;break;
+		default:alert('illegal');
+	}
+
+	
+	var c=Number(prompt('请输入第一个数'));
+	var d=Number(prompt('请输入第二个数'));
+	var e=Number(prompt('请输入第三个数'));
+	if(c>d){
+		if(c>e){
+			alert('最大的数是'+c);	
+		}else{
+			alert('最大的数是'+e);	
+		}	
+	}else{ 
+		if(d>e){
+		alert('最大的数是'+d);
+		}else{
+		alert('最大的数是'+e);
+		}
+	}
+
+		var b=Number(prompt('请输入一个五位数'));
+	alert('万位是'+parseInt(b/10000));
+	alert('千位是'+parseInt(b/1000));
+	alert('百位是'+parseInt(b/100));
+	alert('十位是'+parseInt(b/10));
+	alert('个位是'+parseInt(b%10));
+
+//	var height=170;
+//	var eye=5.0;
+//	var sex='man';
+//	alert(height==170&&eye==5.0&&sex=='man');
+//	var height=170;
+//	var eye=5.0;
+//	var sex='man';
+//	alert(height==170&&eye==5.0&&sex=='man');
+//	var time=89;
+//	alert(parseInt(day=time/24));
+//	alert(time%24);
+//	document.write(parseInt(time/24+'tian')+time%24+'xiaoshi');
+//	var time=89;
+//	alert(parseInt(time/24));
+//	alert(time%24);
+//	document.write(parseInt(time/24)+'tian'+time%24+'xiaoshi');
+//		var a=-2;
+//		if(a>0){
+//			alert(a+'shi zheng shu ');
+//		}else{
+//			alert(a+' bu shi zheng shu ')	
+//		}
+//		var a=-2;
+//		if(a>0){
+//			alert(a+' shi zheng shu ');	
+//		}else{
+//			alert(a+'bu shi zheng shu');	
+//		}
+//	var a=prompt('please enter');
+//	if(a>0){
+//		if(a>0&&a<=10){
+//			alert(a+'zai 0-10 zhi jian');	
+//		}else if(a>10&&a<=50){
+//			alert(a+'zai 10-50 zhi jian');	
+//		}else if(a>50&&a<=100){
+//			alert(a+'zai 50-100 zhi jian ');	
+//		}else if(a>100){
+//			alert(a+'da yu 100');	
+//		}	
+//	}else if(a<0){
+//		alert(a+'xiao yu ling');
+//	}else if(a==0){
+//		alert(a+'deng yu ling ');	
+//	}else{
+//		alert('shu ru de bu shi shu');	
+//	}
+//	var a=prompt('please enter');
+//	if(a>0){
+//		if(a>0&&a<=10){
+//			alert(a+'zai 0-10 zhi jian');	
+//		}else if(a>10&&a<=50){
+//			alert(a+'zai 10-50 zhi jian ');	
+//		}else if(a>50&&a<=100){
+//			alert(a+'zai 50-100 zhi jian');	
+//		}else if(a>100){
+//			alert(a+' da yu 100');	
+//		}	
+//	}else if(a<0){
+//		alert(a+' xiao yu ling');
+//	}else if(a==0){
+//		alert(a+'deng yu ling ');	
+//	}else{
+//		alert('shu ru de bu shi shu');	
+//	}
+//	var a=Number(prompt('please enter first number'));
+//	var b=Number(prompt('please enter second number'));
+//	var c=prompt('please enter symbol');
+//	if(c=='+'){
+//		alert(a+b);	
+//	}else if(c=='-'){
+//		alert(a-b);	
+//	}else if(c=='*'){
+//		alert(a*b);	
+//	}else if(c=='/'){
+//		alert(a/b);	
+//	}else if(c==%){
+//		alert(a%b);	
+//	}else{
+//		alert('illegal');	
+//	}
+//	var a=Number(prompt('please enter first number'));
+//	var b=Number(prompt('please enter second number'));
+//	var c=prompt('please enter symbol');
+//	if(c=='+'){
+//		alert(a+b);	
+//	}else if(c=='-'){
+//		alert(a-b);	
+//	}else if(c=='*'){
+//		alert(a*b);	
+//	}else if(c=='/'){
+//		alert(a/b);	
+//	}else if(c=='%'){
+//		alert(a%b);	
+//	}else{
+//		alert('illegal');	
+//	}
+//	var year=Number(prompt('please'));
+//	if(year%4==0){
+//		if(year%100==0){
+//			alert(year+'bu shi run nian');
+//		}else if(year$400==0){
+//			alert(year+'shi run nian');	
+//		}else{
+//			alert(year+'shi run nian');	
+//		}
+//	}else{
+//		alert(year+'bu shi run nian');	
+//	}
+//	var year=Number(prompt('please'));
+//	if(year%4==0&&year%100!=0||year%400==0){
+//		alert(year+'shi run nian');	
+//	}else{
+//		alert(year+'bu shi run nian');	
+//	}
+//	var a=Number(prompt('please'));
+//	if(a<0){
+//		alert('illegal');	
+//	}else{
+//		if(a%2==0){
+//			alert(a+'shi ou shu');	
+//		}else{
+//			alert(a+'bu shi ou shu');	
+//		}	
+//	}
+//	var a=Number(prompt('please'));
+//	if(a<0){
+//		alert('illegal');	
+//	}else{
+//		if(a%2==0){
+//			alert(a+'shi ou shu');	
+//		}else{
+//			alert(a+' bu shi ou shu');	
+//		}	
+//	}
+//	var a=Number(prompt('please enter'));
+//	switch(a){
+//		case 1:alert('number1');break;
+//		case 2:alert('number2');break;
+//		case 3:alert('number3');break;
+//		case 4:alert('number4');break;
+//		default:alert('no rules');	
+//	}
+//	var a=Number(prompt('please enter'));
+//	switch(a){
+//		case 1:alert('number1');break;
+//		case 2:alert('number2');break;
+//		case 3:alert('number3');break;
+//		case 4:alert('number4');break;
+//		default:alert('illegal');
+//	}
+//	var a=Number(prompt('please enter first num'));
+//	var b=Number(prompt('please enter second num'));
+//	var c=prompt('please enter symbol');
+//	switch(c){
+//		case '+':alert(a+b);break;
+//		case '-':alert(a-b);break;
+//		case '*':alert(a*b);break;
+//		case '/':alert(a/b);break;
+//		case '%':alert(a%b);break;
+//		default:alert('illegal');	
+//	}
+//	var a=Number(prompt('please enter first num'));
+//	var b=Number(prompt('please enter second num'));
+//	var c=prompt('please enter symbol');
+//	switch(c){
+//		case '+':alert(a+b);break;
+//		case '+':alert(a+b);break;
+//		case '+':alert(a+b);break;
+//		case '+':alert(a+b);break;
+//		case '+':alert(a+b);break;
+//		default:alert('illegal');	
+//	}
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

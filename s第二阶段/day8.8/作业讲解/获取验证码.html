@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>获取验证码按钮</title>
+	<script type="text/javascript">
+		window.onload = function(){
+			var btn=document.getElementById('btn1');
+			var s=5;
+			btn.onclick=function(){
+				btn.value="重新获取验证码("+s+")";
+				btn.disabled="disabled";
+				var timer=setInterval(function(){
+					s--;
+					btn.value="重新获取验证码("+s+")";
+					if(s==0){
+						clearInterval(timer);
+						btn.disabled="";
+						btn.value="获取验证码";
+					}
+				},1000)
+			}
+		}
+	</script>
+</head>
+<body>
+	<input id="btn1" type="button" value="获取验证码">
+</body>
+</html>

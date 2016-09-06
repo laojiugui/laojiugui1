@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8"/>
+	<title>闰年</title>
+	<style>
+		span{
+			margin:10px;
+			padding:6px;
+			background:#ff6700;
+		}
+	</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script>
+		
+			var oBox=document.getElementById("box");  //通过id获取要操作的对象
+			console.log(oBox);
+			
+			//alert(oBox.innerHTML);  
+			//对象.属性       这种结构叫获取标签对中的内容
+			
+			//oBox.innerHTML="九九乘法表";   //设置标签对中的内容
+			for(var i=1;i<=5;i++){
+				oBox.innerHTML+="<span>"+i+"</span>";
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			//鸡兔同笼  共35个头  94只脚   问有几只鸡  几只兔？
+			// ji   tu    ji+tu=35  ji*2+tu*4=94
+			/*for(var i=1;i<35;i++){
+				for(var j=1;j<35;j++){
+					if(i+j==35&&(i*4+j*2==94)){
+						document.write("兔："+i+"=======鸡："+j);
+					}
+				}
+			}*/
+			
+			//      &times;  乘号
+			
+			//九九乘法表
+			
+			/*for(var i=1;i<=9;i++){
+				for(var j=1;j<=i;j++){
+					document.write(i+"&times;"+j+"="+i*j+"&nbsp;");
+				}
+				document.write("<br>");
+			}*/
+			
+			
+		</script>
+	</body>
+</html>

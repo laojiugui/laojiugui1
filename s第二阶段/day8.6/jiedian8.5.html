@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+
+
+<style type="text/css">
+.checkCode {
+    cursor: pointer;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 26px;
+    width: 115px;
+    height: 35px;
+}
+</style>
+<script type="text/javascript">
+
+	//设置一个获取验证码是按钮.每隔30秒重新获取一次
+    var sleep = 30, interval = null;
+    window.onload = function ()
+    {
+        var btn = document.getElementById ('btn');
+        btn.onclick = function ()
+        {
+            if (!interval)
+            {
+                this.style.backgroundColor = 'rgb(243, 182, 182)';    //改变颜色
+                this.disabled = "disabled";                          //禁用input属性
+                this.style.cursor = "wait";                           //鼠标样式显示等待
+                this.value = "重新发送 (" + sleep-- + ")";             //改变内容
+                interval = setInterval (function ()
+                {
+                    if (sleep == 0)
+                    {
+                        if (!!interval)
+                        {
+                            clearInterval (interval);
+                            interval = null;
+                            sleep = 30;
+                            btn.style.cursor = "pointer";
+                            btn.removeAttribute ('disabled');
+                            btn.value = "免费获取验证码";
+                            btn.style.backgroundColor = '';
+                        }
+                        return false;
+                    }
+                    btn.value = "重新发送 (" + sleep-- + ")";
+                }, 1000);
+            }
+        }
+    }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	//获取一个获取验证码的按钮,每隔60秒重新获取一次
+	
+	
+	
+	
+	
+	
+	
+	
+</script>
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+ <input class="checkCode" type="button" id="btn" value="免费获取验证码" />
+
+
+<div id="box">
+	<ul id="box1">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
+
+<script>
+var box=document.getElementById("box")
+var box1=document.getElementById("box1")
+
+
+console.log(box1[0].nextSibling)
+
+
+
+
+</script>
+</body>
+</html>

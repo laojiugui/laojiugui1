@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>手机滑动解锁</title>
+<style>
+*{margin:0;padding:0;}
+#box{width:426px;height:640px;background:url(iphone.jpg) no-repeat center;position:relative;left:400px;top:50px}
+#box1{
+	width:371px;height:65px;border:1px solid red;position:absolute;left:27px;bottom:30px;border-radius:15px;position:relative
+
+}
+img{
+	background:url() no-repeat center;position:absolute;left:0;bottom:0px;border-radius:18px
+
+}
+</style>
+</head>
+
+<body>
+<div id="box">
+	<div id="box1">
+		<img src="unlock_btn.jpg" style="width:90px;height:63px;"/>
+	</div>
+</div>
+<script>
+var box1=document.getElementById("box1")
+var img=box1.getElementsByTagName("img")[0]
+img.onmousedown=function(e){
+	var event=window.event||e
+	var offsetL=e.offsetX
+	this.onmousemove=function(e){
+		var event=window.event||e
+		var Left1=e.clientX
+		var dleft=this.parentNode.parentNode.offsetLeft
+		var xleft=this.parentNode.offsetLeft
+		var X=Left1-dleft-xleft-offsetL
+		if(X<0){
+			X=0
+		}
+		if(X>this.parentNode.offsetWidth-this.offsetWidth){
+		
+			X=this.parentNode.offsetWidth-this.offsetWidth
+		}
+		
+		
+			
+	}
+}
+img.onmouseup=function(){
+document.onmousemove=""
+
+}
+</script>
+
+
+</body>
+</html>

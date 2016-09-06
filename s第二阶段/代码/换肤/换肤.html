@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DOM</title>  
+<link href="css/css1.css" rel="stylesheet">
+</head>
+<body>
+<input type="button" value="红色" id="btn1" >
+<input type="button" value="绿色" id="btn2" >
+<div id="hide" style="width:300px;height:400px;background:black;margin:30px;display:none"></div>
+<script>
+	window.onload=function(){
+		//获取类名
+		function  getClassName(classname){
+			var arr=[];
+			if(document.getElementsByClassName==undefined){
+				var eles=document.getElementsByTagName("*");
+				for(var i=0;i<eles.length;i++){
+					if(eles[i].className==classname){
+						arr.push(eles[i]);
+					}
+				}
+				return arr;
+			
+			}else{
+				return document.getElementsByClassName(classname);
+			}
+		}
+		
+		//获取id
+		function getId(id){
+			return document.getElementById(id);
+		}
+		//getComputedStyle 
+		//兼容  获取非行间样式
+		function getStyle(obj,style){
+			if(obj.currentStyle){  //IE8以下（包含IE8）
+				return obj.currentStyle[style];
+			}else{
+				return window.getComputedStyle(obj,false)[style];//标准写法
+			}
+		}
+		//getAttribute()   获取属性  需要传参数 
+		//var box=getId("box");
+		//var shuxing=box.getAttribute("value");
+		//alert(shuxing);
+		
+		//设置属性
+		//setAttribute(属性,值);  自定义的属性   不能传一个参数
+		//box.setAttribute('value','123');    
+		//console.log(box);
+		
+		//删除属性
+		//removeAttribute()
+		//box.removeAttribute("value"); //删除也是一个参数
+		//console.log(box);
+		
+		
+		var btn1=getId("btn1");
+		var btn2=getId("btn2");
+		btn1.setAttribute("data-background","css/css2.css");
+		btn2.setAttribute("data-background","css/css1.css");
+		//alert(btn1.getAttribute("data-background"))
+		var _link=document.getElementsByTagName("link")[0];
+		console.log(_link)
+		
+		btn1.onclick=function(){
+			_link.href=this.getAttribute("data-background");
+		}
+		btn2.onclick=function(){
+			_link.href=this.getAttribute("data-background");
+		}
+		// var hidde=getId("hide");
+		// btn2.onmouseover=function(){
+		// 	hide.style.display="block";
+		// }
+		// btn2.onmouseout=function(){
+		// 	hide.style.display="none";
+		// }
+	}
+
+	
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>7.28</title>
+<style>
+a{display:inline-block;height:30px;width:60px;text-align:center;line-height:30px;background:yellow;text-decoration:none;margin:2px;}
+
+</style>
+</head>
+
+<body>
+<span id="box"></span>
+
+
+
+<script type="text/javascript">
+/*var i=1         //声明i
+while(i<=10){
+	document.write("帅帅哒<br>");      //循环输出i
+	i++
+}
+
+var a=1                //声明了a
+var sum=0               //声明sum
+while(a<=100){
+	document.write(a+"<br>")       //循环输出a
+	sum+=a
+	a++
+}
+document.write(sum+"<br>")             //输出sum
+
+
+
+var b=1                //声明了b
+var sum1=0               //声明sum1
+while(b<=100){
+	document.write(b+"<br>")       //循环输出b
+	if(b%2==0){sum1+=b}
+	b++
+}
+document.write(sum1+"<br>")             //输出sum1
+
+
+var c=1                //声明了c
+var sum2=1
+document.write("sum2=1")               //声明sum2
+while(c<100){
+	c++
+	document.write("+"+c)       //循环输出c
+	sum2+=c
+	
+}
+document.write("="+sum2+"<br>")             //输出sum2*/
+
+
+
+/*var year=1000
+var sum3=0
+while(year<=2000){
+	if(year%100!=0&&year%4==0||year%400==0){
+		document.write(year+"&nbsp;")	
+		sum3++
+		if(sum3%4==0){
+			document.write("<br>")
+		}	
+	}
+	year++
+}
+document.write("<br>共有"+sum3+"个闰年")*/
+
+
+/*var num1=Number(prompt("请输入第一个数"))     //声明了num1，num2，num3，max
+var num2=Number(prompt("请输入第二个数"))
+var num3=Number(prompt("请输入第三个数"))
+var max=num1
+if(max<num2){
+	max=num2
+}
+if(max<num3){
+	max=num3
+}
+alert("最大的数是"+max)*/
+
+
+/*var d=1                          //声明了d ,e
+while(d<=5){
+	var e=1
+	while(e<=10){
+		document.write("*")
+		e++
+	}
+	document.write("<br>")
+	d++
+}*/
+
+
+
+
+/*var i=1                          //声明行数i          //*  **   ***   ****
+while(i<=5){                       //对行数的大循环
+	var j=1                         //声明列数
+	while(j<=i){                   //对列数的小循环
+		document.write("*")         //输出*
+		j++                         
+	}  
+	document.write("<br>")
+	i++
+}*/ 
+
+
+
+
+/*var i=1
+while(i<=5){                                       //   *  ** ***
+	var j=1
+	while(j<=5){
+		if(j<=5-i){
+			document.write("&nbsp;")
+		}else{
+			document.write("*")
+		}
+	j++
+	}
+	document.write("<br>")
+	i++
+}*/
+
+
+
+/*var i=1
+while(i<=3){
+	var j=1
+	while(j<=7){
+		if(j>4-i&&j<4+i){
+			document.write("*")
+		}else{
+			document.write("-")
+		j++
+		}
+	}
+	document.write("<br>")
+	i++
+}
+var i=2
+while(i>=1){
+	var j=1
+	while(j<=7){
+		if(j>4-i&&j<4+i){
+			document.write("*")
+		}else{
+			document.write("-")
+		}
+		j++
+	}
+	document.write("<br>")
+	i--
+}
+*/
+
+
+
+/*for(var i=1;i<=35;i++){                         //鸡兔同笼
+	for(var j=1;j<=35;j++){
+		if((i+j)==35&&(2*i+4*j)==94)
+		document.write("鸡："+i+"兔："+j)
+	}
+}
+*/
+
+/*var oBox=document.getElementById("box") 
+
+for(i=1;i<=9;i++){
+	for(j=1;j<=i;j++){
+		
+		oBox.innerHTML+="<a href>"+i+"*"+j+"="+i*j+"</a>"
+		
+	}
+	oBox.innerHTML+="<br>"
+}
+*/
+
+/*var oBox=document.getElementById(oBox)
+alert(oBox.innerHTML)
+oBox.innerHTML="嘻嘻"*/
+
+for(var a=1,c=1;a<=9;a++){              //酷似99乘法表
+	
+	c++
+	for(var b=1,d=1;b<=a;b++){
+	
+		d++
+		document.write("<a href>"+c+"*"+d+"="+c*d+"&nbsp;"+"</a>")
+	}
+	document.write("<br>")
+}
+
+</script>
+
+
+
+</body>
+</html>

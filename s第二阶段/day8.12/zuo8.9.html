@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>作业8.9</title>
+
+<style>
+ul{padding:10px;margin:0;list-style: none;}
+#dataList{display:none;width:200px;border:1px solid #ddd;}
+#dataList li{padding-left:10;border-bottom:1px dashed #ddd;line-height:1.5;}
+#dataList li:last-child{border:none;}
+span(display:inline-block;background:red;font-)
+</style>
+
+
+</head>
+
+<body>
+ 
+	<h1>快来点名器</h1>
+	<input type="text" value="" id="txt">
+	<ul id="dataList">
+		<li>哈哈哈快来</li>
+		<li>范德萨范德萨发</li>
+		<li>范德萨发大水</li>
+		<li>范德萨发大水</li>
+		<li>放大法萨芬</li>
+		<li>范德萨范德萨发</li>
+	</ul>
+ <span></span>
+ <ul>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+ </ul>
+ 
+<script>
+	var txt=document.getElementById("txt")
+	var list=document.getElementById("dataList")
+	
+	txt.onfocus=function(){
+		list.style.display="block";
+	}
+	document.onclick=function(){	
+		list.style.display="none"	
+	}
+	txt.onclick=list.onclick=function(e){
+		var event=window.event||e
+		window.event?e.cancelBubble=true:e.stoppropagation
+		list.style.display="block"
+	}
+	list.onclick=function(ev){
+		var event=window.event||ev
+		var tar=ev.target||ev.srcElement;
+		if(tar.tagName.toLowerCase()=='li'){
+			txt.value=tar.innerHTML
+			list.style.display="none"
+		}
+	}
+ 
+ 
+ 
+ </script>
+</body>
+</html>

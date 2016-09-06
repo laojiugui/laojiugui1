@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+	.box{width:300px;height:400px;background:red;}
+	.box{width:100px;height:100px;background:blue;}
+</style>
+<script src="index.js"></script>
+
+<script>
+	//引入js 不能在其标签对中间写代码
+	document.write("在script标签中不能嵌套script标签<br />");
+</script>
+
+</head>
+<body>
+	<p class="box">哈哈哈</p>
+	<script>
+		// 单行注释
+		// 多行注释（块注释） /*注释的内容*/
+		document.write("可以放到head，也可以放到body<h1>标题一</h1>");
+		document.write("<div style=\"width:200px;;height:300px;background:red;border-radius:50%;\">aaaaaaa</div>");
+		document.write('<div style=\'width:200px;height:300px;background:green;border-radius:50%\'>bbbbb</div>')
+		//单引号 双引号的嵌套
+		
+		//声明变量 创造变量
+		
+		
+		//变量：可以用来存储数据的一个容器，可以用来保存任何数据类型
+		//关键字 var
+		//声明变量 变量赋值=
+		var a=1;//声明变量 并且赋值 等号左边叫变量名 等号右边变量的值
+		var str="我是字符串";//字符串需要加双引号 单双引号都可以 但一定是英文状态下
+		//变量的命名规则 可以是字母 下划线 $开头
+		//alert(str);
+		//var $num1=23;
+		
+		//var $num1="发达我发完发放";//变量的覆盖  不要起一样的变量名
+		//alert($num1);
+		
+		
+		//typeof 用来检测数据类型
+		//数据类型分为基本数据类型和引用数据类型
+		
+		//数据类型 1.number 2.string 3.boolean  (基本数据类型)
+		//特殊类型 1.underfined 2.null
+		// alert(typeof a); //number  数字
+		//alert(typeof $num1);//string 字符串需要加双引号
+		
+		
+		var bool=true;
+		alert(typeof bool);//boolean 布尔型 布尔型只有两个值（true false）
+		
+		var aa=12,bb=13,cc=14,dd=15;//同时声明多个变量，并且赋值
+		var m,n,x,y;  //同时声明多个变量 分别赋值
+		m=1;
+		n=2;
+		x="a";
+		y="b";
+		
+		var aa="123.33er23"
+		//alert(parseInt(aa));
+		//parseInt() 将字符串并且字符串中包含数字的字符串转换为数字
+		//parseFloat() 将字符串并且字符串中包含小数的数字的字符串转换成数字
+		//alert(parseFloat(aa));
+		
+		//算术运算符  + - * / %(取余/取模)
+		var num1=12;
+		var num2=13;
+		//alert(num1-num2);
+		var a="12";
+		var b="14";
+		//alert(a+b);
+		//加法 的两个作用
+		//1. 求和 2.字符串拼接
+		var num3=24;
+		var num4=2;
+		//alert(num3*num4);
+		var num5=13;
+		var num6=2;
+		//alert(num5/num6);
+		var num7=13;
+		var num8=5;
+		//alert(num7%num8);
+		
+		
+		
+		
+		
+		
+		
+		//关系运算符（比较运算符）   >  <  >=  <=  ==  ===  != !==
+		var num1=1;
+		var num2=2;
+		//alert(num1<=num2);
+		var num3="2";
+		//alert(num3!==num2)  //===绝对等于 在比较时，首先比较数据类型，如果类型不一样，直接false
+		//alert(num2!=num3)  //== 代表比较或者判断 忽略数据类型 只比较结果
+		
+							//=  赋值
+		//！=不等于 ==
+		//！==  ===
+		//赋值运算符 = += -=  *= /=  %=
+		var a=2;
+		a+=6;
+		a=a+6;
+		alert(a);  
+		
+		
+		
+		
+		var number1="123a";
+		var number2=2;
+		//alert(number1-number2);//NaN  Not a Number
+		
+		var num12="12"; //12
+		var num13="24"; //24
+		var result=num13/num12;
+		//alert(result);
+		//Number() //把非数字的数据类型转换为数字
+		//把字符串转成数字
+		var str="12";//在字符串里面 空格和空字符串调用Number()以后的结果为0；
+		//alert(Number(str));
+		
+		
+		
+		
+		//把布尔型转换为数字
+		var bool1=false;
+		//alert(Number(bool1));//在布尔型中 true是1 false是0；
+		//把undefined 转换为数字 NaN
+		var c;
+		//alert(Number(c)); //NaN
+		var nu=null;//空占位符
+		//alert(Number(nu));  //0
+		
+		
+		
+		
+		
+		
+		
+		var a=30;
+		var b=40;
+		var c=2;
+		var d=2;
+		a+=b;  //a=a+b //70
+		a*=c;  //a=a*c //140
+		a/=d; //a=a/d //70
+		a-=b; //a=a-b //30
+		//alert(a);
+		var mz="习大大";
+		var age=45;
+		//document.write("国家主席"+mz",年龄"+age)
+		var guojia="中国";
+		var mianji="960平方";
+		document.write(guojia+mianji+"<br/>");
+		
+		
+		
+		//小结：
+		/*
+			1.了解javaScript的发展史
+			2.javaScript的引入方式 引入（标签对中间不能写代码） 嵌入
+			3.注释 单行 多行（块状）
+			4.声明变量并且赋值
+			5.document.write();可以解析html标签
+			6.alert()弹窗
+			7.数据类型 基本3（number string boolean） 特殊（undefined  null）
+			 关键字typeof 监测数据类型
+			8.运算符
+			 算术运算符 +  - * / %
+			 数据类型转换 Number() parseInt()  parseFloat()
+			 关系运算符  >  <  <= >= ==  === !== !=
+			 赋值运算符 = +=  -= *= /= %=
+			 */
+	</script>
+
+</body>
+</html>

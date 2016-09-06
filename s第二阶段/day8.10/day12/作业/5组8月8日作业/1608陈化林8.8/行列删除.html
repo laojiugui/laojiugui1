@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style type="text/css">
+
+
+</style>
+</head>
+<body>
+请输入行<input type="text" value="" id="hang"/>
+请输入列<input type="text" value="" id="lie"/>
+<input type="button" value="生成表格" id="btn"/>
+<div id="box"></div>
+<script>
+var box=document.getElementById("box");
+var hang=document.getElementById("hang");
+var lie=document.getElementById("lie");
+btn.onclick=function(){
+	var hang1=Number(hang.value);
+	var lie1=Number(lie.value);
+	var table=document.createElement("table");
+	for(var i=0;i<hang1;i++){
+		var tr=document.createElement("tr");
+		for(var j=0;j<lie1;j++){
+			var td=document.createElement("td");
+			if(j==lie1-1){
+				var button=document.createElement("button");
+				var btntet=document.createTextNode("删除");
+				button.appendChild(btntet);
+				td.appendChild(button);
+				button.onclick=function(){
+					var mm=this.parentNode.parentNode;
+					table.removeChild(mm);
+					}
+				}else{
+					td.innerHTML="单元格"+(i+1)+(j+1);
+					}
+					tr.appendChild(td);
+			}
+			table.appendChild(tr);
+		}
+box.appendChild(table);//box.innerHTML=table;
+}
+</script>
+</body>
+</html>

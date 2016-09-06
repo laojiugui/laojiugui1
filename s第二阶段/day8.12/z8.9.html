@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>事件冒泡</title>
+
+<style>
+		*{margin: 0;padding: 0}
+		div{
+			padding: 100px;
+		}
+	</style>
+</head>
+
+<body>
+
+<div style="background:red;">
+		<div style="background:green;">
+			<div style="background:blue;"></div>
+		</div>
+	</div>
+</body>
+<script>
+var div=document.getElementsByTagName("div")         //获取div里面的内容
+div[0].onclick=function(){             //创建单击匿名函数
+ 
+this.style.border="10px solid tan"        //改变该元素的属性值
+
+}
+div[1].onclick=function(){            //创建单击匿名函数
+
+this.style.border="10px solid yellow"        //改变此元素的属性值
+
+}
+div[2].onclick=function(e){         //创建单击匿名函数
+var event=window.event||e              //处理事件兼容问题
+
+window.event?e.cancelBubble=true:e.stopPropagation();        //处理禁止冒泡兼容
+this.style.border="10px solid red"           //改变此元素的属性值
+}
+
+
+
+var div=document.getElementsByTagName("div")         //获取div里面的内容
+div[0].onclick=function(){             //创建单击匿名函数
+ 
+this.style.border="10px solid tan"        //改变该元素的属性值
+
+}
+div[1].onclick=function(){            //创建单击匿名函数
+
+this.style.border="10px solid yellow"        //改变此元素的属性值
+
+}
+div[2].onclick=function(e){         //创建单击匿名函数
+var event=window.event||e              //处理事件兼容问题
+
+window.event?e.cancelBubble=true:e.stopPropagation();        //处理禁止冒泡兼容
+this.style.border="10px solid red"           //改变此元素的属性值
+}
+
+
+
+</script>
+
+
+</html>

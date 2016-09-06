@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            font-size:20px;
+        }
+        div{
+            width:500px;
+            height:200px;
+            border:1px solid red;
+        }
+        input{
+            width: 80px;
+            height:30px;
+            text-align:center;
+            line-height:30px;
+            background:#ccc;
+            border:0;
+            border-radius:5px;
+            box-shadow:0 2px 8px #ccc;
+        }
+    </style>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            $(".btn1").click(function(){
+                $(".box").append($(".txt"));
+            });
+            $(".btn2").click(function(){
+                $(".txt").appendTo($(".box"));
+            });
+            $(".btn3").click(function(){
+                $(".box").prepend($(".txt1"));
+            });
+            $(".btn4").click(function(){
+                $(".txt").prependTo($(".box1"));
+            });
+            $(".btn5").click(function(){
+                $(".box").after($(".txt"));
+            });
+            $(".btn6").click(function(){
+                $(".box1").before($(".txt1"));
+            });
+            $(".btn7").click(function(){
+                $(".box").insertAfter($(".txt1"));
+            });
+            $(".btn8").click(function(){
+                $(".box").insertBefore($(".txt"));
+            });
+            $(".btn9").click(function(){
+                $(".box").wrap("<div class='wrap'></div>");
+            });
+            $(".btn10").click(function(){
+                $(".box").unwrap();
+            });
+            $(".btn11").click(function(){
+                $("p").remove();
+            });
+            $(".btn12").click(function(){
+                $(".box").empty();
+            });
+
+
+
+
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="append" class="btn1">
+<input type="button" value="appendTo" class="btn2">
+<input type="button" value="prepend" class="btn3">
+<input type="button" value="prependTo" class="btn4">
+<input type="button" value="after" class="btn5">
+<input type="button" value="before" class="btn6">
+<input type="button" value="insertAfter" class="btn7">
+<input type="button" value="insertBefore" class="btn8">
+<input type="button" value="wrap" class="btn9">
+<input type="button" value="unwrap" class="btn10">
+<input type="button" value="remove" class="btn11">
+<input type="button" value="empty" class="btn12">
+<div class="box1"></div>
+<div class="box"><span>这是原来的内容</span></div>
+<p class="txt">孙悟空三打白骨精,告诉了我们女人善变会被打死</p>
+<p class="txt1">疯狂的算法范德萨范德萨第三方大是打发</p>
+</body>
+</html>

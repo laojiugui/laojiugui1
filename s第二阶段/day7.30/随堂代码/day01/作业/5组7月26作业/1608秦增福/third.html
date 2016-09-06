@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>document</title>
+<style type="text/css">
+a{text-decoration:none;color:#666;}
+</style>
+<script src="index.js"></script>
+<script>
+	document.write("use好风景好地方是的方式电话方式<br>");
+</script>
+</head>
+
+<body>
+<!--第一部分-->
+<a href="index.html">主页</a>
+<a href="first.html">第一遍</a>
+<a href="second.html">第二遍</a>
+<a href="third.html">第三遍</a>
+<a href="four.html">第四遍</a>
+<a href="five.html">第五遍</a>
+
+<script>
+
+	/*单引号，双引号的嵌套以及转译*/
+	document.write("京东客服电话<h1>一级标题</h1>");
+	document.write("<div style='height:200px;width:300px;background:red;'></div>");
+	document.write("<div style=\"height:200px;width:300px;background:green;\"></div>");
+	
+	/*测试变量的赋值类型*/
+	var num1=55;
+	alert(num1);
+	var str="然后放多少";
+	alert(str);
+	var bool=true;
+	var num3;
+	var num4=null;
+	alert(typeof num1);
+	alert(typeof num2);
+	alert(typeof bool);
+	alert(typeof num3);
+	alert(typeof num4);
+	
+	
+	
+	/*同时声明多个变量*/
+	var a=1,b=2,c=3,d=4;
+	var x,y,z,w;
+	x=5;
+	y=6;
+	z=7;
+	w=8;
+	
+	
+	
+	
+	
+	/* 赋值运算符 */
+	var aa=55;
+	aa+=5;
+	alert(aa);
+	aa-=5;
+	alert(aa);
+	aa*=5;
+	alert(aa);
+	aa/=5;
+	alert(aa);
+	aa%=4;
+	alert(aa);
+	
+	
+	/*加号的拼接作用*/
+	var g="中国";
+	var m="996万平方公里"
+	document.write(g+"的面积是:"+m);
+	
+	
+	/*算术运算符*/
+	
+	var mmm='12';
+	var nnn='24';
+	alert(nnn/mmm);
+	var mm=12;
+	var nn=24;
+	
+	alert(nn/mm);
+	alert(nn*mm);
+	alert(nn+mm);
+	alert(nn-mm);
+	alert(nn%mm);
+	
+	
+	
+	
+	/*将其他字符转化为数字*/
+	var f='122';
+	var h='122aa';
+	var j='122aa222';
+	var k='122.333aa';
+	var bool=true;
+	var l;
+	var o=null;
+	alert(Number(f));
+	alert(parseInt(f));
+	alert(parseFloat(f));
+	alert(Number(h));
+	alert(parseInt(h));
+	alert(parseFloat(h));
+	alert(Number(j));
+	alert(parseInt(j));
+	alert(parseFloat(j));
+	alert(Number(k));
+	alert(parseInt(k));
+	alert(parseFloat(k));
+	alert(Number(l));
+	alert(parseInt(l));
+	alert(parseFloat(l));
+	alert(Number(o));
+	alert(parseInt(o));
+	alert(parseFloat(o));
+	alert(Number(bool));
+	alert(parseInt(bool));
+	alert(parseFloat(bool));
+	
+	
+	
+	/*关系运算符*/
+	var jj='12';
+	var hh=12;
+	var gg=24;
+	/*大于*/
+	alert(hh>gg);
+	alert(hh<gg);
+	/*大于等于或者小于等于*/
+	alert(hh>=gg);
+	alert(hh<=gg);
+	/*等于*/
+	alert(hh==jj);
+	/*绝对等于*/
+	alert(hh===jj);
+	/*不等于*/
+	alert(hh!=gg);
+	/*绝对不等于*/
+	alert(hh!==gg);
+	
+	
+	
+</script>
+</body>
+</html>

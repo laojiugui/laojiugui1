@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+
+div{padding:100px;}
+</style>
+</head>
+
+<body>
+<div style="backgorund:red;">
+	<div style="backgorund:green;">
+		<div style="background:yellow;"></div>
+	</div>
+</div>
+
+<div id="box" style="width:200px;height:200px;background:green;margin:0 auto;"></div>
+
+
+<script>
+/*document.onmousedown=function(ev){
+	var evn=ev||window.event
+	var isie;
+	if(!ev){
+		isie=true;
+	}else if(evn.button==0||isie&&evn.button==1){
+		//alert("您点击的是左键");
+	
+	}else if(evn.button==1||isie&&evn.button==4){
+		//alert("您点击的是滚轮")
+	
+	}else if(evn.button==2){
+		//alert("您点击的是右键")
+	
+	}
+
+}*/
+
+
+
+
+
+//冒泡事件
+var div=document.getElementsByTagName("div")
+div[0].onclick=function(){
+	this.style.border="10px solid yellow"
+	
+}
+div[1].onclick=function(){
+	this.style.border="10px solid blue"
+
+}
+div[2].onclick=function(e){
+	var even=window.event||e
+	window.event?e.cancelBubble=true:e.stopPropagation();
+	this.style.border="10px solid tan"
+	
+}
+
+
+var box=document.getElementById("box")
+box.onmousemove=function(e){
+	box.innerHTML="鼠标坐标"+e.clientX+"======"+e.clientY+"<br>"+"屏幕坐标"+e.screenX+"======="+e.screenY+"<br>"+"偏离事件源"+"坐标"+e.offsetX+"======"+e.offsetY
+
+}
+
+</script>
+</body>
+</html>

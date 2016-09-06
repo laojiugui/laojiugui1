@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正则属性</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+            var oTxt=$("input[placeholder]");
+                oBtn=$("#btn");
+                oPass=$("input[id='fav']");
+            oBtn.click(function(){
+
+                oTxt.css("border","1px solid red")
+            });
+            console.log(oTxt);
+
+            $("#btn1").mouseenter(function(){
+                $("#box").slideDown(500);
+            });
+            $("#btn1").mouseleave(function(){
+
+                $("#box").mouseenter(function(){
+                    $("#box").mouseleave(function(){
+                        $("#box").slideUp(500);
+                    });
+
+                })
+
+            });
+
+        });
+    </script>
+</head>
+<body>
+<form>
+    账号:<input id="txt" type="text" placeholder="请输入账号"/><br><br>
+    密码:<input id="pass" type="password" placeholder="请输入密码"/><br><br>
+    爱好:<input id="fav" type="text" name="favorite" value=""/><br><br>
+    嗜好:<input id="fav2" type="text" value="" name="favorite1"/><br><br>
+    <input id="btn" type="submit" value="属性过滤器"/>
+</form>
+<br>
+<input type="button" id="btn1" value="一级菜单">
+<div id="box" style="width:100px;height:100px;background:pink;display:none"></div>
+</body>
+</html>

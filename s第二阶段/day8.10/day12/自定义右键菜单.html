@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>自定义右键菜单</title>
+	<style>
+	ul{list-style:none;padding:0;margin:0;}
+	.context-menu{display:none;position:absolute;top:10px;left:10px;width:160px;padding:2px;border:1px solid #ddd;line-height:1.5;color:#666;}
+	.context-menu li{padding:0 5px;border-bottom:1px solid #dfdfdf;}
+	.context-menu li:hover{background-color:#efefef;color:#333;}
+	.context-menu li:last-child{border-bottom:none;}
+	</style>
+	<script>
+		window.onload = function(){
+			var context_menu=document.getElementsByTagName('div')[0];
+			document.oncontextmenu=function(e){
+				var e=window.event||e;//事件对象兼容
+				window.event?e.returnValue=false:e.preventDefault();//阻止浏览器的默认行为
+				context_menu.style.display="block";
+				context_menu.style.left=e.clientX+'px';
+				context_menu.style.top=e.clientY+'px';
+			}
+			//点击空白的地方让菜单隐藏
+			document.onclick=function(){
+				context_menu.style.display="none";
+			}
+			context_menu.onclick=function(e){
+				var e=window.event||e;
+				window.event?e.cancelBubble=true:e.stopPropagation();//阻止冒泡
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="context-menu">
+		<ul>
+			<li>菜单1</li>
+			<li>菜单2</li>
+			<li>菜单3</li>
+			<li>菜单4</li>
+			<li>菜单5</li>
+		</ul>
+	</div>
+</body>
+</html>

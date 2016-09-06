@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script type="text/javascript" src="js/index.js"></script>
+</head>
+
+<body>
+	<script type="text/javascript">
+    	var year=Number(prompt("2、请输入一个年份"));
+		if(String(year)=="NaN")alert("输入的不是年份");
+		
+		else if(year%4==0&&year%100!=0||year%400==0)
+		{alert(year+"年是闰年");}
+		else alert(year+"年不是闰年");
+		
+		
+		var num2=(Number(prompt("3、请输入一个整数")));
+		if(String(num2)=="NaN")alert("输入的不是一个数");
+		else if(num2==0) alert(num2+"等于0");
+		else if(num2>0) alert(num2+"大于0");
+		else alert(num2+"小于0");
+		
+		
+		var num3=Number(prompt("4、请输入一个整数"));
+		if(String(num3)=="NaN")alert("输入的不是一个数");
+		else if(num3<=0) alert(num3+"不是正整数");
+		else if(num3%3==0) alert(num3+"是3的倍数");
+		else alert(num3+"不是3的倍数");
+		
+		
+		var height=prompt("5、请输入你的身高(单位:cm)");
+		var weight=prompt("请输入你的体重(单位:斤)");
+		var sWeight=(height-108)*2;
+		if(weight>sWeight+10) alert("你的身材偏胖");
+		else if(weight<sWeight-10) alert("你的身材偏瘦");
+		else alert("你的身材完美");
+		
+		
+		var fenshu=prompt("6、请输入你的成绩");
+		switch(parseInt(fenshu/10))
+		{	
+			case 10:
+			case 9:alert("你的成绩为：A");break;
+			case 8:alert("你的成绩为：B");break;
+			case 7:alert("你的成绩为：C");break;
+			case 6:alert("你的成绩为：D");break;
+			default:alert("你需要留级");	
+		}
+		
+		
+		var month=Number(prompt("7、请输入月份"));
+		switch(month)
+		{	
+			case 1:alert("1月份是31天");break;
+			case 2:alert("2月份是29天");break;
+			case 3:alert("3月份是31天");break;
+			case 4:alert("4月份是30天");break;
+			case 5:alert("5月份是31天");break;
+			case 6:alert("6月份是30天");break;
+			case 7:alert("7月份是31天");break;
+			case 8:alert("8月份是31天");break;
+			case 9:alert("9月份是30天");break;
+			case 10:alert("10月份是31天");break;
+			case 11:alert("11月份是30天");break;
+			case 12:alert("12月份是31天");break;
+			default:alert("你输入的月份错误");	
+		}
+		
+		
+		var num7=parseInt(prompt("8、请输入一个五位数"));
+		if(num7>=10000&&num7<=99999){
+			var ge=(num7%10);
+			var shi=parseInt((num7/10)%10);
+			var bai=parseInt((num7/100)%10);
+			var qian=parseInt((num7/1000)%10);
+			var wan=parseInt(num7/10000);
+			alert(num7+"的个位是"+ge+"，十位是"+shi+"，百位是"+bai+"，千位是"+qian+"，万位是"+wan);}
+		else alert("输入的数值有误")	
+			
+			
+		var a=Number(prompt("9、请输入a值")),b=Number(prompt("请输入b值")),c=Number(prompt("请输入c值"));
+		if(a>=b){
+			if(a>=c) alert("最大数的值为："+a);
+			else alert("最大数的值为："+c);
+		}
+		else {
+			if(b>=c) alert("最大数的值为："+b);
+			else alert("最大数的值为："+c);
+		}
+		
+		
+		var y=1000,i=0;
+		while(y<=2000){
+			if(y%4==0&&y%100!=0||y%400==0){document.write(y+"&nbsp;&nbsp;");i++;}
+			y=y+4;
+			if(i>=20){document.write("<br/>");i=0;}
+		}
+			
+    </script>
+</body>
+</html>

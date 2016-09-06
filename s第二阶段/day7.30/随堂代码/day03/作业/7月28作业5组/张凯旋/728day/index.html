@@ -1,0 +1,169 @@
+﻿<!doctype html>
+<html>
+<head>
+
+<meta charset="utf-8"/>
+<title>首页</title>
+
+</head>
+<body>
+
+<script type="text/javascript">
+//闰年月
+
+ for(var year=2000; year<=2016; year++){
+	 if((year%4==0&&year%100!=0)||year%400==0){
+		 document.write(year+"年  ");
+		 }
+	 }
+	 document.write("<br> "); 
+	 
+
+//奇数和
+
+ var j=1;
+ var sum=0;
+ while(j<=100){
+	if(j%2!=0){
+		 sum+=j;
+		 }j++;
+	 }
+	 document.write(sum);
+	  document.write("<br> "); 
+	  
+//一百以内和
+
+   var b=1;
+   var sums=0;
+   while(b<100){
+	  
+	   sums+=b;
+	    b++;
+	   }
+	   
+	    document.write(sums-10-20-30-40-80-90);
+	  document.write("<br> "); 
+	  
+	  
+	//100以内7的倍数
+	  
+	for(var qi=1;qi<100;qi++)
+	 if(qi%7==0){
+		 document.write(qi+"   ");
+	  
+		 }
+		 document.write("<br> "); 
+		 
+		 
+		 
+   //10的阶乘
+   var jc=1;
+   var jj=1;
+   while(jc<=10){
+	  jj*=jc;
+	  jc++;
+		  }
+	   
+	   document.write(jj); 
+	   document.write("<br> ");
+	   
+	   
+	   //20——80被三整除五个一行
+	 
+
+			
+			var n=20;
+		var m=0;
+		while(n>=20&&n<=80){
+		      if(n%3==0){
+				document.write(n+" ");
+				m++;
+				}
+		       if(n%3==0&&m%5==0){
+				document.write("<br>");
+				}
+			n++;
+			
+			}
+			document.write("<br>");
+			     
+	//操场
+	
+	for(cr=100;cr<200;cr++){
+		if(((cr-1)%3==0)&&((cr-2)%4==0)&&(cr-3)%5==0){
+			document.write(cr+"人");
+			}
+		}			 
+				 
+			document.write("<br>");
+			
+			
+			// 求出1-1/2+1/3-1/4…..1/100的和 var i=1;  i*-1*-1
+	
+	var nn=0;
+	var gg=0;
+	for(var aa=1;aa<=100;aa++){
+		if((aa+1)%2==0){
+			nn=nn+(1/aa);
+			}
+			else{gg=gg-(1/aa);
+			}
+		}
+		document.write(gg+nn);
+		document.write("<br>");
+			
+			
+			
+			//9.输出九九乘法表
+			
+			
+		for(var i=1;i<=9;i++){
+			for(var t=1;t<=i;t++){
+				
+					document.write("<span>"+i+"*"+t+"="+i*t+"</span>");
+					
+				}
+				document.write("<br>");
+			}	
+		document.write("<br>");
+		
+		//打印100–200之间所有能被3或者7整除的数
+		  
+	for(var sq=100;sq<200;sq++)
+	 if(sq%7==0||sq%3==0){
+		 document.write(sq+"   ");
+	  
+		 }
+		 document.write("<br> "); 
+		 //小王入职时月工资10k元，每年涨工资10%，10年后小王的工资是多少？这10年小王共赚了多少钱？(选做)
+    var gz=10;
+	var years=1;
+	while(years<=10){
+		gz=1.1*gz;
+		years++;
+		}
+    document.write(gz);
+	document.write("<br> ");
+	 var gz=10;
+	var years=1;
+	while(years<=10){
+		gz=1.1*gz;
+		gz=12*gz;
+		years++;
+		}
+    document.write(gz);
+	
+	
+	
+	 var gz=10;
+	var years=1;
+	while(years<=10){
+		gz=1.1*gz;
+		years++;
+		}
+    document.write(gz);
+	
+		 
+</script>
+</body>
+</html>

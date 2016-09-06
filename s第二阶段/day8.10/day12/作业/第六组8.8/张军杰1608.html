@@ -1,0 +1,52 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <style>
+  *{margin:0;padding:0;}
+  #box{width:500px;height:350px;margin:50px auto;}
+  #box1{width:500px;height:280px;background:yellow;}
+  #box2{width:500px;height:50px;background:pink;}
+  #btn1{width:100px;height:20px;}
+  #btn2{width:100px;height:20px;}
+  p{background:green;width:200px;min-height:20px;border-radius:8px;float:right;}
+  span{display:block;float:left;background:red;}
+  </style>
+</head>
+<body>
+   <div id="box">
+     <div id="box1"></div>
+	 <textarea id="box2"></textarea>
+	 <input id="btn1" type="button" value="发送"/> <input id="btn2" type="button" value="关闭"/>
+   </div>
+   
+   
+   <script>
+     var oBox=document.getElementById("box");
+	 var oBox1=document.getElementById("box1");
+	 var oBox2=document.getElementById("box2");
+	 var oBtn1=document.getElementById("btn1");
+	 var oBtn2=document.getElementById("btn2");
+	 oBtn1.onclick=function(){
+	    var str=oBox2.value;
+		var p=document.createElement("p");
+		var span=document.createElement("span");
+		var text=document.createTextNode(str);
+		var text2=document.createTextNode("我听不太懂 嘻嘻");
+		p.appendChild(text);
+		oBox1.appendChild(p);
+	    setTimeout(function(){
+		    span.appendChild(text2);
+			oBox1.appendChild(span);
+		},800)
+		oBox2.value="";
+	 }
+	 oBtn2.onclick=function(){
+	    oBox.style.display="none";
+	 }
+	 
+   
+   </script>
+
+</body>
+</html>

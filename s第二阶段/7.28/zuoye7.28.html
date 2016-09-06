@@ -1,0 +1,298 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>哈哈哈哈</title>
+<style>
+span{display:inline-block;margin:10px;padding:10px;background:red;}
+</style>
+
+</head>
+
+<body>
+<div id=box></div>
+<script>
+var oBox=document.getElementById("box")
+	console.log(oBox);
+	//循环结构
+	/*var i=1
+	while(i<=10){	
+		document.write(i+".哈哈哈<br>");
+		i++;	//i=i+1  ,必不可少,永为真,则跳不出循环
+	}
+	var i=1
+	while(i<=10){	
+		document.write(i+".哈哈哈<br>");
+		i++;	//i=i+1  ,必不可少,永为真,则跳不出循环
+	}
+	
+	//从1+...+100的和
+	
+	var i=1;
+	var f=0
+	while(i<=100){	
+		f+=i;
+		i++;	//i=i+1
+	}alert(f)
+	
+	var i=1;
+	var f=0
+	while(i<=100){	
+		f+=i;
+		i++;	//i=i+1
+	}alert(f)
+	
+	//1到100内偶数的和
+	
+	var i=2;
+	var f=0
+	while(i<=100){	
+		f+=i;
+		i+=2;	//i=i+1
+	}alert(f)
+	var i=2;
+	var f=0
+	while(i<=100){	
+		f+=i;
+		i+=2;	//i=i+1
+	}alert(f)
+	
+	//1到100奇数的和
+	
+	var i=1;
+	var f=0
+	while(i<=100){	
+		f+=i;
+		i+=2;	//i=i+1
+	}alert(f)
+	var i=1;
+	var f=0
+	while(i<=100){	
+		f+=i;
+		i+=2;	//i=i+1
+	}alert(f)
+	
+	//从1000到2000年所有闰年且闰年每四个显示一行
+	
+	var a=1000;  //声明变量  用来保存初始数据
+	var b=0  //用来保存闰年个数
+	while(a<=2000){  // 循环条件
+		if((a%4==0&&a%100!=0)||a%400==0){  //闰年成立条件
+			document.write(a+" ");  //找到一个符合条件的就在页面中输出
+			b++;  //每次找到一个符合条件的就在原来的基础上加一
+			if(b%4==0){  //每四个数字就在一行显示
+				document.write("<br>"); //换行!!
+			}
+			}
+			
+		a++;  //变量自增
+		
+	}
+	
+	var a=1000;  //声明变量  用来保存初始数据
+	var b=0  //用来保存闰年个数
+	while(a<=2000){  // 循环条件
+		if((a%4==0&&a%100!=0)||a%400==0){  //闰年成立条件
+			document.write(a+" ");  //找到一个符合条件的就在页面中输出
+			b++;  //每次找到一个符合条件的就在原来的基础上加一
+			if(b%4==0){  //每四个数字就在一行显示
+				document.write("<br>"); //换行!!
+			}
+			}
+			
+		a++;  //变量自增
+		
+	}
+	
+	//输入三个数,且显示最大的数
+	var num=Number(prompt("请输入整数"))
+	var num1=Number(prompt("请输入整数"))
+	var num2=Number(prompt("请输入整数"))
+	var max=num
+	if(num1>max){
+		max=num1;
+	}if(num2>max){
+		max=num2;
+	}alert(max)
+	
+	var num=Number(prompt("请输入整数"))
+	var num1=Number(prompt("请输入整数"))
+	var num2=Number(prompt("请输入整数"))
+	var max=num
+	if(num1>max){
+		max=num1;
+	}if(num2>max){
+		max=num2;
+	}alert(max)
+	
+	//鸡兔同笼,总共35个头.94个脚,问总共多少只鸡,多少兔
+	
+	for(ji=1;ji<35;ji++){
+		for(tu=1;tu<35;tu++){
+			if(ji+tu==35&&ji*2+tu*4==94){
+			
+				document.write("鸡"+ji+"兔"+tu)
+			
+			}
+		}
+	
+	}
+	
+	for(ji=1;ji<35;ji++){
+		for(tu=1;tu<35;tu++){
+			if(ji+tu==35&&ji*2+tu*4==94){
+			
+				document.write("鸡"+ji+"兔"+tu)
+			
+			}
+		}
+	
+	}
+	
+	//九九乘法表
+	
+	for(num=1;num<=9;num++){
+	
+		for(num1=1;num1<=num;num1++){
+		
+			oBox.innerHTML+="<span>"+(num+"&times;"+num1+"="+num*num1)+"</span>" ;
+			//document.write(num+"&times;"+num1+"="+num*num1+" ")
+		}
+	oBox.innerHTML+=("<br>")
+	//document.write("<br>")
+	}
+		
+	for(num=1;num<=9;num++){
+	
+		for(num1=1;num1<=num;num1++){
+		
+			oBox.innerHTML+="<span>"+(num+"&times;"+num1+"="+num*num1)+"</span>" ;
+			//document.write(num+"&times;"+num1+"="+num*num1+" ")
+		}
+	oBox.innerHTML+=("<br>")
+	//document.write("<br>")
+	}*/
+	
+
+
+
+
+	
+	
+//   作业------------------------------------------------------------------------	
+	/*var year=2000;
+	while(year<=2016){
+	
+		if((year%4==0&&year%100!=0)||year%400==0){
+			document.write(year+" ")
+		}	
+		year++;
+	}
+	
+	var num=1
+	var num1=0
+	while(num<100){
+		num1+=num
+	num+=2
+	}alert(num1)
+
+	
+	var num=1
+	while(num<=100){
+		if(num%7==0){
+		document.write(num+" ")
+		}
+	num++;	
+	}
+	
+	for(a=1;a<=9;a++){
+		
+			for(b=1;b<=a;b++){			
+			document.write(a+"&times;"+b+"="+a*b+"&nbsp;")
+			
+			}		
+			document.write("<br>")
+		}
+		
+		
+		
+		var b=0
+	for(var a=20;a<=80;a++){
+			
+		if(a%3==0){
+			
+			
+			if(b%5==0){
+				document.write("<br>")
+			}
+			b++
+			document.write(a+" ")
+		}
+	
+	}
+
+
+	var a=100
+	while(a<=200){
+		if(a%3==0||a%7==0){
+			document.write(a+" ")
+		
+		}	
+	a++	
+	}
+	
+	
+	
+	var b=10
+	var a=1
+	while(a<=10){
+	
+		if(b==10){
+		
+		document.write(a+"&times;"+b+"="+a*b+" ")
+	}	
+	a++;	
+	}*/
+	
+	/*var num=1
+	var num1=0
+	while(num<=100){
+		if(num!=10&&num!=20&&num!=30&&num!=40&&num!=80&&num!=90){
+				num1+=num;	
+				
+			}	
+		num++;
+	}alert(num1)
+	
+	
+	var a=100
+	while(a<=200){
+		
+		if(a%3==1&&a%4==2&&a%5==3){
+		
+		document.write(a+" ")
+		
+		}
+	a++;
+	}
+	
+	var a=1	
+	var b=0
+	var c=0
+	while(a<=100){
+		if(a%2==0){b-=1/a}
+		if(a%2!=0){c+=1/a}	
+	a++;
+	}alert(b+c)*/
+	
+	
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

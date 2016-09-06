@@ -1,0 +1,7 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0 auto;padding:0;text-align:center;}
+#box1{width:800px;height:100px;border:10px groove #30F;background:#FF3;}
+#box3{width:800px;height:100px;border:10px groove #30F;background:#FF3;line-height:100px;font-size:46px;font-weight:bold;}
+#box2{width:800px;height:100px;border:10px groove #30F;background:#FF3;line-height:100px;font-size:60px;font-weight:bold;}
+

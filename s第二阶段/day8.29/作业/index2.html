@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选项卡效果</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #box{
+            width:452px;
+            margin:30px auto 0;
+            border:1px solid #00aaFF;
+        }
+        .active{
+            background:orange;
+        }
+        span{
+            display:inline-block;
+            width:150px;
+            height:50px;
+            font-size:20px;
+            text-align:center;
+            line-height:50px;
+            border-right:1px solid #00aaFF;
+            cursor:pointer;
+        }
+        #box div{
+            width:452px;
+            height:150px;
+            font-size:50px;
+            font-weight: 900;
+            text-align:center;
+            line-height:150px;
+            display:none;
+            border-top:1px solid #00aaFF;
+        }
+        #box .active1{
+            display:block;
+        }
+    </style>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function(){
+           $("span").click(function(){
+                $("span").attr("class","");
+               $(this).attr("class","active");
+               $('#box').find("div").attr('class','');
+               $('#box').find("div").eq($(this).index()).attr('class','active1');
+           })
+        });
+    </script>
+</head>
+<body>
+<div id="box">
+    <span class="active">充话费</span><span>充流量</span><span style="border:0">充固话</span>
+    <div class="active1">充话费送流量</div>
+    <div>充流量送个球</div>
+    <div>充固话送个鸭子</div>
+</div>
+</body>
+</html>

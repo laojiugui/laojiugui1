@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+<script>
+//var year=prompt("请输入年份");
+//var a=year%100;
+//var b=year%4;
+//var c=year%400;
+//
+//if(a!=0&&b==0){alert(year+"年是闰年")}
+//else if(c==0){alert(year+"年是闰年")}
+//else if(b==1||b==2||b==3||c==100||c==200||c==300){alert(year+"年是平年")}
+//else{alert("请输入正确年份！")};
+
+//var num1=prompt("请输入一个整数：");
+//if(num1>0){alert(num1+">0")}
+//else if(num1==0){alert(num1+"=0")}
+//else if(num1<0){alert(num1+"<0")}
+//else{alert("输入非法！")};
+
+//var num2=prompt("请输入一个整数：");
+//var a=num2%3;
+//if(a==0){alert(num2+"是3的倍数")}
+//else if(a==1||a==2){alert(num2+"不是3的倍数")}
+//else{alert("请输入一个正确的整数")};
+
+//var height=prompt("请输入您的身高：cm");
+//var weight=prompt("请输入您的体重：斤");
+//sw=(height-108)*2;
+//if(weight>0&&height>0){
+//	if(weight==sw){alert("恭喜您！身材棒棒哒！")}
+//	else if(sw-10<=weight&&weight<=sw+10){alert("您的身材适中！")}
+//	else if(weight>=sw+10){alert("您需要减肥了！")}
+//	else if(weight<=sw-10){alert("您有点偏瘦了！")}
+//}
+//else{alert("请输入正确数值！")};
+
+//var text=prompt("分数：");
+//if(text<60&&text>0){alert("留级");}
+//	else if(text>100){alert("请输入正确分数")}
+//	else if(text>=90){alert("A")}
+//	else if(text>=80){alert("B")}
+//	else if(text>=70){alert("C")}
+//	else if(text>=60){alert("D")}
+//	else{alert("请输入正确分数")};
+	
+//var month=prompt("输入月份");
+//switch(month){
+//	case "1":
+//	case "3":
+//	case "5":
+//	case "7":
+//	case "8":
+//	case "10":
+//	case "12":alert(month+"月有31天。");break;
+//	case "2":alert(month+"月有29天。");break;
+//	case "4":
+//	case "6":
+//	case "9":
+//	case "11":alert(month+"月有30天。");break;
+//	default:alert("请输入正确月份");break;	
+//	};
+
+var h=prompt("输入一个五位数");
+var wan=parseInt(h/10000);
+var qian=parseInt(h/1000)%10;
+var bai=parseInt(h/100)%10;
+var shi=parseInt(h/10)%10;
+var ge=h%10;
+if(h>-100000&&h<100000){alert("万位是："+wan+" 千位是："+qian+" 百位是："+bai+" 十位是："+shi+" 个位是："+ge);}
+else{alert("请输入五位数")};
+
+/*var x=prompt("输入第一个数");
+var y=prompt("输入第二个数");
+var z=prompt("输入第三个数");
+if(y==x&&y==z){alert("三个一样大")}
+	else if(x>y&&x>z){alert(x+"最大")}
+	else if(y>x&&y>z){alert(y+"最大")}
+	else if(z>x&&z>y){alert(z+"最大")}
+	else if(z=x&&z>y){alert(z+"和"+x+"最大")}
+	else if(y=x&&x>z){alert(y+"和"+x+"最大")}
+	else if(z=y&&z>y){alert(z+"和"+y+"最大")}
+	else{alert("请输入正确的数字")};
+		*/
+
+
+
+
+
+</script>
+</body>
+</html>
